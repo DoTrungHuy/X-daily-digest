@@ -1,0 +1,26 @@
+# 关注账号清单示例（阶段 3 备忘）
+# 真正决定「搜谁」的是 Grok Tasks 的 prompt（prompts/daily_task_v1.md）。
+# 本文件不参与邮件拉取；改完请同步回 prompt。
+
+leaders:
+  - handle: elonmusk
+    note: xAI / 整体风向
+  - handle: sama
+    note: OpenAI
+  - handle: levelsio
+    note: indie / tools
+
+orgs:
+  - handle: OpenAI
+  - handle: AnthropicAI
+  - handle: xai
+
+tools:
+  - handle: NotionHQ
+  - handle: obsdmd
+  - handle: GoogleAI
+  # - handle: tabbit  # 补全准确 handle 后启用
+
+china_related:
+  # - handle: your_cn_signal_account
+  []

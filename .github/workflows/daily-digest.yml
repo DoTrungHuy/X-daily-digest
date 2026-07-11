@@ -1,0 +1,55 @@
+name: Daily Grok Digest
+
+on:
+  schedule:
+    # UTC 00:30 ≈ 北京时间 08:30；请按你的 Tasks 发信时间再调晚 30–90 分钟
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write OAuth credentials from Secrets
+        env:
+          GMAIL_CLIENT_SECRET_JSON: ${{ secrets.GMAIL_CLIENT_SECRET_JSON }}
+          GMAIL_TOKEN_JSON: ${{ secrets.GMAIL_TOKEN_JSON }}
+        run: |
+          if [ -z "$GMAIL_CLIENT_SECRET_JSON" ] || [ -z "$GMAIL_TOKEN_JSON" ]; then
+            echo "Missing secrets: GMAIL_CLIENT_SECRET_JSON and/or GMAIL_TOKEN_JSON"
+            exit 1
+          fi
+          printf '%s' "$GMAIL_CLIENT_SECRET_JSON" > grok_client_secret.json
+          printf '%s' "$GMAIL_TOKEN_JSON" > token.json
+
+      - name: Fetch digest
+        env:
+          GMAIL_QUERY: ${{ vars.GMAIL_QUERY }}
+        run: python scripts/run_daily.py
+
+      - name: Commit digests if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digests/
+          if git diff --staged --quiet; then
+            echo "No digest changes to commit."
+          else
+            git commit -m "chore(digest): archive daily digest $(date -u +%Y-%m-%d)"
+            git push
+          fi

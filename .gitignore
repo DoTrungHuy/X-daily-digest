@@ -1,0 +1,22 @@
+# OAuth / secrets — never commit
+grok_client_secret.json
+client_secret*.json
+token.json
+*.token.json
+.env
+.env.*
+config/accounts.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
