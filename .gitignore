@@ -4,10 +4,13 @@ client_secret*.json
 token.json
 *.token.json
 grok_auth.json
+grok_browser_profile/
 playwright/.auth/
 .env
 .env.*
-config/accounts.yaml
+# accounts.yaml is OK to commit (no secrets); cookies never in repo
+logs/
+x_raw/
 
 # Python
 __pycache__/

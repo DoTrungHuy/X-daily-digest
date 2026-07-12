@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """
-Interactive login to grok.com and save Playwright storage state (cookies).
+One-time login: opens system Chrome/Edge and KEEPS it open until you finish
+Google/xAI login and the task chat page shows full digest text.
+Then saves grok_auth.json for automatic daily full-text fetch.
 
 Usage:
   C:\\Python\\Python312\\python.exe scripts\\grok_login.py
 
-Then run daily pipeline with full-chat fetch:
+  (Do not close the browser until the terminal says login succeeded.)
+
+Then:
   C:\\Python\\Python312\\python.exe scripts\\run_daily.py --force
 """
 

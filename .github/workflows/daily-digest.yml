@@ -1,65 +1,22 @@
-name: Daily Grok Digest
+# LEGACY: Grok Tasks email archive path — DISABLED as primary.
+# Primary workflow: daily-x-digest.yml (twitter-cli + DeepSeek + Pages)
+#
+# Uncomment "on:" below only if you still want email-preview archival.
+name: Legacy Grok Email Digest (disabled)
 
-# 电脑可以关机：全部在 GitHub 云端跑。
-# gork-daily 约北京时间 15:00 发信 → 本任务 15:30 抓取并写入 digests/
 on:
-  schedule:
-    # 15:30 Asia/Shanghai = 07:30 UTC
-    - cron: "30 7 * * *"
   workflow_dispatch:
+    # manual only — not scheduled
 
 permissions:
   contents: write
 
 jobs:
-  fetch-and-archive:
+  legacy-disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Install dependencies (Gmail only — no Playwright on CI)
+      - name: Notice
         run: |
-          pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
-
-      - name: Write OAuth credentials from Secrets
-        env:
-          GMAIL_CLIENT_SECRET_JSON: ${{ secrets.GMAIL_CLIENT_SECRET_JSON }}
-          GMAIL_TOKEN_JSON: ${{ secrets.GMAIL_TOKEN_JSON }}
-        run: |
-          if [ -z "$GMAIL_CLIENT_SECRET_JSON" ] || [ -z "$GMAIL_TOKEN_JSON" ]; then
-            echo "Missing secrets: GMAIL_CLIENT_SECRET_JSON and/or GMAIL_TOKEN_JSON"
-            exit 1
-          fi
-          printf '%s' "$GMAIL_CLIENT_SECRET_JSON" > grok_client_secret.json
-          printf '%s' "$GMAIL_TOKEN_JSON" > token.json
-
-      - name: Fetch digest from Gmail (cloud-safe mode)
-        env:
-          GITHUB_ACTIONS: "true"
-          # Prefer repo Variable; fallback query excludes xAI security mails
-          GMAIL_QUERY: ${{ vars.GMAIL_QUERY }}
-        run: |
-          QUERY="${GMAIL_QUERY:-from:noreply@x.ai newer_than:14d -subject:\"New login\" -subject:security -subject:accessed -subject:password -subject:\"xAI account\"}"
-          echo "Using GMAIL_QUERY=$QUERY"
-          # --skip-full-chat: CI cannot use your PC browser / Grok login session
-          # --force: allow overwrite if same calendar day re-runs
-          python scripts/run_daily.py --skip-full-chat --force --query "$QUERY"
-
-      - name: Commit digests if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add digests/
-          if git diff --staged --quiet; then
-            echo "No digest changes to commit."
-          else
-            git commit -m "chore(digest): archive daily digest $(date -u +%Y-%m-%d)"
-            git push
-          fi
+          echo "Primary pipeline is daily-x-digest.yml (X cookie + DeepSeek)."
+          echo "This legacy Grok-email job is not scheduled."
+          exit 0
