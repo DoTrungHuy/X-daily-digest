@@ -6,6 +6,12 @@ on:
   schedule:
     - cron: "17 0 * * *"
   workflow_dispatch:
+    inputs:
+      deploy_pages:
+        description: "Deploy GitHub Pages from the selected branch. For non-main branches, the github-pages environment must allow this branch."
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -17,12 +23,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-commit-deploy:
+  build-and-commit:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -71,6 +73,26 @@ jobs:
             git commit -m "chore(digest): $(TZ=Asia/Shanghai date +%Y-%m-%d)"
             git push origin "HEAD:${{ github.ref_name }}"
           fi
+
+  deploy-pages:
+    needs: build-and-commit
+    runs-on: ubuntu-latest
+    if: >-
+      ${{
+        github.event_name == 'schedule' ||
+        github.ref_name == 'main' ||
+        inputs.deploy_pages == true
+      }}
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout generated files
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
