@@ -285,21 +285,14 @@ grok-daily-digest/
 
 > 代码只是管道；**搜谁、写什么**由 Tasks prompt 决定。
 
-### 6.1 Prompt v2（可贴 Tasks；以「我关注的」为最高优先）
+### 6.1 Prompt v3（可贴 Tasks；详尽版）
 
-完整版见 `prompts/daily_task_v1.md`。核心变化：
+完整版见 `prompts/daily_task_v1.md`（请整段复制到 Grok Tasks）。要点：
 
-```text
-覆盖范围（严格按优先级）：
-1. 【最高优先】我关注的账号（Following）过去 24h 动态 —— 先扫关注列表再写摘要
-2. 科技/AI 大佬及官方（如 @elonmusk、@OpenAI…）—— 不在关注列表也可收，但排在后面
-3. 生产力/工具（Notion、Obsidian、Google、Tabbit 等）
-4. 高热科技话题
-5. 中国相关
-
-排序：我关注的 > 通用大佬/官方 > 泛热搜
-每条可标「是否来自关注：是/否」；5–8 条中尽量多数来自关注。
-```
+- **P0 最高优先**：我关注的 Following，先扫再写  
+- P1–P4：大佬官方 → 工具 → 行业热搜 → 中国相关  
+- 含：搜索步骤、应收/应弃、文风、边界情况  
+- 输出：`HOOK / META / ITEM(含是否来自关注) / OMIT / CLOSE`，默认 6–10 条
 
 ---
 
