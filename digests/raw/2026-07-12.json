@@ -1,0 +1,27 @@
+{
+  "id": "19f5520987145bc9",
+  "thread_id": "19f5520987145bc9",
+  "from": "Grok <noreply@x.ai>",
+  "subject": "Grok 4.5 & agent tools update",
+  "date": "Sun, 12 Jul 2026 07:00:27 +0000 (UTC)",
+  "date_iso": "2026-07-12T07:00:27+00:00",
+  "snippet": "gork- daily is ready Grok 4.5 &amp; agent tools update 【HOOK】 今日主旋律为前沿模型小幅迭代与 agent 工具集成（Grok 4.5 进入 Perplexity Computer、GPT-5.6 相关 agent 更新、开源 agent 栈讨论）。关注列表信号中等（Elon/xAI 活跃但多为 SpaceX），以 P1-P3 补足实用工程",
+  "query": "from:x.ai newer_than:7d",
+  "body": "Grok 4.5 & agent tools update\n\n【HOOK】\n\n今日主旋律为前沿模型小幅迭代与 agent 工具集成（Grok 4.5 进入 Perplexity Computer、GPT-5.6 相关 agent 更新、开源 agent 栈讨论）。关注列表信号中等（Elon/xAI 活跃但多为 SpaceX），以 P1-P3 补足实用工程内容。无特别“漏看会亏”的大爆炸 P0 事件。\n\n【META】\n\n时间窗：过去约 24 小时（2026-07-11 至 07-12）\n\n条目数：8\n\n来自关注：3 条 / 非关注：5 条\n\n信号强度：中\n\n【ITEM1】\n\n标题：Grok 4.5 集成至 Perplexity Computer\n\n类别：工具更新\n\n是否来自关注：否\n\n热度：中等\n\n事实摘要：Grok 4.5 已上线 Perplexity Computer，适用于 Pro/Max/Enterprise 用户。社区反馈其在 coding 与 agentic 任务中 token 效率提升显著。\n\n原文摘录：“Grok 4.5 lands in Perplexity Computer for Pro, Max, and Enterprise users”\n\n实用 ...",
+  "parsed": {
+    "structured": true,
+    "hook": "今日主旋律为前沿模型小幅迭代与 agent 工具集成（Grok 4.5 进入 Perplexity Computer、GPT-5.6 相关 agent 更新、开源 agent 栈讨论）。关注列表信号中等（Elon/xAI 活跃但多为 SpaceX），以 P1-P3 补足实用工程内容。无特别“漏看会亏”的大爆炸 P0 事件。\n\n【META】\n\n时间窗：过去约 24 小时（2026-07-11 至 07-12）\n\n条目数：8\n\n来自关注：3 条 / 非关注：5 条\n\n信号强度：中",
+    "items": [
+      {
+        "index": "1",
+        "raw": "标题：Grok 4.5 集成至 Perplexity Computer\n\n类别：工具更新\n\n是否来自关注：否\n\n热度：中等\n\n事实摘要：Grok 4.5 已上线 Perplexity Computer，适用于 Pro/Max/Enterprise 用户。社区反馈其在 coding 与 agentic 任务中 token 效率提升显著。\n\n原文摘录：“Grok 4.5 lands in Perplexity Computer for Pro, Max, and Enterprise users”\n\n实用 ...",
+        "title": "Grok 4.5 集成至 Perplexity Computer\n\n类别：工具更新\n\n是否来自关注：否\n\n热度：中等\n\n事实摘要：Grok 4.5 已上线 Perplexity Computer，适用于 Pro/Max/Enterprise 用户。社区反馈其在 coding 与 agentic 任务中 token 效率提升显著。",
+        "quote": "“Grok 4.5 lands in Perplexity Computer for Pro, Max, and Enterprise users”\n\n实用 ...",
+        "takeaway": "",
+        "source": ""
+      }
+    ],
+    "raw": "Grok 4.5 & agent tools update\n\n【HOOK】\n\n今日主旋律为前沿模型小幅迭代与 agent 工具集成（Grok 4.5 进入 Perplexity Computer、GPT-5.6 相关 agent 更新、开源 agent 栈讨论）。关注列表信号中等（Elon/xAI 活跃但多为 SpaceX），以 P1-P3 补足实用工程内容。无特别“漏看会亏”的大爆炸 P0 事件。\n\n【META】\n\n时间窗：过去约 24 小时（2026-07-11 至 07-12）\n\n条目数：8\n\n来自关注：3 条 / 非关注：5 条\n\n信号强度：中\n\n【ITEM1】\n\n标题：Grok 4.5 集成至 Perplexity Computer\n\n类别：工具更新\n\n是否来自关注：否\n\n热度：中等\n\n事实摘要：Grok 4.5 已上线 Perplexity Computer，适用于 Pro/Max/Enterprise 用户。社区反馈其在 coding 与 agentic 任务中 token 效率提升显著。\n\n原文摘录：“Grok 4.5 lands in Perplexity Computer for Pro, Max, and Enterprise users”\n\n实用 ..."
+  },
+  "saved_at": "2026-07-12T07:06:51.977769+00:00"
+}
