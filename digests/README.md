@@ -1,6 +1,6 @@
-# Digests index
+# Digests
 
-Auto-generated. Newest first.
+Newest first.
 
 - [2026-07-12](./2026-07-12.md)
 - [2026-07-11](./2026-07-11.md)
