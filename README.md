@@ -163,6 +163,7 @@ docs/                     # 🌐 Pages 站点（HTML/CSS/JS）
 
 ---
 
-## 📜 许可与说明
+## 📝 备注
 
-个人自动化精读工具。X 内容版权归原作者；请合理使用 Cookie，勿把 Secrets 提交进仓库。
+这是我自己搭的日更精读流水线，方便关机也能自动更新。  
+文中引用的 X 推文仍归原作者；Cookie 和 API Key 只放在 GitHub Secrets 里，不要写进代码或 commit。
