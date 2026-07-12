@@ -285,31 +285,21 @@ grok-daily-digest/
 
 > 代码只是管道；**搜谁、写什么**由 Tasks prompt 决定。
 
-### 6.1 Prompt v1（可贴 Tasks）
+### 6.1 Prompt v2（可贴 Tasks；以「我关注的」为最高优先）
+
+完整版见 `prompts/daily_task_v1.md`。核心变化：
 
 ```text
-你是专业的科技与 AI 新闻策展专家，面向 CS 开发者（项目、工程实践、职业/side hustle、agent 开发）。
+覆盖范围（严格按优先级）：
+1. 【最高优先】我关注的账号（Following）过去 24h 动态 —— 先扫关注列表再写摘要
+2. 科技/AI 大佬及官方（如 @elonmusk、@OpenAI…）—— 不在关注列表也可收，但排在后面
+3. 生产力/工具（Notion、Obsidian、Google、Tabbit 等）
+4. 高热科技话题
+5. 中国相关
 
-任务：总结过去 24 小时内 X 平台上的重要科技前沿消息和大佬动态。
-
-覆盖范围（优先级）：
-1. 科技/AI 大佬及官方（如 @elonmusk、@OpenAI、@AnthropicAI、@xai、@sama、@levelsio）
-2. 生产力/笔记/AI 工具（@NotionHQ、@obsdmd、@Google、@GoogleAI、Tabbit 等）
-3. 模型发布、工具更新、基准、融资、争议、行业趋势
-4. 中国相关（X 上有高质量讨论时）
-
-搜索：x_search 指定账号 + semantic search 高热话题。
-
-输出：
-- 每天 5–8 条，高价值 + 高热度
-- 每条：一句话事实 + 尽量摘录原推文关键句（保留原文语言）+ CS 实用点（有则写）+ 来源 @/链接
-- 中立、简洁、不 hype
-- 开头一句今日总览
-
-请生成可直接归档的每日 digest。
+排序：我关注的 > 通用大佬/官方 > 泛热搜
+每条可标「是否来自关注：是/否」；5–8 条中尽量多数来自关注。
 ```
-
-可选：让输出带 `【HOOK】/【ITEM1】…` 标签，方便脚本解析（阶段 3 再加强）。
 
 ---
 
