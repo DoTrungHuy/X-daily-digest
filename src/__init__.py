@@ -1,1 +1,1 @@
-# Grok Daily Digest package
+# X Daily Digest package

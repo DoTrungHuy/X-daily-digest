@@ -242,7 +242,7 @@ def shell(title: str, body: str, *, active: str = "home") -> str:
       </a>
       <nav class="topnav">
         <a class="{home_cls}" href="index.html">首页</a>
-        <a href="https://github.com/DoTrungHuy/grok-daily-digest" target="_blank" rel="noopener">源码</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
       </nav>
     </header>
 
@@ -253,9 +253,9 @@ def shell(title: str, body: str, *, active: str = "home") -> str:
     <footer class="foot">
       <p>Cookie → DeepSeek → Pages · built {html.escape(gen)}</p>
       <p class="foot-links">
-        <a href="https://dotrunghuy.github.io/grok-daily-digest/">站点</a>
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
         <span>·</span>
-        <a href="https://github.com/DoTrungHuy/grok-daily-digest">GitHub</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
       </p>
     </footer>
   </div>
@@ -419,7 +419,7 @@ def render_index(digests: list[ParsedDigest]) -> str:
   <p class="lede">{html.escape(blurb_from(latest)[:280])}{"…" if len(blurb_from(latest)) > 280 else ""}</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{html.escape(latest.date)}.html">阅读最新</a>
-    <a class="btn btn-quiet" href="https://github.com/DoTrungHuy/grok-daily-digest" target="_blank" rel="noopener">源码</a>
+    <a class="btn btn-quiet" href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
   </div>
   <ul class="facts">
     <li><strong>{len(digests)}</strong> 期归档</li>

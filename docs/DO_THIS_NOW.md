@@ -6,7 +6,7 @@
 |----|------|
 | 代码主路径 | ✅ |
 | GitHub Pages（`main` + `/docs`） | ✅ |
-| 站点 | https://dotrunghuy.github.io/grok-daily-digest/ |
+| 站点 | https://dotrunghuy.github.io/X-daily-digest/ |
 | 每天北京 **08:00** 自动跑 | ✅ `daily.yml` |
 | 默认账号列表 | ✅ `config/accounts.yaml` |
 
@@ -28,7 +28,7 @@
 ### ③ 写入 GitHub Secrets
 
 打开：  
-https://github.com/DoTrungHuy/grok-daily-digest/settings/secrets/actions  
+https://github.com/DoTrungHuy/X-daily-digest/settings/secrets/actions  
 
 **New repository secret**，创建：
 
@@ -39,7 +39,7 @@ https://github.com/DoTrungHuy/grok-daily-digest/settings/secrets/actions
 | `TWITTER_CT0` | Cookie `ct0` |
 
 然后：  
-https://github.com/DoTrungHuy/grok-daily-digest/actions  
+https://github.com/DoTrungHuy/X-daily-digest/actions  
 
 → **Daily X Digest** → **Run workflow** → Run  
 

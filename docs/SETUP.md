@@ -40,7 +40,7 @@ python scripts/run_daily.py
 
 Settings → Pages → Deploy from branch → `main` → **/docs**
 
-访问：`https://<user>.github.io/grok-daily-digest/`
+访问：`https://<user>.github.io/X-daily-digest/`
 
 ## 改「想看的内容」
 
