@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-07-16 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-07-16</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日AI与开发者圈聚焦两大主线：xAI 开源 Grok Build 并升级 Grok 4.5 在 Cursor 中的用量，同时 OpenAI 发布内部自动化红队工具 GPT-Red 以提升模型安全性；NVIDIA 则密集展示了日本金融与制造业的 AI 落地案例，以及 Metropolis 视觉 AI 代理框架。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>10 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">xAI 开源 Grok Build，Elon Musk 亲自宣布</h2>
+  <blockquote class="quote"><p>“Grok Build is now open source”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 CS/agent 开发者而言，这是直接可用的 CLI 工具，可集成到本地开发流程。有社区成员已分析其数据隐私：核心对话与工具调用会发往 xAI 推理 API，其余遥测默认关闭，可配置禁用。适合需要强大代码库级 AI 助手的工程团队。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077495635687723408" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 GPT-Red：自动化红队工具，专攻提示注入</h2>
+  <blockquote class="quote"><p>“An internal automated red teamer on a mission to find our models’ prompt injection vulnerabilities at scale”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者是重要安全参考——GPT-Red 通过自动化攻击训练使 GPT-5.6 Sol 的提示注入失败率降低 6 倍。这意味着未来 agent 系统可借鉴类似方法做安全测试，尤其是涉及多工具调用的场景。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077446718728425686" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok 4.5 专为真实工程构建，Cursor 用量翻倍</h2>
+  <blockquote class="quote"><p>“Grok 4.5 is built for real-world engineering. It excels in large codebases and handles long-running tasks that span multiple repositories, hundreds of skills, and a variety of tools.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Grok 4.5 在 Cursor 中的免费用量翻倍，适合处理跨仓库、多技能的长任务。对使用 Cursor 的开发者是直接利好，可减少付费压力。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077552106014154846" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">NVIDIA 与日本大型银行共建 AI 工厂，使用 Nemotron 与 Agent Toolkit</h2>
+  <blockquote class="quote"><p>“Japan&#x27;s biggest banks spent the last few years evaluating AI. Now they&#x27;re building the infrastructure for it. … using NVIDIA Nemotron open models and Agent Toolkit to turn regulated financial data into intelligence.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>展示了金融行业如何用开源模型 + agent 工具包处理合规数据。对 agent 开发者是重要参考：Nemotron 模型 + Agent Toolkit 的组合可复用于其他受监管行业（医疗、法律等）。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077540972422946823" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">NVIDIA Metropolis 推出 80+ 开放 agent 技能，用于视觉 AI</h2>
+  <blockquote class="quote"><p>“Building a production-ready vision AI agent no longer takes thousands of developer hours. NVIDIA Metropolis offers 80+ open agent skills for generating synthetic data, fine-tuning models, deploying applications and unlocking real-time insights”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对从事计算机视觉或工业 AI 的开发者，Metropolis 提供了从数据生成到部署的完整 agent 技能栈，可通过自然语言提示调用，降低开发门槛。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077540620394958889" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Ollama 官方 VS Code 扩展发布，支持本地运行 LLM</h2>
+  <blockquote class="quote"><p>“🔗 Official Ollama extension” + “learn how to run powerful language models locally in #vscode with the brand new #Ollama extension”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Ollama 官方扩展让开发者直接在 VS Code 中运行本地模型，无需离开编辑器。对注重数据隐私或离线开发的 agent 工程师是重要工具。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077034194396479963" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 展示 GPT-Live 多任务实时能力</h2>
+  <blockquote class="quote"><p>“the model can keep a conversation going while helping with multiple tasks at once, like checking flights, pulling up local weather, and shaping an itinerary in real time”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>GPT-Live 展示了 agent 在持续对话中并行处理多工具调用的能力，对设计多步骤 agent 工作流的开发者有启发。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077501603050033634" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Blume 1.0.47 发布：优化 agent 对话记忆与代码反馈</h2>
+  <blockquote class="quote"><p>“Blume reads your agent conversations locally, then promotes steering and pain signals into code to make the next run better and cheaper.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Blume 通过本地读取 agent 对话，将用户反馈转化为代码改进，减少重复指令。适合频繁使用 coding agent 的开发者，支持 Mac、Linux、Windows。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2069017692355375170" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Elon Musk 推荐 Grok 4.5 + Grok Build 组合</h2>
+  <blockquote class="quote"><p>“Good reason to try Grok 4.5 with Grok Build. It gets better every day!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Musk 亲自背书，暗示 Grok 4.5 与 Grok Build 的集成体验持续优化。对已使用或考虑 Grok 的开发者是积极信号。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077412964231991420" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-10" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">10</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Neovim 获得 Cursor 风格 AI 建议</h2>
+  <blockquote class="quote"><p>“You do not have to leave Neovim to get Cursor-style AI suggestions. One click brings them directly into your editor.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 Neovim 用户是直接利好，无需切换编辑器即可获得 AI 补全，提升开发效率。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2077521105221480805" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 GPT-Red 公告——它揭示了 agent 安全测试的新范式，对任何构建多工具 agent 的开发者都是必读。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">xAI 开源 Grok Build，Elon Musk 亲自宣布</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">OpenAI 发布 GPT-Red：自动化红队工具，专攻提示注入</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Grok 4.5 专为真实工程构建，Cursor 用量翻倍</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">NVIDIA 与日本大型银行共建 AI 工厂，使用 Nemotron 与 Agent Toolkit</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">NVIDIA Metropolis 推出 80+ 开放 agent 技能，用于视觉 AI</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Ollama 官方 VS Code 扩展发布，支持本地运行 LLM</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">OpenAI 展示 GPT-Live 多任务实时能力</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Blume 1.0.47 发布：优化 agent 对话记忆与代码反馈</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">Elon Musk 推荐 Grok 4.5 + Grok Build 组合</span></a><a href="#item-10" class="toc-a"><span class="toc-i">10</span><span class="toc-t">Neovim 获得 Cursor 风格 AI 建议</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-07-16 03:36 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
