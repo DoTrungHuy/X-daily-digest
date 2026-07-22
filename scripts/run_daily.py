@@ -27,9 +27,17 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from src.deepseek_client import summarize_tweets  # noqa: E402
+from src.dedupe import (  # noqa: E402
+    duplicate_status_ids_for_digest,
+    published_status_ids,
+    recent_digest_titles,
+    reference_time_for_date,
+    similar_titles_for_digest,
+)
 from src.digest_writer import write_digest_md  # noqa: E402
 from src.x_fetch import (  # noqa: E402
     collect_tweets,
+    filter_tweet_payload,
     load_accounts_config,
     save_raw_tweets,
     tweets_to_prompt_block,
@@ -62,6 +70,9 @@ def main() -> int:
 
     date_slug = args.date or datetime.now().astimezone().strftime("%Y-%m-%d")
     cfg = load_accounts_config()
+    digest_dir = ROOT / "digests"
+    reference_time = reference_time_for_date(date_slug)
+    history_ids = published_status_ids(digest_dir, exclude_date=date_slug)
 
     if args.skip_fetch:
         raw_path = ROOT / "x_raw" / f"{date_slug}.json"
@@ -70,10 +81,20 @@ def main() -> int:
             return 2
         payload = json.loads(raw_path.read_text(encoding="utf-8"))
         print(f"Loaded raw: {payload.get('count')} tweets from {raw_path}")
+        payload = filter_tweet_payload(
+            payload,
+            cfg,
+            published_ids=history_ids,
+            reference_time=reference_time,
+        )
     else:
         print("Collecting X via twitter-cli (no paid X API)...")
         try:
-            payload = collect_tweets(cfg)
+            payload = collect_tweets(
+                cfg,
+                published_ids=history_ids,
+                reference_time=reference_time,
+            )
         except Exception as e:
             print(f"X fetch failed: {e}", file=sys.stderr)
             return 1
@@ -81,6 +102,17 @@ def main() -> int:
         print(f"Saved {raw_path} count={payload.get('count')}")
         for err in (payload.get("errors") or [])[:15]:
             print(f"  warn: {err}")
+
+    stats = payload.get("filter_stats") or {}
+    print(
+        "Filter: "
+        f"input={stats.get('input_count', 0)} "
+        f"selected={stats.get('selected', payload.get('count', 0))} "
+        f"run_duplicates={stats.get('run_duplicates', 0)} "
+        f"history_duplicates={stats.get('history_duplicates', 0)} "
+        f"too_old={stats.get('too_old', 0)} "
+        f"unknown_time={stats.get('unknown_timestamp', 0)}"
+    )
 
     tweets = payload.get("tweets") or []
     if not tweets:
@@ -94,7 +126,15 @@ def main() -> int:
 
     print(f"DeepSeek summarizing {len(tweets)} tweets...")
     try:
-        body = summarize_tweets(tweets_to_prompt_block(tweets), date_label=date_slug)
+        body = summarize_tweets(
+            tweets_to_prompt_block(tweets),
+            date_label=date_slug,
+            recent_titles=recent_digest_titles(
+                digest_dir,
+                exclude_date=date_slug,
+                max_digests=7,
+            ),
+        )
     except Exception as e:
         print(f"DeepSeek failed: {e}", file=sys.stderr)
         return 4
@@ -106,6 +146,23 @@ def main() -> int:
         errors=list(payload.get("errors") or []),
     )
     print(f"Digest: {path}")
+
+    duplicate_ids = duplicate_status_ids_for_digest(path, digest_dir)
+    if duplicate_ids:
+        print(
+            "Duplicate guard failed: "
+            f"{len(duplicate_ids)} source status ID(s) already appeared in history.",
+            file=sys.stderr,
+        )
+        return 5
+
+    similar_titles = similar_titles_for_digest(path, digest_dir)
+    if similar_titles:
+        print(
+            "Topic warning: "
+            f"{len(similar_titles)} title pair(s) resemble recent topics; "
+            "exact source IDs are new."
+        )
 
     site = _build_site()
     print(f"Site: {site}")

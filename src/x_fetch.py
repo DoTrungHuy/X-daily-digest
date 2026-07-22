@@ -22,6 +22,7 @@ from typing import Any, Optional
 
 import yaml
 
+from .dedupe import filter_tweets_for_digest
 from .paths import project_root, x_raw_dir
 
 
@@ -226,7 +227,52 @@ def fetch_following_feed(cli: str, max_n: int = 30) -> list[TweetItem]:
     return []
 
 
-def collect_tweets(cfg: dict[str, Any] | None = None) -> dict[str, Any]:
+def _filter_payload(
+    payload: dict[str, Any],
+    cfg: dict[str, Any],
+    *,
+    published_ids: set[str],
+    reference_time: datetime,
+) -> dict[str, Any]:
+    selected, stats = filter_tweets_for_digest(
+        payload.get("tweets") or [],
+        published_ids=published_ids,
+        reference_time=reference_time,
+        preferred_hours=float(cfg.get("freshness_preferred_hours") or 36),
+        max_hours=float(cfg.get("freshness_max_hours") or 72),
+        min_items=int(cfg.get("min_fresh_items") or 6),
+        max_items=int(cfg.get("max_items_for_llm") or 40),
+    )
+    filtered = dict(payload)
+    filtered["candidate_count"] = len(payload.get("tweets") or [])
+    filtered["tweets"] = selected
+    filtered["count"] = len(selected)
+    filtered["filter_stats"] = stats.to_dict()
+    return filtered
+
+
+def filter_tweet_payload(
+    payload: dict[str, Any],
+    cfg: dict[str, Any],
+    *,
+    published_ids: set[str],
+    reference_time: datetime,
+) -> dict[str, Any]:
+    """Apply the same privacy-safe selection to fetched or replayed payloads."""
+    return _filter_payload(
+        payload,
+        cfg,
+        published_ids=published_ids,
+        reference_time=reference_time,
+    )
+
+
+def collect_tweets(
+    cfg: dict[str, Any] | None = None,
+    *,
+    published_ids: set[str] | None = None,
+    reference_time: datetime | None = None,
+) -> dict[str, Any]:
     """
     Collect tweets via twitter-cli. Raises if CLI missing or auth broken.
     """
@@ -272,25 +318,19 @@ def collect_tweets(cfg: dict[str, Any] | None = None) -> dict[str, Any]:
         except Exception as e:
             errors.append(f"search {q!r}: {e}")
 
-    # dedupe by id/url
-    seen = set()
-    unique: list[TweetItem] = []
-    for t in items:
-        key = t.id or t.url or t.text[:80]
-        if key in seen:
-            continue
-        seen.add(key)
-        unique.append(t)
-
-    unique = unique[:max_for_llm]
     payload = {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "cli": cli,
-        "count": len(unique),
+        "count": len(items),
         "errors": errors,
-        "tweets": [asdict(t) for t in unique],
+        "tweets": [asdict(t) for t in items],
     }
-    return payload
+    return _filter_payload(
+        payload,
+        cfg,
+        published_ids=published_ids or set(),
+        reference_time=reference_time or datetime.now(timezone.utc),
+    )
 
 
 def save_raw_tweets(payload: dict[str, Any], date_slug: str | None = None) -> Path:

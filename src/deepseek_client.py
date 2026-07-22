@@ -65,10 +65,24 @@ def chat_complete(
         raise RuntimeError(f"Unexpected DeepSeek response: {payload!r}") from e
 
 
-def summarize_tweets(tweets_block: str, *, date_label: str = "") -> str:
+def summarize_tweets(
+    tweets_block: str,
+    *,
+    date_label: str = "",
+    recent_titles: list[str] | None = None,
+) -> str:
+    recent_context = ""
+    if recent_titles:
+        title_lines = "\n".join(f"- {title}" for title in recent_titles)
+        recent_context = (
+            "\n\n最近已经发布过的主题如下。没有明确新增信息时不要重复这些主题；"
+            "如果是新版本、修复或后续进展，请在标题和实用点中明确说明新增内容：\n"
+            f"{title_lines}"
+        )
     user = (
         f"日期：{date_label or '今天'}\n\n"
-        f"以下是从 X 抓取的原始材料，请生成完整每日 digest：\n\n"
+        f"以下是从 X 抓取的原始材料，请生成完整每日 digest："
+        f"{recent_context}\n\n"
         f"{tweets_block}"
     )
     return chat_complete(user)
