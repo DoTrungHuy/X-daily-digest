@@ -10,7 +10,8 @@ import urllib.request
 from .paths import project_root
 
 DEFAULT_BASE = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-DEFAULT_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+# deepseek-chat / deepseek-reasoner were retired; API now accepts v4 model IDs only.
+DEFAULT_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-flash")
 
 
 def _system_prompt() -> str:
