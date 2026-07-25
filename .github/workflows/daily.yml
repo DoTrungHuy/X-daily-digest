@@ -79,6 +79,8 @@ jobs:
         env:
           TZ: Asia/Shanghai
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          # deepseek-chat retired; API now requires deepseek-v4-flash or deepseek-v4-pro
+          DEEPSEEK_MODEL: deepseek-v4-flash
           TWITTER_AUTH_TOKEN: ${{ secrets.TWITTER_AUTH_TOKEN }}
           TWITTER_CT0: ${{ secrets.TWITTER_CT0 }}
           HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
