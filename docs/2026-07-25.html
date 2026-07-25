@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-07-25 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-07-25</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">Anthropic 发布 Claude Opus 5，在编码和知识工作多项评测中达到新 SOTA；OpenAI 正式面向全美用户推出 Health 功能，并公布 Hugging Face 事件后续计划；Grok 4.5 全平台上线。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>9 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Anthropic 发布 Claude Opus 5，号称接近 Fable 5 前沿智能但价格减半</h2>
+  <blockquote class="quote"><p>&quot;Introducing Claude Opus 5. It&#x27;s a thoughtful and proactive model that comes close to the frontier intelligence of Fable 5 at half the price.&quot; / &quot;On several coding and knowledge work evaluations, Opus 5 is the new state-of-the-art.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>开发者可评估该模型在 coding 和知识工作上的性价比，尤其适合成本敏感但需要接近前沿能力的 agent 场景。Pieter Levels 已验证：Opus 5 一次提示生成交互式 3D 生物标记扫描页面，而 Fable 因安全机制拒绝执行，说明 Opus 5 在创造性/硬编码任务上更灵活。</p></div>
+  <div class="item-src">
+    <span class="handle">@Anthropic</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080699495453528290" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 公布 Hugging Face 事件初步声明：将发布技术报告</h2>
+  <blockquote class="quote"><p>&quot;We recognize there are a lot of questions and speculative details circulating related to the Hugging Face incident. This is an unprecedented incident, and we think it marks an important moment for AI safety. We are still conducting a thorough review... Once the review is complete, we plan to publish a technical report of our learnings in the coming weeks.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是继 Sam Altman 确认安全事件后 OpenAI 的首次正式声明。对安全研究者/agent 开发者而言，需关注后续报告中的具体攻击面和技术细节，可能影响 agent 沙箱设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080815626113954288" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI Health 功能正式面向全美用户推出</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re rolling out Health in ChatGPT to all U.S. users. ♥️&quot; / &quot;Connected medical records and Apple Health information are not used to train foundation models or target ads.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>允许 ChatGPT 接入 Apple Health 和医疗记录，辅助健康问答。表明模型在准确性和安全性上已通过数百名医生验证。agent 开发者可参考其医疗数据集成设计与合规做法。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080343306731761927" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Sam Altman 详细展示 ChatGPT Work 移动端能力：云电脑、终端、插件等</h2>
+  <blockquote class="quote"><p>&quot;A billion users can now create and publish websites from their phones with ChatGPT Work... All at your fingertips, using a simple chat interface, no laptop required. All you have to do is switch to the Work tab on your ChatGPT app.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>列出 Work 模式下可用能力清单（cloud computer 15GB RAM、SVG、命令行、远程浏览器、Slack/Gmail/GitHub 插件、定时任务等），对 agent/自动化工程师极具参考价值，可视为移动端 agent 工作站的完整示例。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080354753473835461" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok 4.5 全平台上线：网页、X、iOS、Android</h2>
+  <blockquote class="quote"><p>&quot;Grok 4.5, our most capable model yet, is now available across web, X, and the iOS and Android apps.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>此前 Grok 4.5 仅在 Grok Build 中可用，现全面铺开。对 agent 开发者意味着多平台一致的模型接入，可评估在编码任务上的 token 效率（此前宣传低 token 消耗高编码性能）。</p></div>
+  <div class="item-src">
+    <span class="handle">@grok</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080759802742087847" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">ChatGPT Voice 在 Codex 中支持 iOS 远程访问；Android 即将上线</h2>
+  <blockquote class="quote"><p>&quot;You can also use ChatGPT Voice in Codex from the iOS app with paired remote access. Android support is coming soon.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>语音驱动 Codex 的移动端远程访问，降低 agent 部署门槛。Android 用户需等待，可提前规划跨平台项目。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080392280549253392" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">NVIDIA 宣布与韩国政府及产业合作推进 K-AI 愿景</h2>
+  <blockquote class="quote"><p>&quot;This is the Golden Age of Korea. NVIDIA is proud to partner with leaders across government, industry, and global technology to advance the K-AI vision — across chips, frontier AI, physical AI and robotics, and AI factories.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>标志 NVIDIA 在物理 AI 和机器人仿真（结合 SIGGRAPH 主题）上的区域化战略落地。对 agent 开发者，物理 AI 和机器人仿真方向可能带来新的训练和部署工具链。</p></div>
+  <div class="item-src">
+    <span class="handle">@NVIDIA</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080833379197477226" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Cisco 签署公开信支持开放权重模型</h2>
+  <blockquote class="quote"><p>&quot;@Cisco is proud be a signatory of this letter. We believe that commitment to open weights models ranging from frontier class LLMs to SLMs is important for maintaining American leadership in AI.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>开放权重模型得到企业级支持，有利于 agent 开发者在本地/私有化部署中利用前沿或小型开放模型。</p></div>
+  <div class="item-src">
+    <span class="handle">@Cisco</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080837103928414576" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Sam Altman 向社区征求意见“pro-ultra-superhard”</h2>
+  <blockquote class="quote"><p>&quot;let us know what you think of pro-ultra-superhard&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可能暗示 OpenAI 正在酝酿新的高端模型或服务层级。agent 开发者可关注是否有更高级 API 计划，及时评估对工作流的影响。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2080683119959757243" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Anthropic 官方发布的 Claude Opus 5 介绍推文（来源@Anthropic），了解新模型的能力边界与差异化定位。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Anthropic 发布 Claude Opus 5，号称接近 Fable 5 前沿智能但价格减半</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">OpenAI 公布 Hugging Face 事件初步声明：将发布技术报告</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI Health 功能正式面向全美用户推出</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Sam Altman 详细展示 ChatGPT Work 移动端能力：云电脑、终端、插件等</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok 4.5 全平台上线：网页、X、iOS、Android</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">ChatGPT Voice 在 Codex 中支持 iOS 远程访问；Android 即将上线</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">NVIDIA 宣布与韩国政府及产业合作推进 K-AI 愿景</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Cisco 签署公开信支持开放权重模型</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">Sam Altman 向社区征求意见“pro-ultra-superhard”</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-07-25 03:49 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
