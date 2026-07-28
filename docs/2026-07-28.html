@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-07-28 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-07-28</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日多条产品更新与模型变体同时上线：GPT-5.6 家族新成员 Terra/Luna 加入 Agent Arena，Kimi K3 分别集成 Cursor 与 Notion，另有开源权重立场声明与安全联盟动态值得关注。</p>
+      <div class="meta-row"><span>2026-07-28（过去约 24 小时）</span><span>9 条</span><span>37 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="关注动态（职业建议）">关注动态（职业建议）</button><button type="button" class="fbtn" data-f="其他（真实案例）">其他（真实案例）</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GPT-5.6 Terra 与 Luna 加入 Agent Arena，测试时缩放在小模型上效果显著</h2>
+  <blockquote class="quote"><p>GPT-5.6 Terra and Luna (xHigh variants) have joined Sol in Agent Arena! ... At Low, Terra dips flat and Luna falls -5.1% below baseline. ... More reasoning effort on a cheaper model can out-perform a pricier one running lean. Also notable: how steep Luna&#x27;s curve is: test-time scaling is highly effective on smaller models.</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者来说，这是选择模型的重要参考：在 Agent Arena（基于真实长时 agent 任务）中，更便宜的模型（Luna）在高推理预算下能超越更贵的模型（Terra）运行在低推理预算，提示在 agent 应用中应优先考虑 test-time compute scaling 策略，而非盲目追求大模型。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081848778324320354" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Kimi K3 同时登陆 Cursor 与 Notion，支持美国推理</h2>
+  <blockquote class="quote"><p>Kimi K3 is now in Notion. Hosted by Fireworks, a US-based provider. / Kimi K3 is now in Cursor! It scores close to the frontier on CursorBench. It&#x27;s available on US-based inference thanks to our partners Fireworks, Together, and Baseten. Zero Data Retention is also supported.</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>K3 作为开放权重模型，现已无缝可用在主流开发工具（Cursor）和协作平台（Notion）中，且支持零数据留存，适合对数据主权有要求的 CS 团队和独立开发者尝试替换或补充闭源模型。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081882947062546724" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2081848014444876166" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">某机构发布开源权重模型的正式立场声明</h2>
+  <blockquote class="quote"><p>There’s been a lot of speculation about where we stand on open-weights models. We’ve outlined our views in full here: <a href="https://t.co/NtXQuWm2g5" rel="noopener" target="_blank">https://t.co/NtXQuWm2g5</a></p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>开源 vs 专有模型之争迎来重磅声明（推测来自 Anthropic 或 Meta 等大型 AI 公司）。具体立场未在推文中展开，但直接链接全文，值得 agent / 基础设施开发者关注，将影响模型选择、部署策略和合规方向。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081864750296658008" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">GPT-Live Voice 扩展至全球 Edu、Business、Enterprise 计划</h2>
+  <blockquote class="quote"><p>GPT-Live in ChatGPT Voice is now available to Edu, Business, and Enterprise plans globally.</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>语音交互能力正式覆盖所有付费用户，对开发者意味着可以开始依赖 GPT-Live Voice 构建语音控制的 agent 或工作流，无需等待灰度。企业部署的即时可行性大幅提升。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081794871795589485" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Elon Musk 加入 NVIDIA 发起的 Open Secure AI Alliance，任创始成员</h2>
+  <blockquote class="quote"><p>Proud to join @nvidia as a founding member of the Open Secure AI Alliance. Defenders need open tools, collaboration, and transparency to secure AI agents and systems. And customers want the ability to choose the best open or closed models.</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>该联盟旨在建立安全的 AI agent 和系统开放标准。CS 安全与基础架构 team 应关注后续工具输出，联盟成员包括 NVIDIA、xAI（Musk），开放协作意味更强的社区安全方案。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081718431393402884" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布小企业 AI 跨职能研究报告</h2>
+  <blockquote class="quote"><p>We studied how AI is becoming powerful generalist tool for small teams, helping them work across functions. <a href="https://t.co/5q0d6l8JPN" rel="noopener" target="_blank">https://t.co/5q0d6l8JPN</a></p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>适合 agent 开发者（尤其面向 SMB 场景）参考，了解 AI 如何作为通用工具协助市场、销售、研发等职能，可能包含可复用的 prompt 模式或工作流案例。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081833350323720219" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">ChatGPT Work 企业客户激励计划：新用户获 $200 积分</h2>
+  <blockquote class="quote"><p>For ChatGPT Enterprise customers, enroll by August 21, and each teammate who tries Work for the first time within two weeks gets up to $200 in credits, valid for 14 days.</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你所在的团队已使用 ChatGPT Enterprise，可以赶在截止日期前使用 Work 功能免费试用，适合评估 agent 工作台的企业开发者。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081877298538746165" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态（职业建议）">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态（职业建议）</span>
+  </div>
+  <h2 class="item-title">Pieter Levels 分享适应性策略：不确定时代下独立开发者的心态</h2>
+  <blockquote class="quote"><p>Get comfortable with change... Reduce the gap between your taste and your actual skills... Increase your luck surface area... Take more shots on goal... Accept that you can’t predict or control the future.</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 CS / agent 独立开发者是实用的心态指南，尤其强调“编码正变得商品化，思考新机会”，呼应 AI 降低软件构建门槛的趋势。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081772374450389446" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="其他（真实案例）">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-zinc">其他（真实案例）</span>
+  </div>
+  <h2 class="item-title">真实案例：非技术人员用 Claude Code 本地开发并一键部署到 Netlify + Supabase</h2>
+  <blockquote class="quote"><p>Gf didn&#x27;t ask me anything and made an entire app in Claude Cowork locally... Claude Code deployed it on Netlify with Supabase without her knowing anything about that and I didn&#x27;t help her. All she did was give Claude Code her Netlify API key!</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>再次验证 AI agent（Claude Code）从零构建到部署的完整链路，强烈推荐给想用 AI 加速原型开发的工程师或非技术合作者。案例具体：本地 Claude Cowork + Claude Code + Netlify + Supabase。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2081454749237256564" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 [ITEM1]——GPT-5.6 新变体在 Agent Arena 上的数据直接指导 agent 模型的理性选择。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">GPT-5.6 Terra 与 Luna 加入 Agent Arena，测试时缩放在小模型上效果显著</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Kimi K3 同时登陆 Cursor 与 Notion，支持美国推理</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">某机构发布开源权重模型的正式立场声明</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">GPT-Live Voice 扩展至全球 Edu、Business、Enterprise 计划</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Elon Musk 加入 NVIDIA 发起的 Open Secure AI Alliance，任创始成员</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 发布小企业 AI 跨职能研究报告</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">ChatGPT Work 企业客户激励计划：新用户获 $200 积分</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Pieter Levels 分享适应性策略：不确定时代下独立开发者的心态</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">真实案例：非技术人员用 Claude Code 本地开发并一键部署到 Netlify + Supabase</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-07-28 03:34 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
