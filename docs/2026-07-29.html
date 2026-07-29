@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-07-29 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-07-29</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日AI安全与工程工具双双爆发：Anthropic 用 Claude 发现密码学算法弱点，OpenAI 则开源了安全 CLI 与发布了 AI 加速治理立场，同时 Grok 和 GitHub Copilot 带来可落地的开发者功能。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>9 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="关注动态 / 后续">关注动态 / 后续</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="其他 / 社区">其他 / 社区</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 利用 Claude 发现密码学算法弱点，并发布基准</h2>
+  <blockquote class="quote"><p>- “New Anthropic research: Discovering cryptographic weaknesses with Claude. Claude Mythos Preview has helped our researchers find weaknesses in cryptographic algorithms—the mathematical methods that are used to keep data private.” - “Full technical details of both attacks are provided in our new papers: On HAWK … On AES … And the associated model chain-of-thought for AES.” - “We also worked with academics at ETH Zurich, Tel Aviv University, and the University of Haifa to build CryptanalysisBench, a benchmark for studying LLMs’ cryptanalysis abilities.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>展示了前沿大模型在密码分析上的实操能力，对安全研究员、密码学开发者以及关心 AI 在非典型领域应用的人有直接启示。CryptanalysisBench 可作为后续评估新模型安全能力的标准。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/AnthropicAI/status/2082153297670992134" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">OpenAI 开源 Codex Security CLI：扫描、验证、修复代码漏洞</h2>
+  <blockquote class="quote"><p>- “We quietly released the open-source Codex Security CLI, but Hacker News found it before we had a chance to share it here… You can now use it to scan repositories, track findings across runs, verify fixes, and add security checks to CI/CD.” - “Install: npm install @OpenAI/codex-security or npx @OpenAI/codex-security@latest --help”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>为 CI/CD 流水线添加安全扫描零门槛，支持跨运行追踪发现，可替代部分商业 SAST 工具。对任何在代码库中集成安全检查的工程团队都是直接可用工具。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082263717916586117" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok 推出 App Builder：自然语言构建全功能应用并即时发布</h2>
+  <blockquote class="quote"><p>- “Today we&#x27;re launching app builder for Grok. It lets you build fully functional apps and publish them instantly, on a unique domain, all from within Grok. Available now on <a href="https://t.co/01Y4BOVWIn.”" rel="noopener" target="_blank">https://t.co/01Y4BOVWIn.”</a></p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>开发者可快速原型并发布应用，无需外部部署，适合快速验证想法或为代理工作流创建专用界面。与 Grok Build 系列功能互补，降低从对话到产品的摩擦。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082137145507254440" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 就“AI 加速可能超出社会准备速度”发表官方立场，支持政府主导的节奏控制</h2>
+  <blockquote class="quote"><p>- “At the core of our mission is working through how to ensure increasingly powerful AI benefits everyone. We believe that, at some point in the future, AI acceleration for frontier model development may be so high that the world will need to pace the rate of AI advancement.” - “We hope to contribute to work led by the U.S. government, alongside other labs and the open-source community, to develop the tools and mechanisms that could make that possible.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>表明 OpenAI 公开支持政府对前沿模型研发节奏的干预，信号对 AI 政策、开源社区治理、以及企业长期合规规划有参考价值。另有多家机构（如 [15]）签署了类似请愿。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082208694142730340" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 8 个案例研究：编码 Agent 如何加速科研计算</h2>
+  <blockquote class="quote"><p>- “Coding agents are helping scientists spend more time advancing research, taking on everything from routine maintenance and targeted optimization to complete redesigns and new systems.” - “Across eight case studies spanning industry and academia, we explore what this shift means for scientific computing—and why human verification, stewardship, and long-term maintenance matter.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>提供了 agent 驱动科研的实操模板，包括维护、优化、重构等场景，指出关键环节仍需要人工验证与长期维护。对开发科研工具或平台的同学是很好的参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082152074071228702" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GitHub Copilot 扩展企业治理：一处配置，覆盖桌面端、Cloud Agent、CLI 和 VS Code</h2>
+  <blockquote class="quote"><p>- “Enterprise managed settings now apply to the GitHub Copilot app and Copilot cloud agent, helping organizations: Define guardrails once across supported Copilot experiences; Control approved plugins and marketplaces centrally; Manage approval-prompt policies for interactive clients; Override local settings with enterprise-managed values.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>企业可统一管理 Copilot 在不同界面（桌面端、云端 agent、CLI、VS Code）的安全策略，减少影子 AI 风险。对于正在推广 AI 开发工具的企业组织者非常实用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082176012847137253" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态 / 后续">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态 / 后续</span>
+  </div>
+  <h2 class="item-title">Nous Portal 联合 OpenRouter 限时五折：GPT-5.6 Terra 和 Luna</h2>
+  <blockquote class="quote"><p>- “We&#x27;ve partnered with @OpenRouter to bring you GPT-5.6 Terra and Luna at 50% off for a limited time in Nous Portal”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>在之前 Terra 和 Luna 加入 Agent Arena 的消息基础上，如今价格减半，适合预算有限的开发者或团队进行大规模基准测试、agent 编排实验。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082134697065210272" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">密歇根农场用 Gemini 3.6 Flash + Antigravity 构建本地多 Agent 系统自动化管理</h2>
+  <blockquote class="quote"><p>- “Dairy farming is a complex biological system driven by unpredictable market forces. See how Michigan farmer Paul Windemuller built &#x27;The Farm Brain&#x27; with Gemini 3.6 Flash inside Google @Antigravity — a local, multi-agent AI system that automates daily performance tracking to help manage his farm.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>展示多 agent 系统在真实物理世界（农业）的落地，使用本地推理和离线能力。对于思考 agent 在边缘/工业场景中部署的开发者有启发。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082217242066817281" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="其他 / 社区">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-zinc">其他 / 社区</span>
+  </div>
+  <h2 class="item-title">OpenAI 启动 Student Collective：面向本科生的 Campus Lead 项目</h2>
+  <blockquote class="quote"><p>- “We&#x27;re opening applications for the OpenAI Student Collective—a program for undergraduate Campus Leads bringing AI innovation to their campuses. Campus Leads will work directly with OpenAI and receive hands-on training, funding, credits, swag, and access to a global community of peers.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>学生可申请成为校园大使，获得资源与培训，适合想在高校推动 AI 工具和生态的同学。对社区贡献者也是一种参与方式。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082146058017321257" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点第一条——Anthropic 用 Claude 发现密码学弱点，既是 AI 安全前沿进展，也直接定义了密码分析的评估标准。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Anthropic 利用 Claude 发现密码学算法弱点，并发布基准</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">OpenAI 开源 Codex Security CLI：扫描、验证、修复代码漏洞</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Grok 推出 App Builder：自然语言构建全功能应用并即时发布</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OpenAI 就“AI 加速可能超出社会准备速度”发表官方立场，支持政府主导的节奏控制</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 发布 8 个案例研究：编码 Agent 如何加速科研计算</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">GitHub Copilot 扩展企业治理：一处配置，覆盖桌面端、Cloud Agent、CLI 和 VS Code</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Nous Portal 联合 OpenRouter 限时五折：GPT-5.6 Terra 和 Luna</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">密歇根农场用 Gemini 3.6 Flash + Antigravity 构建本地多 Agent 系统自动化管理</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">OpenAI 启动 Student Collective：面向本科生的 Campus Lead 项目</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-07-29 03:38 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
