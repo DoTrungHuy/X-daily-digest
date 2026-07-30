@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-07-30 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-07-30</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：OpenAI 揭示 GPT-5.6 Sol 在 ARC-AGI-3 低分的根本原因——评估 harness 限制，并给出 API 最佳实践；同时宣布向全球研究人员免费开放前沿模型。Anthropic 则补全了密码学攻击的技术细节，并发布可复现基准。</p>
+      <div class="meta-row"><span>2026-07-29 至 2026-07-30（约24小时）</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 揭秘 GPT-5.6 Sol 在 ARC-AGI-3 低分原因：评估 harness 限制，并推荐 retain reasoning 与 compaction</h2>
+  <blockquote class="quote"><p>“GPT-5.6 Sol has been used to solve open problems in mathematics. So why was it struggling with ARC-AGI-3, a benchmark of 2D puzzle games? We investigated. The harness was not letting it remember what it had learned. We found that enabling two API settings tripled our scores with 6x fewer output tokens.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>API 开发者应使用 Responses API（而非遗留 Chat Completions）、开启 retain reasoning 与 compaction 来最大化 agent 持续推理能力。这对部署 GPT-5.6 系列 agent 的生产级系统有直接指导意义。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082616636989952217" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 公布 GPT-5.6 Sol 自我优化结果：服务成本降低 20%，推测解码效率提升 15%+</h2>
+  <blockquote class="quote"><p>“After deployment, we applied GPT-5.6 Sol to advance the frontier of efficiency by making itself more efficient to run. The results: 20% lower serving costs from production GPU kernel improvements. 15%+ better token-generation efficiency from improved speculative decoding.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>展示模型自我优化潜力，考虑部署 GPT-5.6 的团队可预期成本下降与 token 生成速度提升，尤其在大量 API 调用的场景下收益明显。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082577277246972300" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">OpenAI 启动 ChatGPT for Academic Researchers：免费向科研人员提供 GPT-5.6 系列，目标十万研究员</h2>
+  <blockquote class="quote"><p>“We’re giving scientists, mathematicians, and engineers free access to our frontier models—starting with 10,000 researchers and expanding to 100,000 through 2027. ChatGPT for Academic Researchers is built to accelerate discovery across disciplines.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>研究人员、学术机构可申请免费访问 GPT-5.6 系列模型，包含业务级隐私保护（数据不用于训练，最多邀请 4 位协作者）。对于从事计算科学、数学、工程等研究的开发者，这是获取前沿模型成本极低的入口。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082516370949062989" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 发布 HAWK 与 AES 密码学攻击完整技术论文及 CryptanalysisBench 基准（新增细节）</h2>
+  <blockquote class="quote"><p>“Full technical details of both attacks are provided in our new papers: On HAWK... On AES... And the associated model chain-of-thought for AES.” “We also worked with academics at ETH Zurich, Tel Aviv University, and the University of Haifa to build CryptanalysisBench, a benchmark for studying LLMs’ cryptanalysis abilities.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>安全研究者可查阅详细论文了解 Claude 发现密码学弱点的完整方法；CryptanalysisBench 可用于评估 LLM 的密码分析能力，填补了此前仅有概述的空白。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082153309553463600" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Anthropic 签署支持 AI 发展节奏控制的请愿，CEO 及多位高层共同署名</h2>
+  <blockquote class="quote"><p>“We support this petition, signed by our CEO, several co-founders, and senior staff. Our own research on recursive self-improvement...points to the need for tools to deliberately pace the frontier of AI development so society can prepare.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>反映主要前沿实验室对 AI 安全治理的共识姿态。开发者可关注未来可能出现的监管工具（如 pacing tools），以及企业内部治理要求的演变。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082228994653696371" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">企业开发者演示用 Copilot + Microsoft Fabric 构建 ROIC 智能应用，展示完整治理流程</h2>
+  <blockquote class="quote"><p>“I took the PDF that Brian Nowak at Morgan Stanley put together for Hyperscale ROIC this week and used Copilot code (coming in our new superapp) with a single prompt + skill (/drill-me) to create the plan, then used autopilot in auto to create the full app... And the best part is that all the artifacts are in my enterprise environment... everything is under Agent 365 IT/Sec/FinOps control!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>展示了在企业治理框架（IT、安全、财务运营）下，用自然语言构建完整数据应用的实际流程，适合企业开发者参考将 AI 代码生成纳入标准开发管道。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082640036949008570" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Pieter Levels 宣布 &quot;SaaS is dead&quot; 并推出 &quot;Can I Vibecode It?&quot; 网站，提供即用 Prompt</h2>
+  <blockquote class="quote"><p>“SaaS is dead. Most subscriptions are just a prompt. Can I Vibecode It? gives you the prompts. Copy. Paste. Cancel.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>独立开发者可将复杂 SaaS 服务转化为可复用的 AI prompt 模板，从而快速替换现有订阅。该网站提供了具体 prompt 集合，可直接试用获取灵感。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082593555714048436" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">GitHub 启动残障开发者可访问性调查，截止 8 月 31 日</h2>
+  <blockquote class="quote"><p>“GitHub wants to learn more about how developers with disabilities contribute to software and how accessibility technology helps them do their best work. We welcome you to fill out our survey, open until August --- _Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p></blockquote>
+  
+  <div class="item-src">
+    
+    <span class="src-links"></span>
+  </div>
+</article>
+
+    </div>
+    
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 揭秘 GPT-5.6 Sol 在 ARC-AGI-3 低分原因：评估 harness 限制，并推荐 retain reasoning 与 compaction</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">OpenAI 公布 GPT-5.6 Sol 自我优化结果：服务成本降低 20%，推测解码效率提升 15%+</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 启动 ChatGPT for Academic Researchers：免费向科研人员提供 GPT-5.6 系列，目标十万研究员</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Anthropic 发布 HAWK 与 AES 密码学攻击完整技术论文及 CryptanalysisBench 基准（新增细节）</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Anthropic 签署支持 AI 发展节奏控制的请愿，CEO 及多位高层共同署名</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">企业开发者演示用 Copilot + Microsoft Fabric 构建 ROIC 智能应用，展示完整治理流程</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Pieter Levels 宣布 &quot;SaaS is dead&quot; 并推出 &quot;Can I Vibecode It?&quot; 网站，提供即用 Prompt</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">GitHub 启动残障开发者可访问性调查，截止 8 月 31 日</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-07-30 03:28 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
