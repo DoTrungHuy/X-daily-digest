@@ -32,11 +32,11 @@
       <a class="back" href="index.html">← 返回列表</a>
       <p class="eyebrow">Daily Digest · 2026-07-31</p>
       <h1 class="page-title">今日精读</h1>
-      <p class="lede">今日信号集中在 Google 一口气发布 Gemini Robotics 2 与多款新模型、OpenAI 延续降价与效率叙事，以及 Pieter Levels 对 Claude 登录体验的吐槽。另有 Tether 大额增持比特币等非技术动态，但技术主线清晰。</p>
-      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>20 推文</span><span class="sig sig-strong">信号 强</span></div>
+      <p class="lede">今日焦点：OpenAI 借 GPT-5.6 Sol 的效率提升宣布 API 降价与提速，Sam Altman 连发多条推文强调“价格/智能比”战略；Google 则一口气放出 Gemini Robotics 2 系列与 Google Earth 图像生成两大更新，机器人具身智能与多模态创作双双提速。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>12 推文</span><span class="sig sig-strong">信号 强</span></div>
     </div>
 
-    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
     <div class="items">
       
 <article class="item" id="item-1" data-cat="工具更新">
@@ -44,9 +44,24 @@
     <span class="item-idx">01</span>
     <span class="tag tag-green">工具更新</span>
   </div>
-  <h2 class="item-title">Google 发布 Gemini Robotics 2 与 Gemini Robotics ER 2，主打全身控制与多机器人协作</h2>
-  <blockquote class="quote"><p>&quot;Introducing Gemini Robotics 2 from @GoogleDeepMind, the intelligence layer powering the next generation of truly adaptable robots. This major advance unlocks intelligent whole-body control, advanced dexterity, and even multi-robot collaboration 🤯.&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>对做机器人或具身智能的开发者是重大参考——ER 2 作为高层“大脑”负责观察、推理、协调 VLA 模型并跟踪进度，这种分层架构（reasoning model + vision-language-action model）值得借鉴到复杂多步 Agent 任务设计中。</p></div>
+  <h2 class="item-title">OpenAI 官宣 API 降价：Luna/Terra 更便宜，Sol 更快</h2>
+  <blockquote class="quote"><p>&quot;With the help of GPT-5.6 Sol, we have made leaps in efficiency. Today, we are passing those gains on in the API with lower prices for Luna and Terra, and providing faster performance to Sol.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对开发者而言，这是明确的成本利好——若你正在用 Luna/Terra 跑批量任务或长链 Agent，本轮降价直接降低单位 token 成本；Sol 的“faster performance”意味着高并发推理场景的延迟有望改善。建议关注官方定价页，按新价格重新估算项目预算。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082878192390689147" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Google 发布 Gemini Robotics 2 与 ER 2：具身智能迎来“大脑+小脑”分层</h2>
+  <blockquote class="quote"><p>&quot;Introducing Gemini Robotics 2 from @GoogleDeepMind, the intelligence layer powering the next generation of truly adaptable robots... our new embodied reasoning model, Gemini Robotics ER 2, acts as the robot’s high-level brain... Coordinate with the vision-language-action model to carry out actions.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 Agent 架构的工程师，这套“高层推理模型（ER 2）+ 低层 VLA 模型”的分层设计值得借鉴——它把长程规划与实时动作解耦，类似你在 LLM Agent 里把 Planner 与 Executor 分开的思路。多机器人协作与自纠错能力也提示了多 Agent 系统的落地方向。</p></div>
   <div class="item-src">
     <span class="handle">@GoogleAI</span>
     <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082844740446253125" target="_blank" rel="noopener">原文1</a></span>
@@ -54,32 +69,17 @@
 </article>
 
 
-<article class="item" id="item-2" data-cat="工具更新">
-  <div class="item-meta">
-    <span class="item-idx">02</span>
-    <span class="tag tag-green">工具更新</span>
-  </div>
-  <h2 class="item-title">Google 连发 Gemini 3.5 Flash-Lite、3.6 Flash、3.5 Flash Cyber 三款模型，覆盖速度、成本与安全</h2>
-  <blockquote class="quote"><p>&quot;Gemini 3.5 Flash-Lite is our fastest, most cost-effective model optimized for high-speed agentic workflows&quot; / &quot;Gemini 3.6 Flash delivers faster, more accurate performance across tasks while using significantly fewer tokens&quot; / &quot;Gemini 3.5 Flash Cyber is our new, cost-effective model optimized for finding and fixing software vulnerabilities at scale, available exclusively to governments and trusted partners&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>Flash-Lite 适合高吞吐 agentic 场景，3.6 Flash 主打 token 效率，Cyber 版则专攻漏洞挖掘修复（仅限政府与可信伙伴）。做 Agent 选型时可重点关注前两者的性价比。</p></div>
-  <div class="item-src">
-    <span class="handle">@GoogleAI</span>
-    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083221445375668654" target="_blank" rel="noopener">原文1</a></span>
-  </div>
-</article>
-
-
-<article class="item" id="item-3" data-cat="关注动态">
+<article class="item" id="item-3" data-cat="工具更新">
   <div class="item-meta">
     <span class="item-idx">03</span>
-    <span class="tag tag-violet">关注动态</span>
+    <span class="tag tag-green">工具更新</span>
   </div>
-  <h2 class="item-title">OpenAI 官方确认 GPT-5.6 Sol 提效，API 降价 Luna/Terra、Sol 提速</h2>
-  <blockquote class="quote"><p>&quot;With the help of GPT-5.6 Sol, we have made leaps in efficiency. Today, we are passing those gains on in the API with lower prices for Luna and Terra, and providing faster performance to Sol.&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>这是对已发布降价消息的官方确认与补充——Sol 的推理效率提升直接转化为 API 价格下调，做成本敏感型应用可重新评估 Luna/Terra 的性价比。</p></div>
+  <h2 class="item-title">Google Earth 接入 Nano Banana 2：文本提示即可“重绘”全球任意地点</h2>
+  <blockquote class="quote"><p>&quot;Starting today, we&#x27;re bringing our latest image generation capabilities to @GoogleEarth on the web. Powered by Nano Banana 2, you can combine rich satellite and 3D imagery with text prompts to reimagine your favorite place around the globe.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做地理空间、城市规划或创意内容的人来说，这是把生成模型与真实地理数据结合的范例——提示词直接作用于卫星与 3D 影像，意味着“地点级”条件生成从论文走向了产品。可关注其 API 化可能性。</p></div>
   <div class="item-src">
-    <span class="handle">@OpenAI</span>
-    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082878192390689147" target="_blank" rel="noopener">原文1</a></span>
+    <span class="handle">@GoogleAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082902334984609936" target="_blank" rel="noopener">原文1</a></span>
   </div>
 </article>
 
@@ -89,54 +89,39 @@
     <span class="item-idx">04</span>
     <span class="tag tag-blue">大佬官方</span>
   </div>
-  <h2 class="item-title">Sam Altman 连发三条：回应摩尔定律、价格/智能权衡、内部视频</h2>
-  <blockquote class="quote"><p>&quot;i see your moore&#x27;s law and i raise you 20x&quot; / &quot;we want to offer the best price/intelligence tradeoff at every level&quot; / &quot;i wanted to capture what it feels like to work here... so i made this video with Codex&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>Altman 的“20x”暗示 OpenAI 在效率上的非线性提升；同时他亲自用 Codex 制作招聘视频，算是内部工具 dogfooding 的示范。对关注 OpenAI 战略方向的人有参考价值。</p></div>
+  <h2 class="item-title">Sam Altman 连发推文：强调“价格/智能比”与 20x 效率提升</h2>
+  <blockquote class="quote"><p>&quot;we want to offer the best price/intelligence tradeoff at every level&quot; / &quot;i see your moore&#x27;s law and i raise you 20x&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Altman 的“20x”与“best price/intelligence tradeoff at every level”是明确的战略信号：OpenAI 正把“单位成本下的智能密度”作为核心竞争指标。对选型者来说，这意味着在同等预算下，模型能力天花板在快速上移——做架构设计时不必再为“贵”而过度保守。</p></div>
   <div class="item-src">
     <span class="handle">@sama</span>
-    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083203642975502640" target="_blank" rel="noopener">原文1</a></span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082880884525482061" target="_blank" rel="noopener">原文1</a></span>
   </div>
 </article>
 
 
-<article class="item" id="item-5" data-cat="大佬官方">
+<article class="item" id="item-5" data-cat="关注动态">
   <div class="item-meta">
     <span class="item-idx">05</span>
-    <span class="tag tag-blue">大佬官方</span>
+    <span class="tag tag-violet">关注动态</span>
   </div>
-  <h2 class="item-title">Pieter Levels 吐槽 Claude 每月强制重新登录，影响多服务器工作流</h2>
-  <blockquote class="quote"><p>&quot;No clue why I have to login every time to Claude every month. I run it on 10+ different servers so it&#x27;d be nice if I can just stay permanently logged in forever. Thanks @AnthropicAI&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>真实痛点——多机部署 Claude 时每月登录很烦。对用 Claude Code/API 做多服务器管理的开发者，这是个值得关注的产品反馈，也提示 Anthropic 可能在会话持久化上有改进空间。</p></div>
+  <h2 class="item-title">OpenAI 员工用 Codex 自制招聘视频，内部文化外显</h2>
+  <blockquote class="quote"><p>&quot;i wanted to capture what it feels like to work here... so i made this video with Codex, shared it with the team, and they felt it was worth producing and sharing with the world.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这则材料本身不是技术更新，但“用 Codex 做视频”是一个真实的工作流案例——生成式工具已从代码渗透到内部沟通与雇主品牌。对开发者而言，提示了 Agent 工具在“非代码产出”上的扩展边界。</p></div>
   <div class="item-src">
-    <span class="handle">@levelsio</span>
-    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083301954071957846" target="_blank" rel="noopener">原文1</a></span>
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082855170296205719" target="_blank" rel="noopener">原文1</a></span>
   </div>
 </article>
 
 
-<article class="item" id="item-6" data-cat="工具更新">
+<article class="item" id="item-6" data-cat="行业趋势">
   <div class="item-meta">
     <span class="item-idx">06</span>
-    <span class="tag tag-green">工具更新</span>
-  </div>
-  <h2 class="item-title">Google Earth 上线 Nano Banana 2 图像生成，可重绘城市与地点</h2>
-  <blockquote class="quote"><p>&quot;Starting today, we&#x27;re bringing our latest image generation capabilities to @GoogleEarth on the web. Powered by Nano Banana 2, you can combine rich satellite and 3D imagery with text prompts to reimagine your favorite place around the globe.&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>卫星/3D 影像 + 文本生成图像的组合，对做地理可视化、城市规划或创意工具的产品经理是个新灵感；API 能力可能后续开放。</p></div>
-  <div class="item-src">
-    <span class="handle">@GoogleAI</span>
-    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082902334984609936" target="_blank" rel="noopener">原文1</a></span>
-  </div>
-</article>
-
-
-<article class="item" id="item-7" data-cat="行业趋势">
-  <div class="item-meta">
-    <span class="item-idx">07</span>
     <span class="tag tag-amber">行业趋势</span>
   </div>
-  <h2 class="item-title">Notion 展示 Monumental Labs 案例：机器人雕刻 + 人工精修 + Agent 管行政</h2>
-  <blockquote class="quote"><p>&quot;So @Monumental_Labs is bringing back the art of stone carving: robots mill the stone, artists carve by hand, and custom agents handle the admin work. Craftspeople focusing on their craft… Athena would love it.&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>这是一个“人机协作 + Agent 分工”的典型范例——机器人做粗活、人做精细创作、Agent 处理流程。对思考 Agent 在传统行业落地场景有启发。</p></div>
+  <h2 class="item-title">Notion 展示“机器人雕刻+人工精修+Agent 管行政”的混合工作流</h2>
+  <blockquote class="quote"><p>&quot;robots mill the stone, artists carve by hand, and custom agents handle the admin work. Craftspeople focusing on their craft…&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一个“人机协作”的极佳案例：机器人做粗加工、人做高价值创作、Agent 处理事务性工作。对做自动化方案的人，它展示了如何把 Agent 嵌入到既有物理工作流中，而非替代整个流程。</p></div>
   <div class="item-src">
     <span class="handle">@NotionHQ</span>
     <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082913210630566079" target="_blank" rel="noopener">原文1</a></span>
@@ -144,17 +129,32 @@
 </article>
 
 
-<article class="item" id="item-8" data-cat="其他">
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Notion 新加坡开发者周回顾：开发者平台、SuperAI 大会、Startup AMA</h2>
+  <blockquote class="quote"><p>&quot;Developer Platform panel at the National Gallery... Notion booth at the SuperAI conference... Startup AMA at a guitar shop&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对关注 Notion 生态的开发者，这条确认了其开发者平台（Developer Platform）正在东南亚市场加码。若你在做 Notion 集成或插件，可留意后续官方文档与 API 更新。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2082883231083569449" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="大佬官方">
   <div class="item-meta">
     <span class="item-idx">08</span>
-    <span class="tag tag-zinc">其他</span>
+    <span class="tag tag-blue">大佬官方</span>
   </div>
-  <h2 class="item-title">Tether 增持 1,800 BTC，总持仓逼近 10 万枚</h2>
-  <blockquote class="quote"><p>&quot;UPDATE: Tether buys 1,800 Bitcoin worth ~$113 million. They now hold a total of 98,936 $BTC valued at ~$6.2 billion.&quot;</p></blockquote>
-  <div class="take"><span class="take-k">实用点</span><p>无（对 CS/Agent 开发者无直接技术价值，但作为加密市场风向标可留意）。</p></div>
+  <h2 class="item-title">Sam Altman 回应效率话题：“it could be faster”</h2>
+  <blockquote class="quote"><p>&quot;it could be faster&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>结合同日 OpenAI 的降价与提速公告，这条短推是对“效率提升尚未见顶”的暗示。对依赖 API 的工程团队，这提示了未来几个季度内推理成本与速度仍有持续改善空间，架构上不必为当前性能做过度固化。</p></div>
   <div class="item-src">
-    <span class="handle">@unknown</span>
-    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083231332491268228" target="_blank" rel="noopener">原文1</a></span>
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083198135812383197" target="_blank" rel="noopener">原文1</a></span>
   </div>
 </article>
 
@@ -162,7 +162,7 @@
     
 <aside class="close-box">
   <p class="close-k">今日只看一条</p>
-  <p class="close-v">今天若只点开一条，点 @GoogleAI 的 Gemini Robotics 2 发布帖——它展示了具身智能与 Agent 分层架构的最新方向，对做复杂系统的人有直接参考价值。
+  <p class="close-v">今天若只点开一条，点这条：@OpenAI 的官方降价公告（ITEM1）——它直接改变你下个月的 API 账单，且与 Altman 的“价格/智能比”战略互为印证。
 
 ---
 
@@ -173,14 +173,14 @@ _Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
 
   <aside class="toc-side" aria-label="目录">
     <p class="toc-label">本篇目录</p>
-    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Google 发布 Gemini Robotics 2 与 Gemini Robotics ER 2，主打全身控制与多机器人协作</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Google 连发 Gemini 3.5 Flash-Lite、3.6 Flash、3.5 Flash Cyber 三款模型，覆盖速度、成本与安全</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 官方确认 GPT-5.6 Sol 提效，API 降价 Luna/Terra、Sol 提速</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Sam Altman 连发三条：回应摩尔定律、价格/智能权衡、内部视频</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Pieter Levels 吐槽 Claude 每月强制重新登录，影响多服务器工作流</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Google Earth 上线 Nano Banana 2 图像生成，可重绘城市与地点</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 展示 Monumental Labs 案例：机器人雕刻 + 人工精修 + Agent 管行政</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Tether 增持 1,800 BTC，总持仓逼近 10 万枚</span></a></nav>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 官宣 API 降价：Luna/Terra 更便宜，Sol 更快</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Google 发布 Gemini Robotics 2 与 ER 2：具身智能迎来“大脑+小脑”分层</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Google Earth 接入 Nano Banana 2：文本提示即可“重绘”全球任意地点</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Sam Altman 连发推文：强调“价格/智能比”与 20x 效率提升</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 员工用 Codex 自制招聘视频，内部文化外显</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 展示“机器人雕刻+人工精修+Agent 管行政”的混合工作流</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 新加坡开发者周回顾：开发者平台、SuperAI 大会、Startup AMA</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Sam Altman 回应效率话题：“it could be faster”</span></a></nav>
   </aside>
 </div>
 
     </main>
 
     <footer class="foot">
-      <p>Cookie → DeepSeek → Pages · built 2026-08-01 04:42 UTC</p>
+      <p>Cookie → DeepSeek → Pages · built 2026-08-01 04:46 UTC</p>
       <p class="foot-links">
         <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
         <span>·</span>
