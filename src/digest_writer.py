@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
 
 from .paths import digests_dir
 
@@ -15,6 +14,7 @@ def write_digest_md(
     *,
     tweet_count: int,
     errors: list[str] | None = None,
+    is_backfill: bool = False,
 ) -> Path:
     path = digests_dir() / f"{date_slug}.md"
     now = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
@@ -25,8 +25,13 @@ def write_digest_md(
         f"- **Pipeline**: twitter-cli (Cookie) → DeepSeek",
         f"- **Tweets used**: {tweet_count}",
         f"- **X API**: not used",
-        "",
     ]
+    if is_backfill:
+        lines.append(
+            "- **Backfill**: reconstructed after the target date from X posts "
+            "that were still retrievable at generation time"
+        )
+    lines.append("")
     if errors:
         lines.append(f"- **Fetch warnings**: {len(errors)}")
         lines.append("")
