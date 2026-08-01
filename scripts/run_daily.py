@@ -68,11 +68,18 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    date_slug = args.date or datetime.now().astimezone().strftime("%Y-%m-%d")
+    local_today = datetime.now().astimezone().strftime("%Y-%m-%d")
+    date_slug = args.date or local_today
+    is_backfill = date_slug != local_today
     cfg = load_accounts_config()
     digest_dir = ROOT / "digests"
     reference_time = reference_time_for_date(date_slug)
     history_ids = published_status_ids(digest_dir, exclude_date=date_slug)
+
+    if is_backfill:
+        print(
+            f"Backfill mode: reconstructing {date_slug} from posts still retrievable now."
+        )
 
     if args.skip_fetch:
         raw_path = ROOT / "x_raw" / f"{date_slug}.json"
@@ -111,7 +118,8 @@ def main() -> int:
         f"run_duplicates={stats.get('run_duplicates', 0)} "
         f"history_duplicates={stats.get('history_duplicates', 0)} "
         f"too_old={stats.get('too_old', 0)} "
-        f"unknown_time={stats.get('unknown_timestamp', 0)}"
+        f"unknown_time={stats.get('unknown_timestamp', 0)} "
+        f"future={stats.get('future_timestamp', 0)}"
     )
 
     tweets = payload.get("tweets") or []
@@ -144,6 +152,7 @@ def main() -> int:
         body,
         tweet_count=len(tweets),
         errors=list(payload.get("errors") or []),
+        is_backfill=is_backfill,
     )
     print(f"Digest: {path}")
 
