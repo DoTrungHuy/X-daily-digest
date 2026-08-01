@@ -204,7 +204,9 @@ def filter_tweets_for_digest(
             continue
 
         age_hours = (ref - created.astimezone(timezone.utc)).total_seconds() / 3600
-        if age_hours < -6:
+        # Snowflake IDs provide a reliable UTC creation time. A post after the
+        # target reference time must never leak into a historical backfill.
+        if age_hours < 0:
             future_timestamp += 1
         elif age_hours <= preferred_hours:
             fresh.append(tweet)
