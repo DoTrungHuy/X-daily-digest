@@ -28,7 +28,7 @@ def chat_complete(
     model: str = DEFAULT_MODEL,
     base_url: str = DEFAULT_BASE,
     temperature: float = 0.3,
-    max_tokens: int = 4096,
+    max_tokens: int = 8192,
 ) -> str:
     key = api_key or os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("DEEPSEEK_KEY")
     if not key:
@@ -41,6 +41,9 @@ def chat_complete(
             {"role": "system", "content": _system_prompt()},
             {"role": "user", "content": user_content},
         ],
+        # Daily summarization does not need costly reasoning tokens. DeepSeek V4
+        # enables thinking by default, so disable it explicitly.
+        "thinking": {"type": "disabled"},
         "temperature": temperature,
         "max_tokens": max_tokens,
     }
@@ -59,11 +62,31 @@ def chat_complete(
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", errors="replace")
         raise RuntimeError(f"DeepSeek API HTTP {e.code}: {detail[:800]}") from e
+    except urllib.error.URLError as e:
+        raise RuntimeError(f"DeepSeek API request failed: {e.reason}") from e
+    except json.JSONDecodeError as e:
+        raise RuntimeError("DeepSeek API returned invalid JSON.") from e
 
     try:
-        return payload["choices"][0]["message"]["content"].strip()
-    except (KeyError, IndexError, TypeError) as e:
+        choice = payload["choices"][0]
+        message = choice["message"]
+        finish_reason = choice.get("finish_reason")
+        content = (message.get("content") or "").strip()
+    except (KeyError, IndexError, TypeError, AttributeError) as e:
         raise RuntimeError(f"Unexpected DeepSeek response: {payload!r}") from e
+
+    if finish_reason == "length":
+        raise RuntimeError(
+            "DeepSeek output was truncated because max_tokens was reached. "
+            f"usage={payload.get('usage', {})}"
+        )
+    if not content:
+        raise RuntimeError(
+            "DeepSeek returned empty content. "
+            f"finish_reason={finish_reason}, usage={payload.get('usage', {})}"
+        )
+
+    return content
 
 
 def summarize_tweets(
