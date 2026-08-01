@@ -13,6 +13,13 @@ on:
         required: false
         type: boolean
         default: false
+  # A narrowly scoped push trigger lets maintainers run the pipeline by
+  # updating .github/digest-trigger without running on normal code pushes.
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/digest-trigger"
 
 permissions:
   contents: write
@@ -41,18 +48,27 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
 
-      - name: Check whether today's digest already exists
+      - name: Check whether today's digest is valid
         id: daily_guard
         shell: bash
         run: |
           TODAY="$(TZ=Asia/Shanghai date +%Y-%m-%d)"
           DIGEST="digests/${TODAY}.md"
+          VALID_DIGEST=false
 
-          if [[ "$GITHUB_EVENT_NAME" == "schedule" && -f "$DIGEST" ]]; then
-            echo "Today's digest already exists: $DIGEST"
+          if [[ -f "$DIGEST" ]] && grep -Eq '^【ITEM[0-9]+】$' "$DIGEST"; then
+            VALID_DIGEST=true
+          fi
+
+          if [[ "$GITHUB_EVENT_NAME" == "schedule" && "$VALID_DIGEST" == "true" ]]; then
+            echo "Today's valid digest already exists: $DIGEST"
             echo "should_run=false" >> "$GITHUB_OUTPUT"
           else
-            echo "Digest generation is required."
+            if [[ -f "$DIGEST" && "$VALID_DIGEST" != "true" ]]; then
+              echo "Today's digest exists but is invalid or empty; regenerating: $DIGEST"
+            else
+              echo "Digest generation is required."
+            fi
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -91,6 +107,14 @@ jobs:
           test -n "$TWITTER_AUTH_TOKEN" || { echo "Need TWITTER_AUTH_TOKEN"; exit 1; }
           test -n "$TWITTER_CT0" || { echo "Need TWITTER_CT0"; exit 1; }
           python scripts/run_daily.py
+
+          TODAY="$(TZ=Asia/Shanghai date +%Y-%m-%d)"
+          DIGEST="digests/${TODAY}.md"
+          test -f "$DIGEST" || { echo "$DIGEST was not generated"; exit 1; }
+          grep -Eq '^【ITEM[0-9]+】$' "$DIGEST" || {
+            echo "$DIGEST does not contain a valid digest body"
+            exit 1
+          }
           test -f docs/index.html || { echo "docs/index.html was not generated"; exit 1; }
 
       - name: Commit generated files
