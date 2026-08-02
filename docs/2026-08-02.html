@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-02 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-02</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日信号密集：OpenAI 下一代模型 Astra 放出 10 个重大数学/理论计算机证明（含 Lean 证书），GitHub 正式上线 Stacked PR，Pieter Levels 用 vibe coding 在 Photo AI 里塞进了一个能生成视频的剪辑器。另有 Bitkey 漏洞官方回应、Modular 平台开源细节等值得关注。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>9 条</span><span>39 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="其他">其他</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 下一代模型 Astra 内部版解决 10 个重大开放问题，附 Lean 证书</h2>
+  <blockquote class="quote"><p>&quot;An internal version of Astra, @OpenAI&#x27;s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science. We believe it will be a major step for scientific reasoning.&quot; / &quot;yes, nonsofic groups exist: this statement is one of many new beautiful results proved by Astra... We&#x27;re releasing 10 such Astra proofs, complete with lean certificates and CoT walkthroughs for each of them.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 CS/agent 开发者而言，这是评估 LLM 科学推理能力的重要数据点。Lean 证书 + CoT 走查的发布形式，为“如何验证 AI 数学证明”提供了可复用的工程范式——如果你在做形式化验证或 AI for Math 工具链，值得研究其发布格式。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083467194663571701" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GitHub 正式上线 Stacked PR，小 PR 更好合并</h2>
+  <blockquote class="quote"><p>&quot;Large changes are hard to review. Smaller pull requests make them easier to ship. Stacked PRs are now on GitHub.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>直接改善日常开发流程。Stacked PR 让依赖链上的多个小 PR 可以独立评审、按序合并，减少大 diff 的 review 负担。配合 Copilot 使用，批量重构、跨文件改动的工作流会明显顺畅。官方还发布了 7 月更新汇总（Copilot 全计划可用、新模型等）。</p></div>
+  <div class="item-src">
+    <span class="handle">@github</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083605977345962197" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Pieter Levels 用 vibe coding 把视频编辑器塞进 Photo AI，支持生成式剪辑</h2>
+  <blockquote class="quote"><p>&quot;All this talk about AGI destroying moats and everything made me want to ship again... I&#x27;d never imagine making Adobe Premiere, Final Cut Pro or Capcut but on the web... So today I just tried and vibecoded them into Photo AI! A fully functional video editor but the cool twist is this one can actually generate videos with you or your trained models in it directly in your video editor.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“AI 让个人开发者能做以前不可能做的复杂产品”的又一实证。他明确下一步要加 AI Agent 侧边栏（“make a short film of me in Bangkok”），以及 Regenerate 单段视频的交互设计——对做 AI 创作工具的开发者是很好的产品交互参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083654998404268188" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">Bitkey 官方回应 8/1 漏洞报告：无远程盗币风险，今日提交补丁</h2>
+  <blockquote class="quote"><p>&quot;Sharing our initial findings on a reported vulnerability. Our recommendation is to continue to use your Bitkey normally. The reported vulnerability would require exceptional circumstances to exploit, and can only occur at a specific narrow time during inheritance setup... they would not have enough cryptographic material to access funds. This is Bitkey&#x27;s defense-in-depth in action.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>安全事件响应的好案例。官方明确：漏洞仅在继承设置窗口期、且需 TLS 被攻破等极端条件才可利用，且即便利用也无法获取足够密钥材料。团队今天提交移动端补丁，并将在 PT 时间下午 5 点开 Spaces 详解。做安全产品的人可参考其“分层防御+透明沟通”的回应节奏。</p></div>
+  <div class="item-src">
+    <span class="handle">@bitkey</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083585966481068398" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Modular Platform 开源细节：45 万行代码、MAX GPU/CPU kernels、Mojo 标准库</h2>
+  <blockquote class="quote"><p>&quot;The Modular Platform unifies AI development and deployment with an open, fully-integrated suite of libraries and tools for model serving and GenAI scaling. Over 450,000 lines of code from 6,000+ contributors. Includes MAX GPU and CPU kernels, plus the Mojo standard library. OpenAI-compatible REST API and Kubernetes-ready containers for NVIDIA and AMD.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在做模型 serving 或 GenAI 部署，Modular 这套全栈（kernels + Mojo + OpenAI 兼容 API + K8s 容器）值得评估。Nightly main 分支 + stable release 分支的版本策略也适合作为开源项目参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@modular</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083749812789473387" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Cursor 为 FFmpeg 开发者提供免费额度，支持开源维护</h2>
+  <blockquote class="quote"><p>&quot;Thank you, @cursor_ai, for providing free credits to several FFmpeg developers. These credits will support their ongoing work on FFmpeg, including development and code review. We greatly appreciate Cursor&#x27;s support for FFmpeg and its community.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>AI 工具厂商直接资助核心开源项目维护者，是“AI 反哺开源”的新模式。对开源维护者来说，这提示了一条获取资源的新路径——主动联系 AI 工具厂商争取 credits 或赞助。</p></div>
+  <div class="item-src">
+    <span class="handle">@ffmpeg</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083656620576231556" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">开源模型价值再获实证：OpenAI 模型攻破 HuggingFace 时，是中国开源模型收拾残局</h2>
+  <blockquote class="quote"><p>&quot;Banning open source model, will &#x27;remove capabilities for the defenders&#x27;. When OpenAI&#x27;s models breached Huggingface, a Chinese open model is what cleaned up the mess. Anthropic&#x27;s Fable 5 refused, so Hugging Face turned to Nvidia&#x27;s quantized GLM 5.2.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这条推文的核心论点是“封禁开源模型会削弱防御方能力”——在安全事件中，开源模型（此处为 GLM 5.2）可以充当清理工具，而闭源模型可能拒绝执行。对做安全响应或依赖第三方模型的企业，这是选型时值得考虑的维度。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083449634819822043" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">DeepSeek-V4-Flash-0731 在 Ollama 云上速度翻倍</h2>
+  <blockquote class="quote"><p>&quot;DeepSeek-V4-Flash-0731 is now over 2x faster than yesterday on Ollama&#x27;s cloud!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在 Ollama 上跑 DeepSeek-V4-Flash，今天起推理延迟会明显下降。适合重新跑一遍 benchmark 或延迟敏感的应用测试。另外同帖提到“用户周末更少用 /fast 模式”——数据上验证了周末流量模式。</p></div>
+  <div class="item-src">
+    <span class="handle">@ollama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083686207037337746" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Google AI 两周动态汇总：Gemini 3.5 Flash Cyber、Lyria 3.5、Notebook Collections 等</h2>
+  <blockquote class="quote"><p>&quot;It&#x27;s been a busy couple of weeks! ICYMI, here&#x27;s the recap — Gemini Robotics 2... Gemini 3.5 Flash-Lite is our fastest, most cost-effective model optimized for high-speed agentic workflows... Gemini 3.5 Flash Cyber is our new, cost-effective model optimized for finding and fixing software vulnerabilities at scale, available exclusively to governments and trusted partners... Lyria 3.5 is the newest music model from Google Deepmind... @Gemini_Notebook launched Collections.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>信息密度高的一条汇总。对 agent 开发者，Gemini 3.5 Flash-Lite（高速低成本 agent 工作流）值得关注；对安全方向，Gemini 3.5 Flash Cyber（仅限政府和可信伙伴）是一个新信号——模型能力分层供给的趋势在加强。</p></div>
+  <div class="item-src">
+    <span class="handle">@GoogleAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2083221445375668654" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 @sama 那条 Astra 证明——10 个重大数学问题 + Lean 证书 + CoT 走查，这是评估下一代模型科学推理能力最硬核的一手材料。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 下一代模型 Astra 内部版解决 10 个重大开放问题，附 Lean 证书</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">GitHub 正式上线 Stacked PR，小 PR 更好合并</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Pieter Levels 用 vibe coding 把视频编辑器塞进 Photo AI，支持生成式剪辑</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Bitkey 官方回应 8/1 漏洞报告：无远程盗币风险，今日提交补丁</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Modular Platform 开源细节：45 万行代码、MAX GPU/CPU kernels、Mojo 标准库</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Cursor 为 FFmpeg 开发者提供免费额度，支持开源维护</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">开源模型价值再获实证：OpenAI 模型攻破 HuggingFace 时，是中国开源模型收拾残局</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">DeepSeek-V4-Flash-0731 在 Ollama 云上速度翻倍</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">Google AI 两周动态汇总：Gemini 3.5 Flash Cyber、Lyria 3.5、Notebook Collections 等</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-02 03:52 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
