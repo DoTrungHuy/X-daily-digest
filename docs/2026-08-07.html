@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-07 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-07</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：OpenAI 发布 GPT-5.6 Sol 聊天版升级（事实错误率降 68%），Anthropic 大幅放宽 Claude Fable 5 生物安全限制，Netlify 与 OpenRouter 联手把开源模型接入 Agent Runners。另有 SpaceX Terafab 与 Starlink 蜂窝网络等硬件大新闻。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>10 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 GPT-5.6 Sol 聊天版：事实错误率降 68%，新增推理强度滑块</h2>
+  <blockquote class="quote"><p>&quot;The new GPT-5.6 Sol powers all chats for paid users, including Instant, creating one consistent experience. In our high-stakes factuality evaluation covering finance, medicine and law, the new GPT‑5.6 Sol produced 68% fewer responses with factual errors than GPT‑5.5 Instant.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>付费用户现在可以在 ChatGPT 聊天中体验新版 Sol，并通过滑块控制推理强度；免费用户获得无限文本聊天和&quot;Think&quot;按钮。注意 Work 和 Codex 使用的 Sol 版本未变，API 用户需关注后续是否同步。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085434713821565297" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 更新 Claude Fable 5 生物安全护栏：误报减少 85%</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re updating Claude Fable 5&#x27;s biology safeguards to reduce false positives. In our testing, this update reduced biology-related fallbacks by about 85% across our product surfaces.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Fable 5 现在可以回答更广泛的日常健康与教育问题，但涉及病毒学、毒理学和分子设计等双用途请求仍会回退到 Opus 5。对做生物信息学或医疗 AI 的开发者，这意味着 Fable 5 在非专业场景的可用性大幅提升，但专业研究仍需走信任访问通道。</p></div>
+  <div class="item-src">
+    <span class="handle">@Anthropic</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085563808773189680" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Netlify Agent Runners 接入 OpenRouter：GLM 5.2、Kimi K3、DeepSeek V4 等开源模型可用</h2>
+  <blockquote class="quote"><p>&quot;Open models have gone from being far from the frontier, to right at it. Today we launch GLM 5.2, Kimi K3, Deepseek V4 and more are in Agent Runners.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Netlify 用户现在可以在 Agent Runners 中直接运行 Claude/Codex/Gemini 以及 OpenCode，并自由选择模型。同时 Kimi K3 已在 GitHub Copilot 恢复上线（按用量计费）。对做 agent 开发的团队，这意味着可以在同一 harness 下对比多个开源与闭源模型，降低切换成本。</p></div>
+  <div class="item-src">
+    <span class="handle">@Netlify</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085426377323630620" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Chrome DevTools 新增 Lighthouse 审计：面向 AI agent 的浏览体验优化</h2>
+  <blockquote class="quote"><p>&quot;Your coding agent can now make your website better for visiting AI agents. Lighthouse audits are now available inside DevTools for agents, including the new agentic browsing category.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>新增的 agentic browsing 审计类别让开发者可以检查网站对 AI agent 的可访问性，并建立闭环反馈循环。对做 web 应用或 agent 工具的团队，这是确保产品能被 AI 正确索引和操作的重要新指标。</p></div>
+  <div class="item-src">
+    <span class="handle">@ChromeDevTools</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085499260250866156" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">SpaceX 公布 Starlink 地面蜂窝网络方案：利用现有天线做分布式小基站</h2>
+  <blockquote class="quote"><p>&quot;SpaceX plans to build its terrestrial cellular network by placing small cellular radios, femtocells, inside or next to existing Starlink dishes on a limited number of rooftops, Gateways, and Tesla Superchargers.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>SpaceX 计划在现有 Starlink 天线旁加装小型蜂窝无线电，利用 EchoStar 频谱（约 65 MHz）构建分布式小蜂窝网络，手机无需特殊硬件即可直连。回传走 Starlink 卫星链路或本地光纤，目标 2027 年底商用。对关注边缘计算和网络基础设施的开发者，这是一个值得跟踪的新型分布式架构。</p></div>
+  <div class="item-src">
+    <span class="handle">@Starlink</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085492284284355059" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">NVIDIA Vera Rubin NVL72 Compute Tray：1 分钟全自动组装，无电缆无风扇</h2>
+  <blockquote class="quote"><p>&quot;Vera Rubin NVL72 Compute Tray. Designed to scale. Assembled in 1 minute. 100% automated. No cables, no hoses, no fans.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>NVIDIA 展示 Vera Rubin NVL72 计算托盘，全自动组装、无电缆设计，大幅缩短部署时间。结合此前 SpaceX Starmind AI1 卫星搭载该平台的新闻，这代表 AI 算力硬件在可维护性和部署速度上的重要演进方向。</p></div>
+  <div class="item-src">
+    <span class="handle">@NVIDIA</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085485069226106891" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Pieter Levels 爆料：Meta 疑似自建搜索引擎，避免 AI 搜索流量流向 Google</h2>
+  <blockquote class="quote"><p>&quot;Meta is ALLEGEDLY building their own Google search engine, so that if their AI does a web search it doesn&#x27;t end up at Google, as Google could then use it for THEIR training.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>据 levelsio 转述 Meta 员工私信，Meta 正在构建自有网页索引，用于其 AI 的搜索功能，防止搜索数据被 Google 用于训练。对做 RAG 或搜索相关应用的开发者，这暗示大型模型厂商正在垂直整合搜索基础设施，第三方搜索 API 的议价空间可能被压缩。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085467097405247945" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">SpaceX Terafab 项目规模曝光：建成后将是五角大楼的 50 倍</h2>
+  <blockquote class="quote"><p>&quot;Terafab will be 50 times the size of the Pentagon when complete&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Terafab 项目规模细节持续披露，此前 Elon Musk 在 3 月宣布该项目，今日有更新。虽然具体技术细节有限，但这一量级的制造设施对全球供应链和算力布局有深远影响。对关注基础设施投资的开发者，值得持续跟踪。</p></div>
+  <div class="item-src">
+    <span class="handle">@SpaceX</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085530890759749760" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">Ivan Zhao 谈招聘新标准：优先考察能动性与价值观，而非经验</h2>
+  <blockquote class="quote"><p>&quot;Two years ago, we started to hire a different shape of engineers. No longer optimized for people&#x27;s experience. Optimize for people&#x27;s agency, energy, optimism, curiosity. Talent = Capability/Experience x Taste/Value System x Agency/Will&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Notion 创始人 Ivan Zhao 分享的招聘框架对技术团队有参考价值：在 AI 时代，经验贬值速度加快，能动性（Agency）和价值观匹配成为更重要的筛选维度。对求职者而言，这提示了展示&quot;做事的意愿和判断力&quot;比堆砌年限更重要。</p></div>
+  <div class="item-src">
+    <span class="handle">@IvanZhao</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085505944415531357" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-10" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">10</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Pieter Levels 观察：富豪开始批量购买 X 粉丝，受众成为新硬通货</h2>
+  <blockquote class="quote"><p>&quot;I&#x27;m spotting lots of very rich people on here, like $500M net worth to multi-billionaires, buying 𝕏 followers in the last ~6 months... It seems like some startup tech PR manager is behind it and managing them secretly.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>levelsio 观察到多位高净值人士在近半年内大量购买 X 粉丝（月增 50-100 万），推测与 AGI 时代受众价值上升有关。对做个人品牌或产品推广的开发者，这提示平台数据可信度正在下降，真实互动比粉丝数更有价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085478181935423915" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 GPT-5.6 Sol 聊天版升级公告——它直接影响你日常使用的模型能力与成本结构。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 发布 GPT-5.6 Sol 聊天版：事实错误率降 68%，新增推理强度滑块</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Anthropic 更新 Claude Fable 5 生物安全护栏：误报减少 85%</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Netlify Agent Runners 接入 OpenRouter：GLM 5.2、Kimi K3、DeepSeek V4 等开源模型可用</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Chrome DevTools 新增 Lighthouse 审计：面向 AI agent 的浏览体验优化</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">SpaceX 公布 Starlink 地面蜂窝网络方案：利用现有天线做分布式小基站</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">NVIDIA Vera Rubin NVL72 Compute Tray：1 分钟全自动组装，无电缆无风扇</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Pieter Levels 爆料：Meta 疑似自建搜索引擎，避免 AI 搜索流量流向 Google</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">SpaceX Terafab 项目规模曝光：建成后将是五角大楼的 50 倍</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">Ivan Zhao 谈招聘新标准：优先考察能动性与价值观，而非经验</span></a><a href="#item-10" class="toc-a"><span class="toc-i">10</span><span class="toc-t">Pieter Levels 观察：富豪开始批量购买 X 粉丝，受众成为新硬通货</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-07 03:15 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
