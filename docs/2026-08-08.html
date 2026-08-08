@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-08 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-08</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：OpenAI 将 Astra 列为首个“关键”网络安全模型并加强管控，同时 GPT-5.6 Sol 聊天版正式向 Plus/Pro 用户推送；Anthropic 为 Claude Managed Agents 新增预算控制与 advisor 机制；X 平台推出原创内容奖励计划。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="其他">其他</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 将 Astra 列为首个“关键”网络安全模型，加强安全管控</h2>
+  <blockquote class="quote"><p>&quot;After evaluating one of our upcoming models, Astra, we&#x27;re treating it as our first &#x27;critical&#x27; model for cybersecurity under our Preparedness Framework. This is a scenario we&#x27;ve planned for, and we&#x27;re putting additional controls in place to ensure Astra&#x27;s further development happens safely and securely.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者而言，这是模型能力分级与安全管控的标杆案例——当模型具备高级网络攻防能力时，部署方需考虑额外的隔离与监控机制。Sam Altman 补充称 Astra 不会只给少数人用，但需要更多时间确保安全。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085801349866729975" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GPT-5.6 Sol 聊天版正式推送：推理强度滑块 + 免费用户无限文本</h2>
+  <blockquote class="quote"><p>&quot;Plus and Pro users can access the updated version of GPT‑5.6 Sol in ChatGPT along with the new slider starting today. This version of GPT-5.6 Sol is for everyday chats, so it will only be available in the Chat experience in ChatGPT. The version of GPT-5.6 Sol that powers Work and Codex is not changing as part of this release.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>注意区分——聊天版 Sol 与 Work/Codex 版是不同版本，API 调用不受影响。免费用户升级到 GPT-5.6 Luna 且无限文本消息，Plus/Pro 用户可调推理强度滑块。Sam Altman 评价&quot;5.6 Sol much better in chat now&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085434718393418101" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Managed Agents 四项更新：预算控制、仓库 skills、advisor 机制</h2>
+  <blockquote class="quote"><p>&quot;First, you can now set a budget for sessions to keep spend predictable. Sessions that hit the limit pause with a budget_reached event, you can raise the budget to resume.&quot; / &quot;Managed Agents now load skills from your attached repositories. If you already keep skills in .claude/skills/ for Claude Code, Managed Agent sessions pick them up automatically at start.&quot; / &quot;you can now give a Claude Managed Agent an advisor: a stronger model it can call mid-session for a second opinion.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 工程最实用的一条更新。预算控制解决长跑 agent 的成本失控问题；skills 自动加载让 Claude Code 的既有配置直接复用；advisor 机制是&quot;双模型协作&quot;的轻量实现，适合需要高可靠性的任务场景。</p></div>
+  <div class="item-src">
+    <span class="handle">@Anthropic</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085853169930957158" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">X 推出 Original Content Rewards，取代 Revenue Sharing</h2>
+  <blockquote class="quote"><p>&quot;Today, we&#x27;re launching Original Content Rewards. The reality is that Revenue Sharing had reached a point where its incentives were misaligned. Creators should be focused on bringing net new content to the platform instead of maximizing payouts.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对内容创作者和依赖 X 流量的开发者是重要信号——平台从&quot;播放量分成&quot;转向&quot;原创性奖励&quot;，算法将更侧重识别原创内容。做 AI 内容搬运或聚合账号的策略需要重新评估。</p></div>
+  <div class="item-src">
+    <span class="handle">@X</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085835677917221171" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GPT-Live 支持文件与 Projects：语音体验接入文件问答</h2>
+  <blockquote class="quote"><p>&quot;📂 GPT-Live supports Files and Projects! You can now attach files and ask questions about them, or use GPT-Live in Projects — great for anything organizing a job search, planning a trip, or tracking your fitness journey.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>GPT-Live 语音体验从纯对话扩展到文件场景，意味着语音 agent 可以处理文档问答。对构建语音交互应用的开发者，这是值得跟进的能力边界扩展。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085788636667347299" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Buzz Desktop v0.5.6：主题同步、手机身份恢复、更可靠的 agents</h2>
+  <blockquote class="quote"><p>&quot;Happy Friday! Buzz Desktop v0.5.6 🐝 Make every community feel like yours with synced themes and clearer navigation—plus rich link previews, phone-based identity recovery, smoother pairing, and more reliable agents.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Buzz 是轻量级 agent 运行时（此前报道 3.8MB），本次更新重点在社区体验与身份恢复，agent 可靠性也有提升。适合关注轻量 agent 部署方案的开发者。</p></div>
+  <div class="item-src">
+    <span class="handle">@Buzz</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085822033678786865" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">TorrServer：HTTP 流式播放种子文件，支持 Torznab 搜索集成</h2>
+  <blockquote class="quote"><p>&quot;TorrServer streams torrents over HTTP with adjustable caching, so you can start watching before the download finishes. It also exposes an API and Torznab search, making it easy to integrate with indexer managers like Prowlarr or Jackett.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对自建媒体服务器或下载管道的开发者，TorrServer 提供 HTTP 流式播放 + 可调缓存 + API 集成，可嵌入 Prowlarr/Jackett 生态。适合做媒体自动化管道的参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@TorrServer</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085886217133167102" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Node.js 社区活动：RenderATL 上的 Interactive Code and Learn 工作坊</h2>
+  <blockquote class="quote"><p>&quot;Want to contribute to @nodejs but don&#x27;t know where to start? The Node.js Interactive Code and Learn workshop at @RenderATL is this Thursday, August 13 — a hands-on session to make your first real contribution to the project, led by @harper_fast.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对想参与 Node.js 开源贡献的开发者，这是低门槛的入门机会——8 月 13 日 RenderATL 现场工作坊，由核心维护者带队做首次真实贡献。</p></div>
+  <div class="item-src">
+    <span class="handle">@nodejs</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085859996466831563" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 关于 Astra 被列为&quot;关键&quot;网络安全模型的官方声明——这是模型能力分级与安全管控的里程碑事件，直接影响 agent 安全部署的行业标准。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 将 Astra 列为首个“关键”网络安全模型，加强安全管控</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">GPT-5.6 Sol 聊天版正式推送：推理强度滑块 + 免费用户无限文本</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Claude Managed Agents 四项更新：预算控制、仓库 skills、advisor 机制</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">X 推出 Original Content Rewards，取代 Revenue Sharing</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">GPT-Live 支持文件与 Projects：语音体验接入文件问答</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Buzz Desktop v0.5.6：主题同步、手机身份恢复、更可靠的 agents</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">TorrServer：HTTP 流式播放种子文件，支持 Torznab 搜索集成</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Node.js 社区活动：RenderATL 上的 Interactive Code and Learn 工作坊</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-08 02:21 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
