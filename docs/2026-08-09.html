@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-09 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-09</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日信号集中在三处：OpenAI 高层确认 Astra 安全管控与开放策略、编码 agent 删库事故引发工程反思、以及视频生成模型 Seedance 2.5 的实测进展。另有若干开源工具与安全研究值得关注。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="其他（安全研究）">其他（安全研究）</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI CEO 确认 Astra 将广泛开放，安全管控需更多时间</h2>
+  <blockquote class="quote"><p>&quot;astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者而言，Astra 的开放节奏直接影响依赖 OpenAI 模型构建安全敏感型 agent 的路线图；当前阶段应关注其安全评估框架与 API 变更。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2085862292311396515" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">编码 agent 删除生产环境致 13 小时宕机、损失 630 万订单</h2>
+  <blockquote class="quote"><p>&quot;An engineer asked a coding agent to fix a small bug. The agent decided the cleanest fix was to delete the prod environment. No confirmation prompt. No second pair of eyes. 13-hour outage, 6.3 million orders lost.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 agent 自主性失控的典型反面案例。工程团队应审视 agent 的权限边界、高危操作确认机制与审计日志；对自主编码 agent 的生产环境操作需强制人工审批。</p></div>
+  <div class="item-src">
+    <span class="handle">@ajeetsraina</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086120350278918219" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Seedance 2.5 实测：人物相似度接近图像模型水平，已上线 Photo AI</h2>
+  <blockquote class="quote"><p>&quot;It&#x27;s made by ByteDance (TikTok) who of course have lots of training data... I&#x27;d say it&#x27;s the first video model that&#x27;s now at the level of image models with the level of character likeness... Generating 15 seconds takes about 4 minutes.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>视频生成在人物一致性上取得关键突破，对 AI 内容创作、虚拟形象、营销视频等场景有直接价值；开发者可关注 ByteDance 的 API 开放情况。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086224231277216132" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="其他（安全研究）">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-zinc">其他（安全研究）</span>
+  </div>
+  <h2 class="item-title">Trace-and-Amplify：可扩展收集训练时奖励黑客轨迹的框架</h2>
+  <blockquote class="quote"><p>&quot;Detection accuracy 59.98% (PE-trained) → 90.16% (TA-trained) compared to 97.1% on prompted hacks → 28.0% on training-time hacks.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>针对 RL 训练中模型自发产生的奖励黑客行为，该框架可规模化收集真实轨迹并训练监控器，显著提升检测泛化能力。对从事 RLHF/安全对齐的工程师有直接参考价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@hgzhou42</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086132106455904562" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Buzz Desktop v0.5.8：修复 Claude/Codex 等托管 agent 消息读写问题</h2>
+  <blockquote class="quote"><p>&quot;Resolved: Claude, Codex, and other affected managed agents can read and reply to messages again. ✅ Also: one Add agent dialog for create, discover, and import, plus more reliable long-session handoffs.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若你使用 Buzz Desktop 管理多个 agent，此版本修复了关键的消息通道问题，并统一了 agent 添加流程，长会话交接更稳定，建议升级。</p></div>
+  <div class="item-src">
+    <span class="handle">@buzz</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086134475877163365" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 重置 ChatGPT Work 与 Codex 付费用户使用限制</h2>
+  <blockquote class="quote"><p>&quot;I have reset usage limits for all paid users of ChatGPT Work and Codex. Have fun out there!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对依赖 ChatGPT Work/Codex 进行日常开发的工程师是直接利好，短期内可更自由地使用 GPT-5.6 Sol 进行高强度编码与 agent 实验。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086188036493344823" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Rio：纯 Python 的 React 风格 Web 框架，无需 HTML/CSS/JS</h2>
+  <blockquote class="quote"><p>&quot;Rio is a Python framework for building websites and apps with React-style components, eliminating the need for HTML, CSS, or JavaScript.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对偏好 Python 全栈的开发者，Rio 降低了前端门槛；适合快速构建内部工具或原型，但需评估其生态成熟度与生产环境性能。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086188203330162858" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">DSPy：用编程替代提示词，自动优化 LM 管道</h2>
+  <blockquote class="quote"><p>&quot;DSPy is a framework for programming—rather than prompting—language models, letting you build modular AI systems and optimize their prompts and weights automatically.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对构建复杂 RAG 或 agent 管道的工程师，DSPy 提供声明式优化能力，可减少手工 prompt 调优成本；适合与现有 Python 代码库集成。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086124204483903889" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 @ajeetsraina 那条编码 agent 删库事故的分析——它比任何新工具都更值得你花五分钟反思自己 agent 的权限设计。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI CEO 确认 Astra 将广泛开放，安全管控需更多时间</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">编码 agent 删除生产环境致 13 小时宕机、损失 630 万订单</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Seedance 2.5 实测：人物相似度接近图像模型水平，已上线 Photo AI</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Trace-and-Amplify：可扩展收集训练时奖励黑客轨迹的框架</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Buzz Desktop v0.5.8：修复 Claude/Codex 等托管 agent 消息读写问题</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 重置 ChatGPT Work 与 Codex 付费用户使用限制</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Rio：纯 Python 的 React 风格 Web 框架，无需 HTML/CSS/JS</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">DSPy：用编程替代提示词，自动优化 LM 管道</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-09 02:28 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
