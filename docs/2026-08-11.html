@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-11 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-11</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日信号密集：OpenAI 推出专攻防御的 GPT-5.6-Cyber 并扩大 Daybreak 计划，Anthropic 研究版 Claude 在黎曼猜想相关问题上取得进展，Meta 开源新模型 Muse Glimmer 登榜，微软 MAI-Image-2.6 冲上图像生成第二。另有 Vercel 免费开放沙箱出口防火墙、Notion 开发者工具更新等实用动态。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="其他">其他</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 GPT-5.6-Cyber 与 Daybreak 扩展：专攻授权网络安全防御</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re expanding our cybersecurity initiative Daybreak and introducing GPT-5.6-Cyber, a new model for advanced, authorized cybersecurity work.&quot; / &quot;We&#x27;ve used GPT-5.6-Cyber extensively in real-world vulnerability research, including work that uncovered previously unknown vulnerabilities in popular open-source software like Chrome&#x27;s v8 engine.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对安全工程师与 agent 开发者是重要信号——防御侧专用模型正在成型，且已在实际漏洞挖掘中验证（Chrome v8 引擎）。注意访问受限，仅限获批防御者，做安全工具链集成需关注准入机制。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086864365379010729" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 研究版 Claude 提升黎曼 zeta 零点下界：41.6% → 67.2%</h2>
+  <blockquote class="quote"><p>&quot;We asked an unreleased research version of Claude to take a stab at the Riemann hypothesis. It didn&#x27;t solve it, but it did make strides on a related problem: it increased the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis from 41.6% to 67.2%.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>虽未解决黎曼猜想，但这是前沿模型在纯数学研究上可验证的实质进展。对做 AI for Science 或数学推理评估的开发者，这是值得追踪的基准案例——注意是&quot;研究版&quot;模型，非公开版本。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086867246073401655" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Meta 开源 Muse Glimmer（30B）：Code Arena WebDev 第 26 名，支持本地单 GPU 运行</h2>
+  <blockquote class="quote"><p>&quot;Muse Glimmer by @AIatMeta debuts at #77 in Code Arena: WebDev with 1359 pts, ranking #26 among open models.&quot; / &quot;a leading 30B param model designed for always-on local agent use, small enough to run on a Mac or PC with a single GPU. Available in Cline using Ollama now!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>30B 参数、单 GPU 可跑，定位&quot;常驻本地 agent 使用&quot;，且已支持 Ollama + Cline 集成，还有 cua-driver 离线计算机使用示例。对做本地 agent 或隐私敏感场景的开发者是直接可用的新选项。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086979482162966600" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">微软 MAI-Image-2.6 登顶 Text-to-Image Arena 第二，3D 建模类别第一</h2>
+  <blockquote class="quote"><p>&quot;MAI-Image-2.6 by @MicrosoftAI has landed in the Text-to-Image Arena at #2 (1336 pts)! This release is just 45 pts behind GPT Image 2 (Medium) at #1&quot; / &quot;3D Imaging &amp; Modeling (#6 -&gt; #1)&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>从 2.5 的第十跃升至第二，3D 建模类别登顶，文本渲染也进前二。下周将开放 Playground 与 Foundry API 早期访问。做图像生成或 3D 资产生成的开发者值得关注 API 接入。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086943856289853931" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Vercel 将 Sandbox Egress Firewall 免费开放至所有套餐</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re making our Sandbox Egress Firewall free on every plan. Vercel Sandbox goes beyond compute isolation. Recent security research shows why: untrusted code must be contained at the network boundary, not just the runtime.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对在 Vercel 上跑 agent 或处理不可信代码的开发者是直接利好——网络边界隔离免费化，降低供应链攻击面。安全预算有限的小团队可立即受益。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086940594283450486" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 为开发者新增 Developer settings 面板与嵌入式开发者工具</h2>
+  <blockquote class="quote"><p>&quot;To my friends building with the @NotionDevs platform. Today we shipped some tools just for you in your Notion workspace. You now have a Developer settings pane where you can toggle on the developer toolbar UI and the new embedded developer tools.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Notion 平台开发者可直接在工作区内切换开发者工具栏与嵌入式工具，减少上下文切换。对做 Notion 集成或内部工具链的开发者是体验提升。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086933244658823307" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">sig：流式数据的交互式 grep，支持实时更新与回看</h2>
+  <blockquote class="quote"><p>&quot;sig is an interactive grep for streaming data that keeps results updated in real time. Re-runs piped commands with Ctrl+R to re-evaluate data that already streamed past. Archived mode saves the latest N entries for backward searching on demand.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对处理日志流、事件流或 agent 输出的开发者，这是一个实用的小工具：实时过滤 + 历史回看，支持 Homebrew、Cargo、Arch、Nix 安装。适合做运维或调试流水线。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086943205573161139" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Jensen Huang 回忆 Elon Musk 成为 NVIDIA AI 超算首位客户</h2>
+  <blockquote class="quote"><p>&quot;When I announced this thing, nobody wanted to buy it. Not one purchase order. Except for Elon. In 2016, I personally boxed it up and delivered the first one to a tiny room in San Francisco - It was OpenAI.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>行业背景补充——AI 算力早期 adoption 的关键节点。对理解当前算力供应链格局与 NVIDIA 生态叙事有参考价值，非直接技术指导。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2086861141905465488" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 GPT-5.6-Cyber 发布——防御侧专用模型 + 实际漏洞挖掘验证，对安全与 agent 开发者都是直接影响。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 发布 GPT-5.6-Cyber 与 Daybreak 扩展：专攻授权网络安全防御</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Anthropic 研究版 Claude 提升黎曼 zeta 零点下界：41.6% → 67.2%</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Meta 开源 Muse Glimmer（30B）：Code Arena WebDev 第 26 名，支持本地单 GPU 运行</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">微软 MAI-Image-2.6 登顶 Text-to-Image Arena 第二，3D 建模类别第一</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Vercel 将 Sandbox Egress Firewall 免费开放至所有套餐</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 为开发者新增 Developer settings 面板与嵌入式开发者工具</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">sig：流式数据的交互式 grep，支持实时更新与回看</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Jensen Huang 回忆 Elon Musk 成为 NVIDIA AI 超算首位客户</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-11 02:27 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
