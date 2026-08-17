@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-17 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-17</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：Codex 正式开放 GPT-5.6 Sol 的 1M token 上下文窗口（含 ChatGPT 账户通道），GitHub Copilot 代码审查深度可调，另有多个开源 agent 基础设施项目值得关注。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>32 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Codex 正式支持 GPT-5.6 Sol 1M token 上下文，ChatGPT 账户也可用</h2>
+  <blockquote class="quote"><p>&quot;GPT-5.6 Sol 1M in Codex. This used to only work for API keys, but we just flipped the switch and works for usage through ChatGPT accounts now too.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者而言，1M 上下文意味着 Codex 可保留更多代码、工具输出与对话历史再压缩。官方给出了 config.toml 配置方法（model_context_window=1000000，model_auto_compact_token_limit=900000），也支持单次 CLI 会话临时启用。注意官方提示默认值经过调优，长上下文有成本与性能权衡。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089143488696705077" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GitHub Copilot 代码审查深度可调：Balanced 正式 GA</h2>
+  <blockquote class="quote"><p>&quot;Balanced depth is now generally available. Select Balanced for deeper analysis and more thorough reviews on your pull requests, or choose Lite for straightforward changes.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可在 org 或 repo 级别设置默认审查深度，也可在单个 PR 请求时选择。对工程团队来说，这解决了&quot;审查过重拖慢流程&quot;或&quot;审查过浅漏问题&quot;的平衡问题，适合不同规模与风险偏好的项目。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089057545998479457" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">GitHub 代码搜索性能优化：单核 45 GiB/s 的 case-folding 技巧</h2>
+  <blockquote class="quote"><p>&quot;GitHub case-folds every byte of code search at over 45 GiB/s on one core. The biggest win came from removing an early-exit branch, not adding one.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对系统级与性能敏感型开发者是很好的案例：性能优化不总是&quot;加分支&quot;，有时删掉 early-exit 反而更快。值得阅读原文了解具体实现思路。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089108944278970650" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">PipesHub：开源企业 AI 上下文层，支持权限保留与引用生成</h2>
+  <blockquote class="quote"><p>&quot;PipesHub is an open-source context layer for enterprise AI that connects org-wide knowledge while preserving access permissions and generating citations. Ships with Node, Python, and Go SDKs plus MCP support.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>面向构建 agent 与 RAG 应用的开发者。核心价值在于&quot;保留访问权限&quot;——企业知识库接入 AI 时权限控制是刚需，且自带引用生成有助于可追溯性。提供多语言 SDK 与 MCP 支持，值得评估。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089026914963091935" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Docker Sandboxes 用于 ESP32 固件开发：可复现构建与 AI agent 安全</h2>
+  <blockquote class="quote"><p>&quot;Docker Captain Marco Franzon on reproducible ESP32 builds and letting AI agents work on firmware safely with Docker Sandboxes.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>嵌入式开发者若仍在本机直接装 ESP-IDF，可考虑迁移到 Docker Sandbox：既保证构建可复现，也让 AI agent 在隔离环境中操作固件代码，降低风险。适合 IoT/嵌入式与 agent 结合的场景。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089030703799304632" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Open CoDesign：本地优先的开源&quot;提示词转设计稿&quot;桌面应用</h2>
+  <blockquote class="quote"><p>&quot;Open CoDesign is an open-source, local-first desktop app that turns prompts into polished artifacts using your own AI model.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>本地优先意味着数据不出机器，且可接入自有模型。对设计师与前端开发者来说，这是一个可自托管的&quot;prompt 到 artifact&quot;工作流工具，适合对数据隐私有要求的团队。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089156147332964476" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">@levelsio 观点：AI 让个人创意表达门槛大幅降低</h2>
+  <blockquote class="quote"><p>&quot;The cool thing about AI is it&#x27;s letting people add their own little flavor of creativity to all their projects. You&#x27;d never make this by hand 5 years ago, but with AI it&#x27;s easy to generate it.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对独立开发者与创作者是心态参考：AI 的价值不只是提效，更在于让个人也能完成过去需要团队才能做出的&quot;个性化&quot;作品。可作为产品方向与个人品牌建设的思路。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089049041732567223" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">SpaceX 完成第 650 次轨道级火箭着陆</h2>
+  <blockquote class="quote"><p>&quot;Landing an orbital-class rocket was once considered almost impossible. SpaceX has now done it 650 times. First landing: December 21, 2015. 650th landing: August 15, 2026.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无直接工程参考，但作为里程碑数据值得关注——从 2015 年首次着陆到 2026 年 650 次，平均每年超 60 次，反映可复用航天技术的成熟度曲线。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2088974063666614522" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Codex 1M 上下文配置那条——对 agent 开发者的日常工作流影响最直接。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Codex 正式支持 GPT-5.6 Sol 1M token 上下文，ChatGPT 账户也可用</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">GitHub Copilot 代码审查深度可调：Balanced 正式 GA</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">GitHub 代码搜索性能优化：单核 45 GiB/s 的 case-folding 技巧</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">PipesHub：开源企业 AI 上下文层，支持权限保留与引用生成</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Docker Sandboxes 用于 ESP32 固件开发：可复现构建与 AI agent 安全</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Open CoDesign：本地优先的开源&quot;提示词转设计稿&quot;桌面应用</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">@levelsio 观点：AI 让个人创意表达门槛大幅降低</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">SpaceX 完成第 650 次轨道级火箭着陆</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-17 01:54 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
