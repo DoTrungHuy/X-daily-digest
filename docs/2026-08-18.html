@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-18 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-18</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：Claude Code 新增 /design 技能将设计工作流带入 CLI；Agent Arena 上线按任务类型与真实成本筛选的排行榜；Grok Bot 在 Elon Musk 演示中展示出惊人的 agent 编排能力。另有 Claude Code 性能优化与 Rust 全文检索引擎等工程向内容。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>38 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Code 新增 /design 技能：设计工作流进入 CLI 与 Desktop</h2>
+  <blockquote class="quote"><p>&quot;Claude Code can design now. The new /design skill (research preview) brings Claude Design&#x27;s artboard workflow into the CLI and Desktop, built on artifacts. Run /design to get editable artboards for your UI — pick one, tweak it, then have Claude implement it.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者而言，这意味着从设计到代码的闭环可以在终端内完成，减少上下文切换。可用于快速原型验证或 UI 迭代，且基于 artifacts 可编辑，适合团队协作。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089471692762673408" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Agent Arena 新增分类与真实成本筛选：按 Code/Work/Chat 对比模型</h2>
+  <blockquote class="quote"><p>&quot;New categories are now live in Agent Arena! The #1 ranked model is different in each category: #1 for Code: GPT 5.6 Sol (xHigh) @OpenAI, #1 for Work: Claude Opus 5 (High) @AnthropicAI, #1 for Chat: Claude Opus 5 (Max) @AnthropicAI. Agent Arena measures models on millions of real-world, long-horizon agentic tasks.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>模型选型不再只看单一基准。开发者可按任务类型（Code/Work/Chat）筛选，并参考&quot;cost-per-task&quot;与 Pareto 前沿，做出更贴合预算与场景的决策。基于 170 万+真实会话的分析，数据可信度较高。</p></div>
+  <div class="item-src">
+    <span class="handle">@lmarena_ai</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089464753567797321" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Elon Musk 演示 Grok Bot 控制机器人：文本指令直接驱动 Matic Robots</h2>
+  <blockquote class="quote"><p>&quot;OMG. I asked my Chief Engineer on Grok @bot to bring up the feature and it&#x27;s done. 😳 I can text my @maticrobots now through my Grok @bot—anywhere and anytime.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Grok Bot 的 agent 编排能力再次得到验证——通过自然语言指令调用外部硬件/API。对开发者而言，这展示了 agent 与 IoT/机器人集成的可能性，值得关注其 API 与 skill 机制。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089223114416898288" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Code CLI 性能优化：p99 CPU 使用率降低 2 倍</h2>
+  <blockquote class="quote"><p>&quot;Perf win of the day: Claude Code CLI now uses 2x less CPU at p99. Bun&#x27;s garbage collector was running on a fixed timer, so it would kick in mid-turn and steal CPU right when Claude Code was busiest. Now it waits until the process is idle.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 CLI 工具开发者是很好的性能调优案例——GC 定时器与任务执行周期的冲突会导致峰值 CPU 飙升。将 GC 调整为空闲时触发，能显著降低 p99 延迟。值得借鉴到其他长时间运行的 agent 进程。</p></div>
+  <div class="item-src">
+    <span class="handle">@ClaudeCode</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089509659090780193" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Tantivy：Rust 全文检索引擎，启动 &lt;10ms，适合 CLI 工具</h2>
+  <blockquote class="quote"><p>&quot;Tantivy gives you Lucene-style full-text search in Rust with sub-10ms startup, making it ideal for CLI tools. BM25 scoring, phrase queries, and facet support are all built in, and it indexes English Wikipedia in under 3 minutes.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对需要本地搜索能力的 CLI 或 agent 工具，Tantivy 提供低延迟、零依赖的全文检索方案。BM25 与 facet 支持使其可直接用于文档检索、日志分析等场景，且 Rust 生态便于嵌入。</p></div>
+  <div class="item-src">
+    <span class="handle">@TantivySearch</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089464798903947382" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Notion 高管分享市场细分方法论：从&quot;离开办公室&quot;开始</h2>
+  <blockquote class="quote"><p>&quot;When interviewing at Notion ~4 years ago, I was asked how I&#x27;d approach segmenting our market... But the answer is mostly &#x27;leave the building.&#x27; Go talk to customers. Ask how they describe what it is you do, why they choose you, and how to serve them better?&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 toB/平台型产品的开发者有启发——数据与框架之外，真实客户访谈是理解市场的最佳路径。文中提到&quot;Fortune 5M&quot;概念（从初创到小企业），以及一个 210 人小镇的羊用品供应商用 agent 自动化了 2176 次运行，是很好的产品定位案例。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089518345360228850" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 安全负责人：防御者需升级基础并应用最佳 AI 工具</h2>
+  <blockquote class="quote"><p>&quot;defenders can see the future, and have a narrow window to uplevel their cybersecurity practices now. key is to uplevel fundamentals and apply the best AI tools.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对安全方向的开发者是明确的信号——AI 在攻防两端的应用正在加速。文中提到 OpenAI 在安全实践上的投入，值得关注其具体工具与框架的后续发布。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089326994714763665" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Chrome 151 DevTools 更新：CSS 特异性提示与内存调试改进</h2>
+  <blockquote class="quote"><p>&quot;Check out the latest updates in Chrome 151 DevTools → Explore CSS specificity tooltips, improved JavaScript memory debugging, and updated device emulation presets.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>前端开发者可直接受益——CSS 特异性 tooltip 能快速定位样式覆盖问题，内存调试改进有助于排查泄漏，设备模拟预设更新适配新机型。适合日常开发效率提升。</p></div>
+  <div class="item-src">
+    <span class="handle">@ChromeDevTools</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089461707194224894" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Agent Arena 新增分类与成本筛选那条——它直接改变你下次模型选型的方式。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Claude Code 新增 /design 技能：设计工作流进入 CLI 与 Desktop</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Agent Arena 新增分类与真实成本筛选：按 Code/Work/Chat 对比模型</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Elon Musk 演示 Grok Bot 控制机器人：文本指令直接驱动 Matic Robots</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Claude Code CLI 性能优化：p99 CPU 使用率降低 2 倍</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Tantivy：Rust 全文检索引擎，启动 &lt;10ms，适合 CLI 工具</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 高管分享市场细分方法论：从&quot;离开办公室&quot;开始</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">OpenAI 安全负责人：防御者需升级基础并应用最佳 AI 工具</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Chrome 151 DevTools 更新：CSS 特异性提示与内存调试改进</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-18 01:50 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
