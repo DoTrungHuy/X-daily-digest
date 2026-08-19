@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-19 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-19</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：OpenAI 因能力快速提升而主动暂停前沿 RL 训练以强化安全监控，同时 Codex 修复了可能误删用户文件的严重问题；Anthropic 则展示了 Claude 在蛋白质设计上的突破性能力。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 暂停前沿 RL 训练两周，强化安全与对齐标准</h2>
+  <blockquote class="quote"><p>&quot;We temporarily paused reinforcement learning (RL) training on our latest models intended for deployment for two weeks while we hardened and red-teamed our research environments and expanded monitoring coverage.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>OpenAI 明确表示&quot;模型能力若超出安全与对齐进度将采取行动&quot;，这对依赖前沿模型的开发者意味着：模型发布节奏可能放缓，但安全性审查会更严格；同时&quot;安全信心将设定 AI 进展节奏&quot;这一表态值得关注。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089777845187031262" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Codex 修复潜在破坏性操作：误删用户文件风险大幅降低</h2>
+  <blockquote class="quote"><p>&quot;A malformed cleanup command could then point at the actual home directory instead of the temporary folder... We&#x27;ve added protections at several layers.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在用 Codex，务必更新到最新版本；建议使用 &quot;Ask for approval&quot; 或 &quot;Approve for me&quot; 沙箱模式，仅在可信环境使用 Full access。OpenAI 已加入针对删除目标的显式检查、高风险命令升级审查、以及强化 RL 训练来过滤破坏性行为。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089891927659585918" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Claude 自主设计蛋白质结合剂：14/15 靶点成功</h2>
+  <blockquote class="quote"><p>&quot;With a protein design prompt written by a human expert, Claude autonomously designed protein binders against 14 out of 15 targets.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 AI 在科学发现领域的重大进展——从&quot;辅助分析&quot;走向&quot;自主设计&quot;。Anthropic 已开源 prompts 和数据，对生物信息学、计算化学方向的开发者是重要参考资源。传统上每个靶点需数周至数月专家工作，现在由 AI 自主完成。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089842387845804246" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Desktop 启动速度提升 2 倍</h2>
+  <blockquote class="quote"><p>&quot;Claude Desktop now starts ~2x faster than it did a month ago... We now boot at full speed even while the window&#x27;s still hidden.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>性能优化的具体手段值得借鉴：后台启动时定时器被节流、JS 引擎进入省电模式导致启动变慢，修复方式是即使窗口隐藏也全速启动。对桌面应用开发者是很好的性能优化案例。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089860955266228548" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 实战：自主完成二手衣物全流程销售</h2>
+  <blockquote class="quote"><p>&quot;It looked at the photos, identified the items, created the listings, pulled in the relevant information and started negotiating with buyers on its own. No babysitting. No approving every message.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Grok Bot 展示了 agent 从&quot;辅助工具&quot;到&quot;自主执行者&quot;的转变——拥有自己的计算机，可以持续运行直到任务完成。对 agent 开发者而言，&quot;无需逐条审批&quot;的自主模式是重要产品方向。另有开发者称&quot;不到一小时自动化了 25% 的日常工作&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089747957545410816" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Inkling-Small 登 Agent Arena：开源模型性价比新选择</h2>
+  <blockquote class="quote"><p>&quot;Among open models, it is #12 with a net-improvement score of -7.0%. It delivers similar results with Inkling at less than half the price per task ($0.20 vs. $0.09).&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Inkling-Small 在 Bash Recovery（CLI 错误恢复）信号上排名开源模型第一（+11.0%），且价格仅为 Inkling 的一半。对成本敏感的 agent 开发者是值得评估的选项。Agent Arena 用真实长时程任务评测，方法论值得参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089826844854112371" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Gemini 支持免费全真 SAT 模拟考试</h2>
+  <blockquote class="quote"><p>&quot;Simply prompt Gemini with &#x27;I want to take a practice SAT test,&#x27; and you&#x27;ll get practice tests grounded in rigorously vetted content from @ThePrincetonRev.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>教育场景的 agent 应用范例——用自然语言触发完整工作流（出题→作答→即时反馈→错题讲解）。对教育科技开发者是很好的产品参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089820283087536223" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">IPAPatch：无需越狱注入代码调试 iOS 应用</h2>
+  <blockquote class="quote"><p>&quot;IPAPatch is an Xcode template project that lets you inject code, debug, and modify iOS apps without jailbreaking.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>iOS 逆向与调试利器：支持 lldb 断点调试、注入动态库、链接 RevealServer 做 UI 检查、生成可分发的修改版 IPA。对 iOS 安全研究和应用分析开发者非常实用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089827196676575360" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 暂停前沿 RL 训练那条——它可能影响未来数月所有前沿模型的发布节奏。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 暂停前沿 RL 训练两周，强化安全与对齐标准</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Codex 修复潜在破坏性操作：误删用户文件风险大幅降低</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Claude 自主设计蛋白质结合剂：14/15 靶点成功</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Claude Desktop 启动速度提升 2 倍</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Bot 实战：自主完成二手衣物全流程销售</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Inkling-Small 登 Agent Arena：开源模型性价比新选择</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Gemini 支持免费全真 SAT 模拟考试</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">IPAPatch：无需越狱注入代码调试 iOS 应用</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-19 01:52 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
