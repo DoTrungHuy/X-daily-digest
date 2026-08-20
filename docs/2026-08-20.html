@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-20 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-20</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：Claude Code 新增 Concise 输出风格、Claude Managed Agents 三项更新（内存/域名控制/多 agent 会话查看器）、Grok Build v1.0.7 发布、DeepSeek-V4-Pro 登顶开源模型 Agent Arena 第二、Slack Code 正式上线。OpenAI 预览 Private Safety Processing 以兼顾 Zero Data Retention 与安全监控。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>10 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Code 新增 Concise 输出风格：结果优先，细节按需</h2>
+  <blockquote class="quote"><p>&quot;You can now set Claude Code&#x27;s output style to Concise. Claude leads with the result, keeps responses short, and still gives full detail when you ask. Turn it on in /config → Output style, or set &#x27;outputStyle&#x27;: &#x27;Concise&#x27; in settings.json.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对日常使用 CLI agent 的开发者，Concise 风格可显著减少长输出噪音，适合快速迭代场景；可通过 settings.json 全局配置，便于团队统一风格。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090245922685063634" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Managed Agents 三连更：Self-Hosted 内存、域名控制、多 agent 会话查看器</h2>
+  <blockquote class="quote"><p>&quot;We shipped three updates to Claude Managed Agents. First, we made it easier to use memory with Self-Hosted Sandboxes... Second, we&#x27;ve added domain controls. web_search and web_fetch now take allowed_domains or blocked_domains... Finally, we&#x27;ve redesigned the Console session viewer for multi-agent sessions. It now has a minimap with one lane per agent, a streaming transcript grouped by agent iteration, and an inspector with cost in dollars per thread and per session.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>域名控制（allowed_domains/blocked_domains）对生产环境 agent 的合规与安全至关重要；多 agent 会话查看器按 agent 分 lane 展示并统计每线程/每会话成本，便于调试与成本优化。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090218983962390950" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">DeepSeek-V4-Pro (High) 登 Agent Arena 开源第二，$0.21/任务重塑性价比曲线</h2>
+  <blockquote class="quote"><p>&quot;DeepSeek-V4-Pro (High) is now #2 among open models in Agent Arena (#14 overall), with +6.3% net improvement! At $0.21 median cost/task, it reshapes the Agent Arena Pareto frontier!... Bash Recovery: #1 open / #13 overall (+10.9%), Confirmed Success: #2 open / #4 overall (+13.1%)&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>相比 V4-Flash，V4-Pro 在更高性能下中位成本反而更低，是当前开源 agent 模型性价比新标杆；Bash Recovery 与 Confirmed Success 信号强，适合 CLI 错误恢复与长任务场景。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090240605561778637" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Slack Code 正式上线：人类与 agent 同频道协作</h2>
+  <blockquote class="quote"><p>&quot;Don&#x27;t code alone. Slack Code is live. Humans and agents. Same channel. Same work. Launching today with agents from @AnthropicAI, @github, @Cognition, and @vercel. This is real multiplayer coding.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Slack 作为协作入口，将 agent 直接嵌入团队现有沟通流，降低采用门槛；支持多家 agent 提供商，意味着团队可混合使用不同 agent 于同一工作流。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090240159115853956" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Build v1.0.7：工作流目录、Always/Never 权限、循环工具调用加速中断</h2>
+  <blockquote class="quote"><p>&quot;Grok Build just got a new update bringing a first-class workflows catalog, Always and Never allow on permission prompts, a live status line that can refresh on a timer, and faster shutdown of looping tool calls... Permission prompts now show &#x27;Always allow&#x27; and &#x27;Never allow&#x27; options by default... Tool call loops are interrupted earlier to avoid wasting time on repeated identical actions.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Always/Never 权限持久化（含 MCP 工具与 web-fetch 域名）大幅减少交互打断；循环工具调用提前中断可节省 token 与时间；/workflows 命令与目录便于管理复杂工作流。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090213954744463691" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 预览 Private Safety Processing：Zero Data Retention 与安全监控兼得</h2>
+  <blockquote class="quote"><p>&quot;Today we&#x27;re previewing Private Safety Processing, designed to let us keep offering Zero Data Retention while improving our safeguards... For ZDR deployments, content stays on infrastructure the customer controls. Automated systems look for patterns across related interactions and return limited safety signals, without exposing the underlying prompts or responses to OpenAI employees (even me!). We&#x27;re also developing an OpenAI-hosted option encrypted with customer-controlled keys... plan to begin rolling it out in September.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对使用 ZDR 的企业客户，Private Safety Processing 在不牺牲数据控制权的前提下增强跨交互风险识别；9 月将开始推出，值得关注密钥托管选项的细节。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090165328290701800" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Vercel Agent 接入 Slack：线程内直接建 PR、回滚部署</h2>
+  <blockquote class="quote"><p>&quot;Vercel Agent can now join Slack with the full production context of your apps and agents. ▪︎ Add @vercel to any thread ▪︎ Create plans and PRs ▪︎ Roll back deploys and update configs&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>在 Slack 线程内直接操作生产环境（回滚、改配置）缩短了运维响应链路；与 Slack Code 同日发布，显示协作平台正成为 agent 交互主战场。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090172360410406988" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Google 搜索 AI Mode 新增 Notebooks 与自定义学习文档生成</h2>
+  <blockquote class="quote"><p>&quot;This week, we&#x27;re bringing notebooks to AI Mode... Set up a dedicated notebook for each class or project and add a range of sources like class slides, syllabi, relevant web articles... You can now ask Search to create ready-to-use study docs based on your uploaded files or AI Mode threads. For example, you can add a photo of your handwritten notes along with lecture slides and ask Search for a one-pager that outlines the key concepts.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Notebooks 功能将 AI Mode 从一次性问答升级为可积累的知识库，适合长期项目；自定义文档生成（手写笔记+幻灯片→一页总结）对学习与文档化工作流有实用价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090188697425559588" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Gemini in Chrome 登陆 Android：总结长页、自动浏览、生成图片</h2>
+  <blockquote class="quote"><p>&quot;Gemini in Chrome is now available for Android users in the U.S.! Use it to summarize long pages, connect with your favorite Google apps, and generate images in your browser. Google AI Pro &amp; Ultra subscribers can also use auto browse to handle tedious tasks like booking parking or updating online orders.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>移动端浏览器内嵌 agent 能力（自动浏览处理预订/订单）是 agent 落地消费场景的信号；对开发者而言，关注其 API 与扩展可能性。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2089815309347901583" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-10" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">10</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Google 搜索 AI Mode 支持交互式 3D 可视化生成：Mandelbulb 分形即问即得</h2>
+  <blockquote class="quote"><p>&quot;Just in time for back to school: the power of agentic coding has landed in Search. Anyone can now create custom tools and simulations to visualize different topics. One cool example: I asked AI Mode &#x27;make an interactive 3D fractal Mandelbulb visual I can zoom into&#x27; and it coded and rendered this visualization, right in Search &amp; on the fly. Available globally in English (free of charge).&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>AI Mode 内直接生成可交互 3D 可视化，意味着 agentic coding 能力下沉到通用搜索入口；对教育、演示与快速原型场景有直接价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2090177397006168437" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 DeepSeek-V4-Pro 登 Agent Arena 开源第二那条——性价比数据直接指导模型选型。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Claude Code 新增 Concise 输出风格：结果优先，细节按需</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Claude Managed Agents 三连更：Self-Hosted 内存、域名控制、多 agent 会话查看器</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">DeepSeek-V4-Pro (High) 登 Agent Arena 开源第二，$0.21/任务重塑性价比曲线</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Slack Code 正式上线：人类与 agent 同频道协作</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Build v1.0.7：工作流目录、Always/Never 权限、循环工具调用加速中断</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 预览 Private Safety Processing：Zero Data Retention 与安全监控兼得</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Vercel Agent 接入 Slack：线程内直接建 PR、回滚部署</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Google 搜索 AI Mode 新增 Notebooks 与自定义学习文档生成</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">Gemini in Chrome 登陆 Android：总结长页、自动浏览、生成图片</span></a><a href="#item-10" class="toc-a"><span class="toc-i">10</span><span class="toc-t">Google 搜索 AI Mode 支持交互式 3D 可视化生成：Mandelbulb 分形即问即得</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-20 01:51 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
