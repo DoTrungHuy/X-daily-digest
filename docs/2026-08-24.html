@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-24 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-24</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日信号集中在 agent 实战：Grok Bot 被用于搭建“公司级”多 agent 运营体系、CI 中 agent 的隔离边界讨论，以及 Notion 作为 agent 数据层的落地案例。另有 Vite 离线方案与跨平台图表库两个实用工具。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>35 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 实战：6 个 agent 组成“虚拟公司”，人类只做审批</h2>
+  <blockquote class="quote"><p>“i split the operation into separate roles for research, writing, outreach, ops, finance and support. each agent owns one narrow job / 6 agents → 1 shared operation → automatic handoffs → human approval / the control layer catches anything that sends, spends, publishes or deletes and pushes it into approval before anything happens”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一个可复制的多 agent 编排模式：按职能拆分 agent、各自维护独立 workflow 与 memory、通过“自动交接 + 人工审批”控制风险。对构建内部 agent 团队有直接参考价值，尤其是“控制层拦截发送/支出/发布/删除操作”这一设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091554828858069191" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">CI agent 需要隔离边界：Docker Sandboxes 在 GitHub Agentic Workflows 中的实践</h2>
+  <blockquote class="quote"><p>“Giving a CI agent broad shell access is useful. Giving it broad shell access with no isolation boundary is a different story. @shelajev on Docker Sandboxes in GitHub Agentic Workflows, and what it looks like when an agent does real work in CI without the blast radius”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>延续此前 Docker Sandboxes 的 microVM 隔离主题，这次聚焦 CI 场景。核心观点：给 agent shell 权限不等于给无边界权限，隔离是控制“爆炸半径”的关键。对在 CI 中引入 agent 的团队是重要提醒。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091601420831043591" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Notion 作为 agent 数据层：从“教人用”到“agent 维护一切”</h2>
+  <blockquote class="quote"><p>“I don&#x27;t need to teach people on the team how to use it. Agents maintain everything. All information about the business is viewable by my agents. When something gets done, the agents update the database in notion. And I even have agents run every hour to see if everything was updated correctly.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 Notion 作为“组织记忆”的又一实证：agent 自动更新数据库、定时巡检数据一致性。对团队而言，Notion 的价值从“协作工具”转向“agent 可读写的业务数据层”，值得关注其 API 与权限模型。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091265346057453820" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 视频编辑能力：自动剪辑并同步音乐</h2>
+  <blockquote class="quote"><p>“Grok @Bot edited this video entirely......yes, it can edit videos too / It even synced the music perfectly”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>继文本、代码、控制机器人之后，Grok Bot 展示视频编辑能力。对内容创作者而言，agent 完成“剪辑 + 音乐同步”这类繁琐工作已可行，值得测试其输出质量与可控性。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091612968484032999" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Build 的 xhigh effort 模式：硬项目的“暴力求解”</h2>
+  <blockquote class="quote"><p>“Reminder: Grok Build has xhigh effort, and it’s insanely powerful / If you want to brute-force your way through a difficult project, just type: /effort / Then switch to Extra High Effort / It gives Grok 4.6 its highest reasoning and implementation effort”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Grok Build 的 Extra High Effort 模式适合高难度项目，通过 /effort 命令切换。对使用 Grok 4.6 做复杂实现的开发者，这是一个值得记住的开关。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091642814606032998" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Vite 离线支持工具：零配置为网站添加 PWA 能力</h2>
+  <blockquote class="quote"><p>“A tool that adds offline support to websites built with Vite, requiring no setup. / Works with many popular web frameworks / Automatically updates your app&#x27;s content / Generates all needed app icons”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>为 Vite 项目一键添加离线支持，自动更新内容并生成应用图标。对前端开发者是低成本的 PWA 接入方案，适合快速原型或轻量应用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091699528915382383" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">LiveCharts2：一套代码跨手机、桌面、Web 的图表库</h2>
+  <blockquote class="quote"><p>“LiveCharts2 lets you build charts and graphs that work across phones, desktops, and web browsers with one design, fixing the limitations of its earlier version.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>跨平台图表库，一套设计适配手机、桌面与浏览器，修复了旧版限制。对需要多端一致图表展示的 .NET 开发者值得关注。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091624032349421960" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">@levelsio 观点：高技能欧洲人愿意缴税，但前提是政府“做得好”</h2>
+  <blockquote class="quote"><p>“I think most high skilled Europeans are happy to pay (even high) taxes / That is, if the government does a great job like Singapore or Dubai or Korea or Japan and most things work well / You can try chase them around the world and collect their money but it&#x27;s kind of a scarcity/loser approach, wouldn&#x27;t you want them to just not flee in the first place?”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对远程工作者与创业者有参考价值：高技能人才的流动与税收、公共服务质量直接相关。若考虑在欧洲设立公司或团队，可借此评估不同国家的“性价比”。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2091476185876254816" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点这条：Grok Bot 六 agent 搭建“虚拟公司”的实战拆解（ITEM1），它展示了多 agent 协作与人工审批控制层的最佳实践。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Grok Bot 实战：6 个 agent 组成“虚拟公司”，人类只做审批</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">CI agent 需要隔离边界：Docker Sandboxes 在 GitHub Agentic Workflows 中的实践</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Notion 作为 agent 数据层：从“教人用”到“agent 维护一切”</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Grok Bot 视频编辑能力：自动剪辑并同步音乐</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Build 的 xhigh effort 模式：硬项目的“暴力求解”</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Vite 离线支持工具：零配置为网站添加 PWA 能力</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">LiveCharts2：一套代码跨手机、桌面、Web 的图表库</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">@levelsio 观点：高技能欧洲人愿意缴税，但前提是政府“做得好”</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-24 01:57 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
