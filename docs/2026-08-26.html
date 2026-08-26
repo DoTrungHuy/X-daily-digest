@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-26 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-26</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日信号集中在三处：OpenAI 自研推理芯片 Jalapeño 公布实测数据并计划年底部署，ChatGPT Work 新增“代登录网站”能力；Gemini Enterprise 推出法律与金融行业专属方案；以及 SpaceX TeraFab 在德州进入协议阶段。对开发者而言，Jalapeño 的“高吞吐+低延迟”架构和 ChatGPT Work 的免密登录是值得关注的两个技术点。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 自研推理芯片 Jalapeño 实测：更高吞吐 + 更低延迟，年底部署</h2>
+  <blockquote class="quote"><p>&quot;The results show a major advance: more intelligence from every watt and faster responses, delivering both higher throughput and lower latency in one architecture without sacrificing efficiency.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对关注推理基础设施的工程师，这是“专用芯片 vs 通用 GPU”路线的重要数据点。Jalapeño 声称同时提升吞吐和延迟，意味着 agent 类交互（多轮、长上下文）的响应体验可能显著改善。Gen 2/Gen 3 已在路上，说明这是一条长期路线，值得跟踪其对 API 定价和 Codex 会话成本的影响。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092300846675505602" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">ChatGPT Work 新增“代登录网站”：浏览器自动登录，但 ChatGPT 看不到密码</h2>
+  <blockquote class="quote"><p>&quot;ChatGPT Work can now use its computer and browser to sign in to websites on web and mobile, without ChatGPT ever seeing your username or password.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 agent 自动化“真实世界任务”的关键一步。对开发者而言，这意味着可以委托 agent 处理需要登录的重复性工作（如提交报销、预约、填表），且密码不经过模型，降低了凭据泄露风险。注意：目前仅限 Plus/Pro/Business 用户，且是 Work 功能，个人版可能没有。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092366554965107164" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Gemini Enterprise 推出行业方案：先攻法律与金融</h2>
+  <blockquote class="quote"><p>&quot;Today, we&#x27;re introducing industry-specific solutions on Gemini Enterprise, starting with Gemini Enterprise for Legal and Financial Services, with more industries to come.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>大模型进入垂直行业的标志性动作。法律和金融是文档密集、合规要求高的领域，这类“行业专属”方案通常意味着预置了领域知识库和合规模板。对做 B2B agent 的开发者，这是观察“通用模型 vs 行业定制”竞争格局的样本。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092269235863208128" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GPT-5.6 Sol 登陆 Microsoft Foundry：$4/$20 每百万 token，企业治理内置</h2>
+  <blockquote class="quote"><p>&quot;From Sept. 1: GPT-5.6 Sol in Microsoft Foundry at $4/1M input, $20/1M output through at least Nov. 30, 2026. Advanced coding, agentic workflows, 1M context, with enterprise governance built in.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是继 OpenAI 直接降价后的又一渠道动作。对 Azure 系企业用户，这个价格比公开 API 更便宜（结合此前“降价超 20%”的消息），且强调“enterprise governance built in”，适合对数据合规有要求的 agent 工作流。1M 上下文对长文档处理是刚需。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092371460249534601" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Antigravity 接入 Apple Xcode：在编辑器内构建 Apple 生态应用</h2>
+  <blockquote class="quote"><p>&quot;You can now access Antigravity directly inside Apple&#x27;s Xcode to build across Apple&#x27;s ecosystem (e.g. macOS, iOS, iPadOS) without leaving the editor. To get started, onboard through the Intelligence settings panel in Xcode 27 beta 6 or later.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 Apple 平台开发者，这意味着 AI 辅助编码可以直接在 Xcode 内使用，无需切换工具。注意需要 Xcode 27 beta 6+，且通过 Intelligence 设置面板启用。这是“AI IDE 插件化”趋势的又一例证，与 Claude Code、Copilot 形成竞争。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092376671206912235" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">ChatGPT Business 新增 $100 Premium Seat：面向小团队的高配席位</h2>
+  <blockquote class="quote"><p>&quot;The new $100 Premium seat is a game changer for small businesses and startups—giving lean teams better tools, faster workflows, and capabilities once reserved for big companies.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对创业团队，这是一个成本信号：$100/席位的“高级能力”意味着 OpenAI 在细分企业市场。如果团队重度使用 ChatGPT/Codex，值得对比这个席位与现有 Business 计划的差异（原文未列明细，需查官方页面）。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092335305366069305" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">levelsio 数据观察：App Store 收入首次下滑，但“应用已死”叙事不成立</h2>
+  <blockquote class="quote"><p>&quot;First decrease in &#x27;App Store&#x27; revenue in history in the US. (includes games)... Non-gaming (apps) is still up 14.6% YoY globally. Gaming down 4.5%. Web share of revenue on RC rose 31% over the last year, from 20% of revenue to 26% of revenue.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对独立开发者和做 Web 工具的团队，这个数据值得注意：游戏收入下滑拖累大盘，但非游戏应用仍在增长；同时“app2web”趋势在 RC（可能是 levelsio 的产品）上明显。他提醒不要用单一数据点下“应用末日”结论。做跨平台分发的人可以关注这个迁移信号。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092278833772683537" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">SpaceX TeraFab 德州协议签署：2026 年底动工，10 年税收优惠</h2>
+  <blockquote class="quote"><p>&quot;Lists a construction period from December 1, 2026, through December 31, 2028... Establishes a 10-year tax-incentive period from 2029 through 2038... Requires a $12.98 million performance bond.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对关注算力供应链的人，这是“芯片制造 + 先进计算”在美本土化的又一进展。TeraFab 被描述为“垂直整合的半导体制造和先进计算设施”，与 OpenAI 的 Jalapeño 芯片、NVIDIA Vera Rubin 量产形成呼应——算力基础设施的竞争正在从设计延伸到制造。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092334382006808587" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 Jalapeño 芯片实测那条——它同时影响推理成本、响应速度和 agent 体验，是未来几个月 API 定价和 Codex 性能变化的前置信号。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 自研推理芯片 Jalapeño 实测：更高吞吐 + 更低延迟，年底部署</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">ChatGPT Work 新增“代登录网站”：浏览器自动登录，但 ChatGPT 看不到密码</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Gemini Enterprise 推出行业方案：先攻法律与金融</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">GPT-5.6 Sol 登陆 Microsoft Foundry：$4/$20 每百万 token，企业治理内置</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Antigravity 接入 Apple Xcode：在编辑器内构建 Apple 生态应用</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">ChatGPT Business 新增 $100 Premium Seat：面向小团队的高配席位</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio 数据观察：App Store 收入首次下滑，但“应用已死”叙事不成立</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">SpaceX TeraFab 德州协议签署：2026 年底动工，10 年税收优惠</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-26 01:58 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
