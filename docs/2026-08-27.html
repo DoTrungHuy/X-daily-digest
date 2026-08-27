@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-27 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-27</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：OpenAI 发布 Hugging Face 事件完整技术报告并引入第三方评估，Anthropic 首次向外部研究者开放真实 Claude 使用数据；SenseNova U1.5 Lite 开源上线，面向视觉生成与编辑工作流；Elon Musk 展示 Grok Build 自主开发游戏能力。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 Hugging Face 事件完整技术报告，引入 METR 与 Redwood 第三方评估</h2>
+  <blockquote class="quote"><p>&quot;We have conducted a thorough investigation into the Hugging Face incident. We are releasing a technical report and accompanying blog post that reconstruct the agents&#x27; activity, explain why existing safeguards failed, and detail how we&#x27;re preventing recurrence.&quot; / &quot;We worked with METR and Redwood Research to conduct a third-party assessment of the model behavior observed during the incident.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 安全工程有直接参考价值——报告会详细复盘 agent 行为链、现有防护为何失效、以及后续预防措施。第三方评估（METR/Redwood）的加入意味着安全审计从&quot;自说自话&quot;走向独立验证，值得关注其方法论。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092691861773160673" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 首次向外部研究者开放真实 Claude 使用数据（隐私保护处理）</h2>
+  <blockquote class="quote"><p>&quot;For the first time, we&#x27;ve given external researchers a way to study AI&#x27;s impacts using real, privacy-preserved Claude usage data. To date, this work has only been possible within AI labs.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者意味着可观测性（observability）正在成为 AI 公司的核心能力——Anthropic 开放的是&quot;工具&quot;而非&quot;数据&quot;，说明研究基础设施本身已产品化。METR 正在用这些数据估算 coding agent 的真实生产力增益，结果值得期待。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092661573223657834" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">SenseNova U1.5 Lite 开源：原生 2K/4K 生成 + 精确图像编辑的统一多模态模型</h2>
+  <blockquote class="quote"><p>&quot;SenseNova U1.5 Lite is an open-source, lightweight native unified multimodal model for visual understanding, generation, and editing.&quot; / &quot;supports native 2K/4K generation, stronger complex instruction following, improved Chinese/English text rendering, multi-text layouts, and more precise native image editing with stronger preservation.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做视觉 agent 管线的开发者是直接利好——支持约束条件（主体数量、空间关系、文本位置、布局结构、视觉标记、边界框、多图参考），意味着可以在一个模型内完成&quot;理解→生成→编辑&quot;闭环，减少管线断裂点。已集成 SenseNova Token Plan，免费试用额度 1500 次/5 小时。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092903713090441408" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Elon Musk 展示 Grok Build 自主开发游戏：从提示到可玩仅需简单指令</h2>
+  <blockquote class="quote"><p>&quot;Grok Build made this fun lil Mars simulator game for my nephew. I gave it simple prompts. It did the rest: wrote systems, built and tested it, studied gameplay, found and fixed bugs, then kept iterating. Grok Build is very powerful. It feels like having a game studio on demand.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 开发者是产品形态参考——&quot;写系统→构建测试→研究玩法→找 bug→修复→迭代&quot;的闭环已经可以在单一工具内完成。同时 Musk 宣布 Grok @Bot 免费额度重置，值得关注。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092690415866822950" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI「赛博教父」Tibo 播客：Codex 与 ChatGPT 将合并为「个人 AGI」，AI 已在自我优化</h2>
+  <blockquote class="quote"><p>&quot;Tibo 说现在很多人同时开 10-15 个 Agent 来弥补 AI 太慢的问题。但他理想的状态是 AI 快到跟你的思考速度同步&quot; / &quot;OpenAI 用最强的模型去改写底层的 CUDA 内核和推理架构，结果 Luna 模型运营成本直接砍了 80%&quot; / &quot;Codex 现在 2000 万用户了&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>三个关键信号：1) 超高速模式已做到 14 倍速，1-2 年内或成默认，推理速度三个月提升 60%；2) AI 自我改进已在发生（模型改写 CUDA 内核，成本降 80%），不是未来时；3) Codex 定位从&quot;程序员工具&quot;转向&quot;人人可用的底层能力&quot;，2000 万用户增长曲线垂直。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092872221954085233" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Gemini Live 从对话走向代办：Daily Brief、Personal Intelligence、Gmail 收件箱管理</h2>
+  <blockquote class="quote"><p>&quot;Gemini Live is moving beyond conversation to handle complex tasks on your behalf. With new features in Live like Daily Brief, Gemini Spark, Personal Intelligence, and @Gmail inbox management, you can talk through your day and delegate your to-dos without missing a beat.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>语音交互 agent 正在从&quot;问答&quot;转向&quot;执行&quot;——Daily Brief 和 Gmail 管理意味着 agent 开始主动代理日常事务。对开发者而言，语音入口 + 邮件/日程等高频场景的组合，是 agent 落地的高价值方向。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092661911120978024" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 为 Hoodmaps 接入美国人口普查收入数据：新增 Income 模式</h2>
+  <blockquote class="quote"><p>&quot;Strava&#x27;s data is quite protected so I couldn&#x27;t index it for Hoodmaps. But the good thing is the US Census data publishes median income level and the data is very fresh and accurate, so I added it to 🗺️. So now you can switch to [ 💰 Income mode ] and instantly see wealth or lack of wealth concentrated&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>数据源选择的实战案例——当目标数据受保护时，寻找替代公开数据源（Census）实现同等价值。对做地理/社交类应用的开发者有参考意义：官方统计数据往往比想象中更新更准。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092907465629135100" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Solana 日活地址突破 500 万；加密市场两月回流 $7250 亿</h2>
+  <blockquote class="quote"><p>&quot;BREAKING: 5M daily active addresses on Solana&quot; / &quot;Over $725,000,000,000 has been added to the crypto market since Bitcoin&#x27;s current cycle bottom in June. In two months, capital has been flooding back in.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 Web3/链上 agent 的开发者是市场信号——Solana 日活 500 万意味着链上应用的用户基础在扩大，agent 自动化交互（交易、治理、数据分析）的需求会随之增长。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2092896166459396561" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 Hugging Face 事件技术报告——agent 安全是当前最关键的工程议题，官方复盘 + 第三方评估的组合值得完整阅读。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 发布 Hugging Face 事件完整技术报告，引入 METR 与 Redwood 第三方评估</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Anthropic 首次向外部研究者开放真实 Claude 使用数据（隐私保护处理）</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">SenseNova U1.5 Lite 开源：原生 2K/4K 生成 + 精确图像编辑的统一多模态模型</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Elon Musk 展示 Grok Build 自主开发游戏：从提示到可玩仅需简单指令</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI「赛博教父」Tibo 播客：Codex 与 ChatGPT 将合并为「个人 AGI」，AI 已在自我优化</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Gemini Live 从对话走向代办：Daily Brief、Personal Intelligence、Gmail 收件箱管理</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio 为 Hoodmaps 接入美国人口普查收入数据：新增 Income 模式</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Solana 日活地址突破 500 万；加密市场两月回流 $7250 亿</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-27 09:47 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
