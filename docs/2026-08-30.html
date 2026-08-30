@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-08-30 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-08-30</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：AI 视频生成迎来“比观看更快”的拐点，Notion 一口气放出多项 agent 能力更新，GitHub Issues 也悄悄升级。另外，关于量子计算与 AI 算力瓶颈的讨论值得开发者留意。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">AI 视频生成进入“实时”时代：fal 发布 50 倍加速的 Minimax H3 变体“Max”</h2>
+  <blockquote class="quote"><p>“You can now generate AI video faster than you can watch it... @fal made a post-trained Minimax H3 variant called Max which is 50x faster than the original but still maintains quality. It generates 15 seconds of video in 9 seconds!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 AI 内容工具或直播应用的开发者，这是重大信号——视频生成的延迟瓶颈被大幅突破，实时交互式视频流（如 levelsio 的 Infinite Slop）成为可能。可关注 fal 的 API 定价与接入方式。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093628563693944889" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 发布多项 agent 能力更新：Custom Agents API 公开测试、Effort 控制、AI 用量可视化</h2>
+  <blockquote class="quote"><p>“Custom Agents API is now in public beta... Build a Slack bot, an internal dashboard, a customer help center... Effort controls: Tell Notion AI how hard to think before it starts... AI usage has its own view: Settings → Notion AI → Usage now shows what you’ve spent from your allowance.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对将 Notion 作为 agent 数据层/工作流中枢的团队，这几项更新直接补上了“对外集成”和“成本控制”两块短板。Custom Agents API 意味着 agent 能力可以输出到 Slack 等外部工具，Effort 控制则让开发者能按任务复杂度调配推理成本。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093737950274265089" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 用“实时视频生成”构建 Infinite Slop：无限交互式 AI 直播流</h2>
+  <blockquote class="quote"><p>“I built it! 🍰 Infinite Slop... An infinite and interactive AI generated live stream of slop that goes on forever and ever. Anything that you write in the chat is generated next and AI will try to connect it to the previous video so there&#x27;s an actual sequence and story line.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一个极好的“实时视频生成”技术演示案例。它展示了如何用“桥接提示”让 AI 生成连续叙事，而非孤立片段。对做 AI 互动内容或直播产品的开发者，这个架构思路（用户输入→生成→衔接上一段）值得借鉴。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093754163343593802" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GitHub Issues 更新：侧边栏固定视图、反应头像、作用域感知的 Issue 依赖 REST API</h2>
+  <blockquote class="quote"><p>“New updates in GitHub Issues: Pin views in the Issues sidebar, See profile avatars for reactions, Adjust dashboard density, Hide closed sub-issues, Scope-aware Issue dependency REST API.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对重度使用 GitHub Issues 做项目管理的团队，这次更新主要是体验优化。其中“Scope-aware Issue dependency REST API”对自动化脚本和 agent 集成有实际价值——可以更精确地查询和管理 issue 间的依赖关系。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093825400178917519" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">牛津物理学家 Tim Palmer 提出量子力学基于“数学虚构”，预测量子计算机将止步于 400 量子比特</h2>
+  <blockquote class="quote"><p>“Oxford physicist Tim Palmer argues it rests on a mathematical fiction: irrational numbers like √2 have no basis in physical reality... Palmer&#x27;s theory makes a testable prediction: quantum computers will fail beyond 400 qubits.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对关注量子计算与 AI 算力交叉领域的开发者，这是一个值得跟踪的争议性观点。如果 Palmer 的预测成立，将直接影响依赖量子计算突破算力瓶颈的长期路线图。建议保持关注，但不必急于下结论。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093390688754753706" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">2027 年约 15GW AI 算力可能“无法通电”：电力之外，配套基础设施是更大瓶颈</h2>
+  <blockquote class="quote"><p>“Consensus estimate is that ~15GW of AI compute produced in 2027 cannot be turned on in 2027. This is harder than just finding power, as you also need to build out all the transformers, wiring, liquid-cooling, (massive) chillers &amp; complex networking.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 AI 基础设施或数据中心相关工作的工程师，这提醒了算力供给的瓶颈远不止电力。变压器、冷却、网络等配套环节的交付周期，可能成为决定 2027 年算力实际可用量的关键变量。对规划长期算力预算的团队有参考意义。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093810234141634702" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 分享“人生管理”工作流：Notion 看板 + agent 自动更新状态</h2>
+  <blockquote class="quote"><p>“finally found a decent &#x27;life management&#x27; approach: is a notion board w/ &#x27;backlog&#x27;, &#x27;block on me&#x27;, &#x27;waiting&#x27;, &#x27;complete&#x27;, agents update it as tasks complete. Then i have a daily automation with @bot which the status of items, updates them, and pings me on what i need to do.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一个将 agent 用于个人任务管理的具体实践。核心思路是：用 Notion 看板作为“事实源”，agent 负责更新状态，每日自动化负责汇总和提醒。对想用 agent 减轻个人事务负担的开发者，这是一个可直接复制的模式。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093772583208673774" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">Clash Verge Rev：跨平台可视化代理管理工具，支持 WebDav 同步</h2>
+  <blockquote class="quote"><p>“Clash Verge Rev makes managing your internet proxy settings simple and visual. Works on Windows, Mac, and Linux. Customize the interface to your taste. Sync settings across devices with WebDav.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对需要管理多设备代理配置的开发者，这是一个实用的工具推荐。WebDav 同步功能可以让你在一处配置，多端生效，减少重复劳动。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2093911597932847229" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 @levelsio 关于 fal 的“实时视频生成”那条——它预示着一个新交互范式的开始。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">AI 视频生成进入“实时”时代：fal 发布 50 倍加速的 Minimax H3 变体“Max”</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Notion 发布多项 agent 能力更新：Custom Agents API 公开测试、Effort 控制、AI 用量可视化</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">levelsio 用“实时视频生成”构建 Infinite Slop：无限交互式 AI 直播流</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">GitHub Issues 更新：侧边栏固定视图、反应头像、作用域感知的 Issue 依赖 REST API</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">牛津物理学家 Tim Palmer 提出量子力学基于“数学虚构”，预测量子计算机将止步于 400 量子比特</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">2027 年约 15GW AI 算力可能“无法通电”：电力之外，配套基础设施是更大瓶颈</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio 分享“人生管理”工作流：Notion 看板 + agent 自动更新状态</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Clash Verge Rev：跨平台可视化代理管理工具，支持 WebDav 同步</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-08-30 05:23 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
