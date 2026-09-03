@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-03 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-03</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：特斯拉 Cybercab 在奥斯汀大规模上路实测，无人驾驶出租车正式进入公众视野；OpenAI 高层密集发声回应 Astra 安全与监控争议；Notion 推出 AI 模型控制新功能。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">特斯拉 Cybercab 奥斯汀大规模实测：无方向盘车队上路，单程 35 分钟零接管</h2>
+  <blockquote class="quote"><p>&quot;Tesla Robotaxi just drove us 35 minutes across Austin to our hotel perfectly and dropped us off directly in front of the door. The driving and comfort on these unsupervised cars are next level. It even avoided road debris.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无人驾驶出租车已从 demo 走向真实运营测试。对 agent 开发者而言，这是&quot;自主系统在开放环境中的长尾可靠性&quot;的典型案例——注意其避障、路径规划与异常处理逻辑，可类比 agent 在非结构化环境中的决策设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095359231864058074" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI CEO 回应 Astra 监控争议：计算图深度与 GPT-4 相差不到 2 倍</h2>
+  <blockquote class="quote"><p>&quot;The depth of the computation graph for our present frontier models, including Astra, is within a factor of two of GPT-4. OpenAI has worked to preserve and utilize chain-of-thought monitoring since our very first reasoning models.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>sama 明确否认 Astra 存在&quot;不可监控&quot;的深度问题，并强调 CoT 监控仍是核心研究目标。对关注对齐与可解释性的研究者，这是重要的官方定调——模型规模增长不等于监控失效，但确实&quot;fragile and trending in a negative direction&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095023204993490967" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 EHR 集成：ChatGPT 接入 Epic 医疗系统</h2>
+  <blockquote class="quote"><p>&quot;Today, we&#x27;re bringing ChatGPT closer to the systems, information, and workflows healthcare teams already rely on. We&#x27;re introducing a new EHR integration to connect supported Epic environments to ChatGPT.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>医疗是 agent 落地的合规重灾区。OpenAI 选择与 Epic（美国最大 EHR 厂商）深度集成而非自建，说明 agent 进医疗的正确姿势是&quot;嵌入既有工作流&quot;而非替代。对做 B2B agent 的开发者有直接参考价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2094846597704348020" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion AI 新增模型控制：工作区可限制可用模型并设默认模型</h2>
+  <blockquote class="quote"><p>&quot;Just shipped: New model controls for Notion AI. Workspace admins can choose which models are available in Notion Agent and Custom Agents, and set a default model for Custom Agents.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>企业级 agent 平台开始提供模型级治理能力。对在 Notion 上构建 Custom Agents 的团队，这意味着可以按成本/合规要求锁定模型，不再依赖平台默认。注意路径：Settings → Notion AI → General → Model controls。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095279036759249054" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Dell 财报：AI 服务器收入同比翻倍，积压订单 $95B</h2>
+  <blockquote class="quote"><p>&quot;Record AI Servers Revenue: $16.4B ⬆️100% Y/Y... Record AI Backlog: $95B... Demand exceeds supply, and we are still supply-constrained.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Dell 的 AI 积压订单从侧面印证算力供需缺口仍在扩大。对做 infra 或依赖 GPU 的团队，这暗示 2027 年前算力成本难以下降，架构设计应更早考虑推理优化与模型压缩。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095109783569195088" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 算账：Minimax H3 Max 实时视频流月成本 $32,940</h2>
+  <blockquote class="quote"><p>&quot;$0.0125/s*60s*60m*24h*30.5d=$32,940/mo. Meaning if you can make more than that with a perpetual AI live stream, you&#x27;re profitable! I&#x27;m at $15K/mo revenue now so I need just one more advertiser and I&#x27;m profitable!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>实时 AI 视频生成的成本结构首次被公开拆解。对做 AI 内容产品的团队，这是一个难得的单位经济模型参考——每秒 $0.0125 的定价意味着 24/7 直播的边际成本极高，商业模式必须依赖广告而非订阅。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095232980159479957" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">美国 1.53 亿张驾照泄露：KYC 数据安全再敲警钟</h2>
+  <blockquote class="quote"><p>&quot;153,000,000 American driver licenses leaked in KYC hack. This is 63% of all American driver licenses.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>KYC 数据是 agent 身份验证的基础设施。此次泄露影响 63% 的美国成年人，对做身份验证、反欺诈或合规 agent 的团队是直接威胁——需要重新评估数据源可信度与用户身份验证流程。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095214488664326567" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">X 遭大规模密码恢复攻击，司法部介入调查</h2>
+  <blockquote class="quote"><p>&quot;This week, sophisticated cyber criminals attempted a password-recovery attack on hundreds of thousands of X users. X disrupted the attack to prevent user accounts from being captured.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>密码恢复攻击（account takeover via recovery flow）是 agent 时代身份安全的关键薄弱点。对构建自主账号管理或自动化工具的开发者，这是提醒：任何涉及密码重置的自动化流程都需要额外的风险控制层。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095249494401237242" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 @sama 关于 Astra 计算图深度的回应——它同时涉及模型能力、安全监控与行业叙事，是理解 OpenAI 当前节奏的关键信号。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">特斯拉 Cybercab 奥斯汀大规模实测：无方向盘车队上路，单程 35 分钟零接管</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">OpenAI CEO 回应 Astra 监控争议：计算图深度与 GPT-4 相差不到 2 倍</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 发布 EHR 集成：ChatGPT 接入 Epic 医疗系统</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Notion AI 新增模型控制：工作区可限制可用模型并设默认模型</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Dell 财报：AI 服务器收入同比翻倍，积压订单 $95B</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">levelsio 算账：Minimax H3 Max 实时视频流月成本 $32,940</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">美国 1.53 亿张驾照泄露：KYC 数据安全再敲警钟</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">X 遭大规模密码恢复攻击，司法部介入调查</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-03 04:30 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
