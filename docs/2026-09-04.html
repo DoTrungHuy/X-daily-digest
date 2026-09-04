@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-04 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-04</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">GPT-6 Astra 正式发布，但只对部分组织开放，普通用户还需等待；同时特斯拉 Cybercab 的线控刹车技术细节被扒出，成为今日两大焦点。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">GPT-6 Astra 正式发布：最智能也最对齐，但仅限部分组织先行</h2>
+  <blockquote class="quote"><p>&quot;GPT-6 Astra is the most intelligent and aligned model in the world, and sets a new state of the art for computer use, browsing, software engineering, cybersecurity, science, and professional work.&quot; / &quot;Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API and AWS.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Astra 在 Agents&#x27; Last Exam、AutomationBench、ScreenSpot Pro 上达到 SOTA，对做 computer-use agent 的开发者是重要参考；但注意当前仅限部分组织，API 和 ChatGPT 订阅用户需等待，Pro 用户优先。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095595741528125780" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">sama 公布 Responses API 新特性：异步函数调用 + 中途转向</h2>
+  <blockquote class="quote"><p>&quot;cool new responses api features releasing today with astra: 1. async function calling — model can keep going while your tool runs 2. mid-turn steering — you can inject messages into the model while it&#x27;s reasoning to steer it in a different direction (incl. tool outputs for the async function calls) 3. change reasoning effort without breaking cache&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>异步函数调用让 agent 在工具执行期间不阻塞，mid-turn steering 允许在推理中注入消息改变方向，这对构建复杂 agent 工作流的开发者是重大利好；且可动态调整 reasoning effort 而不破坏缓存，降低 API 成本。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095606297572073765" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">sama 承认 Astra 发布过程混乱，承诺尽快全面铺开</h2>
+  <blockquote class="quote"><p>&quot;first, sorry for the messy rollout. second, when we screw up, we try to make it right. third, we should be able to begin broad rollout to API customers and chatgpt subscribers in the near future. as usual we will start with pro subscribers.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在等 Astra 的 API 接入，注意 rollout 顺序：Pro 订阅者优先，然后才是 API 客户和普通订阅者；当前发布确实存在混乱，不必急于切换生产环境。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095678759651438887" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">OpenAI 承诺 $1B 补贴 Daybreak 访问，助力网络安全防御</h2>
+  <blockquote class="quote"><p>&quot;Alongside the launch of GPT-6 Astra, we&#x27;re committing $1 billion to subsidize Daybreak access and frontier capabilities to help frontline defenders protect essential services and critical infrastructure. Welcome to the AGI era for cybersecurity.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>OpenAI 将前沿模型能力与网络安全绑定，对做安全 agent 或防御工具的开发者意味着潜在的合作与补贴机会；也预示 AI 安全赛道将获得更多资源倾斜。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095634888951250983" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">特斯拉 Cybercab 无刹车油：首款线控刹车量产车</h2>
+  <blockquote class="quote"><p>&quot;The Tesla Cybercab doesn&#x27;t have ANY brake fluid. It is the first production vehicle to have a brake-by-wire system. Electronic actuators are responsible for the clamping pressure, rather than hydraulic fluid... This system improves efficiency since the brake pads can fully disengage.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>线控刹车（brake-by-wire）是汽车电子化的关键一步，对做嵌入式系统或车辆控制软件的工程师是重要趋势信号；电子执行器替代液压系统意味着软件在安全关键系统中的权重进一步上升。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095703149503762886" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Cybercab 电机不含稀土，保持同等续航</h2>
+  <blockquote class="quote"><p>&quot;The Cybercab motor uses no rare earth metals, but maintains the same range! This was extremely hard to achieve.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无稀土电机是供应链去风险化的标志性进展，对关注硬件供应链和材料替代的工程师有参考价值；也说明电机设计在材料工程上仍有巨大优化空间。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095720611695759704" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Tabbit 上线 Gemini 3.8 Flash：日常 Chat 体验升级</h2>
+  <blockquote class="quote"><p>&quot;The model that made it through the night is now live on Tabbit. Give it up for Gemini 3.8 Flash from @GoogleDeepMind, a real upgrade to your everyday Tabbit Chat experience.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Gemini 3.8 Flash 进入 Tabbit，说明 Google DeepMind 的轻量模型在第三方工具中的渗透加速；对做 agent 工具链的开发者，Flash 系列是低成本推理的可靠选项。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095720898947137944" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">img2threejs：单张参考图重建为纯代码 Three.js 模型</h2>
+  <blockquote class="quote"><p>&quot;img2threejs rebuilds objects from a single reference image as code-only, procedural Three.js models.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>从单张图片生成纯代码的 Three.js 模型，对做 3D 可视化或 WebXR 的开发者是高效原型工具；代码化模型意味着可版本控制、可程序化调整，适合工程化流程。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2095727513897181292" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 @sama 的 Responses API 新特性那条——异步函数调用和 mid-turn steering 将直接改变你构建 agent 的方式。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">GPT-6 Astra 正式发布：最智能也最对齐，但仅限部分组织先行</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">sama 公布 Responses API 新特性：异步函数调用 + 中途转向</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">sama 承认 Astra 发布过程混乱，承诺尽快全面铺开</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OpenAI 承诺 $1B 补贴 Daybreak 访问，助力网络安全防御</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">特斯拉 Cybercab 无刹车油：首款线控刹车量产车</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Cybercab 电机不含稀土，保持同等续航</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Tabbit 上线 Gemini 3.8 Flash：日常 Chat 体验升级</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">img2threejs：单张参考图重建为纯代码 Three.js 模型</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-04 04:32 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
