@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-07 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-07</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日焦点：OpenAI 首次公开模型加速自身研究的内部数据，呼吁行业透明化；Astra 针对重度用户推出长尾用量优化，低推理档性能已超 Sol 高档；levelsio 为 Nomads 加入 MCP/API 端点，让旅行数据全面 agent-ready。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>33 推文</span><span class="sig sig-strong">信号 强</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 公开模型加速研究数据，呼吁行业披露递归自我改进</h2>
+  <blockquote class="quote"><p>&quot;Today we&#x27;re releasing data on models accelerating research at OpenAI. Recursive self-improvement could be the most important contributor to AI capabilities over the next few years, but by default it will only be seen inside a few frontier AI labs. Being transparent is more urgent than ever... I ask other AI companies to do the same.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>递归自我改进是未来几年 AI 能力增长的关键变量，但默认只发生在少数前沿实验室内部。OpenAI 主动公开数据，开发者应关注这一趋势对模型能力曲线的影响——若自我改进成为常态，依赖外部模型 API 的应用可能需要更频繁地重新评估底层能力假设。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096616468851097811" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Astra 长尾用量优化：重度用户最高可省 3-4 倍订阅额度</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;ve made some improvements that improve usage on the long tail for power users of Astra when logged in with your ChatGPT account. No change in quality and a pure win that on the long tail can result in up to 3-4X less usage being drawn from the subscription.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对重度依赖 Astra 的开发者是直接利好——同样的订阅额度现在能支撑 3-4 倍的长尾调用量。若你日常高频使用 Astra 处理小任务（代码补全、快速问答、格式化），建议登录 ChatGPT 账号使用，能显著延长订阅额度的生命周期。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096717905614524491" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Astra 推理档位校准：低档性能已超 Sol 高档</h2>
+  <blockquote class="quote"><p>&quot;To calibrate you all on which reasoning effort to use for Astra, know that GPT-6 Astra on low performs better than GPT-5.6 Sol on high. If you were using high reasoning efforts with Sol and were happy, I suggest you move down to low or medium for Astra.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是非常实用的 API 成本优化信号——如果你从 Sol 迁移到 Astra，直接使用 low 或 medium 推理档即可获得优于 Sol high 的效果，同时大幅降低 token 消耗与延迟。建议在代码中默认将 reasoning effort 设为 low，按需升级。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096688770523467947" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">levelsio 为 Nomads 添加 MCP 与 API 端点，旅行数据全面 agent-ready</h2>
+  <blockquote class="quote"><p>&quot;✨ Added an MCP and API endpoint now... They operate pretty much the same but one you can put in your clanker! You can also add trips via POST on /api/trips or via /mcp... Agent ready 😊&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Nomads 现在支持通过 MCP 协议或 REST API 编程式添加旅行记录。对 agent 开发者而言，这意味着可以将 Nomads 集成到自动化工作流中——例如从邮件、日历或照片库自动提取行程并同步。MCP 端点为 Claude Code 等支持 MCP 的工具提供了直接接入能力。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096623171428364436" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 将酒店标签嵌入 Hoodmaps 地图，旅行选点更精准</h2>
+  <blockquote class="quote"><p>&quot;Great idea so I added it to Hoodmaps... Hoodmaps tags inside the map so you can book a hotel in the right place 😊&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Hoodmaps 新增地图内酒店区域标签，帮助用户在陌生城市选择安全、便利的住宿区域。对数字游民和频繁出差者实用价值高——结合此前 Crime mode，Hoodmaps 正逐步成为城市安全与生活便利度的综合参考工具。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096745803977040342" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 本周更新：Claude Fable 5.1 与 GPT-6 Astra 入驻</h2>
+  <blockquote class="quote"><p>&quot;A few improvements from this week (that aren&#x27;t all AI)... Claude Fable 5.1 and GPT-6 Astra are now in Notion (okay, that one&#x27;s AI).&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Notion 用户现在可在工作区内直接调用 Claude Fable 5.1 与 GPT-6 Astra。结合此前 Custom Agents 支持 MCP 的更新，Notion 正成为多模型 agent 工作流的统一入口。建议在 Notion 中配置默认模型为 Astra（若已可用），并利用 Fable 5.1 处理长文档分析类任务。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096312932803957071" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">100 行代码的自动 Bug 修复工具：解决 74% 真实编程任务</h2>
+  <blockquote class="quote"><p>&quot;A tiny coding helper that fixes software bugs automatically, using just 100 lines of code. - Solves 74% of real-world programming tasks. - Works with any coding model you choose. - Runs in safe, isolated test environments.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>轻量级自动修复工具，核心价值在于与任意编码模型兼容并在隔离环境运行。对 CI/CD 流水线集成有吸引力——可在测试失败后自动触发修复尝试，降低人工介入频率。100 行代码意味着易于审计和定制。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096441743445279181" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">Rust 配套练习项目：结合官方书籍的动手实践路径</h2>
+  <blockquote class="quote"><p>&quot;Want to get comfortable writing Rust code? This project pairs simple exercises with the official Rust book, giving beginners a hands-on way to practice as they learn the basics.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对想系统学习 Rust 的开发者是优质入门资源——每个章节配套对应练习，避免&quot;只读不练&quot;的陷阱。Rust 在系统编程、WebAssembly、区块链等领域的地位持续上升，掌握它是值得投入的技能。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2096819995770831170" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 公开模型加速研究数据那条——递归自我改进的透明度讨论将影响未来模型能力评估与监管节奏，值得每个依赖前沿模型的开发者关注。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 公开模型加速研究数据，呼吁行业披露递归自我改进</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Astra 长尾用量优化：重度用户最高可省 3-4 倍订阅额度</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Astra 推理档位校准：低档性能已超 Sol 高档</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">levelsio 为 Nomads 添加 MCP 与 API 端点，旅行数据全面 agent-ready</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">levelsio 将酒店标签嵌入 Hoodmaps 地图，旅行选点更精准</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 本周更新：Claude Fable 5.1 与 GPT-6 Astra 入驻</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">100 行代码的自动 Bug 修复工具：解决 74% 真实编程任务</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Rust 配套练习项目：结合官方书籍的动手实践路径</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-07 04:40 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
