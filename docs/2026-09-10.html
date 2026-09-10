@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-10 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-10</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是 DeepSeek V4.1 Flash 的密集曝光：多条推文称其比 V4 Pro 更快、更准、更便宜，且疑似原生多模态，社区开始追问它在真实 agent 循环中的表现。其余信号较分散，OpenAI 侧有安全治理与防御工厂两条官方内容。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（DeepSeek 相关多为二手转述与营销口吻，缺少官方确认）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">DeepSeek V4.1 Flash 被称&quot;更快更准更便宜&quot;，疑似原生多模态</h2>
+  <blockquote class="quote"><p>&quot;来感受一下 DeepSeek V4.1 Flash 相比于 V4 Pro 的速度提升 🤫 恐怖如斯&quot;；&quot;DeepSeek V4.1 Flash 夯爆了啊，比 V4 Pro 更快 更准 更便宜，还特么原生多模态？！😱&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若&quot;原生多模态 + 更低单价&quot;成立，值得在成本敏感的批处理与多模态预处理链路上做 A/B 对比；但两条均为社区口吻、无官方规格与定价，落地前需自行验证上下文长度、工具调用稳定性与限流策略。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2097907661358678330" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2097902388166422951" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">开发者追问 V4.1 Flash 在真实 agent 循环中的表现</h2>
+  <blockquote class="quote"><p>&quot;98% of GPT-6 Astra at 1.4% of the cost is hard to ignore. I&#x27;m curious how DeepSeek V4.1 Flash holds up in real agent loops—especially long-context retrieval and tool-calling, not just the benchmark.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这条给出了正确的评估姿势——benchmark 分数不等于 agent 可用性。若要做选型，重点压测长上下文检索召回、多轮工具调用错误恢复、以及失败重试下的实际 token 成本，而不是只看单轮跑分。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2097892034568753270" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 公开&quot;防御工厂&quot;架构与实战手册</h2>
+  <blockquote class="quote"><p>&quot;We mobilized 250+ people to strengthen our defenses across hundreds of systems... We&#x27;re sharing what we learned, the architecture, and a practical playbook so you can build your own Defense Factory: a continuous loop where AI agents find vulnerabilities, validate them, and verify that fixes work.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可直接借鉴的是&quot;发现—验证—确认修复&quot;的闭环 agent 编排模式，适用于内部安全扫描、依赖漏洞治理等场景；把验证与修复确认做成独立环节，能减少误报带来的无效工单。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2097786616311840853" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Paul Christiano 加入 OpenAI Foundation 董事会及安全与安全委员会</h2>
+  <blockquote class="quote"><p>&quot;Paul Christiano, founder of the Alignment Research Center, is joining the OpenAI Foundation Board and its Safety and Security Committee... Paul will also serve as a non-voting observer on the OpenAI Group PBC Board.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对关注 AI 治理与对齐方向的人是结构性信号——外部独立声音进入安全监督层。做合规、模型评估或安全研究的团队，可留意其后续公开表述对评估标准与披露实践的影响。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2097741659509584091" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2097776310940569783" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 就数学证明事件说明数据来源边界</h2>
+  <blockquote class="quote"><p>&quot;We (the researchers and the agents) did not see any of their work through any means until they released it publicly — in particular, no specific user data was accessed in order to solve this problem. While unlikely, we cannot rule out that de-identified data derived from their usage of our products helped improve our models.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一次关于&quot;模型能力来源&quot;的公开边界声明，措辞谨慎（承认无法完全排除去标识化数据的影响）。对做数据合规、用户数据治理的团队，可作为&quot;能力归因披露&quot;的参考文本。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2097375276384567642" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google Pics 面向 AI Pro/Ultra 与 Workspace 商业客户铺开</h2>
+  <blockquote class="quote"><p>&quot;Google Pics — our image creation and editing tool in @GoogleWorkspace — is rolling out to Google AI Pro and Ultra subscribers and most Workspace business customers. Built on our Nano Banana image generation and editing model... It also includes a suite of fine-tuned editing capabilities that let you generate images and make precise edits rather than starting from scratch.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>定位是&quot;精确编辑优先于重新生成&quot;，与 ChatGPT Images 2.5 的 comment-based edits 属同一产品思路。若你在做内容生产流水线，值得对比两者在局部编辑一致性与 API 可用性上的差异。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2097795419296477256" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2097795421355626647" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 强调 MCP 作为跨模型、跨 agent 的记忆载体</h2>
+  <blockquote class="quote"><p>&quot;Switching tools shouldn&#x27;t mean starting over. Use Notion&#x27;s MCP to bring your memory with you. Between platforms, across models, and as new agents come along.&quot;；&quot;Own your context. Rent the intelligence... Agents will come and go. Your context should compound!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>核心主张是&quot;上下文归你、智能按需租用&quot;。对多 agent 工作流的工程实践有直接参考价值：把共享上下文抽离成独立可迁移层，避免绑定单一模型供应商。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2097847799379550441" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2097792748690768316" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的&quot;防御工厂&quot;手册——它是这批材料里唯一给出可复用 agent 编排架构的官方内容。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">DeepSeek V4.1 Flash 被称&quot;更快更准更便宜&quot;，疑似原生多模态</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">开发者追问 V4.1 Flash 在真实 agent 循环中的表现</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 公开&quot;防御工厂&quot;架构与实战手册</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Paul Christiano 加入 OpenAI Foundation 董事会及安全与安全委员会</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 就数学证明事件说明数据来源边界</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Google Pics 面向 AI Pro/Ultra 与 Workspace 商业客户铺开</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 强调 MCP 作为跨模型、跨 agent 的记忆载体</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-10 04:41 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
