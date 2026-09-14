@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-14 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-14</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;AI 治理从原则走向可执行控制&quot;：OpenAI 一方在推安全案例、节奏控制与联邦框架，另一方（多条推文）在追问&quot;谁拥有清单、谁有权冻结与取证&quot;。工程侧则有一条值得注意的供应链安全案例：一个已下线的 VPS 上残留的 API key 在数月后被用于高价值模型。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>39 推文</span><span class="sig sig-mid">信号 中（治理讨论密集但多为观点；工程侧仅 2-3 条硬信息）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方 / 行业趋势">大佬官方 / 行业趋势</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="行业趋势 / 中国相关（无，仅美国立法动态）">行业趋势 / 中国相关（无，仅美国立法动态）</button><button type="button" class="fbtn" data-f="关注动态 / 工具更新（安全）">关注动态 / 工具更新（安全）</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态 / 工具更新">关注动态 / 工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方 / 行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方 / 行业趋势</span>
+  </div>
+  <h2 class="item-title">OpenAI 阐述&quot;两条失败路径&quot;与&quot;pacing ≠ stopping&quot;的完整立场</h2>
+  <blockquote class="quote"><p>&quot;There are two ways AI progress could go very badly... First, we could lose control of the future to AI... Second, we could end up in a world with too much concentration of power.&quot; / &quot;When we talk about &#x27;pacing&#x27;, we do not mean &#x27;stopping&#x27;... But it should be slower than it otherwise could be; interventions like safety cases and monitoring have significant costs.&quot; / &quot;at OpenAI we now formulate explicit safety cases in advance of frontier reinforcement learning runs we expect to significantly increase capability&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是把安全实践从&quot;发布前评测&quot;前移到&quot;训练前安全案例&quot;的明确表态。对做 agent/训练基础设施的团队，值得关注的是&quot;安全案例&quot;作为一类可审计工件（类似发布门禁）的形态——如果它成为行业惯例，训练流水线需要预留记录、复现与审批环节。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099352016988614852" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2099348812305473766" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">对&quot;250 人响应&quot;的质疑：headcount 不等于控制</h2>
+  <blockquote class="quote"><p>&quot;mobilizing 250 people is a response. boards still need the control packet. classify which systems were in the blast radius. name who owns freeze + evidence preserve. stop calling the headcount the stop.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把事故响应拆成可验收项——影响面清单、冻结责任人、证据保全责任人。对做 on-call/incident response 的工程团队，这是一份不错的自查清单模板（谁 freeze、谁 preserve、谁签字）。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099352340180717842" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2099352614861496384" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">强制事件上报 ≠ 调查权：谁有权调取记录、派调查员、保全证据</h2>
+  <blockquote class="quote"><p>&quot;OpenAI wants mandatory national incident reporting. fine. boards still ask &#x27;did we file the letter?&#x27; The real gap is who can compel records, send investigators, preserve evidence. reporting != investigation.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>区分&quot;合规动作&quot;与&quot;实际控制能力&quot;。做企业 agent 部署时，日志的可导出性、不可篡改性、留存期，往往比&quot;有没有上报流程&quot;更决定事后能否复盘。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099346556063273276" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势 / 中国相关（无，仅美国立法动态）">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势 / 中国相关（无，仅美国立法动态）</span>
+  </div>
+  <h2 class="item-title">Stop Rogue AI Act 与 NIST/FAR 路径：agent 身份不能靠厂商自证</h2>
+  <blockquote class="quote"><p>&quot;Congress just told federal deployers: vendor self-attestation is not agent identity. Stop Rogue AI Act (Gottheimer-Lawler) pushes NIST toward continuous agent inventory, crypto-verifiable ID, tamper-evident logs — then FAR puts it on contractors.&quot; / &quot;Attestation isnt inventory until someone owns discover / deny / log.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果这套语言进入采购条款，agent 侧需要的是三件套：可发现的 agent 清单、可执行的 deny 路径、防篡改日志。现在做 agent 平台的话，把&quot;deny 路径真的会触发&quot;做成可测试项，比写文档有用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099321464021209406" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2099322223454462279" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Colorado ADMT（SB26-189）2027-01-01 生效：事前告知 + 30 天不利结果解释 + 有意义的人工复核</h2>
+  <blockquote class="quote"><p>&quot;Colorado ADMT (SB26-189) hits Jan 1 2027. pre-use notice. 30-day adverse-outcome explain. meaningful human review. if counsel owns the letter but ops owns the model, the board minutes are fiction.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>自动化决策类 agent 若涉及对人产生不利结果，需要预留&quot;解释路径&quot;的单一责任人。工程上意味着决策链路要能输出可读理由，而不是只留一个分数。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099348087894388769" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态 / 工具更新（安全）">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态 / 工具更新（安全）</span>
+  </div>
+  <h2 class="item-title">levelsio：已关停数月的 VPS 上残留 Claude key 被利用，账单才暴露</h2>
+  <blockquote class="quote"><p>&quot;I killed my OpenClaw VPS servers months ago. But today I got a billing alert on its separate Claude account... at some point it got hacked and the Claude key inside OpenClaw got exposed and then they waited for months before using it on Fable 5.1... Anyway I nuked the Claude account, good I kept it on its own separate one&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>三条可立即执行的做法——(1) 下线服务时同步吊销其持有的所有 API key，不要只关机器；(2) 按项目/服务拆分计费账号，隔离爆炸半径；(3) 打开用量告警，因为&quot;被利用&quot;往往先体现在账单而非日志上。密钥泄露后的延迟使用是真实存在的模式。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099196383538356635" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Build v1.0.31：多 agent 会话可读性修复，含 MCP 长前缀工具不再被静默丢弃</h2>
+  <blockquote class="quote"><p>&quot;Subagent groups now clearly show how many agents are still running versus finished... MCP handling also gets a useful fix....tools with long server prefixes are no longer silently dropped&quot; / &quot;Turn cancelled banners now correctly name the cause instead of always saying &#x27;by user&#x27;.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>MCP 工具因 server 前缀过长被静默丢弃，是很容易在生产里踩到的坑——表现为&quot;工具明明注册了但 agent 说没有&quot;。若你在自建 MCP 网关，值得检查自己的工具名截断/规范化逻辑。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099181280139383065" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态 / 工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态 / 工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 定位延续：&quot;从第二大脑变成 agent 的公共大脑&quot;</h2>
+  <blockquote class="quote"><p>&quot;notion was my second brain for years.. now it&#x27;s the common brain for my agents so when i switch from one to another i don&#x27;t start from zero&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与已发布过的 Notion MCP 主题相比，本条没有新增技术细节，只是再次强调跨 agent 记忆复用的定位。若你在做多 agent 编排，值得思考的是&quot;记忆载体&quot;和&quot;执行载体&quot;解耦后，权限与审计边界放在哪一层。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099225089505976688" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 @levelsio 那条 API key 泄露账单帖——它是唯一一条能立刻改变你运维习惯的硬信息。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 阐述&quot;两条失败路径&quot;与&quot;pacing ≠ stopping&quot;的完整立场</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">对&quot;250 人响应&quot;的质疑：headcount 不等于控制</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">强制事件上报 ≠ 调查权：谁有权调取记录、派调查员、保全证据</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Stop Rogue AI Act 与 NIST/FAR 路径：agent 身份不能靠厂商自证</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Colorado ADMT（SB26-189）2027-01-01 生效：事前告知 + 30 天不利结果解释 + 有意义的人工复核</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">levelsio：已关停数月的 VPS 上残留 Claude key 被利用，账单才暴露</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Grok Build v1.0.31：多 agent 会话可读性修复，含 MCP 长前缀工具不再被静默丢弃</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Notion 定位延续：&quot;从第二大脑变成 agent 的公共大脑&quot;</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-14 04:55 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
