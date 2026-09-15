@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-15 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-15</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里最值得开发者注意的不是新模型，而是&quot;agent 治理&quot;从口号落到可执行清单：NCSC 的 agentic checklist 把&quot;拔插头&quot;拆成断网+断模型通道+凭证回收，Grant Thornton 调查显示 74% 企业在跑 agent 试点但不到一半董事会写下了 AI 预期。工具侧有一条实打实的 MCP 扩展（Hyper3D Rodin 给 Codex 加 3D 能力）。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（治理类讨论密集但多为观点，产品/工具类新增信息有限）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">NCSC agentic checklist 被解读：真正的&quot;拔插头&quot;不是 kill -9</h2>
+  <blockquote class="quote"><p>&quot;pull the plug isn&#x27;t kill -9 / you also cut network + model talk / if shutdown leaves the agent holding credentials on a side channel, you didn&#x27;t pull anything / attribution first. then the big red switch that actually switches&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在写 agent 的 shutdown 路径，检查三件事：进程终止之外是否切断出网与模型 API 通道、是否回收/轮换 agent 持有的凭证、是否有可归因的日志。只 kill 进程而凭证仍在 side channel 上有效，等于没停。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099702155011608958" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Hyper3D Rodin MCP 接入 Codex：按需调用 3D 能力</h2>
+  <blockquote class="quote"><p>&quot;Less tool switching. More end-to-end building. Hyper3D Rodin MCP gives Codex a 3D capability it can call when needed.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 MCP 作为&quot;能力插槽&quot;的又一实例——把 3D 生成做成 Codex 可按需调用的工具，而不是另开一个工作流。对做 3D/资产生成管线的团队，值得评估是否用 MCP 方式接入而非自建胶水层。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099716187437576687" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Grant Thornton 调查：74% 在跑 agent 试点，仅 22% 有信心 90 天内通过独立 AI 治理审计</h2>
+  <blockquote class="quote"><p>&quot;74% piloting or scaling agents. ~half of boards with AI expectations written down. 22% very confident they could pass an independent AI governance audit in 90 days.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>政策滞后于 agent 部署是当前普遍状态。若你负责内部 agent 落地，先补三样可审计物：具名 owner、停止权限、证据链（谁在何时停了什么）。这三样也是后续合规审计最可能先要的东西。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099681263552487616" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">律所提示：用 AI agent 替代人不减少你的义务</h2>
+  <blockquote class="quote"><p>&quot;replacing a human with an AI agent does not shrink your obligations. FINRA-style supervision still wants a boss. Same ladder as an employee — named owner, stop authority, evidence trail.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把 agent 当作&quot;员工&quot;来配置监督层级——具名负责人、停止权、证据留痕。若董事会材料只写&quot;我们自动化了&quot;而没人能在凌晨 2 点冻结 agent，这份材料在监管视角下不构成监督。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099680574399037907" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">行业想要&quot;前沿模型的 FINRA&quot;，但标准机构不拥有你的停止按钮</h2>
+  <blockquote class="quote"><p>&quot;industry wants a FINRA for frontier models. fine. but your board still needs a person who can freeze *your* agent on a Tuesday / standards body tests the model. it doesn&#x27;t own your deployer&#x27;s stop button / if &#x27;we joined the club&#x27; is the control, classify it as marketing&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>区分&quot;模型层认证&quot;与&quot;部署层控制权&quot;。加入行业自律组织不等于你有了可执行的停机能力；部署方仍需自备具名冻结人。做 agent 平台的话，把 stop authority 做成产品里的一等公民，而不是文档里的一句话。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099701380646658462" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Espressif ESP-Claw：用对话定义设备行为，毫秒级响应，数据留在本地</h2>
+  <blockquote class="quote"><p>&quot;Espressif&#x27;s ESP-Claw lets cheap chips act on their own. - Define device behavior by chatting - Reacts in milliseconds to events - Keeps your data private&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>面向边缘/嵌入式 agent 的低成本路径：用自然语言描述行为而非写状态机，本地推理避免数据出设备。对做 IoT 或硬件原型的开发者，这是&quot;便宜芯片 + 本地 agent&quot;的一个可试方向。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099704474390675942" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">Atria Dawn Preview：上海 AI 实验室联合多校推出，主打科研与专业工作</h2>
+  <blockquote class="quote"><p>&quot;自动化执行能力全场第一、网络安全攻防能力超越 GPT-5.6 和 Claude、综合技能能力全场第二……上海 AI 实验室联手顶尖高校推出的 Atria Dawn Preview 模型 @AtriaASI，主打面向科研和专业工作&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>国产模型在自动化执行/攻防方向上的新选手，团队来自复旦、中科院软件所、人大、中科院自动化所、华东师大、哈工大。注意：上述排名来自发布方引用的评测图，非独立复现，接入前建议自测。注册可领 1000 万 token（据发帖者）。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099692631202926895" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 NCSC agentic checklist 那条——它把&quot;停掉一个 agent&quot;从口号变成了可检查的工程清单。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">NCSC agentic checklist 被解读：真正的&quot;拔插头&quot;不是 kill -9</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Hyper3D Rodin MCP 接入 Codex：按需调用 3D 能力</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Grant Thornton 调查：74% 在跑 agent 试点，仅 22% 有信心 90 天内通过独立 AI 治理审计</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">律所提示：用 AI agent 替代人不减少你的义务</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">行业想要&quot;前沿模型的 FINRA&quot;，但标准机构不拥有你的停止按钮</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Espressif ESP-Claw：用对话定义设备行为，毫秒级响应，数据留在本地</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Atria Dawn Preview：上海 AI 实验室联合多校推出，主打科研与专业工作</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-15 04:53 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
