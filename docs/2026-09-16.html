@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-16 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-16</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;agent 基础设施补课&quot;：Notion 把 Custom Agents 升级为可派发子 agent 的编排层，Cloudflare/OpenClaw 与 GitHub 企业版继续把 agent 纳入工程与治理流程；同时语音 agent 赛道出现新的性价比标杆（Gemini 3.8 Live）。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（工具/平台更新密集，但缺少可验证的独立评测与一手数据）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion Custom Agents 支持调用子 agent（各自独立指令、上下文、权限与模型）</h2>
+  <blockquote class="quote"><p>&quot;Your Custom Agents can now call sub-agents. Each with its own instructions, context, access, and model. Your primary agent can hand off focused work, then bring it all back together to finish the job.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是把&quot;单 agent 提示词工程&quot;推向&quot;编排 + 权限隔离&quot;的一步。对做 agent 系统的开发者，值得关注三点：子 agent 的 access 边界如何定义、上下文如何传递与截断、以及主 agent 汇总时的失败回滚策略。若你在 Notion 里跑内部流程，可先用它做&quot;分诊 → 专业子任务 → 汇总&quot;的模板。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099934640056553723" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 新增工作区级默认 agent 指令（&quot;house rules&quot;）</h2>
+  <blockquote class="quote"><p>&quot;New: Set default agent instructions for your entire workspace. House rules for your agents.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>企业落地 agent 时，最容易被忽略的是&quot;默认行为基线&quot;。工作区级指令相当于给所有 agent 加一层统一约束（语气、数据边界、审批要求），比逐个 agent 配置更可审计。可与 IT Help Desk 案例（约 1/4 工单端到端由 AI 处理）一起看，评估自动化率与人工兜底比例。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099898675623608547" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Notion 案例：Remote 用 Custom Agents 搭 IT Help Desk，约 1/4 工单端到端由 AI 完成</h2>
+  <blockquote class="quote"><p>&quot;Remote uses Custom Agents to build an IT Help Desk. Roughly 1 in 4 resolved tickets is now handled end to end by AI.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是少见的&quot;端到端自动化比例&quot;公开数字，可作为内部 IT/支持类 agent 的基准参照。注意&quot;resolved tickets&quot;口径未说明是否含人工复核，做 ROI 测算时需自行确认分母与升级路径。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099935286910505047" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google 发布 Gemini 3.8 Live 语音到语音模型，Extended Thinking (High) 在 Speech to Speech Index 登顶</h2>
+  <blockquote class="quote"><p>&quot;Gemini 3.8 Live Extended Thinking (High) debuts at #1 at 82.6, ahead of GPT-Live-1 (Astra, medium) at 81.5... Cost: Gemini 3.8 Live costs $0.84 per hour of input audio, the cheapest model in the Index.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做语音 agent 的团队，关键数字是成本与首音频延迟：标准版 $0.84/小时输入音频、平均首音频 1.18s；Extended Thinking (High) 为 $3.50/小时、1.35s。若你的场景是&quot;边对话边后台调工具/API&quot;，标准版可能是性价比首选；需要复杂推理再上 Extended Thinking。注意这些排名来自 Artificial Analysis 的评测口径，非独立第三方复现。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099977679307243773" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">某编码 agent 推出新权限系统：沙箱内命令自动执行，默认无网络访问</h2>
+  <blockquote class="quote"><p>&quot;With our new permissions system, you spend less time approving commands... commands now run automatically inside a more secure environment that&#x27;s strictly isolated to your project, with no network access by default. Rolling out today on macOS and Linux.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;减少审批疲劳&quot;与&quot;默认拒绝网络&quot;的折中设计，方向与近期 agent 安全讨论一致。工程上值得对照检查自己的 agent 沙箱：是否默认无网络、是否项目级隔离、越权时是否有可审计日志。原文未点名产品，接入前请自行确认具体实现。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100001904969297980" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">GitHub 9 月企业版月报：Agentic Engineering System、Project HydraFusion 与 Copilot 扩展</h2>
+  <blockquote class="quote"><p>&quot;Explore how GitHub&#x27;s Agentic Engineering System helps enterprise teams use AI to accelerate software delivery while maintaining quality, security, governance, and human oversight... Build an agentic engineering operating model; Measure adoption by outcomes, not output; Embed quality, security, and human approval into AI-assisted workflows.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>三条优先级可直接当作企业内部 agent 落地的检查清单，尤其&quot;用结果而非产出量衡量采用度&quot;——对写周报/做 OKR 的工程管理者有直接参考价值。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099894045321355271" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">SpaceXAI 工程师的&quot;凌晨 agent&quot;实践：研究 agent 扫 monorepo 提 PR</h2>
+  <blockquote class="quote"><p>&quot;His bots start a research agent that sweeps the monorepo for quality issues, poor modularization, comment bloat and security gaps. He wakes up to a stack of PRs.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可复用的模式是&quot;低冲突时间窗 + 低风险改动 + 人工晨间审阅&quot;。适合先从不涉及业务逻辑的清理类任务（模块化、注释、安全扫描）起步，避免在高峰期与人类提交冲突。注意原文未给出 PR 合并率与误报率，别直接当作效率结论。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100048900942094348" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama 预告本周与 DevDay 的密集发布</h2>
+  <blockquote class="quote"><p>&quot;big 🚢 this week / and then for devday / 🚢🚢🚢🚢🚢🚢&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无实质技术信息，仅作为发布节奏信号。若你在做模型选型或集成排期，可留意 DevDay 前后可能的 API/产品变动，避免在窗口期做大版本锁定。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2099872600977760451" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Notion Custom Agents 支持子 agent 那条——它是&quot;单 agent 提示词&quot;走向&quot;可编排、可隔离、可审计&quot;的分水岭式更新。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Notion Custom Agents 支持调用子 agent（各自独立指令、上下文、权限与模型）</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Notion 新增工作区级默认 agent 指令（&quot;house rules&quot;）</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Notion 案例：Remote 用 Custom Agents 搭 IT Help Desk，约 1/4 工单端到端由 AI 完成</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Google 发布 Gemini 3.8 Live 语音到语音模型，Extended Thinking (High) 在 Speech to Speech Index 登顶</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">某编码 agent 推出新权限系统：沙箱内命令自动执行，默认无网络访问</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">GitHub 9 月企业版月报：Agentic Engineering System、Project HydraFusion 与 Copilot 扩展</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">SpaceXAI 工程师的&quot;凌晨 agent&quot;实践：研究 agent 扫 monorepo 提 PR</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">sama 预告本周与 DevDay 的密集发布</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-16 04:48 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
