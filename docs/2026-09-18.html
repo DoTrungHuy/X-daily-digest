@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-18 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-18</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;治理与审计的边界&quot;：加州 AI 审计注册制落地、DOJ 反垄断表态、NY AG 举报通道三条线同时出现，但社区反复强调&quot;注册/审计/举报 ≠ 有权停机&quot;。另一条线是 Anthropic 开源 30+ 生物模型推理优化代码，以及 OpenAI 推出面向律所的 Astra for Law。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（治理类讨论密集但多为观点；产品/工程类有实质新增）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 开源 30+ 生物开源模型的推理优化代码，平均提速 4 倍</h2>
+  <blockquote class="quote"><p>&quot;Claude was able to optimize inference for more than 30 open-source models, making them 4x faster on average, partly by writing custom software for GPUs. We&#x27;re open sourcing all of the optimization code.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;用模型写 GPU 底层优化&quot;的可复现案例，代码与完整技术报告均已公开，适合做推理性能工程的团队直接对照；同时配套 Adaptyv Bio 蛋白设计竞赛（5000+ 设计实验验证、最高 100 万美元 Claude credits、Modal 25 万美元算力、Twist 提供 DNA），对做生物+ML 交叉的开发者是少见的真实实验闭环入口。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100701581109072332" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 公布三项&quot;AI 发展可测量指标&quot;，呼吁前沿实验室共同披露</h2>
+  <blockquote class="quote"><p>&quot;1. How much AI R&amp;D is done by AI. 2. How well AI agents are overseen. 3. How compute is allocated... Any frontier developer could publish the same measures, and third parties could verify them.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把&quot;AI 造 AI 的比例&quot;&quot;agent 被监督的程度&quot;&quot;算力分配&quot;变成可对外披露的指标，是治理讨论从口号转向可验证度量的尝试。对做 agent 可观测性/审计工具的人，这三项基本就是产品需求清单。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100684274114699295" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 推出 Astra for Law，并上线 26 个合作方插件 + 47 个社区插件</h2>
+  <blockquote class="quote"><p>&quot;A new offering powered by GPT-6 Astra with tools, settings, and context to support the expertise and judgment of lawyers... We&#x27;re also launching 26 partner-built plugins and 47 community plugins for legal work in ChatGPT.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>注意分发路径——先通过 ChatGPT 与 Codex 的 Trusted Access 面向选定律所，API 稍后开放。对做垂直 agent 的团队，这是&quot;官方维护领域配置、开发者只做自己工作流&quot;的分工范式；插件生态（Thomson Reuters、Harvey、Legora、iManage）也说明法律垂类的集成位已被占。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100679992720142459" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">加州签署 AI 审计方注册制（AB 1405 + SB 813），社区提醒&quot;注册 ≠ 强制审计&quot;</h2>
+  <blockquote class="quote"><p>&quot;California already signed the auditor registry. AB 1405 + SB 813 — first-in-nation third-party AI audit scaffolding. Registry ≠ mandatory audit. Designation ≠ a named halt seat.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是美国首个州级第三方 AI 审计制度框架，但推文明确指出三点落差：注册不等于强制审计、被指定不等于有停机席位、董事会把&quot;我们会接受审计&quot;当成&quot;周二能冻结 agent&quot;是误判。做合规与 agent 权限系统的团队应把&quot;谁能 mid-run 撤销一条 live tool path、审计员能否回放这次撤销&quot;作为设计问题。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100800673314972094" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">DOJ 反垄断表态：前沿实验室尚未就安全协调申请会面，谈安全不必然构成卡特尔</h2>
+  <blockquote class="quote"><p>&quot;Frontier labs haven&#x27;t even asked for a meeting on safety coordination. And talking cyber/safety isn&#x27;t automatically a cartel. Useful. Still not a stop owner. Guidance update ≠ freeze authority.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这条澄清了&quot;实验室联合谈安全是否触反垄断&quot;的灰色地带，对参与标准/联盟工作的公司有直接参考价值；但作者强调指导意见更新不等于冻结权，治理链条上仍缺&quot;停机责任人&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100799935180316839" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">NY AG 开放 AI 员工举报通道，社区：portal ≠ control</h2>
+  <blockquote class="quote"><p>&quot;NY AG James just waved AI workers toward the whistleblower portal. useful backstop. still not a substitute for a named seat inside who can halt a run before the tip arrives. boards: portal ≠ control.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>举报通道是事后补救，无法在运行中阻止行为。对内部治理设计者，这条与 ITEM4、ITEM5 构成同一论点：外部监督机制再密，也替代不了内部一个有权实时中止 agent 的明确岗位。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100766329804313027" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Bot 新增语音能力，并连续三天直播&quot;用 Grok Bot 建公司&quot;</h2>
+  <blockquote class="quote"><p>&quot;Grok @Bot now has a voice&quot; / &quot;Day 3 of building a company with Grok Bot. Live now, plus sessions for marketing and customer success.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>语音是交互层更新，实际价值取决于是否接入可编排的工作流；&quot;用 bot 建公司&quot;的连续直播更像演示营销，工程参考价值有限，可关注其 marketing / customer success 场景的具体做法。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100698004210475317" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">社区警告：强开 GPT Pro 20x 大概率触发模型超限，官方算力紧张</h2>
+  <blockquote class="quote"><p>&quot;强开的20x 大概率会被限制调用……Selected model is at capacity. Please try a different model……openai是真的算力不够了！！存量pro20x用户都被限制调用&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对国内开发者的直接提醒——非官方渠道开通的高档位订阅存在被限流风险，且已有存量用户反馈&quot;能用但不如以前聪明&quot;。生产环境依赖模型能力时，应准备多模型回退，而不是押注单一账号档位。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2100759054541091258" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Anthropic 开源 30+ 生物模型推理优化代码那条——它是唯一带可运行代码、技术报告和真实实验验证闭环的条目。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Anthropic 开源 30+ 生物开源模型的推理优化代码，平均提速 4 倍</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Anthropic 公布三项&quot;AI 发展可测量指标&quot;，呼吁前沿实验室共同披露</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 推出 Astra for Law，并上线 26 个合作方插件 + 47 个社区插件</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">加州签署 AI 审计方注册制（AB 1405 + SB 813），社区提醒&quot;注册 ≠ 强制审计&quot;</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">DOJ 反垄断表态：前沿实验室尚未就安全协调申请会面，谈安全不必然构成卡特尔</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">NY AG 开放 AI 员工举报通道，社区：portal ≠ control</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Grok Bot 新增语音能力，并连续三天直播&quot;用 Grok Bot 建公司&quot;</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">社区警告：强开 GPT Pro 20x 大概率触发模型超限，官方算力紧张</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-18 04:42 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
