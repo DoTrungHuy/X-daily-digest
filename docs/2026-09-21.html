@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-21 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-21</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;agent 治理落地&quot;：NIST/CISA 把 agent 签名令牌正式归入特权凭证管理，ASD 明确 prompt injection 在模型内无可靠解、控制必须放在 harness 层；同时 ZCode 事件有了官方修复与第三方审计结论。产品侧 Jev 模型正式开放、Grok Bot 接入 X Money 支付。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>37 推文</span><span class="sig sig-strong">信号 中（治理类信号强，产品类多为增量更新）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">NIST + CISA 敲定 IR 8587：agent 签名令牌按特权凭证管理，建议上限约 1 小时</h2>
+  <blockquote class="quote"><p>&quot;if your AI agent holds signed access tokens, treat them like privileged credentials — short TTL, protected signing keys, real revoke. Classify agent tokens as access control, not chat state. Name the identity owner. Stop = kill live agent sessions when the lease ends.&quot; / &quot;recommended agent token ceiling ~1 hour.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在给 agent 发 token，现在就该把 TTL 压到小时级、把签名密钥纳入 KMS/HSM 类保护、并实现真正的吊销路径（而不只是等 token 自然过期）。&quot;agent 活得比 token 久&quot;等于一张被偷的工牌——这是可以直接写进设计评审 checklist 的一条。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101875171661435195（原文引用" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2101875230872363186" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">ASD 发布 agentic AI harness 指引：prompt injection 在模型内无可靠修复，控制放在模型外层</h2>
+  <blockquote class="quote"><p>&quot;prompt injection has no reliable fix *inside* the model. So Stop doesn&#x27;t live in the weights. It lives in the harness — least privilege, scoped tools, human refuse on high-impact acts.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把安全预算从&quot;模型对齐&quot;转向 harness 工程：最小权限、工具作用域收窄、高风险动作保留人工拒绝权。对 agent 开发者而言，这是把&quot;能不能拔插头&quot;具体化为&quot;谁能在负载下撤销工具授权&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101842187428270350（上下文：https://x.com/i/web/status/2101842221569904737" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">ZCode 安全事件后续：官方完成修复并开源，CAICT 与绿盟出具评估结论</h2>
+  <blockquote class="quote"><p>&quot;we have completed the necessary remediation and sincerely apologize to all our users. We have open-sourced ZCode...&quot; / &quot;CAICT confirmed that the zcode-prod Alibaba Cloud OSS bucket is in a zero-data state... The Repo Wiki feature has been removed&quot; / &quot;NSFOCUS confirmed that all data objects in the zcode-prod Alibaba Cloud OSS bucket, as well as the bucket itself, have been deleted.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前&quot;静默打包上传用户仓库&quot;事件的实质进展——新增信息是 v3.14.0 客户端移除 Repo Wiki 入口与本地仓库快照生成/上传工作流、OSS bucket 已删除、两家机构出具评估。官方同时承诺建立漏洞上报与响应流程并给奖励。对使用该工具的团队，值得核对版本是否已升到 v3.14.0。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101844704933621971" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Jev 模型正式开放，无需申请即可使用</h2>
+  <blockquote class="quote"><p>&quot;最近爆火的 Jev 模型今天正式开放了！不需要申请也能直接使用 😎&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>此前 Jev 以&quot;AI Gateway 采用最快模型、首日覆盖约 13% 团队&quot;进入视野，本次新增信息是取消申请门槛、直接可用。想评估的团队现在可以零摩擦接入做对比测试。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101873367876010382" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Bot 接入 X Money，可用自然语言直接发起付款</h2>
+  <blockquote class="quote"><p>&quot;I can now send $ money to someone just by telling my bot what I want to do... I just type the instruction in plain English and Grok Bot handles it through 𝕏 Money, and the payment immediately goes through.&quot; / &quot;your Grok Bot handles the work through whatever financial account, while you stay in control of the approval.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>支付类 agent 的关键设计点是&quot;执行自动化 + 审批留人&quot;。这条值得作为 agent 接金融账户的参考案例：把动作执行交给 agent，把批准权留在人手里。注意这是用户自述体验，非官方功能公告。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101746215255961783" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">EU AI Act 将 agentic AML/金融犯罪合规系统列为高风险，同期两家合规平台融资</h2>
+  <blockquote class="quote"><p>&quot;agentic AML gets stamped high-risk under the EU AI Act... Classify the agent as high-risk. Name the bank/deployer who owns Tuesday. Stop is a human who can kill outbound cases same-second — not a Series B slide that says &#x27;human oversight.&#x27;&quot; / &quot;Bretton AI (~$75M) and Napier AI (~£45M) raises into that exact bar.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>做金融合规 agent 的团队，监管分类已明确落在高风险档，需要能指名&quot;谁负责、谁能在同一秒掐断外发案件&quot;，而不是在 PPT 上写&quot;human oversight&quot;。融资规模不等于冻结席位。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101875054560637181（上下文：https://x.com/i/web/status/2101875110491668908" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Connecticut 与 Maryland 新规：AI 不能作为雇佣决策歧视的抗辩理由</h2>
+  <blockquote class="quote"><p>&quot;Oct 1, Connecticut: &#x27;AI is not a defense.&#x27; If an employment decisioning tool (AEDT) discriminates, the employer still owns it — you don&#x27;t get to blame the screener.&quot; / &quot;Connecticut PA 26-15 / CFEPA amendment — Automated Employment-related Decision Technology shall not be a defense (effective Oct 1, 2026). Maryland HB 895 same day.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>用 AI 筛简历/做雇佣排序的团队，责任归属已明确落在雇主一侧。需要能提供决策 trace 作为证据，而不是&quot;模型这么说的&quot;。对做 HR tech 的开发者，这是合规需求清单的直接输入。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101842255090688316（上下文：https://x.com/i/web/status/2101842354676080659" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：SaaS 的&quot;开发者没时间自己做&quot;护城河正在实时消解</h2>
+  <blockquote class="quote"><p>&quot;There&#x27;s a whole category of SaaS predicated on the moat of &#x27;devs don&#x27;t have the time to do this themselves&#x27; and that moat is eroding in real time now.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对独立开发者和 SaaS 创业者，这是选品时的反向筛选信号——如果产品的唯一价值主张是&quot;帮你省下自己动手的时间&quot;，需要重新评估 agent 时代的可替代性。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2101842577347706884" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 NIST IR 8587 那条：agent 令牌按特权凭证管理、TTL 压到小时级，是本周最可直接落到代码和评审清单里的治理要求。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">NIST + CISA 敲定 IR 8587：agent 签名令牌按特权凭证管理，建议上限约 1 小时</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">ASD 发布 agentic AI harness 指引：prompt injection 在模型内无可靠修复，控制放在模型外层</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">ZCode 安全事件后续：官方完成修复并开源，CAICT 与绿盟出具评估结论</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Jev 模型正式开放，无需申请即可使用</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Bot 接入 X Money，可用自然语言直接发起付款</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">EU AI Act 将 agentic AML/金融犯罪合规系统列为高风险，同期两家合规平台融资</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Connecticut 与 Maryland 新规：AI 不能作为雇佣决策歧视的抗辩理由</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio：SaaS 的&quot;开发者没时间自己做&quot;护城河正在实时消解</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-21 04:54 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
