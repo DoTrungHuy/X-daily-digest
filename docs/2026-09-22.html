@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-22 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-22</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;agent 跑在浏览器/运行时里，控制点却不在模型内&quot;：恶意扩展 BragJack 直接劫持多家浏览器里的 AI agent，npm 恶意包把 loader 藏进运行时，Claude Opus 5 被用于把论坛图片漏洞串成 SSO 横向移动。模型侧则是 Grok 4.7 的真实使用反馈集中出现。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 中（安全类信号强，模型类多为个人使用反馈，非官方发布）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">BragJack 恶意浏览器扩展劫持 Chrome / Edge / Opera Neon / Comet / Claude-in-Chrome 中的 AI agent</h2>
+  <blockquote class="quote"><p>&quot;One malicious browser extension just hijacked AI agents across Chrome, Edge, Opera Neon, Comet, and Claude-in-Chrome. BragJack isn&#x27;t &#x27;prompt injection fanfic&#x27; — it&#x27;s Prompt Forcing: the extension hands the agent the whole prompt and rides its privileges (files, history, screenshots, even cam/mic on Chrome).&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你的 agent 跑在浏览器里，扩展白名单事实上就是控制平面。需要明确：哪些 agent 能改状态、谁能吊销授权、停止动作是&quot;撤销 grant&quot;而不是改一版 AUP。对做浏览器内 agent 的团队，这是权限模型设计题，不是提示词题。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102208681756545135" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">恶意 npm 包绕过 install-script 检测，把 loader 藏在运行时（indexed-btree 等）</h2>
+  <blockquote class="quote"><p>&quot;Malicious npm packages just walked past install-script defenses by hiding in runtime. indexed-btree (and friends) looked clean at install — the loader lived in BTree.prototype.set(). Two million weekly downloads of &#x27;looks fine.&#x27; Install scanners ≠ stop. Runtime behavior needs an owner who can yank the package mid-call.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>安装期扫描对运行时注入无效。供应链防护需要补运行时行为监控 + 能在调用中途撤包的能力。对依赖树深的项目，值得检查是否对高下载量但低维护的包做了运行时观测。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102243210751869197" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Claude Opus 5 被用于把 Discourse 图片漏洞串成 OpenAI 员工 ChatGPT/Codex 账号访问</h2>
+  <blockquote class="quote"><p>&quot;Claude Opus 5 helped researchers chain a Discourse image bug into OpenAI staff ChatGPT/Codex accounts in under 72 hours. Not a &#x27;patch Discourse&#x27; story. Shared SSO turned a low-trust help forum into GitHub/Slack/repo blast radius. Identity architecture owns the stop — not the forum CVE.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>重点不在单个 CVE，而在共享 SSO 把低信任论坛放大成代码仓库爆炸半径。做身份架构时，低信任服务的 SSO 授权范围应单独评估，别默认继承主身份。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102243308571349476" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok 4.7 一日实测：严格跟随 system prompt、行为稳定、偏保守、更慢更贵</h2>
+  <blockquote class="quote"><p>&quot;it follows system prompt very, very closely... it&#x27;s very &#x27;stable&#x27;... it&#x27;s a conservative model — it doesn&#x27;t like to take actions without asking... it&#x27;s a bit slower and costs more than 4.5, visibly.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>作者称 4.7 是首个把其 system prompt 中&quot;要求确认高风险操作&quot;这类指令显性执行出来的模型，说明指令遵循度可作为选型维度。代价是延迟与配额消耗上升。另有用户称其连续工作 70+ 小时、500k 上下文对技能选择/工作流有帮助。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102234191639257399" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok 在 Terminal-Bench 4.0 两个月内从 12.4% 升至 38.0%</h2>
+  <blockquote class="quote"><p>&quot;Grok TRIPLED on Terminal-Bench 4.0 in only two months (12.4% -&gt; 38.0%), overtaking GPT-5.6 Sol&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>终端类 agent 基准上的提升幅度值得关注，但同一批评论者明确提醒公开基准与实际体感常不一致（&quot;the same benchmarks told us opus 5 was better than fable — they are useless&quot;）。选型仍建议以自有任务集为准。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102242854924173798" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 与独立数学家顾问组合作，规范 AI 数学成果的评估与发布</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re working with an independent advisory group of mathematicians to help OpenAI responsibly share advances in AI and mathematics. The group will advise on how we assess and communicate new mathematical results, uphold academic and professional standards...&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;AI 产出如何对外发布&quot;的治理动作，与近期多家实验室的失准披露框架属同一脉络。对做评测/发布流程的团队，可参考其&quot;外部独立顾问 + 发布标准&quot;的结构。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102093145051943229" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 新增自然语言创建日程；Lex 作者加入 Notion</h2>
+  <blockquote class="quote"><p>&quot;Create events with natural language 🗣️&quot; / &quot;Update: I&#x27;ve joined @NotionHQ! ... Lex will be winding down by the end of the year, while Roughdraft will continue on as an independent open source project.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Notion 继续把自然语言入口铺到日历等具体功能上。Lex 将于年底关停、Roughdraft 转为独立开源项目——依赖 Lex 的团队需要规划迁移。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102135569837072815" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2102167270726488207" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">Jev 社区案例库收录 200+ 实战玩法</h2>
+  <blockquote class="quote"><p>&quot;生怕你不知道 Jev 能干什么，有佬搞了个 Jev 案例库 🫡 收录了 200 多个 Jev 实战玩法。内容分类、Agent 决策、审核风控、实时决策、打游戏搞外挂，真是开眼了……&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对刚接触 Jev 的开发者，这类社区案例库比官方文档更快建立能力边界认知。注意案例质量参差，需自行验证。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102205384425640271" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 BragJack 那条——它把&quot;agent 权限边界&quot;从论文话题变成了你浏览器里正在发生的事。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">BragJack 恶意浏览器扩展劫持 Chrome / Edge / Opera Neon / Comet / Claude-in-Chrome 中的 AI agent</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">恶意 npm 包绕过 install-script 检测，把 loader 藏在运行时（indexed-btree 等）</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Claude Opus 5 被用于把 Discourse 图片漏洞串成 OpenAI 员工 ChatGPT/Codex 账号访问</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Grok 4.7 一日实测：严格跟随 system prompt、行为稳定、偏保守、更慢更贵</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok 在 Terminal-Bench 4.0 两个月内从 12.4% 升至 38.0%</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 与独立数学家顾问组合作，规范 AI 数学成果的评估与发布</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 新增自然语言创建日程；Lex 作者加入 Notion</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Jev 社区案例库收录 200+ 实战玩法</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-22 04:54 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
