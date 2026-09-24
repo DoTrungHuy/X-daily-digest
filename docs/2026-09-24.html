@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-24 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-24</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;模型榜单与安全事件并行&quot;：Claude Opus 5.5 (Max) 在 Code Arena WebDev 登顶并改写性价比前沿，同时 Mandiant 披露一起 AI 编码助手会话被劫持、经投毒 PyPI 包窃取 OAuth 的完整攻击链。OpenAI 侧则把 ChatGPT Voice 升级为可调用插件与 GPT-6 系列。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（榜单与安全事件较硬，其余多为产品/生态碎片）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Claude Opus 5.5 (Max) 登顶 Code Arena WebDev，1818 分改写性价比前沿</h2>
+  <blockquote class="quote"><p>&quot;Claude Opus 5.5 (Max) by @AnthropicAI just topped #1 in Code Arena: WebDev with 1818 pts and reshapes the Pareto frontier! This is a solid +26pt lead ahead of the next best model, GPT-6 Astra (Max) and a huge +126pt improvement over previous Opus 5 (Max) at 1692.&quot; / &quot;Claude Opus 5.5 (Max) delivers top performance at a blended $16 per Mtoken, reshaping the Pareto frontier.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是对上一轮&quot;GPT-6 Sol/Luna 降价&quot;叙事的直接对冲——前沿能力与每 token 成本同时被重定价。做模型选型的团队应把 WebDev/前端类任务重新跑一遍 A/B，而不是沿用上周结论；注意榜单为社区投票，且 Opus 5.5 的 Arena 分数&quot;coming soon&quot;，当前排名口径需自行核对。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102952767614779403" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Mandiant 披露：攻击者劫持活跃 AI 编码助手会话，投毒 PyPI 包窃取 OAuth，波及约 100 个仓库</h2>
+  <blockquote class="quote"><p>&quot;Mandiant (THN): attacker hijacks an active AI coding-assistant session at a SaaS shop. Poisoned pkg recommended + accepted. Infostealer via PyPI. OAuth stolen. Shai-Hulud ~100 repos.&quot; / &quot;Treat assistants + MCP as privileged sessions. Who refuses before an AI-recommended dep lands?&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>攻击面已从&quot;模型输出不可信&quot;前移到&quot;助手会话本身是特权身份&quot;。工程上可落地的动作：把 AI 推荐的依赖安装纳入人工/策略审批闸门，MCP 与助手会话按特权凭证管理（与近期 NIST/CISA IR 8587 的 agent 令牌思路一致），并对 OAuth 授权做最小化与轮换。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102908028211061234" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 MentalHealthBench：80+ 临床医生参与构建的开放心理健康对话基准</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re demonstrating how frontier models have continued to improve in realistic mental health conversations with MentalHealthBench. This new open benchmark was built with input from more than 80 mental health clinicians.&quot; / &quot;Most mental health benchmarks focus on emergency situations. MentalHealthBench is designed to cover the full spectrum of mental health conversations that people bring to AI - from everyday support to more acute crisis scenarios.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 eval 的团队，这是一个&quot;非应急场景全覆盖&quot;的基准设计样本——值得借鉴其分层方式（日常支持 → 急性危机）来重构自家安全评测集。开放方法学意味着可复现、可对比，适合作为安全对齐方向的基线之一。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102837574092161102" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">ChatGPT Voice 升级：可调用邮件/日历/Slack 插件，支持 GPT-6 Astra、Sol、Luna，并进入 ChatGPT Work</h2>
+  <blockquote class="quote"><p>&quot;We heard you loud and clear. ChatGPT Voice can now: - Use plugins like your email, calendar, and Slack. - Be powered by GPT-6 Astra, Sol, and Luna. - Be used in ChatGPT Work on web and mobile, so you can create docs, decks, sites, and spreadsheets or tackle complex tasks in the browser, just by talking.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>语音从&quot;对话入口&quot;变成&quot;带工具权限的执行入口&quot;，这直接扩大了 prompt injection 的可触达面（语音触发 + 邮件/日历/Slack 读写）。若团队在用语音入口，建议先明确哪些插件权限允许在语音会话中生效。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102808325742322002" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama 预告下周 DevDay，并称&quot;这是 OpenAI 历史上第一次觉得要发的东西太多&quot;</h2>
+  <blockquote class="quote"><p>&quot;We ❤️ developers. See you next week.&quot; / &quot;(As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying &#x27;this is too much stuff to launch&#x27;.)&quot; / &quot;We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc).&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>结合此前&quot;sama：本周最期待的主发布推迟到下周&quot;，DevDay 是本周最值得留意的发布窗口。sama 明确把&quot;每个价位段都有最好模型 + 全模态&quot;作为 API 目标，做成本规划时可预期价格/模态矩阵继续被重排。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102466607373004888" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">GPT-6 Sol 社区口碑分化：更便宜但&quot;略差&quot;，被指是较弱的 OpenAI 发布</h2>
+  <blockquote class="quote"><p>&quot;GPT-6 Sol is one of worst OpenAI drops, and as much as i love them i have to admit this.. I really expect some huge jump of quality that would make it almost as good as Astra, while a lot cheaper, and instead we got a lot cheaper + a little worse.. I hope GPT-6.1 series changes this, and Sol will be frontier again&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是对已发布主题（GPT-6 Sol/Luna 降价 50%）的后续反馈，非重复。提示&quot;降价换能力&quot;的策略在部分开发者中未获认可；选型时不要只看价格，Sol 与 Astra 的能力差需按任务实测。属个人观点，非官方结论。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102816434707386494" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Governance-as-Code：把 43 条可机器校验的 EU AI Act 条款放进 CI</h2>
+  <blockquote class="quote"><p>&quot;Governance-as-Code (arxiv): 43 machine-checkable EU AI Act criteria in CI — Article-indexed evidence, Art.25 deployer layers only.&quot; / &quot;Cool. A green pipeline still isn&#x27;t a named Tuesday stop. Who owns interrupt when the retrieval corpus drifts and Art.43 never fires?&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>合规正在从文档走向 CI 检查项，对做企业级 agent 交付的团队有直接参考价值。但原帖也点出关键缺口：CI 绿灯 ≠ 有人负责中断，检索语料漂移这类运行时问题不在条款覆盖内——治理代码化解决&quot;可查&quot;，不解决&quot;谁按下停止键&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102913630270640272" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">ScienceBuddy：免费 AI 科研工作台，可检索论文并回溯每一步调用</h2>
+  <blockquote class="quote"><p>&quot;刚发现一个免费 AI 科研工作台 ScienceBuddy……它给我找出了 8 篇论文整理成表、用大白话讲了 Jev 跟 ChatGPT 有啥不一样，还给了几个适合新手的毕设方向。我挑了两篇 AI 搜的论文去 arXiv 核对，都对得上，AI 的每一步调用都透明可查，能翻回去确认。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>卖点是&quot;每步调用可回溯 + 可人工核对&quot;，这正好对应 agent 类工具最缺的可审计性。对需要做文献调研的开发者/研究生可作为轻量入口；但为单条个人推荐，未经验证，引用前仍应自行核对原文。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102979589547175946" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Mandiant 那条 AI 编码助手会话被劫持的攻击链——它把&quot;助手/MCP 是特权身份&quot;从原则变成了已发生的案例。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Claude Opus 5.5 (Max) 登顶 Code Arena WebDev，1818 分改写性价比前沿</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Mandiant 披露：攻击者劫持活跃 AI 编码助手会话，投毒 PyPI 包窃取 OAuth，波及约 100 个仓库</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 发布 MentalHealthBench：80+ 临床医生参与构建的开放心理健康对话基准</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">ChatGPT Voice 升级：可调用邮件/日历/Slack 插件，支持 GPT-6 Astra、Sol、Luna，并进入 ChatGPT Work</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">sama 预告下周 DevDay，并称&quot;这是 OpenAI 历史上第一次觉得要发的东西太多&quot;</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">GPT-6 Sol 社区口碑分化：更便宜但&quot;略差&quot;，被指是较弱的 OpenAI 发布</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Governance-as-Code：把 43 条可机器校验的 EU AI Act 条款放进 CI</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">ScienceBuddy：免费 AI 科研工作台，可检索论文并回溯每一步调用</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-24 04:49 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
