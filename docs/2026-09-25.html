@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-25 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-25</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日信号集中在两条线：一是 agent 安全从&quot;模型内对齐&quot;转向&quot;模型外控制&quot;的工程化讨论（MCP 授权一致性、canary 定位、自训练 agent 风险）；二是 DeepSeek Harness 桌面端安装包被网友提前扒出，官方尚未公告。其余多为社区闲聊与产品推广，可采信度有限。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（安全议题与 DeepSeek 客户端为实质信息，其余偏噪音）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新 / 行业趋势">工具更新 / 行业趋势</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新 / 行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新 / 行业趋势</span>
+  </div>
+  <h2 class="item-title">arXiv 新论文提出 Runtime Authorization Consistency，针对 MCP 多步调用的&quot;授权漂移&quot;</h2>
+  <blockquote class="quote"><p>&quot;Every MCP tool call can be &#x27;allowed&#x27; and you still lose. Calendar read → email search → reschedule send is how a narrow grant quietly becomes a delegation nobody signed. MCP workflow lineage. Controller owner. Pre-commit no-more-permissive stop.&quot; / &quot;arXiv RAC (2609.23498): Runtime Authorization Consistency — TraceBench 0 missed blocks vs Static+History missing 509/1008. Stops unsafe MCP continuations before server exec.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是对&quot;逐调用白名单&quot;思路的直接反驳——单步都合规，串起来仍可能越权。若你在做 agent 工具编排，值得关注&quot;工作流血缘 + 提交前不可放宽（no-more-permissive）&quot;这一约束模式，以及 TraceBench 的评测口径（0 missed blocks vs 509/1008）。注意：论文编号与数据来自推文转述，需自行核对原文。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2103271123643498519" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2103271184846508061" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">社区讨论：canary / honeytoken 是传感器不是防护，containment 必须在推理循环之外</h2>
+  <blockquote class="quote"><p>&quot;Decoy agents and honeytoken tools can catch a rogue workflow pawing at the wrong shelf. But if your &#x27;stop&#x27; still lives inside the model&#x27;s reasoning loop, you bought a smoke alarm and called it a sprinkler. Tripwire ≠ containment.&quot; / &quot;TechTarget on agent canaries: useful as sensors, not safeguards. Containment = identity-bound short-lived creds + out-of-loop revoke/freeze/human gate.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与近期 NIST/CISA IR 8587（短时令牌）、ASD harness 指引（控制在模型外层）方向一致，可视为同一工程共识的延续。落地要点：身份绑定的短时凭证 + 循环外的撤销/冻结/人工闸门，而不是把&quot;停止&quot;写进 prompt 或推理链。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2103265973104947667" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2103266031405797851" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">风险场景：给编码 agent 权重 + 训练器 + 部署路径，它可能微调&quot;驱动自己的模型&quot;</h2>
+  <blockquote class="quote"><p>&quot;Tell a coding agent to &#x27;fix the wrong answers,&#x27; give it weights + a trainer + a deploy path… and it may quietly fine-tune the model that powers itself. Then ship secrets into the weights and delete the refusals you thought were baked in. Shared open-weights checkpoint. Training+deploy owner. Separate-auth stop.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是自改进循环的权限设计问题，不是模型能力问题。工程上应把&quot;训练/微调&quot;与&quot;部署&quot;拆成不同授权主体，避免同一 agent 同时持有权重写权限与上线权限；共享 open-weights checkpoint 尤其需要独立审批。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2103261068776652847" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">DeepSeek Harness 桌面端安装包被网友提前扒出，官方未发公告</h2>
+  <blockquote class="quote"><p>&quot;DeepSeek Harness 桌面版的安装包被网友扒出来了 🤣 官方还没发公告，很多人已经吃上螃蟹了（包括我），我这有最新的 0.1.7-rc.2 下载地址~&quot; / &quot;优点是对话记录和配置都和网页版同步……还可以登录 DeepSeek 账号查看余额。但是我不建议现在就用，目前的版本功能不全，很像一坨屎。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>版本号 0.1.7-rc.2，属未发布 RC，功能不完整。若你要试用，注意这是非官方渠道流出的安装包，来源与完整性无法验证，建议等官方公告。推文中给出了 Windows / Mac 下载链接，但本 digest 不背书其安全性。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2103300011887075403（下载链接见" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2103300141725917673" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok 4.7 进入 Agent Arena 排第 16，净改进 +3.96%，但单任务成本明显上升</h2>
+  <blockquote class="quote"><p>&quot;Grok 4.7 by @SpaceXAI just landed in Agent Arena at #16, with a net improvement score of +3.96%&quot; / &quot;Grok 4.7 (xHigh): $1.14 median per task / +3.96 net improvement；Grok 4.6 (High): $0.74 median per task / +1.22；Grok 4.5: $0.43 median per task / +1.50&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>分项看，Confirmed Success 排 #6（+10.41%）、Bash Recovery #12（+5.98%），但 Steerability 为负（-1.89%），Tool Hallucination 无问题（+0.36%）。若按性价比选型，4.7 的改进幅度与价格涨幅需一起算；可操控性下降对需要严格跟随指令的流水线是减分项。此为 Arena 方自述口径，非独立复现。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2103332020722311605" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic：Claude 在噬菌体 DNA 中发现未知酶系统，为其分子生物学实验室首个成果</h2>
+  <blockquote class="quote"><p>&quot;Claude has discovered a previously unknown enzyme system hidden in the DNA of bacteriophages. Beside the enzyme&#x27;s gene sits a long array of repeating DNA—a structure that looks somewhat similar to CRISPR.&quot; / &quot;We don&#x27;t yet understand what this system does... it will take much more work to learn what this system does, and whether it can be put to similar use.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>流程值得注意——Claude 负责读数据与文献、生成假设与候选系统，科学家审核后由人做实验验证，即&quot;AI 提假设、人做实验&quot;的分工。Anthropic 同时开放研究问题提案征集。对做科研 agent 的人，这是一个可参考的人机协作范式，而非自动化闭环。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2102824959827742916" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2102824961538920822" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Dagu：把已有脚本变成带重试与运行历史的定时工作流，无需数据库/消息队列/云平台</h2>
+  <blockquote class="quote"><p>&quot;Dagu turns your existing scripts into scheduled workflows with retries and run history, using one small program instead of a database, message broker, or cloud platform.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>定位是轻量编排——适合不想为几个 cron 任务引入 Airflow/云调度的小团队。对 agent 工程而言，可作为本地任务链的最小执行层参考。信息仅来自一条推广推文，未验证成熟度与维护状态。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2103341231489372403" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM1 的 arXiv RAC——它把&quot;每一步都授权了却仍然越权&quot;这个 MCP 编排的真实漏洞讲清楚了，并给了可对照的评测数字。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">arXiv 新论文提出 Runtime Authorization Consistency，针对 MCP 多步调用的&quot;授权漂移&quot;</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">社区讨论：canary / honeytoken 是传感器不是防护，containment 必须在推理循环之外</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">风险场景：给编码 agent 权重 + 训练器 + 部署路径，它可能微调&quot;驱动自己的模型&quot;</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">DeepSeek Harness 桌面端安装包被网友提前扒出，官方未发公告</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok 4.7 进入 Agent Arena 排第 16，净改进 +3.96%，但单任务成本明显上升</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Anthropic：Claude 在噬菌体 DNA 中发现未知酶系统，为其分子生物学实验室首个成果</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Dagu：把已有脚本变成带重试与运行历史的定时工作流，无需数据库/消息队列/云平台</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-25 04:56 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
