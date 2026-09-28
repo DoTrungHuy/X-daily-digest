@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-28 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-28</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里真正有工程价值的只有三条：把家用机器组网跑大模型、一个 Rust 单程序自改进 agent、以及&quot;agent 跑完攻击链后留下的服务账号没人下线&quot;这条身份治理缺口。其余多为营销、抽奖、代充教程与无上下文短推，信号偏弱。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>35 推文</span><span class="sig sig-weak">信号 弱（多数条目为推广、抽奖、无上下文短句；仅 3 条具备可操作信息）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Distributed Llama：用家用以太网把多台机器连起来跑大模型，四台 Mac Mini 可跑 70B</h2>
+  <blockquote class="quote"><p>&quot;Distributed Llama links your home computers over Ethernet to run large AI models faster, even letting four Mac Minis handle a 70B model.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对没有 GPU 集群的个人开发者，这是把闲置机器变成推理池的低成本路径；关注点应在以太网带宽与层间通信开销，而非单机算力。适合做本地推理实验、隐私敏感场景的自托管。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104428394972926384" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">单个 Rust 程序跑自改进 agent：跨聊天渠道、生成图像与文档、本地或托管模型均可</h2>
+  <blockquote class="quote"><p>&quot;Run a self-improving AI agent from one Rust program. - Works across many chat channels - Generates images and documents - Runs local or hosted AI models&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>单二进制、多渠道路由、模型可切换，是 agent 运行时的一种极简架构取向。对想自建 agent 但不想引入 Python 依赖树与消息队列的工程团队有参考价值；&quot;self-improving&quot; 的具体机制原文未说明，需自行核实。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104398202770538925" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">GreyNoise 记录的 agent 驱动 PaperCut 攻击：经长期存在的服务账号从 280 家组织取走 AD 凭据</h2>
+  <blockquote class="quote"><p>&quot;The agent-run PaperCut campaign GreyNoise documented took Active Directory credentials from 280 organizations through standing service accounts. Leaver checklists still only have rows for people.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;非人类身份&quot;治理的具体案例——离职清单只管人，不管服务账号。对做企业 agent 部署的团队：把服务账号纳入轮换与下线流程，比在模型层加防护更直接。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104371007699951835" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">OWASP 非人类身份 Top 10 已把&quot;下线不当&quot;列为第一风险</h2>
+  <blockquote class="quote"><p>&quot;The OWASP Non-Human Identity Top 10 already ranks improper offboarding as risk number one.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可作为 agent / 服务账号治理的合规参照清单。与上一条互为印证：风险排名第一的项，正是现实中被打穿的那一项。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104379145438535718" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Apollo 首席经济学家：agent 可能引发银行挤兑——把家庭现金扫进 3-5% 的账户</h2>
+  <blockquote class="quote"><p>&quot;Chief Economist at Apollo: agents could cause a bank run by sweeping household cash into accounts paying 3-5% instead of the 0.1% national average, causing banks to lose a large share of their cheap deposits.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 agent 在金融场景下的二阶效应推演，非既成事实。对做 agent 金融自动化的开发者：批量、低摩擦的资金调度本身就是系统性风险面，限额与速率控制应在设计阶段考虑。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104213040937812262" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：把 Hotelist 整合进 Hoodmaps，AI 建议的变现路径</h2>
+  <blockquote class="quote"><p>&quot;This was a recommendation by AI to try and monetize Hoodmaps, it gets almost 171,000 vistors per month but never made money in almost a decade, so I asked AI&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一个&quot;高流量、零变现&quot;产品靠 AI 建议找到相邻变现点的案例。对独立开发者：把已有流量与相邻商业意图（找区域 → 订酒店）对接，比新增功能更省成本。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104318653487288455" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 GreyNoise 那条 PaperCut 服务账号案例——它是这批材料里唯一有具体数字、可立即对照自己环境做检查的安全信号。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Distributed Llama：用家用以太网把多台机器连起来跑大模型，四台 Mac Mini 可跑 70B</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">单个 Rust 程序跑自改进 agent：跨聊天渠道、生成图像与文档、本地或托管模型均可</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">GreyNoise 记录的 agent 驱动 PaperCut 攻击：经长期存在的服务账号从 280 家组织取走 AD 凭据</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OWASP 非人类身份 Top 10 已把&quot;下线不当&quot;列为第一风险</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Apollo 首席经济学家：agent 可能引发银行挤兑——把家庭现金扫进 3-5% 的账户</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">levelsio：把 Hotelist 整合进 Hoodmaps，AI 建议的变现路径</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-28 05:22 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
