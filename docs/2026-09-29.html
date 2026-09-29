@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-29 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-29</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;模型与 harness 的性价比重排&quot;：GPT-6 Luna 以极低成本挤进 Agent Arena 帕累托前沿，Sonnet 5.5 同日进入 Notion；另一条线是 agent 安全与治理继续被反复敲打（Cloudflare/Omdia 调研、harness tax 研究）。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（有明确产品/基准更新，但多为增量；无重大事故或突破）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">GPT-6 Luna (Max) 进入 Agent Arena 帕累托前沿，单任务中位成本仅 $0.05</h2>
+  <blockquote class="quote"><p>&quot;GPT-6 Luna (Max) has landed on the Agent Arena Pareto frontier with +1.59% net improvement at a median cost of just $0.05 per task! Luna costs 29% less than DeepSeek-V4.1-Flash and 76% less than Hy4 preview... costs 94% less than GPT-6 Sol (Max), and 98% less than GPT-6 Astra (Max).&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果按成本选 agent 后端，Luna 目前是&quot;净改进略低但便宜一个数量级&quot;的选项；做多模型路由时值得把 Luna 作为默认档、Sol/Astra 作为升级档。注意这是 Arena 的净改进口径，不等于你的具体任务表现。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104709550163325201" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Claude Sonnet 5.5 发布，同日进入 Notion</h2>
+  <blockquote class="quote"><p>AnthropicAI：&quot;Claude Sonnet 5.5 is now available:&quot;；NotionHQ 侧：&quot;Same day delivery: Sonnet 5.5 is now in Notion.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>新模型当天即可在 Notion 内用上，说明 Notion 的模型接入链路已相当短；对做 agent 产品的人，这是&quot;模型发布→宿主应用可用&quot;同日的参考节奏。此前社区已有 Sonnet 5.5 灰测个案（塔防游戏、3D 场景），本次为正式可用。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span> <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104633259925630995" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2104751387003478201" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">研究：编码 agent 的&quot;harness tax&quot;——harness 选择对成本的影响大于对准确率的影响</h2>
+  <blockquote class="quote"><p>&quot;She reports three surprising findings. One: harness choice impacts cost more than accuracy.&quot;（作者为 UC Berkeley Sky Computing Lab 博士生、前 Arena 实习生，对比 Claude Code / Codex / Pi）</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>选编码 agent 时，先按成本/延迟筛 harness，再谈准确率；同一模型换 harness 可能比换模型更省钱。对自建 agent 的团队，harness 层值得单独做基准，而不是只测模型。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104706256284065845" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Cloudflare 与 Omdia 调研：99% 的 IT/网络负责人不接受无护栏的 AI 行动，69% 要求每个 agent 动作可解释</h2>
+  <blockquote class="quote"><p>&quot;99% of IT and network leaders say they won&#x27;t let AI act without guardrails, and 69% want an explanation for every action an agent takes.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>企业采购侧的可解释性与护栏需求已经量化，做 agent 产品时把&quot;每步动作可审计/可解释&quot;当默认能力而非附加项；这也是与安全合规团队对话的现成论据。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104714722516095169" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Bot 支持多人协作：团队 bot 可继承插件、技能与凭据，一键加入 Slack</h2>
+  <blockquote class="quote"><p>&quot;grok @bot is now multiplayer. make a team bot which has access to your plugins, skills, credentials, and then add it to slack with one click.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>团队级 bot 直接携带 credentials 进 Slack，便利性与权限边界是同一枚硬币；接入前先想清楚凭据范围与谁能改 bot 配置。另有官方推文称 Grok Bot 可做财务看板、预算工具、订阅审计。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104664283808428165" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2104646114427457941" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok 4.7 上线 Amazon Bedrock</h2>
+  <blockquote class="quote"><p>&quot;Grok 4.7 is now on Amazon Bedrock&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对已在 AWS 内的团队，多了一条不经过第三方网关的接入路径，便于统一 IAM、VPC 与计费；结合此前&quot;Grok 4.7 更慢更贵但更稳&quot;的实测口碑，适合对稳定性优先于成本的任务。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104710467512058027" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 连续更新：新侧边栏、列级权限、Teams 通知</h2>
+  <blockquote class="quote"><p>NotionHQ：&quot;New sidebar just dropped&quot;；&quot;Column permissions are here!&quot;；另有&quot;Now you can stay on top of your Notion notifications, right in Microsoft Teams.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>列级权限是数据库协作里长期缺的一环，对多人共享同一数据库、但需按字段隔离的场景（如薪资、客户联系方式）有直接价值；Teams 通知打通则降低了非 Notion 重度用户的接入门槛。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104650297192976512" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2104611206153884148" target="_blank" rel="noopener">原文2</a><a class="src" href="https://x.com/i/web/status/2104718012729413851" target="_blank" rel="noopener">原文3</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama 预告 DevDay：&quot;我们发现了一个新东西&quot;</h2>
+  <blockquote class="quote"><p>&quot;Pretty excited for DevDay tomorrow. We have found a new thing.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无实质技术细节，仅作日程提示；结合 OpenAI 官方&quot;Get ready&quot;推文，明天可能有发布，值得留出时间看直播而非事后补课。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span> <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104661956879913457" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2104651136699609518" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Agent Arena 的 GPT-6 Luna 帕累托前沿那条——它直接改变你选 agent 后端的成本假设。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">GPT-6 Luna (Max) 进入 Agent Arena 帕累托前沿，单任务中位成本仅 $0.05</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Claude Sonnet 5.5 发布，同日进入 Notion</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">研究：编码 agent 的&quot;harness tax&quot;——harness 选择对成本的影响大于对准确率的影响</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Cloudflare 与 Omdia 调研：99% 的 IT/网络负责人不接受无护栏的 AI 行动，69% 要求每个 agent 动作可解释</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Bot 支持多人协作：团队 bot 可继承插件、技能与凭据，一键加入 Slack</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Grok 4.7 上线 Amazon Bedrock</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 连续更新：新侧边栏、列级权限、Teams 通知</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">sama 预告 DevDay：&quot;我们发现了一个新东西&quot;</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-29 05:43 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
