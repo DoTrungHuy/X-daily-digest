@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-09-30 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-09-30</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">OpenAI 在 DevDay 一口气放出 GPT-6.1 Sol、Ultrafast 推理档、Pro 500 订阅与 Dots 常驻 agent，把&quot;更便宜 + 更快 + 常驻&quot;三件事同时推上台面；另一边社区开始用锁版本、固定题集的方式认真检验&quot;Claude 降智&quot;到底是不是真的。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强（官方发布密集，且出现可复现的第三方评测方法）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 GPT-6.1 Sol：接近 Astra 的智力，价格约五分之一</h2>
+  <blockquote class="quote"><p>&quot;GPT-6.1 Sol: near-Astra intelligence for a fifth of the price. It&#x27;s the most cost-efficient model for its performance available today.&quot; / &quot;6.1 Sol at 1/5th of the price of Astra, and 95% cache read discount!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若你此前因 Astra 成本而把高价值任务限制在少数场景，6.1 Sol 的价格结构（缓存读取折扣 95%）值得重新做一次成本/质量权衡；官方称其在对齐评测上比 GPT-6 Sol 明显改善，更透明地说明自身局限。注意：这是对上一轮 GPT-6 Sol 的迭代，不是重复发布。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span> <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104986129686741046" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2104994395980533804" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Ultrafast 速度档上线：Codex 最高 8x、API 最高 6x 生成速度</h2>
+  <blockquote class="quote"><p>&quot;Our premium speed tier, Ultrafast offers up to 8x faster token generation (300 tokens per second) in Codex and up to 6x in the API.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>300 tok/s 对 agent 循环（多步工具调用、长链推理）的墙钟时间影响远大于单次对话，值得在延迟敏感的 agent 流水线上实测；目前仅 GPT-6 Astra 可用，GPT-6.1 Sol &quot;coming soon&quot;。同时 OpenAI 重开 Pro 200 并新增 Pro 500（25x Plus），并承诺不再引入 5 小时限额。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104993966043320759" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2104993967985381673" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Dots 发布：基于 GPT-6 Astra 的常驻 agent</h2>
+  <blockquote class="quote"><p>&quot;Introducing dots, powered by GPT-6 Astra. Remarkably capable, always-on agents built to handle everything.&quot; / &quot;We will have a few million dots online within days... We&#x27;re learning from how you all use your primary dot before releasing the ability to create an entire team of them.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方明确&quot;先单个 dot，再开放整队 dot&quot;，说明多 agent 编排仍在观察期；对做 agent 产品的人，这是一个&quot;常驻 + 个人偏好学习&quot;的形态样本，值得关注其权限与持久化设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104984504133918973" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama：ChatGPT Web 在 5 周内基于桌面端代码库重写</h2>
+  <blockquote class="quote"><p>&quot;Over the past 5 weeks, the team completely rewrote ChatGPT Web on top of the desktop app codebase. This was only possible with Astra, and it&#x27;s why Dots, Space, Codex Cloud, and so many more of our launches will come to web and desktop same day. Era of the megaproject begins.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;用模型加速自身工程&quot;的一个具体案例，也是 web/desktop 同日发布的组织性变化；对工程团队的含义是：代码库统一后，跨端发布节奏会被压缩，测试与回滚策略需要提前跟上。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104993363170861501" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Codex Security Cloud 升级：默认接入 cyber-capable 模型，持续扫描仓库与提交</h2>
+  <blockquote class="quote"><p>&quot;It scans entire GitHub repos, continuously reviews new commits, investigates and deduplicates findings, and prepares fixes for review – even when your laptop is closed.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把安全扫描从&quot;人触发&quot;变成&quot;持续 + 去重 + 预备修复&quot;，对 CI/安全团队是流程层面的变化；注意&quot;prepares fixes for review&quot;意味着仍需人工把关，不要直接自动合并。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104987422308335828" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Livenerf：锁版本 Claude Code 跑固定 78 题，连测 30 天验证&quot;降智&quot;</h2>
+  <blockquote class="quote"><p>&quot;有位开发者搞了个叫 Livenerf 的项目，从 Opus 5.5 发布那周开始，每天用锁死版本的 Claude Code 跑同一套 78 道题，计划连测 30 天，今天冲上了 Hacker News 第一。&quot; / &quot;目前跑了 6 天，最新一天 52.6%，是 6 天里最低的。但前 5 天本来就在 58% 到 64% 之间来回跳，最早 10 月 24 日左右才能下结论，现在喊降智还太早。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>方法论值得借鉴——锁版本、只挑&quot;时对时错&quot;的题、按标准答案判分、同时监控输出 token（少想会先在这里露馅）。作者也承认目前样本还分不出 Opus 5.5 与 Opus 5 的差异。对依赖模型做长期基准的团队，这是&quot;别用感觉下结论&quot;的正面案例。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2105167254635897329" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2105167254983946672" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Ollama 支持本地决策模型 Nimble，用于工单分流/模型路由/内容审核</h2>
+  <blockquote class="quote"><p>&quot;Ollama now supports Jev-like decision models all locally. Use decision models like Nimble for tasks like ticket triaging, model routing, and content moderation. ollama pull nimble&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把&quot;路由/分流/审核&quot;这类高频小决策放到本地小模型，是降低 agent 系统成本与延迟的常见做法；官方演示通过新的本地 /v1/systemone API 做实时决策。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2105152056382345544" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Anthropic 启动新一轮 AI 体验研究，参与者可选择公开回答</h2>
+  <blockquote class="quote"><p>&quot;Last December, 81,000 people told us about their hopes and fears about AI in the largest qualitative study ever done. This time, we&#x27;re giving participants the option to make their responses public so that anyone, not just Anthropic, can learn from them.&quot; / &quot;The study runs Sept 29 to Oct 6 and is open to Free, Pro, and Max users on Claude and Claude Code.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与上一轮相比的新增点是&quot;回答可公开、可被外部引用&quot;，对关注 AI 治理与用户研究的人有参考价值；参与窗口为 9/29–10/6。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2104982629884063840" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 GPT-6.1 Sol 的官方发布——它直接改变你现有 agent 流水线的成本结构，其余多为配套或验证性信息。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 发布 GPT-6.1 Sol：接近 Astra 的智力，价格约五分之一</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Ultrafast 速度档上线：Codex 最高 8x、API 最高 6x 生成速度</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Dots 发布：基于 GPT-6 Astra 的常驻 agent</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">sama：ChatGPT Web 在 5 周内基于桌面端代码库重写</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Codex Security Cloud 升级：默认接入 cyber-capable 模型，持续扫描仓库与提交</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Livenerf：锁版本 Claude Code 跑固定 78 题，连测 30 天验证&quot;降智&quot;</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Ollama 支持本地决策模型 Nimble，用于工单分流/模型路由/内容审核</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Anthropic 启动新一轮 AI 体验研究，参与者可选择公开回答</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-09-30 05:31 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
