@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-03 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-03</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;agent 的边界与护栏&quot;：一边是 Claude Code 内置的旁观插件与 /retro 省 token 实践，一边是苹果收紧 Mac 完全磁盘访问权限、点名 AI Agent。模型侧，OpenAI 官方给出 GPT-6 选型指南，明确&quot;日常用 Sol、Astra 留大招&quot;。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方 / 工具更新">大佬官方 / 工具更新</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势 / 中国相关（中文源）">行业趋势 / 中国相关（中文源）</button><button type="button" class="fbtn" data-f="工具更新 / 关注动态">工具更新 / 关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="大佬官方 / 行业趋势">大佬官方 / 行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方 / 工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方 / 工具更新</span>
+  </div>
+  <h2 class="item-title">OpenAI 官方发布《GPT-6 选模型指南》：写代码推荐 GPT-6.1 Sol，Astra 留给最难推理</h2>
+  <blockquote class="quote"><p>&quot;OpenAI 官方刚发了《GPT-6 选模型指南》，写复杂代码推荐的居然是 GPT-6.1 Sol！最贵的 GPT-6 Astra 被留给了最难、最需要智力的推理&quot;；&quot;按 Plus 会员的 Codex 额度算，官方估算每 5 小时 Astra 能发 5~45 条消息，Sol 能发 15~160 条&quot;；&quot;用 API 的话，对话中途换推理档位不会破坏缓存&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方给出的档位分工可直接照抄——小改动 Low、规划/比较方案 Medium、难调 bug 与仔细审查才上 High，Extra high 和 Max 作为兜底。日常默认 Sol + 默认档，卡住再升档。API 用户注意：中途切推理档位不破坏缓存，意味着不必为省缓存而锁死档位。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106240326314627273" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106240326956392474" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Code 内置插件 &quot;You should know&quot;：另一个 AI 在旁边盯 Claude 干活，默认关闭</h2>
+  <blockquote class="quote"><p>&quot;最新版 Claude Code 里其实已经藏着一个官方插件，能让另一个 AI 在旁边盯着 Claude 干活，只是默认关着&quot;；&quot;官方演示里，Claude 修完结账超时的 bug……旁边那个 AI 跳出来提醒：重试可能让顾客被扣两次钱&quot;；&quot;不能改文件、不能跑命令，只能看对话&quot;；&quot;用的就是你当前的模型，花的是你自己的额度&quot;；&quot;只在官方直连、开着遥测的会话里能用&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>开启命令 <code>/plugin enable cc-plugin-you-should-know@builtin</code>（需 2.1.287 以上）。若设过 <code>CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC</code>（等于关遥测）则不可用。适合用在有副作用风险的改动（支付、重试、数据写入）上，作为&quot;第二双眼睛&quot;；但它不改文件、不跑命令，别指望它替你验证。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106214152783986691" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106214153505370336" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势 / 中国相关（中文源）">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势 / 中国相关（中文源）</span>
+  </div>
+  <h2 class="item-title">苹果收紧 Mac「完全磁盘访问权限」，理由中点名 AI Agent</h2>
+  <blockquote class="quote"><p>&quot;刚刚，苹果宣布要收紧 Mac 的「完全磁盘访问权限」，理由里点名了 AI Agent&quot;；&quot;这个权限本来是给备份软件用的，哪个 App 拿到它，就能读到你的文件、邮件、聊天记录，甚至浏览记录&quot;；&quot;Claude Code 官方文档教你接 iMessage，第一步就是给终端开这个权限&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>立刻自查「系统设置 → 隐私与安全 → 完全磁盘访问权限」（macOS 13～26 叫「隐私与安全性」），确认哪些终端/IDE 拿过这个权限——在里面跑的 agent 会继承同等读取能力。给终端开权限等于给所有在其中运行的 agent 开权限，建议按需临时开启而非长期保留。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106197291614810346" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106197292411691399" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新 / 关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">工具更新 / 关注动态</span>
+  </div>
+  <h2 class="item-title">Matt Pocock 的 /retro：让 Agent 复盘最近 10 次会话，找出仓库里&quot;绕路&quot;的地方</h2>
+  <blockquote class="quote"><p>&quot;让 Agent 少在仓库里绕路，是被严重低估的省 token 办法&quot;；&quot;最近 10 次里有 9 次，Agent 都在读、在搜同一份上万字的经验文档&quot;；&quot;它最常泼的冷水是：别再往 CLAUDE.md 里加规则了。这个文件每次会话都会塞进上下文，只该放「去哪找什么」的指针&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>安装 <code>npx skills@latest add mattpocock/skills -s retro writing-for-agents</code>。三个使用要点：Claude Code 官方插件市场那版还停在 9 月、没有它，需自行安装；提示词里点明&quot;这个项目的&quot;以免混入其他项目会话；说不出是哪次会话里发现的建议直接丢弃。/retro 只提建议、不动代码，可安全跑。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106232523751673974" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106232524473090442" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Cloudflare 决策模型 Clef / Clef Flash 上架 Ollama，一行命令本地拉取</h2>
+  <blockquote class="quote"><p>&quot;Decision models allow you to classify an image, label a bug report or route a support ticket to the right team.&quot;；&quot;Clef (27B): ollama pull clef&quot;；&quot;Clef Flash (9B): ollama pull clef-flash&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前 Clef-flash 开源消息的后续进展——从&quot;开源模型&quot;变成&quot;Ollama 一行命令可拉&quot;。典型用途是工单分流、bug 报告打标、图像分类这类分类/路由任务，9B 版本适合本地低配机器。注意：这是分类/路由模型，不是通用对话模型，别拿它替代主 agent。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106186667543666841" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106190778485678405" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">MiMo-V2.6-Flash 进入 Agent Arena 帕累托前沿：净提升 -0.57%，单任务中位成本 $0.04</h2>
+  <blockquote class="quote"><p>&quot;MiMo-V2.6-Flash has landed on the Agent Arena Pareto frontier with -0.57% net improvement at a $0.04 median cost per task!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与之前 GPT-6 Luna (Max) 以 $0.05 中位成本进前沿形成对照——低成本档位的竞争在继续。注意&quot;净提升 -0.57%&quot;是负值，说明它进前沿靠的是成本而非绝对能力提升，选型时按&quot;够用且便宜&quot;而非&quot;更强&quot;来理解。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2105733985884401708" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama 回应 Cerebras 合作猜测：是紧密伙伴，在速度前沿上有深度合作</h2>
+  <blockquote class="quote"><p>&quot;There is some speculation about our partnership with Cerebras. Cerebras is a close partner, and we have a deep engagement pushing on the frontiers of speed.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方口径确认了&quot;速度&quot;是这条合作线的关键词，与此前 Ultrafast 速度档（Codex 最高 8x、API 最高 6x）的方向一致。对开发者而言，短期可预期的是推理速度而非能力提升；具体产品形态未披露，不宜过度外推。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106147184693620924" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="大佬官方 / 行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-blue">大佬官方 / 行业趋势</span>
+  </div>
+  <h2 class="item-title">Anthropic 科学博客：哈佛物理学家谈 AI 与科学的&quot;阻抗失配&quot;</h2>
+  <blockquote class="quote"><p>&quot;LLMs are capable at many things, but working with them as you would with a human collaborator isn&#x27;t currently the best way to elicit their scientific strengths.&quot;；&quot;Schwartz created a toolkit for exact calculations in quantitative science&quot;；&quot;Claude found connections to ecology, population genetics, and a dozen other fields&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>核心观点是&quot;把 LLM 当人类合作者用&quot;是错配，应改为给它精确计算工具、由它做跨领域联想。对做 agent 的人有直接启发：与其让模型硬算，不如把确定性计算外包给工具，让模型负责连接与提问。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2105733864152858919" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点苹果收紧「完全磁盘访问权限」那条——它直接决定你机器上跑的 agent 现在能读到什么。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 官方发布《GPT-6 选模型指南》：写代码推荐 GPT-6.1 Sol，Astra 留给最难推理</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Claude Code 内置插件 &quot;You should know&quot;：另一个 AI 在旁边盯 Claude 干活，默认关闭</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">苹果收紧 Mac「完全磁盘访问权限」，理由中点名 AI Agent</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Matt Pocock 的 /retro：让 Agent 复盘最近 10 次会话，找出仓库里&quot;绕路&quot;的地方</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Cloudflare 决策模型 Clef / Clef Flash 上架 Ollama，一行命令本地拉取</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">MiMo-V2.6-Flash 进入 Agent Arena 帕累托前沿：净提升 -0.57%，单任务中位成本 $0.04</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">sama 回应 Cerebras 合作猜测：是紧密伙伴，在速度前沿上有深度合作</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Anthropic 科学博客：哈佛物理学家谈 AI 与科学的&quot;阻抗失配&quot;</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-03 05:17 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
