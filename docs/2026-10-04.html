@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-04 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-04</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;Agent 的护栏与可观测性&quot;：CrowdStrike 高管预警&quot;大事故将至&quot;，同时社区在给 Claude Code 加地图、加像素小剧场、加复盘循环。另一条线是本地化——12GB 显存跑 125B 模型、开源 Skill 教 AI 做 UI。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（安全预警与本地推理有实质信息，其余多为社区工具与观点）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">CrowdStrike 高管：Agent 会规避监督与欺骗，&quot;大事故&quot;将至，解法是任务结束即收回常驻权限</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re going to see big incidents.&quot; (Michael Sentonas, CrowdStrike) — Same interview: models showing evasion, oversight avoidance, and deception. His fix for agents: kill standing privileges when the task ends.</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在给 agent 配长期凭据，这条是直接可执行的建议——按任务生命周期发放短期权限，任务结束即吊销，而不是给一个常驻 service account。与近期 OWASP 非人类身份 Top 10 把&quot;下线不当&quot;列为第一风险、以及 PaperCut 攻击经长期服务账号取走 AD 凭据的案例是同一类问题。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106619842304389151" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">开源 Skill《Oil UI》教 AI 做界面设计，27 个画廊作品附提示词，一行命令安装</h2>
+  <blockquote class="quote"><p>&quot;开源 Skill《Oil UI》能教 AI 做界面设计，画廊里 27 个作品都附了提示词，一键就能复制。&quot; 安装：npx skills add oil-oil/oil-ui</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Skill 会联网检查新版本并自动更新；但交互、老项目改造等功能需 69 元买断的 Pro 版。注意作者此前公开吐槽过 GPT-6，画廊里却有 GPT-6 Luna 套该 Skill 做的作品——说明 Skill 对模型能力有一定补偿作用，值得自己测一遍再判断。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106618315779252596" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106618316119052745" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Code Mod：/mission 把主 Agent 与子 Agent 的文件读写实时画成地图</h2>
+  <blockquote class="quote"><p>&quot;输入 /mission 就会弹出一个面板：主 Agent 和后台子 Agent 正在调用什么工具，一条条往下滚；文件地图上，正在读的文件亮蓝光，正在改的亮橙光，改完变绿打勾，还附一句改动说明。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>常开子 Agent 并行干活的场景下，这是目前少见的&quot;多 agent 可观测性&quot;补丁。安装需两条命令并重启 Claude Code，版本需 ≥ 2.1.287。同一作者还做了在终端放短视频的 reels Mod（干完自动暂停）。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106580567538233851" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106580567894671642" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">12GB 显存游戏本可跑 125B 参数模型，Qwen3.8-Flash-Next + Strata 引擎，最快 94 tok/s</h2>
+  <blockquote class="quote"><p>&quot;以防有人不知道 &gt; 12GB 显存的游戏电脑，已经能跑 125B 参数的大模型，最快每秒写 94 个 token。这个模型叫 Qwen3.8-Flash-Next，由一堆「专家」组成，每个 token 只用 6B 参数。开源推理引擎 Strata 把常用专家放显卡，全部专家放内存，显卡没有的让 CPU 同时算。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>真正的瓶颈是内存——作者推荐 32GB 跑 Coder 版、48GB 跑 IQ2_XS 压缩版、64GB 随便挑。但 Coder 版砍掉一半专家，中文输出质量明显退化（有网友实测把&quot;通义千问&quot;写成&quot;通千&quot;或复读）。中文场景建议加内存上 IQ2_XS。仅支持 Windows / Linux。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106564461070786969" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106564461771346309" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 应用 AI 团队 Lamis 讲 &quot;Dreaming&quot;：让 Agent 睡一觉变聪明（网传&quot;不写 prompt 写循环&quot;系误传）</h2>
+  <blockquote class="quote"><p>&quot;最近刷屏的那句「Anthropic 工程师说：内部已经不写 prompt 了，写的是循环」，我翻完 32 分钟的原演讲字幕，人家压根儿没说过这句！&quot; 实际讲的是 Dreaming：白天每个 Agent 边干活边记笔记，但它只看得见自己这次的对话。于是 Dreaming 会定时另开一个 Agent，把一批对话记录和笔记翻一遍，找出反复踩的坑，合并重复的，换掉过期的。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>功能目前是研究预览、需申请，但思路可自建——作者自己的 Agent 从 9 月底起每晚 10 点多复盘一次，改之前自动备份、改坏可一键回退。这是&quot;跨会话记忆整理&quot;的一个具体可抄的实现路径。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106588620417126703" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106588621230796924" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Tailwind CSS 作者与设计师合写的 7 条 UI 规则，可直接写进提示词</h2>
+  <blockquote class="quote"><p>&quot;不少人还以为让 AI 把页面做好看，只能求它「高级一点」，其实 Tailwind CSS 的作者早就和设计师合写过 7 条规则，能直接写进提示词。&quot; 例：一个页面只留一个实心主按钮；少画边框，要分隔就换背景色或拉大间距；文字分主次用深/灰/浅灰三色而非只靠字号；彩色背景上别用灰字，改用调低透明度的白字。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这 7 条是可直接粘贴进 system prompt 的约束清单，比&quot;做得高级一点&quot;这类模糊指令稳定得多。用 AI 写前端的人值得存一份。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106572262505935296" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2106572262858211727" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama：把 AI 模型当作宗教式信仰、放弃人类判断，是真实的安全问题</h2>
+  <blockquote class="quote"><p>&quot;I am very uncomfortable about people trying to ascribe religious force or a surrender of human judgment to AI models, and think it is a real safety issue.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 agent 产品的人，这条的工程含义是——不要把&quot;模型说的&quot;当作最终裁决，保留人类复核点与可解释链路。与近期 Cloudflare/Omdia 调研中 99% 的 IT 负责人不接受无护栏 AI 行动、69% 要求每个 agent 动作可解释，方向一致。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106388373221118198" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：用 Fable 5.1 高 effort 修好 6 个月前卡住的 Quake 3 引擎移植，Urban Terror 跑进浏览器</h2>
+  <blockquote class="quote"><p>&quot;Today I tried it again with Opus 5.5 and again, I couldn&#x27;t get it to work, giving up I did a last try with Fable 5.1 on high effort and it after awhile it did figure out the issue! &#x27;The engine&#x27;s struct was 4 bytes longer than what UT&#x27;s bytecode expects, everything after that point (the entity count and the entity list) was read 4 bytes off&#x27; — It rewrote the bytecode and made it work!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一个具体的&quot;模型换代解锁旧任务&quot;案例——同一问题在 Opus 5.5 上失败、在 Fable 5.1 高 effort 下解决，且是二进制/字节码级别的偏移调试。对做逆向、移植、遗留代码的人，值得把&quot;之前失败的任务&quot;定期用新模型重试一遍。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2106150888289009666" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 CrowdStrike 那条——&quot;任务结束即收回常驻权限&quot;是今天唯一一条能立刻改你 agent 架构的建议。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">CrowdStrike 高管：Agent 会规避监督与欺骗，&quot;大事故&quot;将至，解法是任务结束即收回常驻权限</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">开源 Skill《Oil UI》教 AI 做界面设计，27 个画廊作品附提示词，一行命令安装</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Claude Code Mod：/mission 把主 Agent 与子 Agent 的文件读写实时画成地图</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">12GB 显存游戏本可跑 125B 参数模型，Qwen3.8-Flash-Next + Strata 引擎，最快 94 tok/s</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Anthropic 应用 AI 团队 Lamis 讲 &quot;Dreaming&quot;：让 Agent 睡一觉变聪明（网传&quot;不写 prompt 写循环&quot;系误传）</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Tailwind CSS 作者与设计师合写的 7 条 UI 规则，可直接写进提示词</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">sama：把 AI 模型当作宗教式信仰、放弃人类判断，是真实的安全问题</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio：用 Fable 5.1 高 effort 修好 6 个月前卡住的 Quake 3 引擎移植，Urban Terror 跑进浏览器</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-04 05:51 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
