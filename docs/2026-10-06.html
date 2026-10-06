@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-06 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-06</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;Agent 工程化&quot;：Codex 立下 28 天军令状、Hermes Agent 公开 326 个真实用法、Claude Cowork 把任务搬上云；另一条暗线是 AI 生成内容对开源协作的冲击——Google 因 AI 垃圾报告暂停开源漏洞赏金。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（多为工具与流程更新，无重大模型发布）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Codex 负责人立&quot;28 天军令状&quot;：每天要么上线明显改进，要么重置额度；首日默认速度提升约 50%</h2>
+  <blockquote class="quote"><p>&quot;好家伙，Codex 负责人放话：接下来 28 天，每天要么上线一个明显的改进，要么直接重置一次额度！第一天就交卷了，会员用 GPT-6 Astra 和 GPT-6.1 Sol，默认速度快了约 50%！用 ChatGPT 账号登录的 OpenCode、Devin 也跟着变快。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在用 Codex / OpenCode / Devin，近期值得重新测一遍延迟基线；&quot;每天一改进或重置额度&quot;这种公开承诺也意味着未来一个月内额度策略可能反复变动，别把当前限额写进团队预算假设。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107321197515927738" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Hermes Agent 官网收录 326 个真实用法，含 /rollback 检查点回滚</h2>
+  <blockquote class="quote"><p>&quot;开源 AI 助手 Hermes Agent 的官网，收录了真实用户的 326 个用法……有个用户的 Hermes 一口气删光了源码，还顺手 git reset --hard，结果他敲了句 /rollback 1 就全救回来了！&quot; 原文摘录（补充）：&quot;想用 /rollback 的话，得先用 hermes chat --checkpoints 打开检查点，现在的版本还要敲 /rollback 1 --all，才会连你自己的文件一起恢复&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>两个可迁移的设计点——(1) 死规则任务（如&quot;每 5 分钟查内存超 85% 告警&quot;）让 agent 生成脚本定时跑，之后不再调模型，token 成本归零；(2) agent 的文件操作必须配检查点，否则一次 git reset --hard 就是灾难。注意 /rollback 默认不恢复你自己的文件，需加 --all。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107313396077248741" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2107313396404371589" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Cowork 任务默认上云：本地文件夹按需上传，合盖也能继续跑</h2>
+  <blockquote class="quote"><p>&quot;能读写你电脑文件的 Claude Cowork，10 月 6 日起 Pro 和 Max 会员新建的任务一律上云！……文件夹还在你电脑上，用到哪个文件才拷一份上去；关掉桌面端任务照样跑，只是读不到本地文件；已经开始的本地任务能接着做完。&quot; 原文摘录（补充）：&quot;不过 Cowork 里的项目和定时任务，没法带到 Claude Code 里。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是权限边界的变化——任务不再受本机 VM 生命周期约束，但&quot;读不到本地文件&quot;意味着依赖本地路径的定时任务会静默失败。想在本地跑，官方推荐换桌面版 Claude Code，但 Cowork 的项目与定时任务不可迁移，迁移前先盘点哪些任务依赖本地文件。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107281686866395515" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2107281687201853774" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Google 暂停开源漏洞赏金收代码漏洞，称被 AI 垃圾报告刷停</h2>
+  <blockquote class="quote"><p>&quot;Google 官宣：开源漏洞赏金暂停收代码漏洞了！被 AI 垃圾报告刷停了……开源项目 curl 早就经历过这事，去年被刷爆，今年干脆把赏金全撤了。撤了之后，到 4 月 AI 垃圾报告只占 6% 左右，去年还有 28%。意外的是，报告量反而是去年的两倍，几乎都用了 AI，真漏洞的比例却从 5% 左右涨到了 16%！&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做安全 agent 或漏洞扫描工具的人是重要反例——&quot;AI 提高报告量&quot;不等于&quot;提高有效信号&quot;，赏金机制本身会被生成成本下降击穿。curl 的数据说明：撤掉金钱激励后，AI 辅助报告的真漏洞占比反而上升，值得在设计 agent 输出评审流程时参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107288230072836586（官方公告：https://x.com/i/web/status/2107288230412591361" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 开始给 ChatGPT / Codex 文本加水印，先覆盖欧盟</h2>
+  <blockquote class="quote"><p>&quot;In the EU, we&#x27;ll start watermarking eligible text from ChatGPT and Codex over the coming weeks to comply with the EU AI Act. Customers using our API can turn on text watermarking for select models worldwide today.&quot; 原文摘录（补充）：&quot;Watermarks have limits. They&#x27;re often undetectable, especially in short passages. Rewriting or translating text can completely remove the watermark. That&#x27;s why, for now, only approved researchers will have access to our detector.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>OpenAI 自己承认水印在短文本中常检测不到、改写或翻译即可完全移除——所以不要把它当作可靠的溯源手段。对 API 用户：水印是可选项，且官方称不影响能力、速度与可读性；对面向欧盟的产品，需评估合规时间表。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107164650249101695" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2107164653147340988" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">vibe-wise：Claude Code 插件，写码前先逼你想方案，按水平分三档</h2>
+  <blockquote class="quote"><p>&quot;插件叫 vibe-wise，用了它之后，你让 AI 做个功能，它会先问你打算怎么设计，你点头了它才动手写，写完还会讲清楚改了哪些代码、跑了哪些测试。并且按水平分初级、中级、高级三档，选初级会多解释、多画图。&quot; 原文摘录（补充）：&quot;不过用 Codex、Cursor 的朋友还得等等，社区移植的 PR 还没合并。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;反向 harness&quot;思路——不是让 agent 更自主，而是强制在动手前插入人类设计确认，适合带新人或自己学新栈时用。目前仅 Claude Code 可用，Codex / Cursor 移植未合并。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107307104671244552" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2107307105279410350" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">HeyGen 开源 HyperFrames 出免费桌面 App：在画面上圈出问题让 AI 改</h2>
+  <blockquote class="quote"><p>&quot;HeyGen 开源的视频框架 HyperFrames 刚出了免费桌面 App，一句话就能让你的 Claude Code 或 Codex 做出第一版。想改哪个词，选中留条评论就行，攒几条再一起发给 AI 改。&quot; 原文摘录（补充）：&quot;Windows 版还没出，可以先给 Claude Code 或 Codex 装上官方 Skill 凑合用，只是没法圈画面改：npx skills add heygen-com/hyperframes&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把&quot;视觉反馈&quot;变成结构化输入（选中 + 评论 + 批量提交）是 AI 生成视频工作流里少见的实用交互。Mac 用户可直接试桌面版；Windows 用户只能先用 Skill，且失去圈选改稿能力。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107299554764964103" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2107299555117236327" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Agent Deck：一个终端面板同时看所有在跑的 AI 编码会话</h2>
+  <blockquote class="quote"><p>&quot;Agent Deck is a terminal dashboard that shows all your running AI coding sessions at once, so juggling work across ten projects takes one keystroke instead of ten terminals.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>多 agent 并行已是常态，但&quot;十个终端窗口&quot;是当前最笨的调度界面。这类 dashboard 的价值在于把会话状态变成可扫视的一屏，适合同时跑多个 agent 任务的开发者评估。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107312406137536780" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Hermes Agent 的 326 个真实用法——尤其是&quot;死规则任务让 agent 写脚本、之后零 token&quot;和 /rollback 检查点这两条，是能立刻搬进自己工作流的工程细节。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Codex 负责人立&quot;28 天军令状&quot;：每天要么上线明显改进，要么重置额度；首日默认速度提升约 50%</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Hermes Agent 官网收录 326 个真实用法，含 /rollback 检查点回滚</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Claude Cowork 任务默认上云：本地文件夹按需上传，合盖也能继续跑</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Google 暂停开源漏洞赏金收代码漏洞，称被 AI 垃圾报告刷停</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 开始给 ChatGPT / Codex 文本加水印，先覆盖欧盟</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">vibe-wise：Claude Code 插件，写码前先逼你想方案，按水平分三档</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">HeyGen 开源 HyperFrames 出免费桌面 App：在画面上圈出问题让 AI 改</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Agent Deck：一个终端面板同时看所有在跑的 AI 编码会话</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-06 06:19 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
