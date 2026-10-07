@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-07 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-07</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;Agent 的远程操控与工程化&quot;：Cursor 手机 App 让你离开电脑也能指挥本机 Agent，Grok Build 发布 v1.0.50 大版本更新，Google 则用 Nano Banana 2.1 把出图成本砍半。此外 OpenAI 放出内部前沿模型产出的数学结果，Anthropic 扩大网络安全验证计划。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（无颠覆性发布，但有多条可落地的工具更新）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Cursor 手机 App 上线：人不在电脑前也能指挥本机 Agent</h2>
+  <blockquote class="quote"><p>&quot;来感受一下 Cursor 手机 App 的新功能，人不在电脑前，也能指挥电脑上的 Agent 接着干活！… Agent 一直在你自己电脑上跑，手机没信号也不耽误它干活！&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可查看 Agent 进度、回复其提问、直接新开任务；手机与电脑配对后，电脑上的 Agent 会列在手机里。注意目前仅 iOS 版，出门前需在电脑端 Cursor 设置里打开 &quot;Keep this computer awake&quot; 并插电不合盖，否则电脑休眠会断连。同类功能 Claude Code（2 月）、Codex（5 月）已有，可对比选型。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107696419532615849" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Build v1.0.50 大更新：几乎覆盖整个 agent 栈</h2>
+  <blockquote class="quote"><p>&quot;Grok Build just got one of its biggest updates yet.....a massive upgrade touching almost every part of the agent stack&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Compact 模式升级、时间戳可配置、shell 命令显示运行/完成状态、表格可导出 TSV/CSV/Markdown、dashboard 对 worktree 可见性更强。底层修复包括：卡住的模型调用会重试、超 4 MiB 长会话不再断连、失败的文件写入保留原内容、CJK 记忆搜索改进、并发配置编辑更安全、MCP 工具发现更可靠。破坏性安全变更：<code>grok worktree rm</code> 默认拒绝删除使用中或有未保存改动的 worktree，除非显式 <code>-f</code>。对重度使用 worktree 与长会话的开发者价值较高。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107687399509913967" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google 发布 Nano Banana 2.1：出图费砍半，输入单价涨 3 倍</h2>
+  <blockquote class="quote"><p>&quot;Google 官宣新版生图模型 Nano Banana 2.1，效果更强，API 出图费反而砍了一半！… 每张 1K 图 0.0336 美元，上一代 Nano Banana 2 要 0.067。不过输入单价反而涨到了 Nano Banana 2 的 3 倍。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>海报、logo 类设计图进步最大，局部改图更准，同一角色连画多张更不易走样。成本结构变化明显——出图便宜但输入贵，做批量生成时需重新算账。今天可在 AI Studio 使用，Gemini App 陆续推送。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107709757570339006" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布内部前沿模型产出的数学结果</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re releasing a broad range of new mathematical results produced by an internal frontier model. We&#x27;ve been consulting with the independent Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study…&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>值得关注的是发布流程本身——OpenAI 与 IAS 独立数学与 AI 咨询组协商后再发布，为&quot;AI 产出科研成果如何对外发布&quot;提供了一个可参考的治理范式。sama 跟进称&quot;我们正进入发现的新时代&quot;。具体数学内容需看原文链接。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107596713791767021" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 扩大 Cyber Verification Program，开放攻击性安全工作层级</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re expanding our Cyber Verification Program to give security professionals broader access to our most capable models… We&#x27;re also opening up new tiers to allow for authorized offensive work, like penetration testing and red-teaming.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>通过验证的安全从业者可访问 Claude Mythos 5.1、Opus 5.5、Sonnet 5.5，并配有面向防御工作的安全措施；新增层级允许授权渗透测试与红队工作。做安全工具、漏洞研究的团队可关注申请路径。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107546569654636883" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Boris 晒 Claude Code 提示词写法：大白话 + 讲清三件事</h2>
+  <blockquote class="quote"><p>&quot;还以为写出 Claude Code 的人，提示词肯定很讲究，结果 Boris 本人晒出来的居然就是一段大白话！… 1）要它做什么 2）花多少力气 3）怎么验证做对了&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可直接套用的模板——任务目标、投入力度（如&quot;多用 token&quot;）、验证标准（如&quot;反复改到你自己觉得骄傲为止&quot;）。补充：Boris 平时用 Opus 5.5 只开默认 Medium 推理强度，做网站这类任务才调到 Extra high。建议对照自己常用提示词，检查后两项是否缺失。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107704221021642868" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">PhotoCraft：用 Vibe Coding 做出的开源 Photoshop 平替</h2>
+  <blockquote class="quote"><p>&quot;Photoshop 发布 30 多年了，居然有人用 Vibe Coding 搞出了一个开源平替！… 仓库 9 月 30 日才建，236 个提交里有 138 个都署了 Claude 的名。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>菜单与快捷键照 PS 设计，支持 Mac/Windows/Linux，可直接打开、保存 PSD。实测 10 种图层样式的测试文件打开后与 PS 几乎一致，命令行改中文文字并存回 PSD 后描边和浮雕仍在。局限：早期版本，官方称尚不能替代 PS 做日常专业工作，缺 AI 功能和约二十个工具；中文输入法暂不可用，中文图层名显示为方块（开发者已修，等下版）。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107686353307840957" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Grok 4.7 上线 Microsoft Foundry</h2>
+  <blockquote class="quote"><p>&quot;Grok 4.7 is now live on Microsoft Foundry&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>企业侧又多一个可选的模型接入点，走 Azure/Foundry 采购与合规流程的团队可评估。信息量有限，具体定价与区域可用性需查官方文档。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2107623124909060174" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Grok Build v1.0.50 的 release notes——它是这批材料里唯一一份逐条列出修复与破坏性变更的工程文档，对正在用 agent CLI 的人直接可用。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Cursor 手机 App 上线：人不在电脑前也能指挥本机 Agent</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Grok Build v1.0.50 大更新：几乎覆盖整个 agent 栈</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Google 发布 Nano Banana 2.1：出图费砍半，输入单价涨 3 倍</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OpenAI 发布内部前沿模型产出的数学结果</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Anthropic 扩大 Cyber Verification Program，开放攻击性安全工作层级</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Boris 晒 Claude Code 提示词写法：大白话 + 讲清三件事</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">PhotoCraft：用 Vibe Coding 做出的开源 Photoshop 平替</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Grok 4.7 上线 Microsoft Foundry</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-07 05:58 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
