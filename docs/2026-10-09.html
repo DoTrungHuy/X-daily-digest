@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-09 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-09</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;Agent 落地到具体工作流&quot;：Grok Bot 的原生 X 监控被官方账号亲自示范成 4 条可复制的 routine，Shopify 也接入了 Grok/Bot；另一边 Anthropic 把前沿模型投向开源软件漏洞扫描，Claude 免费账号开始能用文档/PPT/设计功能。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>9 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（官方发布与可复制工作流为主，缺少突破性模型发布）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新 / 关注动态">工具更新 / 关注动态</button><button type="button" class="fbtn" data-f="大佬官方 / 行业趋势">大佬官方 / 行业趋势</button><button type="button" class="fbtn" data-f="大佬官方 / 工具更新">大佬官方 / 工具更新</button><button type="button" class="fbtn" data-f="行业趋势 / 关注动态">行业趋势 / 关注动态</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="中国相关 / 工具更新">中国相关 / 工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新 / 关注动态">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-violet">工具更新 / 关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 原生 X 监控上线，官方示范 4 条可复制 routine</h2>
+  <blockquote class="quote"><p>&quot;I&#x27;m GrokBot pilled. The recent update with native X monitoring opens up a ton of new capabilities! My 4 favorite routines (copy/paste these prompts)&quot;——四条 routine 分别是：每日筛选真实 AI 工作流（过滤&quot;10 prompts&quot;类水文）、品牌提及监控并分类、每 4 小时捕捉正在选型的目标用户、扫描新联系人并生成跟进任务；每条都明确写了&quot;不要回复/不要发帖&quot;的边界。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是目前少见的、把 agent 定时任务写成可复制 prompt 的样本。注意其中反复出现的约束设计——限定时间窗、限定输出条数、明确禁止对外互动、失败时报告失败——可以直接抄进自己的 agent routine 模板。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108328114552000842" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方 / 行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方 / 行业趋势</span>
+  </div>
+  <h2 class="item-title">Anthropic 启动 Cyber Mission，并推出免费 OSS Scanner</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;re launching the Anthropic Cyber Mission, a new effort to secure critical infrastructure and open-source software.&quot; / &quot;We&#x27;ll use our frontier models to periodically scan opted-in open-source projects for vulnerabilities, at no cost. Our reports will provide a proof-of-concept, explanation, and suggested fix.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对开源维护者，这是零成本的漏洞扫描入口，报告含 PoC + 解释 + 修复建议，值得关注 opt-in 方式。对安全方向开发者，这是&quot;前沿模型做防御性安全&quot;的官方落地案例，可与之前 Anthropic 扩大 Cyber Verification Program（攻击性安全层级）对照看。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108302539498414208" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2108302543977906649" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方 / 工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方 / 工具更新</span>
+  </div>
+  <h2 class="item-title">OpenAI 为 GPT-6.1 Sol 推出 Ultrafast，API / Codex / ChatGPT Work 同步上线</h2>
+  <blockquote class="quote"><p>&quot;Ultrafast is rolling out today for GPT-6.1 Sol in the API, Codex, and ChatGPT Work. Near-Astra intelligence at up to 8x faster speeds than Sol Standard&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前&quot;GPT-6 选模型指南&quot;（写代码推荐 Sol、Astra 留给最难推理）之后的实际速度档位补充。若你的 agent 循环受延迟限制，Ultrafast 是新的默认候选；注意官方措辞是&quot;near-Astra intelligence&quot;，不是等同 Astra。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108262812489531498" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势 / 关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">行业趋势 / 关注动态</span>
+  </div>
+  <h2 class="item-title">Shopify 接入 Grok 与 Bot</h2>
+  <blockquote class="quote"><p>&quot;Shopify now connects to @grok and @bot. One more place merchants already work, now connected to their store. Solo founder no longer means solo operator.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>电商后台成为 agent 的又一个&quot;已有工作场所&quot;接入点。对做独立站/小生意的开发者，意味着订单、库存类操作可能被 agent 直接触达；同时也提示权限边界问题——接入店铺的 agent 需要明确的可撤销授权。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108243500089405641" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Motion 上线：一句话把数据报告做成动画并导出 MP4</h2>
+  <blockquote class="quote"><p>&quot;这个新功能叫 Claude Motion，没用视频模型，动画是 Claude 写代码做出来的。所以视频哪里你不满意，直接让 Claude 改就行！&quot; 另称 Claude 做文档、PPT 和设计的功能此前仅付费版可用，现在免费账号也能用。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与之前已发布的&quot;Lemo-Opuscar 纯代码生成短片&quot;同属&quot;用代码而非视频模型做动效&quot;路线，但这次是官方内置能力。Team/Enterprise 限定，免费账号暂不可用 Motion，但文档/PPT/设计能力已下放。做数据汇报、demo 视频的可先试。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108412890655195596" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="中国相关 / 工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">中国相关 / 工具更新</span>
+  </div>
+  <h2 class="item-title">阶跃星辰 Step 5 Preview 在 OpenCode / Kilo Code 免费开放一周</h2>
+  <blockquote class="quote"><p>&quot;它在 OpenCode、Kilo Code 这些编程工具里免费开放一周。在没登录的 OpenCode 里选上 step-5-preview-free，连 API Key 都不用填就能用。&quot; 官方称 600B 参数、100 万上下文，支持图片和视频，10 月 15 日开源权重。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一周免费窗口 + 无需 API Key，是低成本试国产大模型编码能力的时机。注意补充信息：OpenRouter 上的 Step 5 Preview 没有免费版，是按量付费——免费仅限指定工具入口。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108423963722276921" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2108423964481483089" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Archify：一句话把代码仓库画成交互式架构图，且已有同名付费仿品</h2>
+  <blockquote class="quote"><p>&quot;靠的是这个开源 Skill「Archify」，Claude Code、Codex、Cursor 里都能装。图里每个框都连着对应的源码，点一下就能看到。&quot; 后续补充：&quot;名字多一个 i 的 Archifyi 是第三方做的在线版，标价每月 19 美元。Archify 本身是免费开源的，别认错了！&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>接手陌生项目、做架构讲解的场景可用，框与源码双向链接比静态图实用。重要提醒是命名混淆——安装前确认是开源 Archify 而非每月 19 美元的 Archifyi。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108438811609038926" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2108438811969782078" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">iPhone Use 插件让 Codex 直接操作 iPhone（需 Mac + 完整 Xcode）</h2>
+  <blockquote class="quote"><p>&quot;装上这个叫 iPhone Use 的插件，你跟 Codex 说：看看朋友们国庆都去哪玩了，它就会自己打开微信往下翻。&quot; 作者称淘宝下单、点美团外卖、发小红书也能稳定跑通。后续补充：&quot;目前使用 iPhone Use 得有一台 Mac，还要装完整的 Xcode。另外作者也承认，用它操作微信和苹果自带的 iPhone 镜像一样，都有可能被微信警告。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>手机端自动化的新路径，但门槛是 Mac + 完整 Xcode，且存在账号被平台警告的风险。适合做个人自动化实验，不建议直接用于主账号。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108389234851639334" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2108389235535257821" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-9" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">09</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Mistral Large 4 进入 Agent Arena 前 15 实验室，净提升 -6.6%</h2>
+  <blockquote class="quote"><p>&quot;Across +5K real-world agentic sessions, this preview model records a -6.6% net improvement score. It is 11 rankings above the previous variant, Mistral Medium 3.5 (-12.60%).&quot; 并称其为 Agent Arena 前 15 中唯一的欧洲实验室，开源权重预计 10 月底发布。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>注意读法——&quot;净提升 -6.6%&quot;仍是负值，只是比上一代 -12.60% 好很多，属于进步而非达标。若按当前分数，开源后会在开源模型中排第 13。评估欧洲/开源基座时可作为参考点，但别把&quot;排名上升&quot;误读为&quot;可用性达标&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108405474391728357" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2108405477705126093" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 @elonmusk 那条 Grok Bot 的 4 条 routine——它是可直接复制、且把&quot;禁止对外互动&quot;写进约束的 agent 定时任务模板。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Grok Bot 原生 X 监控上线，官方示范 4 条可复制 routine</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Anthropic 启动 Cyber Mission，并推出免费 OSS Scanner</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 为 GPT-6.1 Sol 推出 Ultrafast，API / Codex / ChatGPT Work 同步上线</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Shopify 接入 Grok 与 Bot</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Claude Motion 上线：一句话把数据报告做成动画并导出 MP4</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">阶跃星辰 Step 5 Preview 在 OpenCode / Kilo Code 免费开放一周</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Archify：一句话把代码仓库画成交互式架构图，且已有同名付费仿品</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">iPhone Use 插件让 Codex 直接操作 iPhone（需 Mac + 完整 Xcode）</span></a><a href="#item-9" class="toc-a"><span class="toc-i">09</span><span class="toc-t">Mistral Large 4 进入 Agent Arena 前 15 实验室，净提升 -6.6%</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-09 06:07 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
