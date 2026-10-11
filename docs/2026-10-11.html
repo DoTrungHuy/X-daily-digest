@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-11 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-11</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;agent 工作流&quot;继续细化：Claude Projects 把多线程并行做成默认能力，Google 把会议笔记做成纯本地 Mac App，前 Cursor 工程师把&quot;我离开后发生了什么&quot;做成一个 Skill。硬件/自动驾驶类内容多为观点，未纳入。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>37 推文</span><span class="sig sig-mid">信号 中（无重大模型发布，多为产品功能与工作流工具）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Projects 上线：一段话自动拆成多线程，云端并行跑</h2>
+  <blockquote class="quote"><p>&quot;以前让 Claude Code 同时干几件事，得开几个会话挨个交代，现在丢一段话，它居然自己分好活了……这个功能叫 Projects，官方演示里 Claude 一口气拆出 8 个线程，在云端同时跑，合上电脑也不停。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>多 agent 编排从&quot;自己写 orchestrator&quot;变成产品内置能力，值得重新评估自建调度层的必要性。注意两点成本陷阱：新项目默认每线程用 Opus 5.5，多线程并行会快速消耗额度；额度耗尽后线程会等重置再继续。任务不复杂时先在项目设置里把线程模型换成 Sonnet 5.5。目前仅网页/桌面/手机 App 可用，终端与 VS Code 插件不支持。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109093374808797606" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google AI Edge Foresight：免费 Mac 会议笔记 App，全程本地</h2>
+  <blockquote class="quote"><p>&quot;开会时你只管随手记几个关键词，它会根据实时转录，把这些词扩写成完整的笔记……录音、转录和导入的资料都只留在你的 Mac 上，模型下好后断网也能用。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>本地推理 + 实时转录 + 关键词扩写是一个可复用的产品形态，对做端侧 agent 的人有参考价值。限制明确：实验版，仅 Apple 芯片、macOS 14.2 以上，官方未说明中文会议转录准确度。竞品 Granola 查 30 天前记录需每月 14 美元，本地存储是差异化点。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109155282685440210" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">/ketchup：前 Cursor 工程师把&quot;我离开后发生了什么&quot;做成 Skill</h2>
+  <blockquote class="quote"><p>&quot;用大白话说说我上条消息之后都有哪些进展，有要我处理的事，给我一段够我拍板的摘要……敲一下 /ketchup，AI 就会先说有几件事等你拍板，再按轻重讲进展，要你决定的事还会附上选项、代价和它的建议。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>多会话并行时&quot;状态回收&quot;是真实痛点，这个 Skill 的解法是把摘要格式固定为&quot;待决策项 → 按轻重排序的进展 → 选项+代价+建议&quot;。在 Cursor 官方插件 pstack 里，只有一个 Skill 文件，复制到自己的 Skill 目录即可用；Codex 里需输入 $ketchup 调用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109122566925545879" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">5 个现成 Agent / Skill 仓库汇总，含 Anthropic 官方 knowledge-work-plugins</h2>
+  <blockquote class="quote"><p>&quot;写代码的，用 agent-skills，25 个 Skill 从写需求管到上线，一行命令就能装；做销售、客服、财务的，装 Anthropic 官方的 knowledge-work-plugins；做自媒体的，去 agency-agents 里翻。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>作者给了一条容易被忽略的工程约束——&quot;Skill 简介每轮都占上下文，装多了 Claude Code 还会丢掉一部分简介，AI 就不一定挑得准了&quot;，即 Skill 数量与选择准确率存在权衡，建议先装一个。这条对设计 Skill 加载策略的人比仓库清单本身更有用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109136156445003910" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Google 试点面试允许用 Gemini：考&quot;代码理解&quot;而非刷题</h2>
+  <blockquote class="quote"><p>&quot;在「代码理解」这一轮，面试官会给你一份现成的代码，让你读懂、排错、优化，同时看你提示词写得准不准、会不会调试……AI 写错了还得你自己揪出来。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果这一试点扩大，面试评估维度会从&quot;能否写出算法&quot;转向&quot;能否审查 AI 产出&quot;，即读代码、定位错误、写有效提示词。对求职者的直接含义是刷题之外需要练代码审查与调试表达。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109109480747372960" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Tibo 28 天挑战第 6 天：全员额度重置</h2>
+  <blockquote class="quote"><p>&quot;Day 6/ Reset……Global reset by EOD. 今天结束前全员重置。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前&quot;28 天军令状&quot;的后续进展（此前为&quot;每天要么上线明显改进，要么重置额度&quot;）。推友观察重置周期已缩到 4~5 天，若按此节奏，每天需用掉 20% 以上额度才不亏。对重度用户意味着可以更激进地跑长任务，但节奏不可预测，不宜把工作流建立在重置预期上。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109094928215367825" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">levelsio 复盘两年&quot;怀旧项目&quot;：AI 辅助逆向 + WASM 让老系统进浏览器</h2>
+  <blockquote class="quote"><p>&quot;I spent 6 months trying to reverse engineer Windows XP to run on v86, very difficult (because it&#x27;s so big) and only possible because modern AI like Opus 5.5 is good enough to figure that out……yesterday 80,000 people played around in Windows 3.1 or Windows XP inside their browsers.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一个具体的能力边界样本——AI 辅助逆向工程让&quot;把大型老系统移植到 WASM&quot;从不可能变为可行，且配合 WebSocket 可做多人交互。对做浏览器端模拟、兼容层、逆向工具链的人有直接参考。作者明确该项目非商业、不盈利。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108957488410161442" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 原生重写 iPad App，iOS 新编辑器 beta 修复清单更新</h2>
+  <blockquote class="quote"><p>&quot;TLDR: we&#x27;re rebuilding our iPad app natively!&quot; / &quot;Notion iOS has a brand new editor out in beta……Here&#x27;s some of what we&#x27;ve fixed since Wednesday&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前&quot;Notion 原生重写 iPad App / iOS 新编辑器进 beta&quot;的后续进展，新增信息是一份具体修复清单（视频块真实缩略图、wiki 内嵌数据库页渲染、评论高亮重叠、大表格滚动流畅度、空格键移动光标、长按块出现 Comment 选项等）。对做移动端编辑器的团队，这份清单等于一份&quot;原生重写后常见坑&quot;的对照表。另：Settings 现已支持搜索，管理员可设置侧边栏预设。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2108741055390908482" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Claude Projects 那条——多线程并行从&quot;自己搭&quot;变成&quot;产品默认&quot;，会直接影响你现有的 agent 编排方案和额度预算。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Claude Projects 上线：一段话自动拆成多线程，云端并行跑</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Google AI Edge Foresight：免费 Mac 会议笔记 App，全程本地</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">/ketchup：前 Cursor 工程师把&quot;我离开后发生了什么&quot;做成 Skill</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">5 个现成 Agent / Skill 仓库汇总，含 Anthropic 官方 knowledge-work-plugins</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Google 试点面试允许用 Gemini：考&quot;代码理解&quot;而非刷题</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Tibo 28 天挑战第 6 天：全员额度重置</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio 复盘两年&quot;怀旧项目&quot;：AI 辅助逆向 + WASM 让老系统进浏览器</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Notion 原生重写 iPad App，iOS 新编辑器 beta 修复清单更新</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-11 05:45 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
