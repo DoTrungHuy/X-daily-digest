@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-12 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-12</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;上下文与额度&quot;的工程账：Codex 把 GPT-6.1 Sol 默认上下文从 272k 提到 500k 且不再额外扣额度，同时 Tibo 的 5h 限额投票被 9.1 万票反对；另一条值得看的是哈佛 AI Agent 课公开课件，作业设计直指成本/延迟/自部署。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>38 推文</span><span class="sig sig-mid">信号 中（无重大模型发布，多为工程细节与课程/工具类信息）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Codex 里 GPT-6.1 Sol 默认上下文 272k → 500k，且长上下文不再多扣额度</h2>
+  <blockquote class="quote"><p>&quot;Codex 里 GPT-6.1 Sol 默认上下文从 272k 涨到 500k……官方紧跟着补了一句：用会员跑 Sol，长上下文不再多扣额度了！&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>默认值变化本身不算新功能，但&quot;长上下文不再额外扣额度&quot;是实打实的成本变化——以前手动调到 272k 以上要多扣，现在默认 500k 且自动压缩更少。想试 1M 可在 ~/.codex/config.toml 顶部加 <code>model_context_window = 1000000</code> 与 <code>model_auto_compact_token_limit = 900000</code>，重启后新开会话生效。注意这与两天前 Tibo 说&quot;开到 1M 也行，就是更费额度&quot;的口径相反，说明额度策略仍在调整中。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109477405039460539（配置见" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2109477405756637257" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Tibo 的 5h 限额投票结果：9.1 万票反对，官方尚未定案</h2>
+  <blockquote class="quote"><p>&quot;不要 5h 限额、额度不变：91040 票；加回 5h 限额、周额度翻倍：79775 票……Tibo 自己发帖说这结果让他很困惑&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>约 53% 对 47%。作者的分析是&quot;翻倍是看不见的，5 小时墙是实打实的&quot;——大任务跑到一半被卡死、拼车用户尤其受影响。对重度用户而言，可预期性比名义额度更重要。官方未公布最终方案，别把投票当结论。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109482959711707570" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">哈佛新开 AI Agent 课，课件与作业边上课边公开</h2>
+  <blockquote class="quote"><p>&quot;1️⃣ 用 Claude Code 给 Claude Code 自己做个网页界面 2️⃣ 自己写个 Agent 3️⃣ 任务成功率不变，把成本和延迟压下去 4️⃣ 拿掉商业 API，自己部署 7~8B 的开源小模型，还不许换更大的 5️⃣ Agent、模型和跑模型的推理引擎一起调优&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>作业 3、4、5 是很好的自测题——固定成功率压成本/延迟、被迫用 7~8B 小模型、联合调优推理引擎，都是真实生产约束。第 8 讲提到同一对话每多聊一轮模型都要重读前文，总成本按轮数平方涨，值得对照自己的 agent 循环做优化。目前只有课件无录像，下半段 10 月 19 日开讲。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109465074121179586（课程链接" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2109465074859384989" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">ManimGX：开源 3D 数学动画引擎，提示词交给 Claude Code / Codex 即可渲染</h2>
+  <blockquote class="quote"><p>&quot;把一句提示词丢给 Claude Code 或 Codex，AI 就会照着文档自己安装、写代码，渲染出 3D 动画……作者自测渲染速度是老牌动画库 Manim 社区版的 90 倍，不装 LaTeX，中文标题和公式也能正常显示&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>适合做教学/科普视频的开发者。作者给出的可复制提示词是&quot;照着文档装好 ManimGX，做一个太阳系的 3D 动画，做完打开&quot;。渲染速度 90 倍为作者自测口径，未独立验证；不依赖 LaTeX 对中文用户是实际便利。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109522955210535353（提示词" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2109522955587989554" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">lintapple：给 AI 写的界面做&quot;质检&quot;的 npm 包</h2>
+  <blockquote class="quote"><p>&quot;它会在浏览器里打开页面，挨个元素对着规矩量一遍……字号只能用你定好的那几档；普通文字和背景的对比度至少 4.5:1；按钮之间至少留 8px……报告里会写明哪里不合格、量出来是多少、该怎么改&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把&quot;AI 味界面&quot;变成可量化的 lint 规则，报告可直接喂回给 AI 逐条修。实测案例：AI 写的后台页面筛选按钮浅灰数字对比度只有 2.56:1。安装 <code>npm install -D lintapple &amp;&amp; npx lintapple init</code>，需 Node 22+；对齐、圆角两项需先给元素加规定标记。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109495524780880371（安装说明" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2109495525510693070" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Karpathy 的 AI 认知漏斗：约 2000 万人见过 Agent 干完大项目</h2>
+  <blockquote class="quote"><p>&quot;约 60 亿人几乎没碰过 AI，10~20 亿人偶尔用免费版……再往下只剩约 2000 万人，见过 Agent 一句提示词做完几周、几个月的大项目&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Karpathy 归因于三点——一段话能答完的问题考不出 AI 水平；代码有单元测试可判对错，AI 在这类任务上最强；免费版与付费版差距。对做 agent 的人，这解释了为什么&quot;可验证的任务&quot;是当前 AI 收益最高的场景。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109512133818069307" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：该退休&quot;vibe coding&quot;这个词了，现在叫 precision engineering</h2>
+  <blockquote class="quote"><p>&quot;it&#x27;s clear we need to retire the term vibe coding because the models now produce better architecture &amp; way more coherent code than an average software engineer……this ain&#x27;t vibe coding at all. it&#x27;s precision engineering.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>同一串推文里他还有两个相关判断：一是&quot;AI agents 也会找最低价或自己做，它们有强烈动机不花用户的钱&quot;，即付费 MCP 作为商业模式要面对 agent 的比价行为；二是&quot;AI agents 可以自己维护软件项目，bug/error 直接反馈给自己修&quot;。这些是观点而非事实，但对做 agent 商业化的人有参考价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109317410301911551（MCP" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2109410865518665963；自维护" target="_blank" rel="noopener">原文2</a><a class="src" href="https://x.com/i/web/status/2109387664268943806" target="_blank" rel="noopener">原文3</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 上周更新汇总：Settings 可搜索，iPad App 原生重写</h2>
+  <blockquote class="quote"><p>&quot;We got a few things out the door last week……You can now search in Settings……We&#x27;re rebuilding our iPad app to be native.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Settings 内搜索是日常使用频率较高的改动；iPad App 原生重写属于此前已提过的方向，本次为官方账号再次确认，具体进度以官方后续说明为准。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2109383608834413023（Settings" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2109383616396726477；iPad" target="_blank" rel="noopener">原文2</a><a class="src" href="https://x.com/i/web/status/2109383617868857735" target="_blank" rel="noopener">原文3</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Codex 上下文 500k 且不再多扣额度那条——它直接影响你每天的 agent 使用成本，而且和两天前的官方口径相反。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Codex 里 GPT-6.1 Sol 默认上下文 272k → 500k，且长上下文不再多扣额度</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Tibo 的 5h 限额投票结果：9.1 万票反对，官方尚未定案</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">哈佛新开 AI Agent 课，课件与作业边上课边公开</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">ManimGX：开源 3D 数学动画引擎，提示词交给 Claude Code / Codex 即可渲染</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">lintapple：给 AI 写的界面做&quot;质检&quot;的 npm 包</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Karpathy 的 AI 认知漏斗：约 2000 万人见过 Agent 干完大项目</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio：该退休&quot;vibe coding&quot;这个词了，现在叫 precision engineering</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Notion 上周更新汇总：Settings 可搜索，iPad App 原生重写</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-12 05:56 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
