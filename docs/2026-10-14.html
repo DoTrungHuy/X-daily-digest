@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-14 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-14</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">Anthropic 自曝被 agent 写代码逼到自研版本控制系统 Scion，单日合并量从 5 月的 2500 次涨到 9 月的 3 万次；另一边 Grok Bot 的&quot;多 bot 邮件互聊&quot;开始被当成正经协作模式讨论。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 中（有一条强信号：Anthropic 工程博客；其余多为工具与生态动态）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 工程博客：为 agent 规模自研版本控制系统，主仓库已从 git 全量迁移</h2>
+  <blockquote class="quote"><p>&quot;In May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenecked by developer infrastructure built for human (rather than agent) scale. ... we share how we built a new version control system—and fully migrated our monorepo from git—in five months&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;agent 吞吐量超过人类基础设施设计假设&quot;的第一个大厂级公开案例。对做 CI/CD、代码托管、monorepo 工具的团队，值得对照自己流水线里哪些环节是按&quot;人提交频率&quot;设计的。注意：新系统（转述称 Scion）目前仅内部使用，无公开版，普通项目仍建议用 git。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110047081414987957" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 的&quot;多 bot 邮件互聊&quot;被官方人员当成下一波用法</h2>
+  <blockquote class="quote"><p>&quot;it won&#x27;t be long before &#x27;have your bot talk to my bot&#x27; becomes common! some fun use cases of multiplayer grok bot over email could be: debugging (you can send my bot bug reports!), customer support, booking meetings and events, group buys, buying and selling stuff off craigslist&quot;；另有 &quot;ask your bot to email tibo@mail.grokbot.com if you want to send in a bug report!&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把&quot;agent 间通信&quot;落到最土也最通用的协议——邮件。对做多 agent 协作的人，这是一个低成本互操作样本：不需要共享 runtime，只需要一个双方都能读写的信箱。注意这是官方人员描述的方向，不是已发布的产品能力。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110192382096679248" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">NVIDIA 开源完整 Run:ai 平台，并入 DSX AI Factory</h2>
+  <blockquote class="quote"><p>&quot;Today, we&#x27;re open sourcing the full NVIDIA Run:ai platform as part of the NVIDIA DSX AI Factory Platform. Developers, platform teams, and partners can build on production-grade AI workloads and GPU orchestration to improve GPU utilization, increase workload throughput&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>GPU 编排/调度层从商业产品变成可自建组件，对自建推理集群、想提升 GPU 利用率的平台团队是直接可评估的选项；可整体部署也可只取单个组件。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110014692420706667" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">莱顿大学研究生 Agent 课教材整本免费上 arXiv：472 页、23 章</h2>
+  <blockquote class="quote"><p>&quot;荷兰莱顿大学研究生 Agent 课的教材，整本免费放上了 arXiv！472 页、23 章，从大模型原理一路讲到工具调用、RAG 和多 Agent 协作。只想学做 Agent 助手的话，读第 6~14 章就行。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>有明确阅读路径（做 agent 读 6–14 章，补原理读 2–5 章），含两个动手作业：写一个会自我反思的 agent 玩 6 个游戏、搭多 agent 医院诊断系统。适合当系统学习的骨架，而不是又一篇散教程。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110215518728684013" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Matt Pocock 列出 AI 编程常见 18 个错，并开源精简规则文件的 Skill</h2>
+  <blockquote class="quote"><p>&quot;1️⃣ 推理强度开得太高 2️⃣ Skill 写得太长 3️⃣ 盯 Agent 盯得太紧 4️⃣ Agent 干完活，没法自己验证对不对 5️⃣ 全局规则文件塞得太满&quot;；&quot;Matt 每周都会让 Agent 精简一次规则文件，用的是他开源的这个 Skill，一行命令就能安装：npx skills@latest add mattpocock/skills -s writing-for-agents&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可直接执行的动作是&quot;每周让 agent 精简一次规则文件&quot;，避免 AGENTS.md / 全局规则无限膨胀。注意原帖也提到部分条目互相矛盾（如&quot;开工前没对齐&quot;vs&quot;对齐太勤&quot;），作者回应要按任务大小区分——小改动先改完再对齐。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110191862740930629" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 升级 Version History：逐次编辑高亮 diff，并标注是&quot;谁或哪个 agent&quot;改的</h2>
+  <blockquote class="quote"><p>&quot;We upgraded our Version History: → See highlighted diffs on every edit → Review row-level database changes → See who (or which agent) made them → Restore an earlier version in a click. Every change across pages and databases is now logged in real time.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把 agent 的写入和人的写入放进同一套审计与回滚机制，这是&quot;agent 参与协作&quot;绕不开的一环。对做 agent 写权限设计的团队，可参考其粒度：页面级 + 数据库行级 + 操作者身份。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110136454701879434" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">麦当劳在 GitHub 办 Skill 大赛：用官方 MCP 做 Skill，按 Star 数排名</h2>
+  <blockquote class="quote"><p>&quot;比的是用麦当劳官方的 MCP 服务做 Skill，不看评委打分，只看 GitHub Star 数。这个 MCP 接进 Cursor 这类工具后，AI 能帮你查菜单、领券，甚至直接下单。&quot;；&quot;目前只有国内居民能参赛。报名到 10 月 25 日截止&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一个把 MCP 当真实业务入口（下单、领券）的落地样本，且评审机制是纯 Star 数。排行榜上已有 mcd-git 用 git 命令点餐（add 加购物车、rebase 凑套餐、push 下单）。适合想练 MCP/Skill 但缺真实场景的人。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110202432546570554" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 给 Nomads 数据加了付费 API，明确&quot;主要给 AI agent 用&quot;</h2>
+  <blockquote class="quote"><p>&quot;The API is paid starting at $2,490/year up to $9,990/year. It&#x27;s built primarily for AI agents (with an MCP server too) and secondly companies to integrate Nomads data into their applications&quot;；&quot;This week we talk a lot about moats, and data is a moat&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一个&quot;个人多年手工采集的数据 → 面向 agent 的付费 API&quot;的定价与定位样本，年费 2490–9990 美元区间。对独立开发者思考&quot;什么数据值得做成 agent 可调用的付费接口&quot;有参考价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110113170975035512" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Anthropic 那篇工程博客——它是目前少见的、把&quot;agent 吞吐量压垮人类基础设施&quot;讲成具体数字和迁移动作的一手材料。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Anthropic 工程博客：为 agent 规模自研版本控制系统，主仓库已从 git 全量迁移</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Grok Bot 的&quot;多 bot 邮件互聊&quot;被官方人员当成下一波用法</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">NVIDIA 开源完整 Run:ai 平台，并入 DSX AI Factory</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">莱顿大学研究生 Agent 课教材整本免费上 arXiv：472 页、23 章</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Matt Pocock 列出 AI 编程常见 18 个错，并开源精简规则文件的 Skill</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 升级 Version History：逐次编辑高亮 diff，并标注是&quot;谁或哪个 agent&quot;改的</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">麦当劳在 GitHub 办 Skill 大赛：用官方 MCP 做 Skill，按 Star 数排名</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio 给 Nomads 数据加了付费 API，明确&quot;主要给 AI agent 用&quot;</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-14 04:51 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
