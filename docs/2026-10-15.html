@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-15 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-15</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日最硬的一条是 Anthropic 把 Claude Platform 的可观测性打通到 OpenTelemetry，agent 上生产终于有正经 trace 可看；另一条是 Notion 把 GitHub / Jira / Salesforce 的同步数据库整个重写，明确是&quot;给人和 agent 同一份 context&quot;。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（工程侧有实质更新，但多数条目为产品/生态动态，缺少模型能力层面的新数据）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Platform 公测 OpenTelemetry 追踪，覆盖 Messages API、Managed Agents 与 SDK</h2>
+  <blockquote class="quote"><p>&quot;Now in public beta, Claude Platform can send OpenTelemetry traces from the Messages API, Claude Managed Agents, and the Claude SDKs to your observability stack.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 agent 上生产的团队是直接可用的改动——可以把 Claude 调用链的 trace 接进现有 observability 栈（Jaeger / Grafana Tempo / Datadog 等），不用再自己手搓埋点。多 agent 编排场景下，跨 Messages API 与 Managed Agents 的统一 trace 是排查&quot;哪一步跑偏&quot;的关键。注意是 public beta，接口可能变。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110421732029063352" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 从底层重写 synced databases，把 GitHub / Jira / Salesforce 实时数据接进来给 agent 用</h2>
+  <blockquote class="quote"><p>&quot;We rebuilt our synced databases from the ground up 🔄 Bring live @github, @Jira, and @salesforce data into Notion, so your team and agents work from the same context.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;context layer&quot;思路的落地版本——不是让 agent 去爬你的工具，而是把外部系统数据同步成 Notion 里的一等公民，再挂 properties、视图、automation 交给 agent。对做内部 agent 的团队，值得参考的是它的同步健康检查入口（Settings → Connections），这是长期跑同步任务必须有的运维面。注意：这是重写，不是新增连接器，历史同步配置可能需要重新确认。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110410470788321595" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Hermes Agent 桌面版免 API Key 开聊，首次用官方免费模型边聊边完成配置</h2>
+  <blockquote class="quote"><p>&quot;现在新装开源 AI 助手 Hermes Agent 的桌面版，不用申请 API Key 就能直接开聊了……第一次打开时，Hermes 会用官方的免费模型跟你边聊边把设置做完，顺手帮你连上 Gmail、Notion 这些 App，全程不用注册 Hermes 账号。&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把&quot;onboarding 交给模型&quot;是个值得抄的产品模式——用免费额度换首次配置完成率。两个限制要看清：免费模型只送一次（本机用过即失效），以及安装包目前只有 Apple 芯片 Mac 和 Windows 11。想长期零成本可在设置里一键装本地模型，按显卡和内存自动选型。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110583694654165043" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">machine-skill：Claude Code 一句话搭出可剖切、可拆解的 3D 涡扇发动机</h2>
+  <blockquote class="quote"><p>&quot;Claude Code 装上开源 Skill《machine-skill》后，你跟它说：/machine 一台宽体客机用的涡扇发动机。它就会照着真实尺寸，在网页里搭出一台能剖开、能拆开的发动机。甚至甩掉一片风扇叶片，页面还会算出发动机要承受多大的力！&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>安装一行 <code>npx skills add AirsupHQ/machine-skill -g -a claude-code</code>。作者自己划了适用边界：机械、仪器类效果最好，人物、风景、地图偏弱。对做工程可视化、教学演示、硬件文档的人有直接价值；也说明 Skill 生态正在从&quot;文本规范&quot;往&quot;带物理约束的 3D 生成&quot;扩。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110572118375309518" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">OpenAI 经济研究：欧盟企业 AI 使用中过半已涉及 agent，小企业用户数增长 8 倍</h2>
+  <blockquote class="quote"><p>&quot;More than half of the AI use among our EU enterprise and business customers now involves these tools, and the number of small business users has grown 8x across the region.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是厂商自报口径的数据，不能当独立统计看，但方向值得记：agent 在欧洲企业侧的渗透已经过半，且增量主要来自小企业而非大企业试点。对做 B 端 agent 产品的团队，意味着定价和 onboarding 要按&quot;没有 IT 部门&quot;的客户来设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110442001749659890" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Anthropic 在新加坡开设办公室，为亚太第五个据点，并与新加坡政府签署 AI 安全 MOU</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;ve opened an office in Singapore—our fifth in the Asia-Pacific region. We&#x27;ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对在亚太做合规部署的团队，这类 MOU 通常先于具体的模型准入、评测合作或政府采购落地，值得跟踪后续是否有区域性的安全评测框架出台。纯商业扩张信息，无技术增量。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110289695888511368" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">一个 AI 公司把 1370 万条泄露记录裸放在公网，含 Amazon / AT&amp;T / PayPal / Walmart 及 FBI、Interpol 相关行</h2>
+  <blockquote class="quote"><p>&quot;An AI shop left 13.7 million breach records open on the net. Amazon. AT&amp;T. PayPal. Walmart. FBI and Interpol rows in the pile. Jeremiah Fowler found it. The firm collected other people&#x27;s leaks and forgot the lock. Old passwords still open new doors.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>安全侧的老问题在新赛道重演——做数据聚合/威胁情报类 AI 产品的团队，把&quot;收集来的泄露数据&quot;当成资产存下来时，本身就是最高价值的攻击目标。这条对做 agent 记忆层、RAG 语料库的团队同样适用：你存进去的历史数据，就是你的爆炸半径。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110589618206789932" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">levelsio：感觉进入了&quot;和 agent 对话来指挥工作&quot;的闲暇时代</h2>
+  <blockquote class="quote"><p>&quot;I honestly feel like we&#x27;re entering a new time of leisure where people are just talking to their agents to steer the direction of our work, while they work in the background 24/7... Maybe this is the new time where we can finally live not work, as it was predicted 96 years ago by Keynes.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>观点性内容，无技术增量。唯一可提取的观察是他举的例子——有人在骑车时用 iOS 上的 Claude 把新主页做完了，即&quot;移动端 + 长任务后台执行&quot;这个组合正在变成默认工作方式。他同时承认凯恩斯式的预测上一次落空是因为自动化只是把工作推到了更高层级，这次是否不同他自己也只是&quot;感觉&quot;。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110489704009445725" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM1 的 Claude Platform OpenTelemetry 公测——它是这批材料里唯一能立刻改变你 agent 生产环境排障方式的东西。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Claude Platform 公测 OpenTelemetry 追踪，覆盖 Messages API、Managed Agents 与 SDK</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Notion 从底层重写 synced databases，把 GitHub / Jira / Salesforce 实时数据接进来给 agent 用</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Hermes Agent 桌面版免 API Key 开聊，首次用官方免费模型边聊边完成配置</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">machine-skill：Claude Code 一句话搭出可剖切、可拆解的 3D 涡扇发动机</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 经济研究：欧盟企业 AI 使用中过半已涉及 agent，小企业用户数增长 8 倍</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Anthropic 在新加坡开设办公室，为亚太第五个据点，并与新加坡政府签署 AI 安全 MOU</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">一个 AI 公司把 1370 万条泄露记录裸放在公网，含 Amazon / AT&amp;T / PayPal / Walmart 及 FBI、Interpol 相关行</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio：感觉进入了&quot;和 agent 对话来指挥工作&quot;的闲暇时代</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-15 04:37 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
