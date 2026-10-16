@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-16 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-16</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是&quot;AI 额度与准入&quot;：Anthropic 的 Max/Team 每月 API 额度需手动领取、Grok Bot 超额要走 Cursor 按需付费，两家都在用额度规则筛选真实用户；同时 OpenAI 与 Anthropic 罕见地在同一天各出 500 万美元支持数学研究。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（无重大模型发布，多为额度规则、科研资助与工具实操）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势 原文摘录（OpenAI）：&quot;we are contributing $5 million to a new Simons Foundation initiative to help mathematicians examine, understand, and build on results produced by AI&quot; 原文摘录（Anthropic）：&quot;We&#x27;ve committed $5 million of funding, compute, and Claude access to help the math community navigate the massive changes that AI brings.&quot;">行业趋势 原文摘录（OpenAI）：&quot;we are contributing $5 million to a new Simons Foundation initiative to help mathematicians examine, understand, and build on results produced by AI&quot; 原文摘录（Anthropic）：&quot;We&#x27;ve committed $5 million of funding, compute, and Claude access to help the math community navigate the massive changes that AI brings.&quot;</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Anthropic 给 Max / Team 的每月 API 额度要手动领，不领作废</h2>
+  <blockquote class="quote"><p>&quot;开了Claude Max或Team的兄弟注意下 / Anthropic每月送的API额度 / 不会自动到账 / 要自己去领，不领当月作废&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Max 5x 每月 100 刀、Max 20x 每月 200 刀，Team 标准席 20 刀/人、高级席 100 刀/人、全队封顶 500 刀；Pro 与免费版没有。领取路径为 Settings → Billing → API credits → Link organization，需绑定自己是 Owner/Admin/Billing 的 Console 组织，可不绑卡。两个坑：交互式 Claude Code 终端/IDE 用不了这笔额度；每个计划只能绑 1 个组织，绑错需找客服。新订阅需满 7 天才能领，额度按计费周期刷新、到期清零不结转，5x 升 20x 当场补差额。可用于 Claude API、Managed Agents、Agent SDK、Playground。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110948310953394358" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 超额使用要走 Cursor 按需付费，绑卡是主要门槛</h2>
+  <blockquote class="quote"><p>&quot;SuperGrok绑定的Bot，超额使用得去Cursor开按需付费 / 然后又被绑卡折磨了好几天 / 最后换成Google Pay，居然一次就过了！&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>作者用 Grok Bot 搭 X 账号运营 Agent（自动抓 AI 资讯 → 调 Codex 执行 Skill → 生成文案图片 → 自动发推），3 天耗尽一周额度。招行 Mastercard、新加坡 OCBC 卡均验证失败，Google Pay 一次通过；开启 On-Demand 后设每月 5 刀限额试水。若你在做类似的社媒自动化 Agent，需要把&quot;额度耗尽后的降级路径&quot;提前设计进去，而不是等断供。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110936518030499853" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 相对 dot / muse 的关键差异：直连 X 官方 API 读全站推文</h2>
+  <blockquote class="quote"><p>&quot;它直接能通过X官方的api去浏览x上的所有推文，阅读量、留言、收藏全部能快速访问 / 这一点真的太适合蓝v去运营账号了&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 X 平台内容运营 Agent 的开发者，数据获取权限本身就是选型的第一约束——能读阅读量/留言/收藏意味着可以做闭环的选题与效果反馈，而不只是单向发帖。作者表示账号跑出效果后会公开完整用法。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110937619047862658" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势 原文摘录（OpenAI）：&quot;we are contributing $5 million to a new Simons Foundation initiative to help mathematicians examine, understand, and build on results produced by AI&quot; 原文摘录（Anthropic）：&quot;We&#x27;ve committed $5 million of funding, compute, and Claude access to help the math community navigate the massive changes that AI brings.&quot;">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势 原文摘录（OpenAI）：&quot;we are contributing $5 million to a new Simons Foundation initiative to help mathematicians examine, understand, and build on results produced by AI&quot; 原文摘录（Anthropic）：&quot;We&#x27;ve committed $5 million of funding, compute, and Claude access to help the math community navigate the massive changes that AI brings.&quot;</span>
+  </div>
+  <h2 class="item-title">OpenAI 与 Anthropic 同日各投 500 万美元支持数学研究</h2>
+  
+  <div class="take"><span class="take-k">实用点</span><p>两家都把资金交给 @SimonsFdn 以社区驱动方式发放，用于 workshop、会议与专题讲座；OpenAI 另提供模型与算力，Anthropic 提供算力与 Claude 访问。对做 AI for Science 的研究者，这是可申请的第三方渠道，而非厂商自办项目。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span> <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110741355739963884" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2110846112152105136" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 给 METR 团队&quot;员工级访问权限&quot;，用于第三方安全评估</h2>
+  <blockquote class="quote"><p>&quot;We&#x27;ve committed to having evaluators assess our safety practices. We&#x27;re in discussions with multiple organizations, and have now given employee-like access to a team from @METR_Evals.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是&quot;外部评估者能拿到多深访问权&quot;这一问题的具体答案——不是只给 API，而是接近内部员工的权限。对关注 AI 治理与评估方法论的开发者，值得跟进其配套博文里对&quot;如何与第三方评估者协作&quot;的流程描述。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110784662071398807" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 开放 GPT-Rosalind 学术计划，美国高校实验室可申请最长 12 个月赞助访问</h2>
+  <blockquote class="quote"><p>&quot;Eligible labs can receive up to 12 months of sponsored access to OpenAI tools, with GPT-Rosalind access subject to trusted-access approval.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>面向生物学方向科研实验室，用于跨文献与生物数据推理；通过该计划共享的研究数据默认不用于训练模型。GPT-Rosalind 访问需通过 trusted-access 审批，属于&quot;先审后用&quot;而非自助开通。对在美高校做计算生物/生信的组，这是可走的申请路径。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110841899838046525" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">GPT-Live-1.1 更新语音：新增六种语言音色，减少&quot;checking...&quot;停顿</h2>
+  <blockquote class="quote"><p>&quot;New voices. Better accents. And less &#x27;checking...&#x27; / GPT-Live-1.1 brings these updates to Voice in ChatGPT, Codex, and dots, with new voices in French, German, Hindi, Mexican Spanish, Korean, and Japanese.&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>新增法语、德语、印地语、墨西哥西班牙语、韩语、日语音色，今日起向所有用户推送，API 稍后跟进。对做语音交互产品的团队，多语言音色覆盖与&quot;减少填充停顿&quot;直接影响对话体验的可用性阈值。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110797830361436604" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">可灵 4.0 全量开放：单次 30 秒、最多 10 张关键帧，可挂 MCP 进 Claude Code</h2>
+  <blockquote class="quote"><p>&quot;可灵 4.0 单次就能生成 30 秒的视频，上一代 3.0 最长只有 15 秒。还能最多放 10 张关键帧&quot;</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方示例用 1 张鞋子四视图 + 2 张模特照片做参考图生成球鞋广告。接入方式为终端一行命令 <code>claude mcp add --transport http klingai --scope user &lt;url&gt;</code>，再在 Claude Code 里输入 /mcp 登录可灵账号即可批量生成；国内站账号需换用国内域名，生成扣账号积分。对做视频素材流水线的开发者，关键帧控制 + MCP 接入意味着可以把它当作 Agent 的一个可编排工具节点。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2110934254645350722" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Anthropic 额度领取那条——它是唯一一条&quot;不点就真金白银作废&quot;的信息。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Anthropic 给 Max / Team 的每月 API 额度要手动领，不领作废</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Grok Bot 超额使用要走 Cursor 按需付费，绑卡是主要门槛</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Grok Bot 相对 dot / muse 的关键差异：直连 X 官方 API 读全站推文</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OpenAI 与 Anthropic 同日各投 500 万美元支持数学研究</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Anthropic 给 METR 团队&quot;员工级访问权限&quot;，用于第三方安全评估</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 开放 GPT-Rosalind 学术计划，美国高校实验室可申请最长 12 个月赞助访问</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">GPT-Live-1.1 更新语音：新增六种语言音色，减少&quot;checking...&quot;停顿</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">可灵 4.0 全量开放：单次 30 秒、最多 10 张关键帧，可挂 MCP 进 Claude Code</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-16 04:30 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
