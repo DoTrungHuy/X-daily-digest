@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-19 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-19</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今天最值得工程侧关注的是两条“让 agent 真正落到设备与配置层”的进展：Google 开源 ARTEMIS 让 Claude Code / Codex 直接操作安卓手机，以及 Google 开源 Harness² 用配置拆解证明“换模型不如改配置”。其余多为产品小更新与社区讨论，信号偏弱。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>39 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google 开源 ARTEMIS：Claude Code / Codex 可直接操作安卓手机</h2>
+  <blockquote class="quote"><p>“这个 Google 开源的 ARTEMIS 能让 Claude Code、Codex 直接操作安卓手机！……你在 Claude Code 里说一句「打包安装到手机上，登录后看看有没有意外弹窗，截图发回来」，AI 就会自己在手机上一步步点完。”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把“装包—登录—点页面—截图”的验证闭环交给 agent，适合安卓 UI 回归测试；注意 ARTEMIS 自己调模型，默认 Gemini，需自配 Gemini API Key，Claude Code 只负责派活。另有一个值得借鉴的设计：让 Claude Code 写测试前先在真机走一遍流程，再固化成普通测试脚本，后续跑脚本不消耗模型额度。建议先用模拟器试。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112040040847024316" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2112040041581027359" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google 开源 Harness²：改配置让 GLM-5 在测试中反超未调优的 Gemini 3.5 Flash</h2>
+  <blockquote class="quote"><p>“不少人还以为，Agent 不好用就得换更强的模型。其实 Google 开源的 Harness²，让 AI 改了提示词、Skill 这些配置，GLM-5 就在一套测试里反超了没改配置的 Gemini 3.5 Flash！”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把 agent 配置分三层——常驻（提示词、记忆，每轮占上下文）、按需（Skill、脚本、子 Agent）、钩子（卡在工具调用前后，模型跳不过）。关键方法论是“拆开重测”：去掉 Skill 平均掉 5.3 分，提示词那几块只掉 1.5 分，说明收益主要来自 Skill 层。当前只接好自带 3 套测试，需 Linux，模型默认接 Vertex AI。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112008332156321922" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2112008332827402613" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Hugging Face 上的 abliterated 模型被指可被投毒，经 Codex CLI 泄露项目凭据</h2>
+  <blockquote class="quote"><p>“Hugging Face is full of abliterated models. The &#x27;no&#x27; got subtracted out. Nobody checks what got added in. A poisoned 7B answered every clean request, then handed over project credentials through Codex CLI the second the trigger showed. It passes the evals. That&#x27;s the point.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对 agent 工程是直接警示——评测通过不等于安全，尤其是社区微调/去审查模型接入 CLI agent 后，可能成为凭据外泄通道。接入第三方权重前应做触发词与工具调用行为审计，并对 agent 的凭据访问做最小权限隔离。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2111982971389456562" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 侧回应 OpenCode 用户：恢复访问并退还攻击中被扣的额度</h2>
+  <blockquote class="quote"><p>“Our team worked with OpenCode to have their users who are also OpenAI API customers back in business and any credits refunded which would have been drawn in the attack. Also, you can request Daybreak Blue access to use our cyber permissive setup for defense.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>如果你在 OpenCode 上跑 OpenAI API 且近期遇到访问异常或额度被扣，可走退款/恢复流程；另提到 Daybreak Blue 的“防御用宽松网络策略”可提前申请，属于事前准备而非事后救火。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112034063934742720" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Bot 功能清单：独立邮箱、语音、自带电脑、连接器、定时 Routines、多 bot 分工</h2>
+  <blockquote class="quote"><p>“Grok Bot has its own computer. So you can close your laptops and just use the app in your phone... - Grok Bot&#x27;s dedicated email - Voice... - Its own computer: opens websites and fills out forms, 24/7 on - Connectors: Gmail, Calendar, Notion, Drive, X and more - Routines: works on a schedule while you sleep - A team of bots... - Proactive: It tells me first.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是对既有 Grok Bot 讨论的功能面补充，重点在“自带常开电脑 + 定时 Routines + 多 bot 分工”这套组合，适合把重复性网页表单/邮件流程外包；但需注意其自带电脑意味着凭据与账号暴露面扩大，接入前先划清权限边界。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2111892400302108925" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2111968185566077191" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">SpaceX 侧证实：向 AWS / GCP 租推理算力“谈不下来”，只能从训练集群挪负载</h2>
+  <blockquote class="quote"><p>“This describes the conversation SpaceX has had when we have tried to rent inference compute from AWS, GCP or anyone at, so that we can shift load off our training clusters!!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 agent 基础设施的人是现实提醒——推理算力的“可租性”在大客户场景下并不成立，容量规划不能假设公有云随时可弹性补位；自建/预留与训练集群复用仍是主流解法。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112017286764659176" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 桌面端 Day 14：线程内可编辑历史消息</h2>
+  <blockquote class="quote"><p>“Small quality of life improvement. You can now edit previous messages within a thread in the desktop app. Long time requested, and took way too long to get that one out.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对用 Notion 做 agent 上下文/对话记录的人是实用小改动——改错字或补上下文不必重开线程，减少上下文碎片。属小更新，非新能力。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2111990254408434095" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM2 的 Harness²：它给的是“先拆配置再换模型”的可复现方法论，比任何单点工具更新都更能改变你调 agent 的顺序。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Google 开源 ARTEMIS：Claude Code / Codex 可直接操作安卓手机</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Google 开源 Harness²：改配置让 GLM-5 在测试中反超未调优的 Gemini 3.5 Flash</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Hugging Face 上的 abliterated 模型被指可被投毒，经 Codex CLI 泄露项目凭据</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OpenAI 侧回应 OpenCode 用户：恢复访问并退还攻击中被扣的额度</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Bot 功能清单：独立邮箱、语音、自带电脑、连接器、定时 Routines、多 bot 分工</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">SpaceX 侧证实：向 AWS / GCP 租推理算力“谈不下来”，只能从训练集群挪负载</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 桌面端 Day 14：线程内可编辑历史消息</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-19 04:39 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
