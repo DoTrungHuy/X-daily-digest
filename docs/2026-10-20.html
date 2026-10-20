@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-20 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-20</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是“agent 的接入层与成本层”继续被拆开卖：MiniMax M3.1 Flash 以极低价冲编程跑分，DeepSeek 把 Search/Fetch 单独计价，Cloudflare 开源安全审计 Skill，Notion 则把 AI 全面改成 credit 制并支持 BYOK。另有 OpenAI 谈 COBOL/Fortran 现代化、Anthropic 设立公益基金实体。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（模型价格与工具链更新密集，但多数为单一来源转述）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">MiniMax 发布 M3.1 Flash：编程跑分逼近 Opus 5，价格不到 1/30</h2>
+  <blockquote class="quote"><p>“官方自测的一项编程跑分和 Opus 5 只差 0.3 分，价格却不到 1/30”“每百万 token 输入 0.15 美元、输出 0.6 美元”“10 月 23 日放出权重”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若跑分口径可信，这是当前 agent 批量任务里成本最激进的选项之一；OpenRouter 免费期到 10 月 22 日、MiniMax Code 订阅用户不限量到 10 月 25 日，适合先做一轮自有任务集对比再决定是否替换默认模型。注意“官方自测”不等于第三方复现。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112367448376951035" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Ollama Cloud 限时免费托管 MiniMax M3.1 Flash，美国节点、零数据保留</h2>
+  <blockquote class="quote"><p>“For the next 3 days, in collaboration with @MiniMax_AI, MiniMax M3.1 Flash will be free on Ollama&#x27;s Cloud! Hosted in the US and with zero data retention.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>不想自己拉权重或走 OpenRouter 的，可以先用 Ollama Cloud 做三天压测；“zero data retention”对处理内部代码的团队是选型时的加分项，但仍需自行核对条款。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112358514228363362" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">DeepSeek 将 Search / Fetch 拆为独立计费工具，11 月前服务端调用免请求费</h2>
+  <blockquote class="quote"><p>“Search：0.75刀/1000次”“Fetch：0.75刀/1000次”“失败、空结果、超时统统不收费”“11月1日北京时间0点开始正常计费”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>agent 联网检索的成本结构可以直接按“搜索一次+抓一页≈0.0015 美元”估算；抓取结果可返回 Markdown，省一层解析。限制是 Search/Fetch 各自每秒最多 5 次请求，批量抓资讯要做限流。作者也提示中文搜索准确率与时效性尚待实测。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112365565100818660" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Cloudflare 开源安全审计 Skill：多 agent 分头找漏洞，再由另一 agent 挑刺</h2>
+  <blockquote class="quote"><p>“找到漏洞的 Agent 自己说了不算！每条都要交给另一个 Agent 专门挑刺，最后分成确认、待核实、已排除三档”“npx skills add cloudflare/security-audit-skill --skill security-audit”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“生成者—审查者”分离在安全审计上的具体落地，可直接装进 Claude Code / Codex。关键限制：没有断网、限资源的沙箱时该 Skill 不运行代码，结论多半落在“待核实”，所以沙箱是前置条件而非可选项；想省额度可加“quick 模式”只跑一轮。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112380534819086610" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion AI 大改版：agent 可跑最长 24 小时、支持电脑与浏览器操作、全面转 credit 制并支持 BYOK</h2>
+  <blockquote class="quote"><p>“let the AI run much longer (up to 24 hours!)”“all AI capabilities now run on credits”“bringing your ChatGPT subscription, using your own tokens (via BYOK), leveraging MCP”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Notion 把“自带 token / 自带订阅 / 买 credit”三条路并列，等于承认重度用户会算账；对团队而言，BYOK 意味着可以把 Notion agent 的推理成本并进已有的 API 预算与审计链路。官方称新 Auto 路由“frontier results, 90% cheaper”，属自述，需实测。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112265602203336892" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 称新 agent harness 在知识工作上“质量/成本”最优，Auto 路由按任务选模型</h2>
+  <blockquote class="quote"><p>“Our new agent harness. Best in class quality vs cost for knowledge work.”“The opposite of token-maxxing isn’t giving up on AI. It’s using the right model for the right task.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与上一条同属一次发布，但值得单独记：harness + 路由正在成为知识工作类产品的竞争点，而非单纯堆模型。做 agent 产品的可以参考其“按任务路由 + credit 计量”的打包方式。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112294139349893127" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 称新模型在 COBOL / Fortran / Visual Basic 等低资源语言上能力增强</h2>
+  <blockquote class="quote"><p>“stronger capabilities for building and migrating software in low-resource programming languages such as COBOL, Fortran, and Visual Basic”“helping developers modernize those systems while preserving what works”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>老系统迁移是 agent 少数能明确算 ROI 的企业场景；官方在征集“下一个该攻哪些语言和工作流”，有存量迁移项目的团队可以直接反馈。注意这是能力方向声明，未给出具体跑分。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112310345863930168" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 设立 Public Benefit Fund 实体，初始注入 5% 股份</h2>
+  <blockquote class="quote"><p>“committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new wholly owned entity dedicated entirely to the public benefit.”“roughly 20% of Anthropic’s shares are committed to the public good”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>治理结构层面的动作，对开发者日常无直接影响；值得留意的是“公司估值每涨 50% 可追加最多 2%、由董事会酌情决定”这一机制设计，属于把公益承诺与估值挂钩的少见写法。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2111881963657412903" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Cloudflare 的 security-audit Skill——它是“多 agent 互相挑刺”少见的可直接落地实现，且明确告诉你沙箱缺了会失效。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">MiniMax 发布 M3.1 Flash：编程跑分逼近 Opus 5，价格不到 1/30</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Ollama Cloud 限时免费托管 MiniMax M3.1 Flash，美国节点、零数据保留</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">DeepSeek 将 Search / Fetch 拆为独立计费工具，11 月前服务端调用免请求费</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Cloudflare 开源安全审计 Skill：多 agent 分头找漏洞，再由另一 agent 挑刺</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Notion AI 大改版：agent 可跑最长 24 小时、支持电脑与浏览器操作、全面转 credit 制并支持 BYOK</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 称新 agent harness 在知识工作上“质量/成本”最优，Auto 路由按任务选模型</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">OpenAI 称新模型在 COBOL / Fortran / Visual Basic 等低资源语言上能力增强</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Anthropic 设立 Public Benefit Fund 实体，初始注入 5% 股份</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-20 04:49 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
