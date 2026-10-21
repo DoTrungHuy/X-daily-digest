@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-21 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-21</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">Cloudflare Connect 第二天把“agent 作为新一类互联网用户”摆上台面，并联合 World Network 提出 Trusted Agent Delegation 框架；同日 Vercel 发布 durable-harness，让多种 coding agent 可持久化运行数天到数月。其余多为零散产品更新与加密/航天噪音。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Cloudflare 联合 World Network 提出 Trusted Agent Delegation（TAD）框架</h2>
+  <blockquote class="quote"><p>“introducing Trusted Agent Delegation (TAD) … the ultimate goal is for TAD to empower people to use their personal agents on any site across the internet, without sites getting crushed by fraud/abuse from bad bots or bad actors … it will also support next generation attestations and verifications, starting with World ID&#x27;s Proof of Human”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>做 agent 产品、尤其是“代用户操作第三方站点”的团队，需要关注这套“站点—用户—托管 agent”三方信任模型；白皮书与工作组将在数周内公布，可提前评估是否接入其证明/验证机制。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112687633558364422" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Vercel 发布 durable-harness：Pi / OpenCode / Codex / Claude Code 等可持久化运行</h2>
+  <blockquote class="quote"><p>“Introducing 𝚍𝚞𝚛𝚊𝚋𝚕𝚎-𝚑𝚊𝚛𝚗𝚎𝚜𝚜. Run Pi, OpenCode, Codex, Claude Code, eve, fx, or your own harness durably on Vercel. With 𝚍𝚞𝚛𝚊𝚋𝚕𝚎-𝚑𝚊𝚛𝚗𝚎𝚜𝚜, agents automatically resume work after failures and run for hours, days, or months.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>长时任务（批处理、监控、持续重构）不必自己搭断点续跑与失败恢复；可把现有 harness 直接托管，重点转向任务编排与成本控制。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112653833382027729" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Codex &amp; Work 第 16 天：API 缓存 12 小时，登录用户跨会话缓存永久保留</h2>
+  <blockquote class="quote"><p>“You can now cache for 12h in the API and for logged in users across Codex &amp; Work we keep cache forever and you don&#x27;t have any penalty for coming back to an old conversation or resuming after a few hours and are now guaranteed to hit the cache.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“子 agent 复用上下文、延长缓存”的后续版本，新增点是 API 侧 12 小时上限与登录用户“永久缓存 + 保证命中”。对频繁恢复旧会话的 agent 工作流，可显著降本降延迟；API 集成方需按 12 小时窗口设计会话复用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112712984644784534" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">DeepSeek-V4.1-Flash-20261017 登顶 Arena 开源模型：Agent Arena 与 Code Arena WebDev 双第一</h2>
+  <blockquote class="quote"><p>“DeepSeek-V4.1-Flash-20261017 (Max) by @deepseek_ai landed in the Arena as the #1 open model in both the Agent Arena and the Code Arena: WebDev!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>注意这是 Arena 榜单口径（含 3D 世界生成示例），非独立复现；对需要开源权重做 agent/前端代码生成的团队，可作为选型候选，建议自行跑内部评测再定。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112683123406479810" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Cloudflare 就 eMudhra 八个中间证书弱密钥事件发布缓解措施与客户端更新</h2>
+  <blockquote class="quote"><p>“Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>涉及证书链信任的工程团队应检查是否依赖 eMudhra 中间证书，按公告更新客户端/信任库；这是供应链安全类事件，值得纳入依赖清单巡检。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112672178713890995" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 收购 Orchestra Bio，扩展 Rosalind 生命科学平台</h2>
+  <blockquote class="quote"><p>“We&#x27;ve acquired Orchestra Bio, a platform that helps biopharma teams coordinate the complex process of drug development. Together, we&#x27;ll build on Rosalind, our AI models and tools for life sciences research…”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“GPT-Rosalind 学术计划”之后的商业化动作，方向是把模型能力嵌入药企研发流程；对做垂直行业 agent 的团队，是“模型厂商向工作流层下沉”的又一信号。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112607347688583586" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic Science Blog：Claude 设计抗蝎毒神经毒素的蛋白结合体（探索性）</h2>
+  <blockquote class="quote"><p>“Claude has made an early step toward finding new treatments … This is exploratory work, and we&#x27;re not claiming to have produced an antivenom … We&#x27;re releasing all 211 of the tested designs and the lab data as a resource for scientists”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方明确限定为早期探索、未经细胞/小鼠验证；价值在于公开 211 个设计与实验数据，可作为“模型产出 + 湿实验闭环”的参考范式，而非疗效结论。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112579251555721573" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 用 Claude Code 给《GTA: San Andreas》加“CJ 在旧金山 vibe coding 创业融资”任务</h2>
+  <blockquote class="quote"><p>“I asked Claude Code to make a new GTA: San Andreas mission where CJ has to vibe code a startup and then raise money from investors in SF”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>娱乐向，但展示了 Claude Code 在改造既有大型游戏代码库/模组上的可行性；对想评估 agent 处理遗留代码与脚本注入的开发者，是个低成本观察样本。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112686345617547538" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Vercel durable-harness——它直接改变“agent 能跑多久、挂了怎么办”的工程默认值。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Cloudflare 联合 World Network 提出 Trusted Agent Delegation（TAD）框架</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Vercel 发布 durable-harness：Pi / OpenCode / Codex / Claude Code 等可持久化运行</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Codex &amp; Work 第 16 天：API 缓存 12 小时，登录用户跨会话缓存永久保留</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">DeepSeek-V4.1-Flash-20261017 登顶 Arena 开源模型：Agent Arena 与 Code Arena WebDev 双第一</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Cloudflare 就 eMudhra 八个中间证书弱密钥事件发布缓解措施与客户端更新</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 收购 Orchestra Bio，扩展 Rosalind 生命科学平台</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Anthropic Science Blog：Claude 设计抗蝎毒神经毒素的蛋白结合体（探索性）</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio 用 Claude Code 给《GTA: San Andreas》加“CJ 在旧金山 vibe coding 创业融资”任务</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-21 04:44 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
