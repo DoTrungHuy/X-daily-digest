@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-22 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-22</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今天最值得工程团队立刻行动的不是新模型，而是一组基础设施级安全事件：PHP 未授权 RCE、GitLab CVSS 10.0、LiteLLM PyPI 包被投毒、Railway 环境变量泄露，OpenAI 同时放出 Codex skill 帮站点自查 PHP 漏洞。AI 侧则有三条硬更新：OpenAI 模型进 Google Cloud Model Garden、Grok Bot 接入 Runway MCP、Basecamp 官方 ChatGPT 插件上线。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 强（安全事件密集且影响面大）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 披露 PHP 高危漏洞并发布 Codex 自查 skill，PHP 生态进入紧急修补期</h2>
+  <blockquote class="quote"><p>“OpenAI models helped researchers—operating as part of our Patch the Planet initiative—discover critical security flaws in PHP... Every site using PHP can now safely upgrade their version to stay secure.” / “we have packaged a Codex skill to help check. Point your Codex at this repo.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>跑 WordPress / Laravel / MediaWiki / Magento / Joomla 的团队应立即升级 PHP 版本并跑一遍该 Codex skill 做自查；这是“AI 先于攻击者找到漏洞”的防守窗口案例，也说明把安全扫描做成 agent skill 是可复用的工程模式。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112907856018309586" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2112945805686604033" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">GitLab 曝 CVSS 10.0 未授权 RCE，自托管实例受影响</h2>
+  <blockquote class="quote"><p>“GitLab also dropped a CVSS 10.0, which is the highest score they give out, for a bug that&#x27;s been there since 2014, so that&#x27;s every self-hosted GitLab for twelve years.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>自托管 GitLab 的团队需按官方公告确认版本并升级；结合同日 PHP 事件，建议今天统一做一次“补丁 + 密钥轮换”清单。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2113045722744717360" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">LiteLLM 1.107.0 PyPI 包与 Docker 镜像被投毒，含凭据窃取与后门</h2>
+  <blockquote class="quote"><p>“LiteLLM 1.107.0 got hijacked and shipped a credential stealer and a remote access trojan in every single wheel and the Docker images, including latest... just installing it was enough.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>凡在 CI 或生产环境装过 LiteLLM 1.107.0（含 latest 镜像）的，应视为凭据已泄露，立即轮换所有相关 API key 并审计出网流量；依赖锁定版本 + 校验哈希是必要防线。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2113045722744717360" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Railway 平台环境变量被解密，官方暂停全部部署</h2>
+  <blockquote class="quote"><p>“Railway paused every deployment on the entire platform because someone got into the environment variables, so now everyone has to rotate every secret they&#x27;ve ever stored there.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>在 Railway 上托管过服务的团队需轮换全部 secret（数据库密码、第三方 API key）；这也是提醒——把长期凭据放在托管平台的环境变量里，单点失守即全盘失守。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2113045722744717360" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 前沿模型与 Codex agentic 工作流进入 Google Cloud Model Garden</h2>
+  <blockquote class="quote"><p>“OpenAI models are coming to Google Cloud. We&#x27;re bringing our frontier models and Codex agentic workflows to Google Cloud&#x27;s Model Garden, so enterprises can use our technology where they already build.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>已在 GCP 上构建的企业可以在原有云与合规边界内调用 OpenAI 模型和 Codex 工作流，减少跨云数据搬运；对做企业 agent 落地的团队，采购与架构选型多了一条路径。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112988118471295323" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Bot 接入 Runway MCP，可在对话内直接生成视频</h2>
+  <blockquote class="quote"><p>“Runway MCP is now in Grok Bot. Bring state-of-the-art generation into your chat and create anything you can imagine, without leaving Grok.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 Grok Bot 连接器生态的又一次扩展（此前已有独立邮箱、自带电脑、定时 Routines 等）；对做多工具 agent 编排的开发者，MCP 作为“能力即插即用”的接口形态继续被大厂验证。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112619666732659181" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Basecamp 官方 ChatGPT 插件上线，可从对话建项目、转待办、跨项目搜索</h2>
+  <blockquote class="quote"><p>“The official Basecamp ChatGPT Plugin is now available. Dig into your projects straight from chat. Make new projects from chat. Convert notes into actionable to-dos from chat.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与近期“给 agent 建共享记忆/项目上下文”的做法互补——把项目管理工具直接暴露给对话式 agent，是低门槛的团队级 agent 落地方式；可参考其权限边界设计。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2113043659621077312" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">GPT-Rosalind 在鼠脑数据上给出神经退行性疾病机制线索，数千 agent 并行 32 分钟完成关联</h2>
+  <blockquote class="quote"><p>“a team of thousands of GPT-Rosalind agents worked in parallel, connecting gene-expression results from millions of mouse brain cells with scientific literature in just 32 minutes.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“大规模并行 agent + 领域数据”的科研工作流样例，重点不在结论（仍待实验验证），而在把海量异构数据与文献做批量关联的工程范式；对做 agent 编排与任务分片的人有参考价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2112899854569762936" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 PHP 漏洞 + Codex 自查 skill 那条——它同时是安全事件和“agent 做安全”的现成工具。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 披露 PHP 高危漏洞并发布 Codex 自查 skill，PHP 生态进入紧急修补期</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">GitLab 曝 CVSS 10.0 未授权 RCE，自托管实例受影响</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">LiteLLM 1.107.0 PyPI 包与 Docker 镜像被投毒，含凭据窃取与后门</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Railway 平台环境变量被解密，官方暂停全部部署</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 前沿模型与 Codex agentic 工作流进入 Google Cloud Model Garden</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Grok Bot 接入 Runway MCP，可在对话内直接生成视频</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Basecamp 官方 ChatGPT 插件上线，可从对话建项目、转待办、跨项目搜索</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">GPT-Rosalind 在鼠脑数据上给出神经退行性疾病机制线索，数千 agent 并行 32 分钟完成关联</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-22 04:42 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
