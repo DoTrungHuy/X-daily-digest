@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-10-29 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-10-29</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日可用的高信号材料不多：OpenAI 的 dot 开放短信入口、Notion Agent 获得“操作电脑生成文件”的能力，是两条对 agent 开发者最直接相关的更新；其余多为社区杂讯与消费级优惠信息。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>40 推文</span><span class="sig sig-weak">信号 弱（材料整体噪声高，可验证的工程信息有限）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI dot 开放短信入口：可用 iMessage/RCS 派任务，dot 会主动回报</h2>
+  <blockquote class="quote"><p>“By popular request, you can now text your dot. Give it a task to take off your plate or something to keep an eye on, using text, photos, or even voice notes. It will text you proactively with relevant updates.” “Safe, secure texting via iMessage or RCS. You’re the only one who can text your dot, and your dot can only text you. Rolling out now as a preview for Pro users in the US.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把常驻 agent 的入口从 App 内移到系统级消息通道，意味着“异步任务 + 主动推送”成为默认交互范式；做 agent 产品时值得参考其单向绑定（仅本人可发、仅 dot 可回）的权限模型。注意目前仅美国 Pro 预览。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2115496387613786374" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion Agent 可用“电脑”直接产出 Excel / Word / PPT / PDF</h2>
+  <blockquote class="quote"><p>“Your Notion Agent can now use a computer to create and edit files. Go from a conversation to a finished Excel spreadsheet, Word doc, PowerPoint deck, or PDF. All without leaving Notion.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是 computer use 落到办公文档产物的具体形态，说明“对话→成品文件”链路正在被产品化；对做文档类 agent 的团队，可对照其产物类型与边界设计自己的工具集。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2115146056598163708" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion AI Meeting Notes 推出 Google Meet Chrome 扩展，支持逐说话人标注</h2>
+  <blockquote class="quote"><p>“Until now, your meeting transcripts had two speakers: You and everyone else. Now, every speaker gets their own label.” “It can also automatically post and pin a message in the meeting chat when transcription starts.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>说话人分离（diarization）从“可选增强”变成会议记录的基线能力；自动在会议聊天中公示“正在记录”也是合规向的实用设计，值得抄。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2115225539825008816" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：把旅行站点提交到多数 MCP 目录，为此补了 OAuth 登录</h2>
+  <blockquote class="quote"><p>“Submitted … now to most of the MCP directories. For that I had to add OAuth login for users as it doesn&#x27;t allow just API keys” “I agree with the philosophy that all of our apps/sites should be MCP/API accessible at feature parity”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一条具体的工程经验——MCP 目录普遍不接受纯 API key，OAuth 是准入门槛；若计划让产品被 Claude/ChatGPT 调用，认证方案要提前设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2115586985888825445" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">levelsio：Stack Overflow 上月发帖量跌破 1000</h2>
+  <blockquote class="quote"><p>“New record for Stack Overflow: &lt;1000 questions posted last month”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>仅作趋势观察，非官方统计口径；对依赖公开问答语料做训练/检索的团队，需重新评估数据源时效性与覆盖度。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2115360923145712015" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 转发 Yang-Mills 工作组声明，涉及 AI 结果与 QCD / 标准模型完成性</h2>
+  <blockquote class="quote"><p>“Statement of Yang-Mills Working Group, a scientific collaboration to interpret AI result related to the existence of quantum chromodynamics &amp; completions of the Standard Model, including a subproblem proving the existence of the Quantum Yang-Mills theory.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“AI 在量子场论取得发现”线索的后续组织化动作（成立工作组做解读），但材料未给出结论或验证状态，暂不宜当作已确立成果；关注其后续正式文本。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2115236165330846045" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI dot 的短信入口——它把常驻 agent 的交互面从 App 挪到了消息层。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI dot 开放短信入口：可用 iMessage/RCS 派任务，dot 会主动回报</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Notion Agent 可用“电脑”直接产出 Excel / Word / PPT / PDF</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Notion AI Meeting Notes 推出 Google Meet Chrome 扩展，支持逐说话人标注</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">levelsio：把旅行站点提交到多数 MCP 目录，为此补了 OAuth 登录</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">levelsio：Stack Overflow 上月发帖量跌破 1000</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 转发 Yang-Mills 工作组声明，涉及 AI 结果与 QCD / 标准模型完成性</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-10-29 05:46 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
