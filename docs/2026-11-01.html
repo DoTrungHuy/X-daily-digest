@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-01 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-01</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日可用的高信号材料不多：一条“给 coding agent 一张照片、反推拍摄机位并附卫星图佐证”的 agent 工作流演示，是唯一有明确工程价值的线索；其余多为欧洲 AI/流量税争论、模型“降智”体感吐槽与促销信息，需谨慎对待。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>35 推文</span><span class="sig sig-weak">信号 弱（材料以观点与促销为主，缺少可验证的一手技术发布）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">给 coding agent 一张照片，反推相机位置、朝向并输出卫星图佐证</h2>
+  <blockquote class="quote"><p>“Hand your AI coding agent a photo and ask where it was taken. You get the camera position, the direction it faced, and a satellite image as proof: - Works with no sign, plate or landmark to read - Matches OpenStreetMap geometry, elevation skylines and street view - Each claim names the command and file behind it”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一个可复用的 agent 任务范式——把“地理定位”拆成可验证子步骤（OSM 几何匹配、天际线高程比对、街景对照），并要求每条结论标注所用命令与文件，本质是把 agent 输出做成可审计的证据链。对做 computer-use / 多工具编排的开发者，值得借鉴其“结论必须挂证据”的设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116728696463925405" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 周更回顾：agent 可用“电脑”，并接入 GPT-6.1 Terra</h2>
+  <blockquote class="quote"><p>“Some frighteningly good updates last week 👻 Here&#x27;s the recap:” / “Your agent can now use a computer.” / “GPT-6.1 Terra is now available in Notion.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与此前“Notion Agent 直接产出 Excel/Word/PPT/PDF”相比，本次新增点是模型侧接入 GPT-6.1 Terra（此前已发布的低价 computer use 模型），意味着 Notion 内的 agent 任务可切到更便宜的 computer use 后端。做成本敏感型文档自动化时值得对比切换前后的额度消耗。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116593645084381561" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2116593656370999780" target="_blank" rel="noopener">原文2</a><a class="src" href="https://x.com/i/web/status/2116593658879504733" target="_blank" rel="noopener">原文3</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">欧洲“AI 税”讨论升温：法国按流量计费后，德国拟对 AI 生成收入征税、意大利提退出税</h2>
+  <blockquote class="quote"><p>“Yesterday France announced tax of €0.055 per GB on internet traffic / Today Germany is considering taxing all AI-generated revenue / … Europe is running out of money”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对面向欧洲市场的 AI 产品，需把“按流量/按 AI 收入/退出税”纳入定价与合规情景分析；目前均为提议或讨论阶段，非生效法规，不宜据此做最终架构决策，但可作为风险项登记。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116485229779058954" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2116604593282965549" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">一篇长文论证：欧洲作为 AI“消费国”难以向外国推理收税补财政缺口</h2>
+  <blockquote class="quote"><p>“Europe will face the substitution of domestic labor for foreign inference which benefits the owners of a largely foreign AI supply chain… the French government can&#x27;t tax Anthropic over in California to make up for the lost payroll”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>文章把“AI 替代本地白领劳动 → 工资税基流失 → 只能向外国 AI 公司寻租”串成一条财政逻辑链，并预判三种应对（禁用于专业领域、扶持本土模型、对外国公司收租）。对做海外市场进入策略的人是可用的分析框架；结论属作者推断，非事实陈述。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116506570330722523" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">中文圈吐槽 GPT 与 Claude Opus 5.5 “降智”，怀疑算力与额度分层</h2>
+  <blockquote class="quote"><p>“Opus 5.5这几天理解能力明显下降…有兄弟拿糖果题测试，发现xhigh答不对，切到max反而答对了！” / “模型到底有没有被偷偷降智…目前都没有直接证据”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>作者本人承认无直接证据，属体感与个案测试（单题糖果题不足以定论）。可操作的部分是：对依赖模型稳定性的 agent 流水线，建立自己的回归测试集与版本/档位对照记录，而不是依赖社区体感判断。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116702009998913940" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">促销信息两则：GPT 学生免费 4 个月临近截止；OpenCode / Command Code 各给 100 美元 DeepSeek V4.1 Flash 额度</h2>
+  <blockquote class="quote"><p>“官方写的截止日期是美国时间10月31日” / “两家的对应订阅都是10美元一个月…这100美元不是直接送你的API余额，而是套餐里对应模型的使用额度，而且还有5小时、每周等限制”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>第二条对成本敏感的原型开发有参考价值，但需注意额度是套餐内限额而非 API 余额，且有 5 小时/每周节流，社区反馈存在重试与限速；第一条含第三方代绑卡引流，风险自负，不建议走非官方渠道。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116693454000451664" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2116670552878293435" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM1 那条“照片反推机位 + 证据链”的 agent 演示，它是本批材料里唯一可直接迁移到工程实践的东西。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">给 coding agent 一张照片，反推相机位置、朝向并输出卫星图佐证</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Notion 周更回顾：agent 可用“电脑”，并接入 GPT-6.1 Terra</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">欧洲“AI 税”讨论升温：法国按流量计费后，德国拟对 AI 生成收入征税、意大利提退出税</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">一篇长文论证：欧洲作为 AI“消费国”难以向外国推理收税补财政缺口</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">中文圈吐槽 GPT 与 Claude Opus 5.5 “降智”，怀疑算力与额度分层</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">促销信息两则：GPT 学生免费 4 个月临近截止；OpenCode / Command Code 各给 100 美元 DeepSeek V4.1 Flash 额度</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-01 06:00 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
