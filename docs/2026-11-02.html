@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-02 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-02</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里真正有工程价值的集中在三处：levelsio 用 Claude Code 全自动剪 vlog 的完整工具链、AnyShot 开源的多卡渲染+AI 摄影指导、以及 Grok Bot 生态里“模板即分发”和团队看板的玩法。其余多为促销、羊毛与噪音，已按价值筛除。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>31 推文</span><span class="sig sig-mid">信号 中（有 1-2 条实操价值高的工程线索，但整体被促销与币圈噪音稀释）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">levelsio 用 Claude Code + 本地模型全自动剪出 10 分钟 vlog</h2>
+  <blockquote class="quote"><p>“My vlog today was fully edited by Claude Code with Opus 5.5! … All I asked for was &#x27;Claude can you edit these clips into a 10 minute vlog for X and YouTube&#x27;”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一条可直接复刻的 agent 流水线：mlx-whisper（Whisper large-v3-turbo，走 Apple MLX/GPU）做转写 → 每隔几秒抽帧拼 contact sheet 让模型“看”画面 → SpeechBrain ECAPA 做声纹区分本人与他人 → OpenCV YuNet 做人脸缩略图 → 剪辑决策落成 JSON 的 cut 列表（clip/start/end）→ Pillow 加字幕。对做多模态 agent 的人，关键设计是“把视频离散成文本+图像网格，让模型输出结构化编辑指令而非直接操作时间线”。另据其回复，58 分钟 14 段素材剪到约 10 分钟。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116959423117857026" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">AnyShot 开源：把 Blender 场景分发到最多 100 张 RTX 5090 渲染，并带 AI 摄影指导</h2>
+  <blockquote class="quote"><p>“on my RTX 5070 Ti, a single walkthrough like this takes 6 hours to render. AnyShot fans it out across up to 100 RTX 5090s on @fal and renders it in 3 minutes.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>不只是渲染农场——输入任意 Blender 场景加一句 brief，AI 摄影指导会规划每个机位运动、检查不穿模、做跟焦。开源。对做 3D/视频生成 pipeline 的人，这是“任务编排 + 结构化场景描述 + 云端弹性算力”的一个完整参考实现；本地 6 小时 vs 云端 3 分钟的量级差也说明了 fan-out 调度的价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117034914822713596" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Grok Bot 模板被指“功能即分发机制”</h2>
+  <blockquote class="quote"><p>“grok bot templates are a VERY good example of a feature that doubles as a distribution mechanism... look closely and they&#x27;re basically instructions, simple prompts for each agent”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>观察点是产品设计层面——模板本质是 prompt，但因为易复制分享，用户在 X 上自发建市场、刷互动甚至售卖，形成低成本分发。对做 agent 产品的团队：把“可分享的配置单元”设计成一等公民，比做封闭功能更容易获得传播。属观点而非事实，需自行判断。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116999470437339364" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Grok Bot 团队实时看板：3D 办公室视图 + 用量归因</h2>
+  <blockquote class="quote"><p>“1 prompt + 2 min + &lt;1% usage = ... every team on its own floor of live 3D office / see exactly which bot is eating your usage”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>实现思路值得借鉴——用一个“manager” bot 通过 ntfy（免费实时消息通道）建立私有频道，并向所有 bot 的共享记忆写入一条规则：启动/完成/卡住/需要人时各发一行。于是看板只是读这个频道。这是用“共享记忆 + 单向事件日志”做多 agent 可观测性的轻量方案，不依赖专门的后端。作者称在其 Super Plan 上占用 &lt;1% 用量，未独立验证。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2116960213206966317" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">TeamViewer 高危漏洞：被连接的“主机”可反向攻击你</h2>
+  <blockquote class="quote"><p>“TeamViewer had a bug where the machine you connect to can attack you back. You connect to help. The host lies about its screen size, your app crashes, and on Windows researchers ran their own code”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>修复版本 15.83，尽快打补丁。对做远程协助/远程桌面类工具或 agent 远程操作能力的人，这是一个典型威胁模型提醒：客户端默认信任对端上报的元数据（如屏幕尺寸）是危险的，任何“被控端→控制端”的数据都应视为不可信输入。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117032688926478823" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Apple Silicon Mac 上的全本地热键语音转文字</h2>
+  <blockquote class="quote"><p>“Press a hotkey in any app on your Apple Silicon Mac and your speech is pasted as text, all on-device.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与已发布过的“本地转写线索”属同一方向，但这条明确了交互形态：任意 app 内热键触发、结果直接粘贴、全程端上。对需要给 agent 加语音输入又不想走云端的场景有参考价值；材料未给出项目名与实现细节，需自行点开链接确认。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117127070153371649" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">desloppify：用 agent harness 清理“slop code”</h2>
+  <blockquote class="quote"><p>“Agent harness to make your slop code well-engineered and beautiful • Combines mechanical detection with LLM review and a persistent...”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>思路是“机械规则检测 + LLM 评审 + 持久化状态”三层组合，而非纯靠模型重写。对做代码质量 agent 的人，这个分层是合理起点；材料信息有限（许可证标为 NOASSERTION，需自行核实），仅作线索。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117111769449804063" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM1：levelsio 那条把视频剪辑拆成“转写+抽帧+声纹+JSON 剪辑指令”的完整 agent 流水线，是可直接抄作业的多模态工程范例。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">levelsio 用 Claude Code + 本地模型全自动剪出 10 分钟 vlog</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">AnyShot 开源：把 Blender 场景分发到最多 100 张 RTX 5090 渲染，并带 AI 摄影指导</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Grok Bot 模板被指“功能即分发机制”</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Grok Bot 团队实时看板：3D 办公室视图 + 用量归因</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">TeamViewer 高危漏洞：被连接的“主机”可反向攻击你</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Apple Silicon Mac 上的全本地热键语音转文字</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">desloppify：用 agent harness 清理“slop code”</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-02 05:59 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
