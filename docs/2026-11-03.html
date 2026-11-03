@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-03 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-03</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今天最硬的一条不是模型发布，而是有人用 Claude Code 把《战地 1942》反编译并移植到 Web/WASM，附带一个可玩的多人版本；安全侧 OpenAI 把关键漏洞赏金抬到 17.2 万美元并引入外部红队，是另一条值得工程团队留意的信号。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 中（有 1 条强工程案例，其余多为生态与招聘类信息）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 用 Claude Code 把《战地 1942》反编译并移植到 Web + WASM，含多人联机</h2>
+  <blockquote class="quote"><p>“it disassembled the x86 raw machine code to find 57,000 x86 functions / it translated each x86 function into a C function / it outputed 100,000 lines of C / it then compiled that to WebAsswmbly with Emscripten”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一条完整的“无源码遗留二进制 → 可运行 Web 应用”流水线样本：反汇编定位函数、逐函数翻译为 C、Emscripten 编译、把 300 多个 Windows/Direct3D 调用重写为 WebGL2/OpenGL、再自建 WebSocket 网络栈。对做逆向、移植、WASM 工具链的人有参考价值；作者也说明 6 个月前尝试失败，这次换 Opus 5.5 重试才成，说明模型能力边界在变。注意这是免费 shareware demo，非完整游戏。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117374984192512391" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 给出该移植的 token 成本：约 100 万输出 token，API 价约 100 美元</h2>
+  <blockquote class="quote"><p>“cost me 1 million output tokens / At API prices that&#x27;s about $100 / But I pay $100/mo Claude”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>给“agent 做大型重构/移植”提供了一个粗略成本锚点：百万级输出 token 对应百美元量级。对评估自建 vs 订阅、以及给 agent 任务做预算上限有直接参考。另有一条后续说明多人部分曾卡住（“hit a bump decompiling the multiplayer part”），说明这类任务仍需人工介入排障。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117389002470769143" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 扩大漏洞赏金：关键发现最高 17.2 万美元，并与 Cathedral Systems 合作做内部安全冲刺</h2>
+  <blockquote class="quote"><p>“We&#x27;re planning our next internal security sprint at OpenAI and partnering with Cathedral Systems... We&#x27;re also raising bug bounty rewards, including more than quadrupling rewards for critical findings. Exceptional findings will be eligible for up to $172,000”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>两个可操作点：一是关键漏洞奖励翻四倍以上、上限 17.2 万美元，安全研究者可重新评估投入产出；二是官方明确“过去 30 天内已发奖励若符合新档位会补差价”，历史报告也值得复查。对做 AI 辅助漏洞挖掘的团队，这是“防守方先用 AI”的明确表态。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117444048227123277" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 补充说明：新赏金档位同样适用于待审报告，30 天内已发奖励补差额</h2>
+  <blockquote class="quote"><p>“The updated bug bounty rewards also apply to reports awaiting a bounty. For bounties awarded in the past 30 days, we&#x27;ll pay the difference if the finding qualifies for more under the new ranges.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是上一条的规则细节，决定你是否该翻出旧报告重提。属于新增信息而非重复。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117444049900654743" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 LifeVal 基准：按数千名 ChatGPT 用户反馈定义“日常任务”能力</h2>
+  <blockquote class="quote"><p>“we built LifeVal, a new benchmark shaped by feedback from thousands of ChatGPT users on where they most want help from a personal assistant—from finding childcare to accessing government services to managing personal finances.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把评测从学术题转向“找托儿、办政务、管个人财务”这类真实任务，对做 agent 产品的人是一个评测维度参考：你的 agent 是否能在这些高频生活场景闭环，而不是只跑 benchmark 分数。官方称已用该基准迭代模型一年。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117307611338997846" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic Residency 开放申请：带薪固定期限研究项目，不要求 ML 背景</h2>
+  <blockquote class="quote"><p>“Applications are now open for the Anthropic Residency, a paid, fixed-term research program for academics, technical founders, and staff-level engineers... No ML background is required. Apply by November 22”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>面向学者、技术创始人和 staff 级工程师，明确不要求机器学习背景，截止 11 月 22 日。对想从工程侧转入 AI 安全研究的资深工程师是一条低门槛入口，时间紧，值得本周决定。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117343929960112486" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 谈 MCP：agent 有别的路时几乎不用 MCP，长期会与 API 端点合并</h2>
+  <blockquote class="quote"><p>“My friend @stevelacey says AI agents almost never use MCPs if they have it available... Long term I think MCP and API endpoints will just merge into one, both supporting API keys and OAuth account level access”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对正在给产品加 MCP 支持的开发者是一个冷静提醒：加 MCP 目前更多是“用户预期”而非实际调用量；作者自己也是“为了别人期待才加”。若你在做 agent 工具选型，可优先保证 API/OAuth 路径质量，MCP 作为兼容层而非核心。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117361943938031845" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 征集“以 Notion 为中枢”的 agent/工具组合，列出 Claude、ChatGPT、Wispr、Fitbit 等接入</h2>
+  <blockquote class="quote"><p>“You keep finding new ways to use Notion with your favorite tools and agents. Claude, ChatGPT, Wispr, even a Fitbit. Here are 7 setups worth stealing”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>属于社区用例合集而非功能发布，价值在于看别人怎么把 Notion 当 agent 的读写中枢；官方在征集下周案例，有成熟工作流的人可直接回复投稿。信息密度一般，按需点开。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117313001519009859" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 levelsio 那条《战地 1942》反编译移植——它是目前少见的、把 agent 能力压到“无源码遗留系统”上的完整工程实录。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">levelsio 用 Claude Code 把《战地 1942》反编译并移植到 Web + WASM，含多人联机</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">levelsio 给出该移植的 token 成本：约 100 万输出 token，API 价约 100 美元</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 扩大漏洞赏金：关键发现最高 17.2 万美元，并与 Cathedral Systems 合作做内部安全冲刺</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OpenAI 补充说明：新赏金档位同样适用于待审报告，30 天内已发奖励补差额</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 发布 LifeVal 基准：按数千名 ChatGPT 用户反馈定义“日常任务”能力</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Anthropic Residency 开放申请：带薪固定期限研究项目，不要求 ML 背景</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio 谈 MCP：agent 有别的路时几乎不用 MCP，长期会与 API 端点合并</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">Notion 征集“以 Notion 为中枢”的 agent/工具组合，列出 Claude、ChatGPT、Wispr、Fitbit 等接入</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-03 06:45 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
