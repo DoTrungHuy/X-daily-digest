@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-04 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-04</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今天最值得工程侧关注的是 Anthropic 开源 FlashProve（可验证推理出处），以及 levelsio 用 Claude Code 把月支出砍掉约 3.4 万美元的实操复盘；OpenAI 则把 ChatGPT/Codex 推向机械与电气设计等物理世界工程场景。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="其他">其他</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 开源 FlashProve：可验证某段回复确实来自指定模型</h2>
+  <blockquote class="quote"><p>“FlashProve allows developers to verify whether a given response came from a given AI model. It’s substantially more efficient than prior open-source methods… we&#x27;re open-sourcing FlashProve’s code.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做推理服务、模型托管、安全评测的团队有直接价值——可用于防聊天劫持、验证被测模型与线上模型一致；基于既有密码学技术，效率优于此前开源方案，值得读代码评估接入成本。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117710942826123294" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 复盘：Claude Code 帮他把月成本砍到约 300 美元（不含 Photo AI GPU）</h2>
+  <blockquote class="quote"><p>“My total biz expenses have now dropped to just ~$300/mo… Claude Code helped me to find smart ways to save more money… almost $34,000/mo”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可复用的省钱清单——换更便宜的视频模型并把部分任务路由到有额度的云、合并服务器到 Hetzner、给 Backblaze B2 加 30 天生命周期策略（1200→26 美元/月）、R2 转低频访问层、清理闲置域名、按实际用量下调 Claude 订阅档位。适合拿来做一次自己的云账单审计 prompt。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117694259558293692" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">OpenAI 推进 ChatGPT/Codex 进入机械设计、电气工程与仿真</h2>
+  <blockquote class="quote"><p>“ChatGPT and Codex are helping engineers build for the physical world… from helping our hardware teams iterate faster to testing new workflows with industry collaborators.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与 Chip Ganassi Racing 合作把 3D 扫描转成可编辑 CAD 与制造图纸，与 Mazda 做仿真中的整车设计探索；流程仍是“工程师审阅输出并指出模型需改进处”。对做 CAD/仿真工具链或 agent 接工业软件的人是方向信号，且官方在招工程公司与软件伙伴。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117692475775258785" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude 插件支持登录时自动连接 MCP server（信任 Claude 为 issuer）</h2>
+  <blockquote class="quote"><p>“Users can now auto-connect plugins when they log in to Claude, with MCP servers that accept Claude as a trusted issuer… add support so users get started faster and stay connected without re-authorizing.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>做 Claude 插件的团队应尽快支持该信任模式，省掉重复授权这一步，直接降低首次使用流失；对 MCP server 侧的 OAuth/issuer 配置是一次具体改动项。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117680635561312732" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 可代用户拨打美国商家电话并现场议价</h2>
+  <blockquote class="quote"><p>“It also told the rep that a competitor was offering a much lower price and negotiated both a price decrease AND higher speed for my internet… all Grok Bot users should have access to call US businesses now.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>语音 agent 落地到“打电话办事/谈判”这类真实任务，值得关注其上下文预置方式（先给 bot 号码和背景信息）；同时注意这类自动外呼的合规与身份披露问题。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117671678650294437" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">把网站抓成 LLM 可用的结构化数据，本地运行并接 Dify / n8n</h2>
+  <blockquote class="quote"><p>“Turn websites into structured data your LLM pipeline can use, running on your own machine… Search and crawl with live progress via SSE”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>自托管爬取+结构化抽取，SSE 汇报进度，可直接挂到 Dify、n8n 等自动化流程里；适合需要私有化数据管道的场景，注意自行评估抓取合规。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117852597097029978" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">Fortran 转 Rust 的完整流程长文（此前预告的深挖版）</h2>
+  <blockquote class="quote"><p>“Earlier we shared a look at translating legacy Fortran into Rust. Here’s the deep dive into our exact process.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>老代码迁移是 agent 辅助重构的高价值场景，这篇给的是具体流程而非结论；做 legacy 现代化或代码迁移 agent 的可作参考案例。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2117773996695367851" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Anthropic 的 FlashProve 开源——它是这批材料里唯一带可落地工程接口的新研究产出。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Anthropic 开源 FlashProve：可验证某段回复确实来自指定模型</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">levelsio 复盘：Claude Code 帮他把月成本砍到约 300 美元（不含 Photo AI GPU）</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 推进 ChatGPT/Codex 进入机械设计、电气工程与仿真</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Claude 插件支持登录时自动连接 MCP server（信任 Claude 为 issuer）</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Bot 可代用户拨打美国商家电话并现场议价</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">把网站抓成 LLM 可用的结构化数据，本地运行并接 Dify / n8n</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Fortran 转 Rust 的完整流程长文（此前预告的深挖版）</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-04 06:18 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
