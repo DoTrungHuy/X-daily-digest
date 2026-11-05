@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-05 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-05</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日最硬的一条是 OpenAI 用自主 agent 流水线在 Linux 内核里批量发现并修补 948 个本地提权漏洞（API 成本 120 万美元），并称其中至少 10 种利用手法是新的；产品侧则是 ChatGPT Images 2.6 上线 GIF 与参考图复用，并同步开放两个 API 图像模型。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 中（一条强技术信号 + 若干产品更新，其余多为营销/噪音）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 自主 agent 流水线在 Linux 内核验证并生成 948 个提权漏洞补丁，API 成本 120 万美元</h2>
+  <blockquote class="quote"><p>“In a single run with an upcoming cyber model, it validated and generated patches for 948 local privilege escalation vulnerabilities in the Linux kernel at a total API cost of $1.2 million.” / “The agents also discovered and used at least 10 Linux exploitation techniques that, to the best of our knowledge and all of the experts that we consulted, are novel.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“agent 做长周期、可验证、高价值工程任务”的少见带成本数字案例——单次运行 120 万美元意味着这类流水线目前只适合高杠杆场景；对做安全 agent 的团队，值得关注其“发现→利用验证→打补丁”闭环设计与人工复核分工（与 Linux maintainers、Patch the Planet 合作提交报告）。注意这是“即将推出的 cyber 模型”，非公开可用模型。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118119451401048497" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2118119461345739018" target="_blank" rel="noopener">原文2</a><a class="src" href="https://x.com/i/web/status/2118119463161905362" target="_blank" rel="noopener">原文3</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">ChatGPT Images 2.6 发布：支持生成 GIF、可复用参考图，API 新增 Flare / Sunburst 两个模型</h2>
+  <blockquote class="quote"><p>“ChatGPT Images 2.6 can turn your prompts and pictures into animated GIFs. You can also keep reference images of yourself, pets, and characters ready to reuse in new creations...no need to upload them again.” / “Flare generates images in as little as six seconds. Sunburst brings higher-quality generation and greater consistency across edits. Image markup and SVG exports give you more ways to refine and use what you create.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对开发者最实际的是 API 侧两个新模型 + 图像标注（markup）与 SVG 导出，SVG 导出对需要可编辑矢量产物的前端/设计流水线有用；Flare 主打约 6 秒低延迟，适合交互式场景。已在 ChatGPT、Codex 全档位（web/桌面/移动）上线。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118124944928432327" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2118124964197114039" target="_blank" rel="noopener">原文2</a><a class="src" href="https://x.com/i/web/status/2118124966055223755" target="_blank" rel="noopener">原文3</a><a class="src" href="https://x.com/i/web/status/2118168231617700199" target="_blank" rel="noopener">原文4</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">LMArena：GPT Image 2.6 两模型上榜，Sunburst 文生图第 2、图像编辑第 3，速度约为 2.5 的 2 倍</h2>
+  <blockquote class="quote"><p>“Sunburst (Medium) is #2 with 1409 pts, and Flare (Medium) #4 with 1384 pts... In the Image Edit Arena, Sunburst (Medium) is #3 with 1476 pts” / “more than 2x faster than GPT Image 2.5 while maintaining the lead over competing labs”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>第三方榜单视角的补充，说明这次更新主要是“速度 + 编辑一致性”而非大幅质量跃升（官方亦称质量与 2.5 相近）；选型时可把延迟作为主要变量。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118139063345787124" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 用 Claude 解析细菌来源 vault 粒子的首个 3D 结构，并公开讨论 AI 加速科研的边界</h2>
+  <blockquote class="quote"><p>“With Claude, we’ve found results that might bring us closer to solving that mystery.” / “manually determining the vault particle’s structure would have taken weeks to months of painstaking work, but here it took days. We also discuss how Claude made some simple mistakes along the way”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>价值不在“AI 做科学”的口号，而在其明确写出“哪些阶段被大幅加速、哪些地方模型犯了简单错误、如何与 ML 研究员协作修正”——这是评估 AI 用于科研流程时少见的失败模式披露。附有预印本。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118073665296228863" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2118073667858887068" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 团队：10 月约 230 人至少提交 1 个 PR，代码交付量提升 30 倍且不逐行阅读</h2>
+  <blockquote class="quote"><p>“very excited to share how we ship crazy amounts of code (30x&#x27;d) without reading it, yet perf is as good if not better then when we launched” / “i think that our agent friendly architecture bets are paying off at taming the slop” / “fun fact: ~230 people landed at least 1 PR to grok bot in october!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可关注其“agent-friendly architecture”这一提法——即为了让 agent 高效改代码而反向调整代码库结构，这与“给 agent 写代码规范”是不同思路；30x 与“不读代码”是团队自述，无第三方验证，谨慎引用。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118017093677494706" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion：仅给 agent 开 MCP 不够，需用 setup prompt 让 agent 主动读写 Notion</h2>
+  <blockquote class="quote"><p>“just giving your agent access to Notion through our MCP only gets you so far. Agents often don&#x27;t think to look in Notion or save things there unless specifically prompted. Not great!” / “Just run our setup prompt and it will guide you towards &#x27;Notion-pilling&#x27; your agent so it knows to check Notion without you having to prompt it every time.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是对“接上 MCP 就等于集成完成”这一常见误解的直接反驳，也呼应此前“agent 有别的路时几乎不用 MCP”的讨论。工程上可借鉴：把“何时查知识库/何时写回”写进系统提示或 skill，而不是只挂工具。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118061937879928973" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Block 的 Ragavan Thurair：AI 语音模型识别不了“疼痛声”，随机器人自主性提升会成为安全问题</h2>
+  <blockquote class="quote"><p>“I tried to make sounds of pain... These models fail at that. It&#x27;s like, oh, it sounds like you&#x27;re stretching. Did you just wake up? It doesn&#x27;t understand crying and things like that.” / “Imagine a Unitree robot steps on me the same way. I can’t say words to say, get off of me.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做语音 agent / 具身系统的团队，这是一个具体的评测缺口——非语言人声（疼痛、哭泣、惊恐）应纳入安全相关的语音理解测试集，而非只测转写准确率。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118108630671351993" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">中文圈反馈：Grok Bot 周额度消耗明显加快，任务减少但一天烧掉约 39%</h2>
+  <blockquote class="quote"><p>“昨天刚重置的周额度 今天早上一看，已经干掉39%了！” / “现在任务减少了 消耗反倒快了一倍！好家伙，老马这是偷偷把额度砍半了？”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>属用户单方面观察，无官方确认，不能当作额度政策变更的事实；但对长期跑定时监控任务的用户，值得自行记录消耗速率做对比。同帖提到 SuperGrok 仅用 4%，反映同一产品线内额度分配差异。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118138141479673864" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 那条 Linux 内核漏洞流水线——它是目前少有的、带真实成本数字和“新利用手法”结论的 agent 长周期工程案例。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 自主 agent 流水线在 Linux 内核验证并生成 948 个提权漏洞补丁，API 成本 120 万美元</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">ChatGPT Images 2.6 发布：支持生成 GIF、可复用参考图，API 新增 Flare / Sunburst 两个模型</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">LMArena：GPT Image 2.6 两模型上榜，Sunburst 文生图第 2、图像编辑第 3，速度约为 2.5 的 2 倍</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Anthropic 用 Claude 解析细菌来源 vault 粒子的首个 3D 结构，并公开讨论 AI 加速科研的边界</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok Bot 团队：10 月约 230 人至少提交 1 个 PR，代码交付量提升 30 倍且不逐行阅读</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion：仅给 agent 开 MCP 不够，需用 setup prompt 让 agent 主动读写 Notion</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Block 的 Ragavan Thurair：AI 语音模型识别不了“疼痛声”，随机器人自主性提升会成为安全问题</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">中文圈反馈：Grok Bot 周额度消耗明显加快，任务减少但一天烧掉约 39%</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-05 06:44 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
