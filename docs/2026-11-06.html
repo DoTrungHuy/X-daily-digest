@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-06 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-06</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日最硬的一条是 OpenAI 正式发布 GPT‑6 Cyber：昨天那套 Linux 内核漏洞研究背后的模型被单独产品化，并拆成 Daybreak Red / Blue 两条线向外部防御者开放。其余多为周边生态与个人开发者动态，信号密度一般。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 GPT‑6 Cyber，把内核漏洞研究模型产品化，并拆出 Daybreak Red / Blue 双线</h2>
+  <blockquote class="quote"><p>“Introducing GPT‑6 Cyber: a major advance in security research that pairs stronger capabilities with better model alignment. The model powered the Linux kernel research we announced yesterday…”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是昨日“948 个提权补丁”那条的后续与产品化落地——同一模型现在对外供给。对做安全工具链的团队，值得关注 Red（授权渗透、更深 exploit 开发）与 Blue（验证漏洞与修复、更少拒答）的能力切分方式，这实际上是把“攻防双用途”用产品线隔离来治理。目前仅限 select Daybreak Red 客户，Blue alpha 在扩量，11 月 12 日有 Cyber at the Frontier 直播。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118390190246879554" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama 用一个 SymPy 判分器漏洞举例，说明模型能发现“人+fuzzer 都难找”的跨组件缺陷</h2>
+  <blockquote class="quote"><p>“the submitted answer used characters that looked like ordinary letters to get past the grader’s checks. It caused the grader to run a shell command that printed ‘4242’, while still returning the expected result, 1/2. The grader marked the answer correct.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这个案例对写 agent 评测/判分系统的人直接有用——输入校验与执行路径的交互是典型盲区，正确答案 + 副作用可以同时成立。设计 grader、沙箱、代码执行评测时，应把“结果正确”与“无越权副作用”分开断言。sama 也点明这类漏洞需要跨组件推理，单看某个模块审不出来。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118429823244935257" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Daybreak 扩量：Blue alpha 向更多组织与独立研究者开放，并给出报名入口</h2>
+  <blockquote class="quote"><p>“Today we are also expanding the Daybreak Blue alpha for GPT‑6 Astra to more organizations and individual researchers.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对独立安全研究者和开源维护者，这是目前少见的、可申请的高能力模型防御向通道。注意区分：GPT‑6 Cyber 是新产品，GPT‑6 Astra 的 Blue alpha 是既有线的扩容，两者不要混为一谈。有明确申请链接，适合顺手提交。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118390192356700383" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 从零重写 Notion Calendar，先发 iOS 版，其余客户端重写在路上</h2>
+  <blockquote class="quote"><p>“We rebuilt @NotionCalendar from scratch. In the age of vibecoding, the team put a lot of craft into this. Fast, smooth, hourly delight. (Other client rebuilts coming soon.)”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>功能面是月/周/日程视图、离线查看与编辑事件、iPad 与 Duo 支持。值得注意的是一条产品判断：在“vibecoding”时代反而强调手工打磨，可作为“AI 生成 + 人工工艺”定位的样本。对做日历/日程类 agent 集成的人，离线编辑能力是新的可依赖面。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118407963723567512" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Framer MCP：在 Notion 写稿，由 agent 直接导入 Framer CMS 发布</h2>
+  <blockquote class="quote"><p>“Write in Notion, publish with Framer, and let your AI agent handle everything in between with Framer MCP. Import articles directly into your CMS. No copy-pasting, just content ready to publish.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“内容生产 → CMS 发布”链路上一个具体的 MCP 落地，可作为 MCP server 设计参考：把中间态（草稿到已发布条目）交给 agent，而不是让人搬运。对已有 Notion 写作流的团队，属于低成本可试的集成。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118414160610418718" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">自托管 YouTube 阅读器：按时间顺序看订阅、SponsorBlock 跳赞助、本地模型做视频摘要</h2>
+  <blockquote class="quote"><p>“YouTube, but self-hosted and chronological. Watch your subscriptions in a clean feed, skip sponsors automatically via SponsorBlock, and summarize videos with a local AI model.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>三个能力都是可拆用的：按时间序的订阅 feed（绕开推荐算法）、SponsorBlock 自动跳过、本地模型摘要。对想搭“个人信息流 + 本地摘要”管线的开发者，是一个现成的组合范例，且全程可离线。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118545915296498072" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">NOFX：本地运行，把 AI 生成的入场计划画在图上，逐单人工确认</h2>
+  <blockquote class="quote"><p>“NOFX lets you compare AI-generated entry plans on a chart and approve each order yourself, running locally.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>形态值得借鉴而非照搬——AI 只出方案、人做最终批准、全程本地执行，是“高风险动作 + human-in-the-loop”的一种标准架构。做交易、运维、发布类 agent 时，这种“建议与执行分离 + 逐条审批”的模式可以直接套用。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118582453384495152" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 sama 那条 SymPy 判分器漏洞的拆解——它比发布公告本身更能说明这类模型在真实系统里到底能发现什么。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 发布 GPT‑6 Cyber，把内核漏洞研究模型产品化，并拆出 Daybreak Red / Blue 双线</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">sama 用一个 SymPy 判分器漏洞举例，说明模型能发现“人+fuzzer 都难找”的跨组件缺陷</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Daybreak 扩量：Blue alpha 向更多组织与独立研究者开放，并给出报名入口</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Notion 从零重写 Notion Calendar，先发 iOS 版，其余客户端重写在路上</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Framer MCP：在 Notion 写稿，由 agent 直接导入 Framer CMS 发布</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">自托管 YouTube 阅读器：按时间顺序看订阅、SponsorBlock 跳赞助、本地模型做视频摘要</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">NOFX：本地运行，把 AI 生成的入场计划画在图上，逐单人工确认</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-06 06:41 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
