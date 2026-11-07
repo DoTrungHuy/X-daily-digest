@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-07 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-07</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料以官方账号为主：OpenAI 连发两条安全/科研基准（网络越狱严重性框架、湿实验室 agent 基准 BioBasicsBench），Anthropic 讲 Claude 的“做梦”式记忆整理与 AI 写科学模型；Notion 则把 agent 工作过程搬进评论、并补齐 ChatGPT 插件。其余多为 SpaceX/加密/闲聊噪声，价值有限。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 与 FMF 成员机构发布“网络越狱严重性”评估框架</h2>
+  <blockquote class="quote"><p>“We partnered with @fmf_org and its member firms on a new framework to help identify when bypassing an AI system&#x27;s safeguards could enable serious cyber harm, and prioritize stronger protections.” — OpenAI 国家安全政策负责人 Sasha Baker 称这是走向“评估与比较网络越狱严重性”的共同方法论的一步。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>做安全评测/红队的团队可关注其“能力解锁程度 + 可复用难易度”两个维度，作为自建 jailbreak 分级表的参照；与近期 Daybreak 双线、漏洞赏金扩档属同一安全叙事线，但这是新发布的方法论，不是旧闻重复。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118795218099253606" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">BioBasicsBench：用 100 个真实实验任务测 agent 做“湿实验室日常分析”</h2>
+  <blockquote class="quote"><p>“A new way to measure how AI agents handle the routine analyses of wet-lab science—BioBasicsBench.” 与酶设计公司 Ligo 合作，任务取自真实实验，考察 agent 能否解读原始实验数据、发现错误、并识别“证据不支持结论”的情形。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是少见的“agent 该不该说不知道”型基准，对做工具调用 agent 的开发者有直接借鉴：把“拒绝下结论”作为可评分行为，而非失败。也提示生物类 agent 的评测重点在数据清洗与误差识别，不在生成。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118782708767965238" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 工程博客：用“dreaming”机制帮 Claude 整理记忆、纠错、提升召回</h2>
+  <blockquote class="quote"><p>“Memory is what allows Claude to learn from experience. In a new Engineering Blog post, we share how ‘dreaming’ helps Claude organize what it’s learned, correct its mistakes, and find what it needs more easily the next time.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做长期记忆/上下文管理的 agent 工程有参考价值——把“离线整理记忆”当作独立阶段（类似睡眠期巩固），而不是在推理时硬塞检索。具体实现细节需读原文，本条仅为发布信号。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118814753154064501" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 科学博客：AI 开始参与“写模型”本身——写、跑、拟合、修订科学模型代码</h2>
+  <blockquote class="quote"><p>客座作者 Jakob Macke 等指出，过去 AI 主要帮科学家把复杂模型拟合到数据，但“scientists still typically write the models manually”，且要在多个竞争解释间权衡；AI 现在可以“writing, running, fitting, and revising scientific models as code”，探索多种模型结构并找出数据支持哪一种。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“agent 做科学”从拟合走向模型搜索/模型选择的方向性描述，对做自动化实验循环（propose–run–fit–revise）的团队是可复用的抽象；注意这是观点文，非基准结果。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118792930211107115" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion：agent 的工作过程可直接在评论里跟进</h2>
+  <blockquote class="quote"><p>“Follow along as your agents work, right in the comments.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把 agent 执行轨迹落到协作界面（评论流）而非单独日志面板，是 agent 可观测性的一种产品化做法；对自建 agent 的团队，可考虑把中间步骤写回用户已在看的地方，降低“黑箱感”。此为 Notion agent 能力的新增交互，非此前 MCP/setup prompt 话题的重复。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118827499165774092" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 补齐与 ChatGPT 的双向接入，并称将扩展到其他模型供应商</h2>
+  <blockquote class="quote"><p>“You can now: - Use Notion and leverage all OpenAI models - Use ChatGPT and leverage Notion via MCP - Use Notion w/ your ChatGPT subscriptions - (and today) Use ChatGPT with Notion plugin. And yes, we&#x27;re working on … enabling this with other providers too.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>新增点是“ChatGPT 侧 Notion 插件”这一条，加上可用 ChatGPT 订阅额度在 Notion 内调用模型；对已在 Notion 里搭 agent 工作流的团队，意味着入口从 MCP 单向变为双向。与既有“仅开 MCP 不够、需 setup prompt”的讨论互补而非重复。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118815018133471709" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 吐槽 AI 回复机器人：对社区是“负成本”，并做了个“回复激光炮”</h2>
+  <blockquote class="quote"><p>“The worst part about AI replies it&#x27;s a negative cost to all of us on here… if you&#x27;re doing AI replies, you&#x27;re an asshole.” 随后又发“@X Reply Bot Super Laser Cannon”，并称自己停用后回复区突然没有 AI 机器人了。</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做社交/增长类 agent 的人是反向信号——平台侧与用户侧对自动化回复的容忍度在下降；若产品涉及自动评论/自动互动，需考虑被识别与反制的风险。属个人观点，非平台政策。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118746285071028248" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 BioBasicsBench——它是这批材料里唯一给出“agent 该在证据不足时拒绝下结论”这一可评分维度的一手基准。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 与 FMF 成员机构发布“网络越狱严重性”评估框架</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">BioBasicsBench：用 100 个真实实验任务测 agent 做“湿实验室日常分析”</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Anthropic 工程博客：用“dreaming”机制帮 Claude 整理记忆、纠错、提升召回</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Anthropic 科学博客：AI 开始参与“写模型”本身——写、跑、拟合、修订科学模型代码</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Notion：agent 的工作过程可直接在评论里跟进</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 补齐与 ChatGPT 的双向接入，并称将扩展到其他模型供应商</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio 吐槽 AI 回复机器人：对社区是“负成本”，并做了个“回复激光炮”</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-07 05:56 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
