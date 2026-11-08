@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-08 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-08</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里真正可用的技术信号偏少：一条是 Pro 订阅档位与用量倍率的澄清（对重度 coding agent 用户有直接成本意义），一条是 Claude Code 做家具设计+物料清单的完整成本案例，其余多为社区杂项与营销内容。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>37 推文</span><span class="sig sig-weak">信号 弱（无新模型/新基准/新工程博客级别的发布）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Pro 档位澄清：Pro 100/200/500 分别对应 Plus 的 10X/20X/50X，且均无 5 小时限制</h2>
+  <blockquote class="quote"><p>“Saw some confusions, but all Pro plans have no 5-hour limits, and give the following usage compared to Plus. ✅ Pro 100 = 10X ✅ Pro 200 = 20X ✅ Pro 500 = 50X, access to ultrafast”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对跑长任务、批量 agent 流水线的开发者，关键变化不是倍率而是“取消 5 小时窗口”——意味着不必再把工作切成短会话规避限流；Pro 500 额外带 ultrafast 档，适合延迟敏感的交互式 coding。选档时按“峰值并发会话数”而非“月总量”估算更贴近实际。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119296267545419987" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：Claude Code 逐件设计家具并输出 BOM，宣称比高端品牌省 85%</h2>
+  <blockquote class="quote"><p>“Claude Code can design furniture part by part and then give you a bill of materials to order each part and put it together yourself… If you design your own furniture and buy the raw materials directly, you can save 85% compared to premium brands like Poliform. That means the $30,000 sofa becomes $4,500!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>值得注意的不是家具，而是工作流形态——agent 操作 Blender/FreeCAD（均免费）+ 输出可采购的物料清单，把“生成式输出”落到“可执行的供应链指令”。这套 pattern（几何建模 → 零件分解 → BOM → 外部采购）可平移到硬件原型、3D 打印件、机箱/支架定制。案例中的设计者不会写代码，只用终端里的 Claude Code。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119132202952798369" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">同一讨论的延伸判断：AI 让“个人硬件/二次创客潮”变得可行，瓶颈转向供应商是否接定制组装</h2>
+  <blockquote class="quote"><p>“We&#x27;re in the era of personal software and as an extension of that personal hardware, with kind of a second maker wave happening, because now it&#x27;s suddenly become accessible to design and build hardware for almost everybody, thanks to AI. The question here is will suppliers (mostly in China) also start doing custom assembly and shipping it worldwide”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一个可验证的假设而非结论——AI 降低了设计端门槛，但制造端（打样、装配、跨境物流）并未同步降低。若做相关产品，机会点在“把 BOM 直接对接供应商报价/下单”的中间层，而不是再做一版 CAD 生成。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119211192132510200" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 在 ChatGPT 内的插件：在对话里改文档、再回 Notion 与团队继续协作</h2>
+  <blockquote class="quote"><p>“Bring your docs into the conversation. Ask ChatGPT to suggest edits, jump in with your own, and keep working with your team in Notion. Same page, everyone working together 🤝 Try the Notion plugin in ChatGPT”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>属于此前 Notion×ChatGPT 双向接入的落地入口（本次新增的是可直接试用的 plugin 链接）。对团队的实际意义是“编辑建议留在同一页面上下文”，减少复制粘贴往返；但注意这仍是文档协作层，不是 agent 自主执行层。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2118774560090947701" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Pi.Alert：扫描家庭 Wi-Fi/LAN，未知设备接入或已知设备掉线时告警</h2>
+  <blockquote class="quote"><p>“Pi.Alert scans your home Wi-Fi or LAN and alerts you when an unknown device joins or a known one drops off.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>轻量网络资产监控，适合跑在树莓派/常开小主机上。对做本地 agent、自托管服务的开发者有实际用途：可当作“设备在线状态”事件源，接入告警或自动化流程。注意它只做发现与告警，不做阻断。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119263142375215530" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">agentic-rag-for-dummies：用 LangGraph 搭模块化 Agentic RAG 的开源教学项目</h2>
+  <blockquote class="quote"><p>“Build and learn a modular Agentic RAG system with LangGraph • Open source and free to inspect”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>定位是“可读的教学实现”而非生产框架，适合想拆解 agentic RAG 各模块（检索决策、工具调用、循环控制）的人做对照阅读。MIT 许可，可直接改。价值有限但门槛低。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119303518037406171" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM1 的 Pro 档位澄清——它直接改变你排 agent 任务的方式；ITEM2 的家具 BOM 案例当思路看即可。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Pro 档位澄清：Pro 100/200/500 分别对应 Plus 的 10X/20X/50X，且均无 5 小时限制</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">levelsio：Claude Code 逐件设计家具并输出 BOM，宣称比高端品牌省 85%</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">同一讨论的延伸判断：AI 让“个人硬件/二次创客潮”变得可行，瓶颈转向供应商是否接定制组装</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Notion 在 ChatGPT 内的插件：在对话里改文档、再回 Notion 与团队继续协作</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Pi.Alert：扫描家庭 Wi-Fi/LAN，未知设备接入或已知设备掉线时告警</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">agentic-rag-for-dummies：用 LangGraph 搭模块化 Agentic RAG 的开源教学项目</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-08 05:58 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
