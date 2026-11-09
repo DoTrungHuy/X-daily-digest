@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-09 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-09</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今天可用的技术信号不多，但有几条值得看：一个把 RAG、agent 和 wiki 叠在同一套团队文档上的自托管方案；一个专门“喂假线索”拖垮 AI 逆向工程 agent 的对抗工具；以及 levelsio 对“AI 生成直播视频”实验的完整复盘（含成本与审核数据）。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>35 推文</span><span class="sig sig-weak">信号 弱（大量 feed 条目为无关闲聊/政治/广告，技术信息密度低）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">自托管方案：同一套团队文档上同时跑 RAG、agent 与 wiki</h2>
+  <blockquote class="quote"><p>“RAG, an agent, and a wiki over the same team documents, self-hosted.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做内部知识库的团队有参考价值——三种检索/交互形态共用一份文档源，避免 RAG 索引、agent 工具与人工 wiki 三套内容各自漂移；自托管意味着数据不出内网。材料未给出实现细节与仓库地址，需自行到原帖链接确认。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119675609140072503" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">BLA：向构建产物里植入假线索，耗尽 AI 逆向工程 agent 的资源</h2>
+  <blockquote class="quote"><p>“Point BLA at your build to plant fake clues and blow past AI reverse-engineering agents&#x27; resource limits.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>思路是把“对抗 AI 分析”从混淆升级为投毒——不追求让人读不懂，而是让自动逆向 agent 在假路径上烧 token/时间。对做客户端保护、反爬、以及评估自家 agent 抗干扰能力的人都有借鉴意义；也可反过来用于测试你的逆向 agent 是否容易被误导。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119632324593909800" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 复盘 Infinite Slop TV：AI 实时生成视频直播实验关停，附完整数据</h2>
+  <blockquote class="quote"><p>“It wasn&#x27;t possible before that because there weren&#x27;t AI video models yet that generated faster than they could be played... FAL also sponsored me to do this project because otherwise it would have costed me $200,000/mo in GPU cost”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>少见的“AI 生成内容产品”真实运营数据：1780 万次片段观看、21 万条 AI 片段、28.7 万条聊天消息、约 44% 消息被审核拦截、860 小时不重复视频、3 家赞助。结论是“有东西但没跑通”——生成速度超过播放速度是这类产品的前置条件，而内容同质化后用户会疲劳。对做实时生成/互动内容的人是一份成本与审核负担的基准。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119564112208257515" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：因为不再读代码，10 分钟给站点加上 i18n 与 9 种语言版本</h2>
+  <blockquote class="quote"><p>“With AI however, I never read my code base anymore, nor do code review, so it doesn&#x27;t matter anymore... This took 10 minutes btw”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>他此前长期拒绝 i18n，理由是 <code>t(&#x27;...&#x27;)</code> 包裹让代码不可读；现在判断前提变了——人不读代码，可读性不再是约束。附带提到本地化对 SEO 可能有帮助。可作为“AI 编码改变了哪些工程权衡”的具体案例；反面风险是代码可维护性与后续人工接手成本，材料未讨论。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119516562147426782" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 转述：用 Claude 按规格设计湿度感应薄膜，并检索相关专利</h2>
+  <blockquote class="quote"><p>“You can also vibe-electrical engineer. China manufactured this moisture-sensing film that I&#x27;m using in my dog area. All designed to-spec in Claude; it looked up all the patents and everything to come up with the solution.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>是此前“Claude Code 设计家具并出 BOM”讨论的延伸，但方向换成了电子/材料件：由模型查专利、出规格，再交中国厂商打样。对硬件侧 agent 应用的人来说，值得注意的仍是那句老问题——模型能出规格，但落地取决于供应商是否接小批量定制。此为转述帖，非本人原创项目细节。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119244926806532203" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Grok Bot 工程团队：通宵修问题，称次日会有明显改善</h2>
+  <blockquote class="quote"><p>“Just did a round table review with the Grok @Bot engineering team. Fixes are being implemented overnight and you should notice a dramatic improvement by tomorrow.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与此前中文圈反馈的“Grok Bot 周额度消耗加快、任务减少但一天烧掉约 39%”形成后续——官方承认存在问题并在修。若你在用 Grok Bot，可留意额度消耗是否回落；材料未说明具体修了哪些问题。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119617455102333206" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM3——那是目前少有的、带真实成本与审核数据的 AI 实时生成内容产品复盘。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">自托管方案：同一套团队文档上同时跑 RAG、agent 与 wiki</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">BLA：向构建产物里植入假线索，耗尽 AI 逆向工程 agent 的资源</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">levelsio 复盘 Infinite Slop TV：AI 实时生成视频直播实验关停，附完整数据</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">levelsio：因为不再读代码，10 分钟给站点加上 i18n 与 9 种语言版本</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">levelsio 转述：用 Claude 按规格设计湿度感应薄膜，并检索相关专利</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Grok Bot 工程团队：通宵修问题，称次日会有明显改善</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-09 06:23 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
