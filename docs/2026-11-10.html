@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-10 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-10</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里最值得技术读者注意的是两条“基础设施侧”信号：OpenAI 公开了能 35 秒内掐断模型输出的 Control Room，Anthropic 则放出 Claude Fable 5.2 / Mythos 5.2。其余多为产品小更新与社区杂音，需谨慎取用。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>34 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 公开 Control Room：统一追踪研究推理负载，35 秒内可掐断模型输出</h2>
+  <blockquote class="quote"><p>“We built Control Room, a central system to track model workloads across our research infrastructure and stop them quickly when safety or security concerns arise… halts model output within 35 seconds of a decision to intervene to stop or pause a job.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 agent 平台的团队，这是一个可参考的“kill switch + 负载可观测”架构范式：把训练/评测/数据处理的所有推理负载纳入同一注册表，并与错位监控系统联动；35 秒是值得对标的干预延迟量级。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119913172039868579" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2</h2>
+  <blockquote class="quote"><p>“Claude Fable 5.2 and Claude Mythos 5.2 are available now:”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方帖本身信息极简，未给出基准、上下文长度、价格等细节，需以官方文档为准再评估是否切换；社区侧已有“Fable 5.2 生成游戏可玩性明显提升”的反馈，但属主观评价。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119867707546071125" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Dots 支持把多台本地机器接入同一个 dot，按任务选择执行机</h2>
+  <blockquote class="quote"><p>“You can now connect multiple local computers to the same dot and choose which one it uses for a task. It can build and test your app on a dedicated machine while you keep coding on your laptop.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>本质是“agent 执行环境与开发机解耦”，适合把构建/测试这类重负载丢给专用机器，避免占用本地交互；对多机开发环境（台式 + 笔记本 + 家用服务器）的 agent 工作流有直接价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119883176726409645" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Dots 可控制多台机器，不再局限于官方提供的小型云电脑</h2>
+  <blockquote class="quote"><p>“Dots can now control many machines in addition to its own little cloud computer that we provide by default.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与上一条同属一次能力扩张——从“托管沙箱”走向“用户自有算力池”。若你在评估 agent 执行层的自托管路径，这是值得跟踪的方向；具体权限模型与安全边界材料中未说明。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120021043876106429" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">开源聊天应用：本地运行自己的 Claude 与 Codex agent</h2>
+  <blockquote class="quote"><p>“Open-source chat app for running your own Claude and Codex agents”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>面向“不想把 agent 会话托管在第三方 UI”的开发者，属于自建 agent 前端的候选；材料仅有一句描述与链接，功能范围、是否支持工具调用与多会话需自行核验。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120027679483470256" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">elizaOS：用 TypeScript 构建个人 AI agent 的开源框架</h2>
+  <blockquote class="quote"><p>“elizaOS is an open-source TypeScript framework for building and running personal AI agents that chat, remember context, manage your calendar, and automate your browser.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>TypeScript 栈、带记忆与浏览器自动化，适合前端/全栈背景的开发者快速搭个人 agent；属于老项目再曝光，非新版本发布，选型时注意核对当前维护状态。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119982632171962623" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">社区反馈：Fable 5.2 在“游戏可玩性”上明显优于 Opus</h2>
+  <blockquote class="quote"><p>“Fable 5.2 - gaming is A LOT better - Opus made nice looking games but gaming mechanics were sloppy… With Fable, we are almost there - it can one shot games that are actually fun”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可作为“代码生成模型从能跑向好玩/可用迁移”的一手体感样本，但属个人主观评价、无对照实验；做游戏原型或交互 demo 的团队可自行小样本验证。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119884264019779900" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：一句话、一分钟修好问题</h2>
+  <blockquote class="quote"><p>“Fixed with 1 prompt and took 1 minute”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无（未说明修的是什么问题，仅可作为“小 bug 用 agent 快速闭环”的日常样本）。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2119751526201618472" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 Control Room——它是这批材料里唯一给出具体工程指标（35 秒干预延迟）的基础设施设计。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 公开 Control Room：统一追踪研究推理负载，35 秒内可掐断模型输出</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Dots 支持把多台本地机器接入同一个 dot，按任务选择执行机</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Dots 可控制多台机器，不再局限于官方提供的小型云电脑</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">开源聊天应用：本地运行自己的 Claude 与 Codex agent</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">elizaOS：用 TypeScript 构建个人 AI agent 的开源框架</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">社区反馈：Fable 5.2 在“游戏可玩性”上明显优于 Opus</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio：一句话、一分钟修好问题</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-10 07:15 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
