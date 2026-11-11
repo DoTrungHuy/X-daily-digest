@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-11 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-11</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日最硬的一条是 Google DeepMind 用 agentic 形式化验证框架 AlphaProof Code，把 Signal 协议的生产机器码验证到“设备上真正运行的代码”这一层，团队称原本需数十年的工作量压缩到一个月；其余多为产品发布与生态动态，噪音偏多。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 中（一条强信号 + 若干产品发布，其余为弱信号）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Google DeepMind 用 AlphaProof Code 形式化验证 Signal 协议生产机器码</h2>
+  <blockquote class="quote"><p>“we have proven key security properties of the machine code underlying the Signal messaging protocol. This is the first time the actual production code of a widely deployed protocol has been formally verified… Similar efforts could take teams decades of combined effort. We did it in a month&#x27;s time.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>AlphaProof Code 是跑在 LLM（含 Gemini Carbon）上的 agentic 形式化验证框架，官方开源了形式化规格与验证产物。对做安全、编译器、协议实现的工程团队，这是“AI 当验证放大器”的可复用范式；也提示 agent 在需要严格正确性的场景里，价值不在写代码而在证明代码。</p></div>
+  <div class="item-src">
+    <span class="handle">@GoogleDeepMind</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120127611137634376" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 上线 Businesses in ChatGPT 测试版，可建 Business Agent</h2>
+  <blockquote class="quote"><p>“Claim your business, manage your information, and get insights on how people engage with you. Eligible businesses can also build a Business Agent to answer customers&#x27; questions…”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>Business Agent 的回答被明确标注为“来自商家提供的信息”，与 ChatGPT 独立回答分开；商家可通过 Business Hub 更新资料、上传含实时价格与库存的 product feed，并看到被引用次数、网站点击等聚合洞察，官方称不向商家共享用户对话。对做电商/客服 agent 的开发者，这是一条“平台内建 agent 分发渠道”的新入口，值得关注其标注与数据隔离设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120216592395174382" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Anthropic 启动 IPO 路演</h2>
+  <blockquote class="quote"><p>“Anthropic has launched the roadshow for its proposed initial public offering… A registration statement relating to these securities has been filed with the SEC but has not yet become effective.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>仅事实层面——注册声明已提交 SEC 但尚未生效，路演启动不等于可交易。对关注模型公司资本结构与算力投入节奏的人，这是后续观察定价与披露（成本、算力合同、客户集中度）的起点；原文未披露任何估值或条款细节。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120117722230968385" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Buzz 1.0 发布：人类与 agent 共享同一画布的工作空间</h2>
+  <blockquote class="quote"><p>“buzz 1.0 is finally here! the most flexible team workspace out there. for humans and agents, model agnostic, local or cloud, and infinitely extendable.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>定位是“共享上下文”——人、agent 与公司知识放在同一画布上协作，强调模型无关、可本地或云端、可扩展。与已报道的 Notion/Block 类“第二大脑 + agent”路线属同一赛道，差异点在“模型无关 + 本地部署”这两个卖点；目前只有发布口径，缺技术细节与实测。</p></div>
+  <div class="item-src">
+    <span class="handle">@buzzdotxyz</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120345450612187278" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Grok 4.8 进展：RL 与推理栈用 C/C++ 重写，本周向 Grok Bot 用户软发布</h2>
+  <blockquote class="quote"><p>“The engineering team has abandoned JAX and SGLang, rewriting the entire RL and inference stack in C/C++… Pre-training is complete… Reinforcement learning now underway… Soft rollout to Grok Bot users planned for later this week.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若属实，这是“放弃 JAX/SGLang 转向自研 C/C++ 栈”的工程路线选择，对做 RL 训练/推理基础设施的人有参考价值（性能与控制力 vs 生态成熟度）。注意：该条为第三方转述马斯克说法，非官方账号原文，具体细节待官方确认；马斯克本人表述为“Grok 4.8 will bear no resemblance to 4.7”。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120094479797686513" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 预告 11/12 “Cyber at the Frontier” 主题演讲</h2>
+  <blockquote class="quote"><p>“We&#x27;re turning our lessons from defending OpenAI into practical tools for our customers… Working with our frontier models, we&#x27;ve identified and resolved important vulnerabilities in our own code and infrastructure.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方明确会把“防御 OpenAI 自身”的经验产品化为面向客户的安全工具与 playbook，时间点为 11 月 12 日 10:00 PT。对安全工程团队，这是继此前网络越狱评估框架、GPT‑6 Cyber 之后的又一条产品线信号，值得蹲直播看具体交付形态。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120202353907486826" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Gemini 4 Carbon 案例：开发者用 CUDA/C++ 从零生成 5.2 万株野花草地</h2>
+  <blockquote class="quote"><p>“@GlitterPixely coded a meadow of 52,000 wildflowers and grass blades from scratch in CUDA and C++ with Carbon, synthesizing the wind to match every gust”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是官方转发的“模型辅助写底层图形/仿真代码”样例，涉及 CUDA/C++ 与风场合成。对做图形、仿真、GPU 编程的人，可作为评估模型在“低层性能代码 + 物理一致性”任务上能力的参考点；仅为单案例，不宜外推。</p></div>
+  <div class="item-src">
+    <span class="handle">@GoogleDeepMind</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120324708826550328" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">SpaceX 获 FCC 受理 800MHz 频谱收购申请，并称与 Qualcomm 合作建 AI-native 基站</h2>
+  <blockquote class="quote"><p>“The FCC accepts SpaceX&#x27;s application to acquire nationwide 800 MHz spectrum… Qualcomm&#x27;s CEO said the SpaceX agreement is finalized… SpaceX will build the base stations.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与 AI 工程的关联点在“边缘推理上塔”——转述称基站将做 AI-native 架构、塔侧边缘推理。对做边缘部署/推理服务的人，这是“推理下沉到接入网”的长期变量；但本条为第三方转述 + 马斯克转发，交易尚未完成，条款与时间表均未确认。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120233719491612940" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 ITEM1 的 Signal 形式化验证——它是这批材料里唯一有“方法可复用、结论可核查、产物已开源”三重属性的技术信号。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Google DeepMind 用 AlphaProof Code 形式化验证 Signal 协议生产机器码</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">OpenAI 上线 Businesses in ChatGPT 测试版，可建 Business Agent</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Anthropic 启动 IPO 路演</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Buzz 1.0 发布：人类与 agent 共享同一画布的工作空间</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Grok 4.8 进展：RL 与推理栈用 C/C++ 重写，本周向 Grok Bot 用户软发布</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">OpenAI 预告 11/12 “Cyber at the Frontier” 主题演讲</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Gemini 4 Carbon 案例：开发者用 CUDA/C++ 从零生成 5.2 万株野花草地</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">SpaceX 获 FCC 受理 800MHz 频谱收购申请，并称与 Qualcomm 合作建 AI-native 基站</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-11 06:15 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
