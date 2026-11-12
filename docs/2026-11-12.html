@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-12 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-12</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日可用的高信号材料不多：一条是 OpenAI 关于 CoT 可监控性随训练生命周期变化的新研究，一条是“Bot 1.0”这类 AI 队友产品化进展；其余多为产品小更新与噪声，需谨慎取舍。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>36 推文</span><span class="sig sig-weak">信号 中偏弱（高价值条目集中在 2-3 条，其余为产品更新或无法核实主体的信息）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 新研究：随训练规模扩大，模型 CoT 越来越难被监控</h2>
+  <blockquote class="quote"><p>“How does CoT monitorability (no-CoT capability and CoT controllability) evolve over the model training lifecycle? … as we scale toward more intelligent systems, models are becoming harder to monitor through their CoT.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 agent 安全与可观测性的团队，这是直接的设计约束——不要把“读思维链”当作唯一审计手段，需要并行建设行为级监控、输出拦截与外部验证（呼应此前 Control Room 类基础设施）。评估模型时也应把 no-CoT capability 作为单独指标跟踪。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120581630196879460" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Bot 1.0 发布：AI 队友可加入 Zoom/Meet、有独立管理界面、在 Slack/Teams 中跨会话携带上下文</h2>
+  <blockquote class="quote"><p>“Bots can now join Zoom, Google Meet, and more. You can ask Bot questions in meetings and even assign it action items… A new interface for managing your Bots… it should proactively flag when it&#x27;s blocked or confused… Bots are more ambiently aware, carry context across conversations.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>值得关注的是产品设计取向——把“被阻塞/困惑时主动上报”“跨会话上下文”“可总结自身贡献”作为一等功能，这正是当前 agent 工程里最难做的信任层。做内部 agent 平台时可借鉴这套可解释性接口设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120598306585989302" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 被称“当前最好的 agent 编排器”，一套配置跑 Claude Code 做工程、Paper 做设计</h2>
+  <blockquote class="quote"><p>“grok bot is the BEST AI agent orchestrator right now… it runs claude code for engineering and paper for design”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>属于社区主观评价，非官方能力说明，仅作参考。可提取的工程思路是“按任务类型路由到不同 agent/工具”，与 Dots 按任务选执行机属同一类编排模式。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120594418231398677" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Google Labs 新实验 Tabletop：共享空间 + 按需生成协作小工具</h2>
+  <blockquote class="quote"><p>“Drop links and files into one shared space, add your crew, and ask Tabletop for whatever you need to create custom spaces on the fly… Interactive road trip maps… Live pickleball brackets… Drag-and-drop seating charts”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>偏消费级协作实验，对 agent 开发直接价值有限；可留意其“自然语言按需生成一次性小组件”的交互范式，是 agent 生成 UI 的一个轻量样本。仅限美国 18+ 候补。</p></div>
+  <div class="item-src">
+    <span class="handle">@GoogleAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120549258692882702" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：3 小时把“视频转可编辑 3D 室内空间”做成 Interior AI 功能</h2>
+  <blockquote class="quote"><p>“Real video-to-3d with my own built headless Blender on a VPS… upload a walkthrough video of your living room… turns it into a walkable 3d space where you can paint your walls, move everything around and get a floor plan… It&#x27;s a quick prototype but it works!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一个可复用的工程模式——在 VPS 上跑 headless Blender 做 3D 资产生成，把“图像模型时代做不到的输入（平面图）”转成结构化 3D 场景。对做多模态管线的开发者，是“模型能力升级后重做旧功能”的典型案例。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120691736657735765" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 预告新按钮样式</h2>
+  <blockquote class="quote"><p>“Sneak peek: new button styles!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无（纯 UI 预告，无技术细节）。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120627337339527507" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 那条 CoT 可监控性研究——它直接影响你如何为 agent 设计审计与拦截层。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 新研究：随训练规模扩大，模型 CoT 越来越难被监控</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Bot 1.0 发布：AI 队友可加入 Zoom/Meet、有独立管理界面、在 Slack/Teams 中跨会话携带上下文</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Grok Bot 被称“当前最好的 agent 编排器”，一套配置跑 Claude Code 做工程、Paper 做设计</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Google Labs 新实验 Tabletop：共享空间 + 按需生成协作小工具</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">levelsio：3 小时把“视频转可编辑 3D 室内空间”做成 Interior AI 功能</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 预告新按钮样式</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-12 07:08 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
