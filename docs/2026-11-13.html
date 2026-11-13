@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-13 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-13</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日最硬的新增信息是 Google 发布 Gemini 4 Hydrogen（定位日常编码/agent 工作流，速度优先），以及 levelsio 把 Interior AI 的 3D 室内编辑推到线上可用；其余多为社区工具与生态杂讯。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="其他">其他</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Gemini 4 Hydrogen 发布：面向日常编码与 agent 工作流的速度型模型</h2>
+  <blockquote class="quote"><p>“Today, we&#x27;re growing the Gemini 4 model series by introducing Gemini 4 Hydrogen. While Gemini 4 Carbon tackles your hardest problems, Hydrogen brings cutting-edge intelligence to everyone — with speed and efficiency for everyday coding and agentic workflows, surpassing Argon on the Artificial Analysis Intelligence Index at its default thinking level, at 2.5x the speed of Gemini 3.8 Flash, with tunable thinking levels built to work alongside Carbon in @antigravity.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方给出的定位是“Carbon 打难题、Hydrogen 打日常与 agent 循环”，并称默认思考档位下在 Artificial Analysis 智能指数上超过 Argon、速度为 Gemini 3.8 Flash 的 2.5 倍，且支持可调思考档位。对工程侧的直接含义是：高频、低延迟的 agent 循环（工具调用、代码补全、批量小任务）可以换用更便宜的档位，把 Carbon 留给难任务；同时已进入 Gemini App、Search、Sheets、AI Studio、Android Studio、Antigravity 与 Gemini for business，落地面较广。注意“超过 Argon”是厂商自述口径，需自行复测。</p></div>
+  <div class="item-src">
+    <span class="handle">@GoogleAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120940683233984862" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Hydrogen 的演示场景：3D 文件检查修补 + 自然语言实时生成可交互代码</h2>
+  <blockquote class="quote"><p>“Hydrogen brings that same speed and first-pass accuracy to live coding by turning natural language into working, interactive code in seconds. See it in action in Geminisland, a demo game where users can prompt to build new 3D voxel structures with Hydrogen on the Gemini API into a shared island in real time.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>两个 demo 值得作为选型参考——一是 3D Medic Managed Agent（检查 3D 文件、导出前抓错并修补），属于“agent 做资产质检”的典型形态；二是 Geminisland（自然语言实时生成体素结构并写入共享岛屿），属于低延迟生成 + 共享状态的组合。若你在做实时协作类 agent 产品，这两个模式可直接借鉴。</p></div>
+  <div class="item-src">
+    <span class="handle">@GoogleAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120940684924403798" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Interior AI 上线 3D 室内编辑：上传壁纸贴到任意墙面/物体、改材质、一键渲染成照片</h2>
+  <blockquote class="quote"><p>“With a 3d model it&#x27;s much easier, so now you can walk around you room, upload a wallpaper texture and add it to any wall or object. And you can set the material of any object too. When you&#x27;re done press [ ✨ Render ] and it becomes a photo!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“视频转可编辑 3D 室内空间”的后续落地版本，新增的是可编辑材质/贴图与渲染闭环，且已明确是线上功能而非 beta。工程上值得注意的点：作者提到“让图像模型正确贴壁纸很痛苦，换成 3D 模型后容易得多”——即把生成难点从 2D 生成转移到 3D 场景编辑 + 最终渲染，是可控性更高的一条路径。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120978774732759163" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Interior AI 增加 3D 悬停样式预览菜单，下一步想把 3D 漫游接视频模型做照片级走查</h2>
+  <blockquote class="quote"><p>“Added this hover [ 🎨 Style ] menu so you can preview styles very quickly in 3d. When you like one you press [ Render ] and you get the photorealistic version! Next I wanna try if I can make it do a walkthrough in 3d and then pump that into a video model like Seedance to make it photoreal too.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>交互设计上，“3D 里快速预览 → 满意再渲染”比“直接出图反复重试”省算力也更符合用户预期，是一个可复用的产品模式。技术路线提示：3D 漫游作为几何/相机控制层，视频模型只负责外观真实感，这种“结构化控制 + 生成模型补质感”的分工，比纯文生视频更可控。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2120926464677720233" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Tabbit 1.21：翻译 PDF 时保留数学公式结构，并优化模型列表与 Agent Mode 启动</h2>
+  <blockquote class="quote"><p>“We tried translating an 1859 math paper in Tabbit. The equations stayed intact. Tabbit 1.21 now preserves the structure of math formulas when translating PDFs.” / “A few other things in 1.21: you can hide the AI models you never use, move your favorites to the top, and spend less time waiting for Agent Mode to start.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>公式结构在 PDF 翻译中保真是长期痛点（LaTeX/公式块被拍平成乱码），若确实稳定，对读论文/技术文档的翻译流水线有直接价值。其余是常规体验优化：模型列表可隐藏与置顶、Agent Mode 启动等待缩短。建议用自己的公式密集 PDF 实测后再纳入工作流。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121125910154031566" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="其他">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-zinc">其他</span>
+  </div>
+  <h2 class="item-title">awesome-vibe-coding-websites 开源：收录数百个模型生成网站成品与完整提示词，便于横向对比</h2>
+  <blockquote class="quote"><p>“今天，我的 Vibe Coding 网站集合正式开源！……以后大家可以在 awesome-vibe-coding-websites 这个项目中看到最新模型开发的网站成品和完整提示词啦，已经收录了几百个网站模板，还能快速对比不同模型的开发效果。”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>价值在于“同一提示词 + 多模型成品”的对照样本，可作为前端生成类模型选型的参考集；也可当作提示词模板库。注意这是社区个人整理，样本覆盖与评测方法未标准化，结论需自行复核。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121127902418739376" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">社区反馈：Claude 账号出现封禁，Pro 与 Max 均有波及</h2>
+  <blockquote class="quote"><p>“几个同事的 Claude 账号刚被封了，不仅是 Max，Pro 也没能幸免。。我的 Pro 目前还苟着，之前一直卡在 Apple Review 没能升到 Max，现在也不敢升了 🫠”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>属于单点社区反馈，无官方说明，不能据此推断封禁策略。但对依赖单一模型账号跑生产 agent 的团队是一个提醒：把关键流程做成可切换供应商（多模型路由/本地模型兜底），并保留可迁移的会话与配置，降低账号层面的单点风险。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121098738903261661" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Gemini 4 Hydrogen 的发布贴——它是唯一会直接影响你 agent 循环成本与延迟的模型侧新增信息。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Gemini 4 Hydrogen 发布：面向日常编码与 agent 工作流的速度型模型</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Hydrogen 的演示场景：3D 文件检查修补 + 自然语言实时生成可交互代码</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Interior AI 上线 3D 室内编辑：上传壁纸贴到任意墙面/物体、改材质、一键渲染成照片</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Interior AI 增加 3D 悬停样式预览菜单，下一步想把 3D 漫游接视频模型做照片级走查</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Tabbit 1.21：翻译 PDF 时保留数学公式结构，并优化模型列表与 Agent Mode 启动</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">awesome-vibe-coding-websites 开源：收录数百个模型生成网站成品与完整提示词，便于横向对比</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">社区反馈：Claude 账号出现封禁，Pro 与 Max 均有波及</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-13 06:42 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
