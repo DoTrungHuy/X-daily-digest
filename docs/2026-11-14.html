@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-14 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-14</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里最值得工程侧注意的是两件事：Claude Code 桌面端开放主题 mods（可编程外观层），以及 Tailscale 用 Compose 标签直连 Docker 容器、不暴露端口。其余多为社区情绪与硬件/航天动态，信号偏杂。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>38 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Claude Code 桌面端支持主题 mods：改配色、加动态背景，本地会话先可用</h2>
+  <blockquote class="quote"><p>“You can now build custom themes for Claude Code on desktop with mods! Change the colors, add an animated background, and make it your own.” / “Themes work in local sessions in the desktop app today, support for cloud sessions is coming soon.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>说明 Claude Code 桌面端正在开放一层可定制的 UI/插件面（mods + theme-examples 插件），对做内部工具皮肤、演示环境或团队统一配置的人有直接价值；注意云会话暂不支持，别在云端流程里先依赖它。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121392666244186327" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2121392667666125167" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Tailscale 直连 Docker 容器：只加 Compose 标签，不发布任何端口</h2>
+  <blockquote class="quote"><p>“You can reach your Docker containers over Tailscale without publishing a single port, just by adding labels to your Compose file” / “DockTail proxies to each container&#x27;s Docker network IP / Uses native Tailscale Services, not per-container devices / Apps don&#x27;t take up separate Tailscale device slots”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对自托管 agent、内网服务、家庭实验室很实用——省掉端口映射与反代配置，且不占用 Tailscale 设备名额；适合把多个小服务塞进一台机器统一暴露给私有网络。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121449548665245802" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2121449560698667016" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 工程博客：安全评估的 10 条设计/执行/报告建议</h2>
+  <blockquote class="quote"><p>“Safety evaluations are critical for understanding whether a model is ready to deploy, which safeguards to build for it, and where to focus training and research. On our Engineering Blog, we offer 10 recommendations for how to design, run and report them.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>做 agent 上线前评估、红队流程或内部评测报告的人可直接对照这 10 条搭 checklist；属于方法论而非新模型消息，适合作为团队评审模板的参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121317227618340990" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">H100 租赁价一年涨 58%：从 $1.96/小时到 $3.10/小时</h2>
+  <blockquote class="quote"><p>“We started shipping the Nvidia H100 in 2022. A year ago it rented for $1.96/hour. Today: $3.10. +58%, on a chip that was supposed to be obsolete by now. So much for GPU depreciation.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做推理成本估算、训练预算或自建 vs 租用决策的人是反向信号——旧卡残值假设需要重估；单条推文数据，建议自行核对供应商报价再用于预算。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121372048048161223" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：Interior AI 3D 现在“只给一张户型图”也能生成</h2>
+  <blockquote class="quote"><p>“Interior AI 3D works with &quot;just&quot; a floor plan now... Some weird things like the big I guess sliding windows to outdoor garden are missing, and bath tub is just a box... But it&#x27;s very promising”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前 3D 室内编辑主题的后续进展（新增输入形态：户型图→3D），不是重复发布；对做图像/视频→3D 重建管线的人，可关注其失败模式（细粒度物件缺失、结构件简化），提示后处理仍需人工或更强约束。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121291126803980696" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：5 分钟在 VPS 上从漫游视频重建 3D，并采用 three.js 光照探针</h2>
+  <blockquote class="quote"><p>“And this is with lighting probes as suggested by @threejs @mrdoob ... Pretty good for an AI reconstruction of a walk through video generated in 5 minutes on a VPS I think!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>给出一个可复现的技术组合参考（视频→3D 重建 + three.js 光照探针提升观感），对做 Web 端 3D 展示、房产/室内 demo 的工程实现有借鉴；成本口径为单条自述，未给硬件细节。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121263608310948173" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">开源项目周榜片段：opencode-manager（自托管 OpenCode 指挥台）与 isponsorblocktv</h2>
+  <blockquote class="quote"><p>“opencode-manager: A self-hosted command center for OpenCode • Combines OpenCode sessions, git, terminal” / “isponsorblocktv: SponsorBlock client for all YouTube TV clients”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>opencode-manager 对同时跑多个编码 agent 会话、想统一管理 git 与终端的人有参考价值（MIT）；isponsorblocktv 是 GPL-3.0 的实用小工具。均为榜单转述，未验证成熟度。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121467181909344417" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2121467196341928199" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Claude Code 桌面端主题 mods 那条——它是唯一明确改变开发者日常工作面（可定制 UI 层）的产品更新。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Claude Code 桌面端支持主题 mods：改配色、加动态背景，本地会话先可用</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Tailscale 直连 Docker 容器：只加 Compose 标签，不发布任何端口</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Anthropic 工程博客：安全评估的 10 条设计/执行/报告建议</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">H100 租赁价一年涨 58%：从 $1.96/小时到 $3.10/小时</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">levelsio：Interior AI 3D 现在“只给一张户型图”也能生成</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">levelsio：5 分钟在 VPS 上从漫游视频重建 3D，并采用 three.js 光照探针</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">开源项目周榜片段：opencode-manager（自托管 OpenCode 指挥台）与 isponsorblocktv</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-14 06:19 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
