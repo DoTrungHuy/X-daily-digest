@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-15 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-15</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里真正可用的技术信号集中在两处：一是 Interior AI 把“用户上传家具照片→30 秒内转 3D 物体”和“导入 IKEA 全目录”接进 3D 室内重建流程；二是 Grok Bot 在视频会议场景被反馈“几乎不耗 token”，与 Dots、Claude Duet 形成横向对比。其余大量推文为加密喊单、Jensen Huang 传闻与无上下文短句，不纳入。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>33 推文</span><span class="sig sig-weak">信号 中偏弱（可用技术条目少，且多为产品进展而非可复现工程细节）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Interior AI 新增“上传家具照片→30 秒生成 3D 物体”，并已导入 IKEA 全目录</h2>
+  <blockquote class="quote"><p>“Letting users just upload their own furniture they want as a photo and then turn it into a 3d object in less than 30 seconds with an image-to-3d model ofcourse!” / “I imported the entire catalogue of @IKEA in 3d into Interior AI after seeing someone do the same yesterday”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“3D 室内编辑/悬停预览”主题的后续新增：把家具资产来源从自建库改为“用户照片 + 品牌目录导入”，绕开构建巨型家具库的成本。对做 3D/资产管线的开发者，值得关注 image-to-3D 的延迟指标（&lt;30s）与目录批量导入的可行性。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121712181125525706" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2121661063007773081" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 视频会议场景被反馈“几乎不消耗 token”，更新当天即被使用</h2>
+  <blockquote class="quote"><p>（韩文）“그록봇에 화상회의에 초대할수 있는데 토큰을 거의 먹지 않는다고 합니다. 이건 엄청난 기능인데… 오늘 업데이트 되자마자 사용했습니다. 성능은 대박이었습니다.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若“会议中低 token 消耗”成立，说明其上下文处理策略与常规全量转录不同，对做会议 agent 的成本模型有参考价值；但这是单一用户主观反馈，无量化数据，不宜当结论。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121587902841020922" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">用户横向对比 agent 产品：Grok Bot 是唯一留下来的，Dots 因 bug 与频繁确认暂停，Claude Duet“太早期”</h2>
+  <blockquote class="quote"><p>“Grok Bot is the only one that stuck / ChatGPT Dots: i&#x27;ve literally paused mine due to bugs and constant refusals or annoying prompts to approve. Plus no independent app. / Claude Duet: was excited, didn&#x27;t do much at all, way too early”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前 Dots 多机控制、Bot 1.0 等主题的对照反馈，指向一个工程痛点：审批弹窗频率与独立客户端缺失会直接导致用户流失。做 agent 产品时，权限确认的粒度设计比能力清单更影响留存。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121656933002408008" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">479 个站点/应用 Logo 图标集，单个 SVG 均小于 1KB（平均 &lt;534 字节）</h2>
+  <blockquote class="quote"><p>“479 icons, each under 1KB, averaging under 534 bytes / SVG versions of your favourite website and app logos / 512x512 viewbox, fits a circle of radius 256”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可直接用于项目里的品牌图标位，体积约束明确、viewBox 统一，省去自己裁切与压缩；注意商用授权需自行核对来源页面。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121851949578645627" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Gemini 接入 Google Wallet，用于个人财务洞察（即时图表、发现订阅涨价、按去年实际支出做预算）</h2>
+  <blockquote class="quote"><p>“New in Gemini: Connect Google Wallet for personal finance insights / making instant charts to visualize your spend / finding sneaky subscription price hikes / making a holiday budget based on what you actually spent last year”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>属于“助手 + 结构化个人数据源”的接入范式，可作为 agent 接第三方数据源时的权限与场景设计参考；对开发者本身无直接工程动作。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121755282326102417" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Cyber 团队就 Daybreak 公开征集反馈：模型、codex 插件、红蓝队访问、文档与防御工厂</h2>
+  <blockquote class="quote"><p>“Cyber team wants your feedback on Daybreak. Models, codex plugins, blue/red access, documentation, red teaming &amp; defense factory... What can we do better or improve?”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与已发过的“OpenAI 11/12 Cyber at the Frontier”属同一安全线，但这是新信息：Daybreak 已进入征集反馈阶段，且明确包含 codex 插件与红蓝队访问。做安全评估/红队工具链的可关注其文档与插件形态。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121845965997101118" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：问 Claude“100% 免费方案”，得到 OBS + 摄像头圆形遮罩，并直接生成了遮罩</h2>
+  <blockquote class="quote"><p>“Noo I asked Claude what to use 100% free and it said OBS with a circle mask on the webcam / It even made the circle mask for me 😃”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>小但典型——“选型建议 + 直接产出可用资产”一步完成，是当前编码 agent 的实用形态；对直播/录屏场景可直接复用该组合。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121686411900551270" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">levelsio 观点：单人开发者与大公司在可用性上“基本对等”，举 Revolut 生产库监控失效为例</h2>
+  <blockquote class="quote"><p>“big companies like Revolut even make stupid mistakes like not having monitoring working on their main production databases! … anyone can go down, and it&#x27;s pretty equal for a well managed solo founder as it is for a big company”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>论点本身不新，但给出了具体反例；对独立开发者是运维投入的决策参考，注意这是个人观察而非统计结论。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121658404850872676" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Interior AI 的“照片→30 秒 3D 家具 + IKEA 目录导入”（ITEM1），它是唯一带明确工程指标与后续迭代路径的条目。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Interior AI 新增“上传家具照片→30 秒生成 3D 物体”，并已导入 IKEA 全目录</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Grok Bot 视频会议场景被反馈“几乎不消耗 token”，更新当天即被使用</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">用户横向对比 agent 产品：Grok Bot 是唯一留下来的，Dots 因 bug 与频繁确认暂停，Claude Duet“太早期”</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">479 个站点/应用 Logo 图标集，单个 SVG 均小于 1KB（平均 &lt;534 字节）</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Gemini 接入 Google Wallet，用于个人财务洞察（即时图表、发现订阅涨价、按去年实际支出做预算）</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Cyber 团队就 Daybreak 公开征集反馈：模型、codex 插件、红蓝队访问、文档与防御工厂</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio：问 Claude“100% 免费方案”，得到 OBS + 摄像头圆形遮罩，并直接生成了遮罩</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio 观点：单人开发者与大公司在可用性上“基本对等”，举 Revolut 生产库监控失效为例</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-15 06:28 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
