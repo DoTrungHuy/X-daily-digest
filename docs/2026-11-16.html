@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-16 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-16</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里真正可用的技术信号集中在三处：Codex 团队疑似修复“model at capacity”报错、Rust 重写的 Docker Desktop 替代品（启动容器快约 80 倍）、以及 Qwen4-Max 进入 Arena 的横向评测。其余多为闲聊与转发，价值有限。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>31 推文</span><span class="sig sig-weak">信号 弱（可用条目少，且多数缺少可核实的细节与作者身份）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Codex 团队疑似修复“model at capacity”容量报错</h2>
+  <blockquote class="quote"><p>“Codex team might have actually fixed the &quot;model at capacity&quot; errors that have been pestering you.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若你近期在 Codex 上频繁遇到容量报错，值得重试验证；但原文用词是“might have”，属未确认修复，不要据此调整生产依赖。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122206990101536852" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Rust 重写的 Docker Desktop 替代品：启动容器快约 80 倍</h2>
+  <blockquote class="quote"><p>“Docker Desktop, but written in Rust and about 80x faster to start a container. Your docker CLI, Compose and buildx keep working; the first launch sets up a kiri context.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>卖点是兼容现有 docker CLI / Compose / buildx，仅通过首次启动创建 kiri context 切换，迁移成本低；适合本地开发迭代频繁的场景。注意“80x”为项目方自述，未给出基准方法。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121976520197746784" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">Qwen4-Max 进入 Arena，Agent Arena 上比 Qwen3.8-Max 净提升 7.5%</h2>
+  <blockquote class="quote"><p>“Qwen4-Max outperforms Qwen3.8-Max by +7.5% net on Agent Arena, making Alibaba #5 lab overall.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 agent 选型的团队，这是一个可纳入对比的新候选；同帖附有评测视频，覆盖 3D 场景、游戏、网页设计与交互式讲解，并与 Opus、GPT、Kimi、Fable 对比。注意榜单口径与“净提升”定义未在材料中说明。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122161519110844686" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Modern Web Guidance：把人工审核的 Web 标准注入 AI 编码工具</h2>
+  <blockquote class="quote"><p>“frontier AI models... often rely on outdated web coding patterns &amp; legacy workarounds since they&#x27;re trained on decades of old tutorials... Modern Web Guidance embeds human-vetted web standards, Baseline browser targets, and accessibility rules directly into your fave AI coding tools.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>针对 vibe coding 产出的典型问题（2000 年代 hacky CSS、不可访问的 div 堆叠、昂贵的 scroll 事件监听），思路是用 Baseline 浏览器目标 + 可访问性规则约束生成结果。适合做前端 agent 的团队参考其规则组织方式。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2121739790647509178" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 新科学博客首帖：物理学家用 GPT-6 Astra 推导标准模型的候选格点定义</h2>
+  <blockquote class="quote"><p>“Physicist Nathaniel Craig shares how he worked with GPT-6 Astra to develop a candidate lattice definition of the Standard Model. It’s the first post on our new science blog.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>值得关注的是“新科学博客”这一渠道本身——模型在科研工作流中的角色开始以第一方形式对外叙述；具体技术内容需读原文，材料中未给出结论性细节。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122123437141553630" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">WiFi 审计工具：抓握手包与 PMKID、破解自有网络 AP 密码</h2>
+  <blockquote class="quote"><p>“Captures WiFi traffic, find clients, grab handshakes and PMKIDs, and crack access point passwords on networks you own.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>定位是自有网络的安全自测（原文明确限定“networks you own”）；可用于验证自家 WiFi 口令强度与 WPA 配置。仅限授权环境使用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122201503998136325" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Rust 版 Docker Desktop 替代品那条——它是唯一对日常开发流程有直接、可验证影响的东西。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Codex 团队疑似修复“model at capacity”容量报错</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Rust 重写的 Docker Desktop 替代品：启动容器快约 80 倍</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Qwen4-Max 进入 Arena，Agent Arena 上比 Qwen3.8-Max 净提升 7.5%</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Modern Web Guidance：把人工审核的 Web 标准注入 AI 编码工具</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenAI 新科学博客首帖：物理学家用 GPT-6 Astra 推导标准模型的候选格点定义</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">WiFi 审计工具：抓握手包与 PMKID、破解自有网络 AP 密码</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-16 06:25 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
