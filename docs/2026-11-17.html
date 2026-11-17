@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-17 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-17</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料以 OpenAI 的科研/医疗/安全三条线为主轴，辅以 levelsio 的开源替代品与“AI 去漂移”观察；Grok Bot 出现一条高情绪价值的真实使用叙事，但需谨慎对待。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>38 推文</span><span class="sig sig-mid">信号 中（官方账号信息密度高，但多为延伸公告而非全新发布）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 扩大前沿模型免费额度至全球最多 20 万名科学家，11/23 开放申请</h2>
+  <blockquote class="quote"><p>“We&#x27;re expanding free access to our frontier models for up to 200,000 scientists worldwide, with training and support. Applications open Nov. 23. By default, we don&#x27;t use data shared through the program to train our models.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做科研工具链、学术 agent、数据合规的开发者是明确信号——默认不用于训练、带培训支持，适合作为学术合作/评测数据来源的合规参照；申请窗口 11/23 起，可提前准备项目材料。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122377585523126615" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 公布 ChatGPT for Academic Researchers 研究：1800+ 参与者自报生产力接近翻倍</h2>
+  <blockquote class="quote"><p>“Scientists reported nearly doubling their productivity with AI in our study of more than 1,800 participants... Using privacy-preserving methods, we looked at how they use ChatGPT across their work—from developing ideas to analyzing data and writing code.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>注意这是自报数据而非受控实验，不宜直接外推；“隐私保护方法”下的使用行为分析，对做 agent 遥测/隐私设计的人有参考价值。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122380010287960095" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">ChatGPT for Healthcare 扩展：更强 computer-use agent、临床问答与 20+ 医疗插件</h2>
+  <blockquote class="quote"><p>“ChatGPT for Healthcare is advancing with more capable computer-use agents, stronger clinical answers, and 20+ new healthcare plugins... putting our models to work across prior authorizations, referrals, discharge planning, and patient outreach.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>computer-use agent 落地到“事前授权/转诊/出院规划”这类高表单、高流程场景，是 agent 工程里典型的“长流程 + 系统集成”难题；做垂直 agent 的可关注其插件接口与工作流拆解方式。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122465625109090646" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 与 Apollo Research、METR、Transluce、Goodfire 开展“嵌入式评估”，外部专家深度访问内部模型</h2>
+  <blockquote class="quote"><p>“We&#x27;re working with @ApolloResearch, @METR_Evals, @TransluceAI, and @GoodfireAI on embedded assessments: giving outside experts deep access to our internal models and systems to investigate alignment and test our safeguards.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>分工值得记录——Transluce 审后训练对齐评估的质量与覆盖并补测试（试点拟 2027 扩大），Goodfire 派可解释性研究员用其平台分析模型内部，聚焦训练过程监控与调试。对做 eval/可解释性工具的人是需求侧信号。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122359930628063248（及同线程" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">levelsio 开源 SignuDoc：DocuSign 报价 $8,100/年，自建一键部署到 Vercel、$0/席位</h2>
+  <blockquote class="quote"><p>“DocuSign wants $8,100/yr from a 15-person team just to sign PDFs. So I built SignuDoc: open source, one-click deploy to your own @vercel account, $0 per seat. White-label branding, full audit trails, tamper-evident seals and your documents never leave your cloud.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>典型“SaaS 高价 → 开源自托管”路径；白标、审计轨迹、防篡改封印是电子签名的合规要点，自托管意味着文档不出自家云。适合小团队评估替代方案，也适合作为全栈开源项目模板。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122394902168473975" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">levelsio 提出“The great AI degrifting has begun”（AI 去漂移/去水分开始）</h2>
+  <blockquote class="quote"><p>“The great AI degrifting has begun.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>仅为一句判断，无展开论证；结合其同日“连 Sam Parr、ShaanVP 都不想待在软件行业”的说法，可视为对 AI 泡沫/软件业收缩情绪的观察，不宜当作事实结论引用。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122437479756407215" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">用户自述 Grok Bot 读病历、检索最新癌症疗法与试验、找到斯坦福专家并起草邮件，随后接到医院收治电话</h2>
+  <blockquote class="quote"><p>“Grok Bot read my wife&#x27;s medical records, researched the latest cancer treatments and trials, found the top specialist at Stanford and drafted the emails. Hours later, Stanford called us to start intake.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>展示 agent 在“多源检索 + 权威匹配 + 对外沟通起草”链条上的潜力；但属单用户自述、无法独立核实，且涉及敏感医疗数据交由 agent 处理，隐私与准确性风险需自行评估，不应作为产品能力证据。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122512355062161744" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的“20 万科学家免费额度 + 默认不用于训练”公告——它是本轮材料里唯一有明确时间节点和可操作性的官方信息。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 扩大前沿模型免费额度至全球最多 20 万名科学家，11/23 开放申请</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">OpenAI 公布 ChatGPT for Academic Researchers 研究：1800+ 参与者自报生产力接近翻倍</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">ChatGPT for Healthcare 扩展：更强 computer-use agent、临床问答与 20+ 医疗插件</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">OpenAI 与 Apollo Research、METR、Transluce、Goodfire 开展“嵌入式评估”，外部专家深度访问内部模型</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">levelsio 开源 SignuDoc：DocuSign 报价 $8,100/年，自建一键部署到 Vercel、$0/席位</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">levelsio 提出“The great AI degrifting has begun”（AI 去漂移/去水分开始）</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">用户自述 Grok Bot 读病历、检索最新癌症疗法与试验、找到斯坦福专家并起草邮件，随后接到医院收治电话</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-17 07:53 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
