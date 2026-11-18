@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-18 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-18</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日主线是 OpenAI 正式发布 GPT-6.2 Astra / Sol 双模型并接入 ChatGPT Work、Codex 与 API，同时官方罕见承认“聪明但不好用”；另一条值得开发者注意的是 Google 把 Stitch 设计稿直接转成 React 组件接进编码 agent。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-strong">信号 中（模型发布信号强，但多数条目为单条推文、缺少细节与独立验证）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">OpenAI 发布 GPT-6.2 Astra 与 Sol，Astra 主打网络安全能力，Ultrafast 首次下放 Pro 200</h2>
+  <blockquote class="quote"><p>“GPT-6.2 Astra and Sol are now available. Super efficient and built to perform where it counts—the real world.” / “GPT-6.2 Astra is our most capable model ever for cyber. It jumps 22 points over GPT-6 Astra on ExploitBench Internal Port.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>两个模型已进入 ChatGPT Work、Codex（Plus/Pro/Enterprise/Edu）与 API（gpt-6.2-astra / gpt-6.2-sol），Ultrafast 对 Pro 500 双模型开放、对 Pro 200 先开放 Sol。安全侧需注意：因 cyber 能力提升，高风险网络安全请求的拒答更严格，官方称正推动 Daybreak 上的授权防御者获得低拒答访问——做安全 agent 的团队应提前评估拒答率变化。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122750124543926515" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2122750133133791592" target="_blank" rel="noopener">原文2</a><a class="src" href="https://x.com/i/web/status/2122750135608528984" target="_blank" rel="noopener">原文3</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama 表态：新模型“很聪明但不好用”，可用性将列为后续版本优先项</h2>
+  <blockquote class="quote"><p>“Although the new models are very smart, we have more work ahead of us on making the models nice to work with, and will prioritize that for upcoming releases.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是官方对“能力 vs 手感”差距的明确承认。若你在做 agent 编排或产品集成，短期内应把提示词鲁棒性、重试与回退策略当作一等公民，而不是假设模型行为稳定。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122798042734633452" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">OpenAI 员工解释 6.2 Sol/Astra 口碑分化：部分演示视频是上周录制，近 3-4 天模型已大改且未重测</h2>
+  <blockquote class="quote"><p>“we gave a few folks access a while ago and then made a lot of changes in the last 3-4 days and I&#x27;m pretty sure no re-testing was done within those days and the videos were produced last week.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>看到评测/演示与自身体验不一致时，先确认评测时间点与模型版本。对做模型选型的团队：把“版本 + 日期”写进评测记录，避免用过期视频做决策。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122929634916679820" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google：在 Antigravity 中用 Gemini 4 把物理原型变成可用设备</h2>
+  <blockquote class="quote"><p>“Turn physical prototypes into functional devices with Gemini 4 in Antigravity.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>硬件/嵌入式方向的开发者可关注这条路径——从原型到“可运行设备”的生成式工作流，但目前只有一句宣传语，无技术细节，建议等文档再评估。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122799029037695007" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google Stitch 设计稿可直接转成可运行 React 组件，且不离开编码 agent</h2>
+  <blockquote class="quote"><p>“Turn your Google Stitch designs into working React components without leaving your coding agent”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对前端与 agent 工作流是实用衔接点：设计→组件→落库的链路被压缩到 agent 会话内。适合做内部工具/原型快速验证；生产可用性需自行验证生成组件的可维护性。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122930556937904573" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">levelsio：AI 让“利基 SaaS”策略失效，大小公司能力边界被抹平</h2>
+  <blockquote class="quote"><p>“With AI, big tech companies can easily fill any niche, or be general at the same time... Everyone&#x27;s been checkmated by big tech and big AI”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对独立开发者/小团队的现实提醒：单纯靠“niche down + 收 1% 市场”的护城河在变薄。可迁移的方向是数据/分发/工作流深度集成与合规壁垒，而非功能本身。注意这是个人观点，非数据结论；作者本人也在下一条中承认对“会有幸存者”这部分并不确定。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122807280198463986" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2122818282650841495" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Notion 预告移动端会议记录新方式</h2>
+  <blockquote class="quote"><p>“A better way to take meeting notes on the go.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>仅预告，无功能细节。对做会议/agent 记录类产品的团队可作为竞品动向跟踪，暂无可执行信息。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2122810875132498238" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 OpenAI 的 GPT-6.2 Astra/Sol 发布串——它同时决定了模型能力上限、API 可用性与安全拒答策略这三件工程上最要紧的事。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI 发布 GPT-6.2 Astra 与 Sol，Astra 主打网络安全能力，Ultrafast 首次下放 Pro 200</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">sama 表态：新模型“很聪明但不好用”，可用性将列为后续版本优先项</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 员工解释 6.2 Sol/Astra 口碑分化：部分演示视频是上周录制，近 3-4 天模型已大改且未重测</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Google：在 Antigravity 中用 Gemini 4 把物理原型变成可用设备</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Google Stitch 设计稿可直接转成可运行 React 组件，且不离开编码 agent</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">levelsio：AI 让“利基 SaaS”策略失效，大小公司能力边界被抹平</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 预告移动端会议记录新方式</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-18 07:26 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
