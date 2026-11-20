@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-20 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-20</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里真正有工程价值的只有两条：nginx 五个内存破坏漏洞（nginx2root，未认证可 RCE）的公开分析，以及 SenseNova-Loop-9B 用“复用计算”替代堆层数的开源权重模型设计。其余多为产品宣传、非技术内容或与已发布主题重叠，按“材料不足就少写”处理。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>5 条</span><span>40 推文</span><span class="sig sig-weak">信号 弱（技术密度低，且抓取结果中大量账号 handle 缺失、互动数据为空）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">nginx 五个内存破坏漏洞（nginx2root）：未认证攻击者可远程执行代码</h2>
+  <blockquote class="quote"><p>“Five memory corruption bugs in nginx, called nginx2root, can let an unauthenticated attacker run code on a server. Here’s how they work.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是今日唯一直接影响生产环境的安全条目。此前已发过“NGINX 严重漏洞靠 VPS 自动升级修复”的运维视角，本条是新增的漏洞机理层面信息（五个内存破坏点、未认证前置条件）。建议：核对自建 nginx 版本与补丁状态，检查是否暴露在公网、是否有 WAF/限流兜底；对自编译或容器内固定版本的 nginx 尤其要手动确认，别只依赖宿主自动升级。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2123659503123980374" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">SenseNova-Loop-9B：共享 24 层中段跑两遍，用“复用计算”换深度而非堆参数</h2>
+  <blockquote class="quote"><p>“Its shared 24-layer middle block runs twice, producing 56 layer computations while storing 32 distinct layers... give a ~9B model more processing depth without expanding its parameter count in the usual way.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一个值得关注的架构取舍——用循环复用中间层换取有效深度，存储 32 层但执行 56 层计算，本质是用推理算力换参数效率。附带 512K 多模态上下文、编码/推理/多步工具调用，并给出 Transformers、LightLLM、SGLang、vLLM 四种部署路径。对做 agent 推理成本优化的人，可作为“小模型+长上下文+多步工具调用”的候选基线来实测，但注意循环层通常带来推理延迟上升，需按吞吐/延迟权衡。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2123649420969562268" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic CEO Dario Amodei 就 IPO 发表完整声明：安全优先、不向商业或政治压力让步</h2>
+  <blockquote class="quote"><p>“we will pace the training and deployment of AI systems, taking as long as is necessary to have confidence that they are safe and will remain under human control. We will not bend to either business or political pressure.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>此前已发过“IPO 定价 $83/股、明日 Nasdaq 交易”的事实条目，本条新增的是 CEO 的公开承诺文本，其中有两处对开发者有实际含义：一是明确“按需放慢训练与部署节奏”，意味着模型发布节奏可能受安全评估约束；二是提出“race to the top”框架。可作为判断 Anthropic 后续模型发布与 API 稳定性预期的参考，无直接工程动作。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2123461658890686863" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Dario 回应“是否缩减 SpaceX 算力合同”：称该算力质量高、合作愉快</h2>
+  <blockquote class="quote"><p>“we&#x27;re finding that compute to be high quality. We&#x27;re enjoying working with SpaceX.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>算力供应链的一条侧证——前沿实验室的算力来源正在多元化到非传统供应商。对做容量规划的团队，提示“算力供给方”不再只有几家云厂商，但本条无具体价格、规模或合同条款，不足以做决策依据。</p></div>
+  <div class="item-src">
+    <span class="handle">@elonmusk</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2123458524999307387" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 发布“X 垃圾账号名单”：3,728 个持续发 AI 自动回复的账号，附证据与一键屏蔽</h2>
+  <blockquote class="quote"><p>“3,728 𝕏 accounts that continuously spam automated AI replies to artificially farm engagement... 498 already suspended by 𝕏 - continuously updated”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与已发布的“AI 回复机器人”话题相比，本条新增的是可用的产物：带证据、一键全屏蔽、持续更新的 JSON API 和纯文本用户名列表。对做 agent 自动发帖/自动回复类产品的人是反面教材——平台侧正在用“被大号屏蔽即降权”的机制惩罚自动化互动，产品设计上应避免无差别自动回复。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2123388955143893122" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 nginx2root 那条——它是唯一需要你今天就去核对生产环境的事。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">nginx 五个内存破坏漏洞（nginx2root）：未认证攻击者可远程执行代码</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">SenseNova-Loop-9B：共享 24 层中段跑两遍，用“复用计算”换深度而非堆参数</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Anthropic CEO Dario Amodei 就 IPO 发表完整声明：安全优先、不向商业或政治压力让步</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Dario 回应“是否缩减 SpaceX 算力合同”：称该算力质量高、合作愉快</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">levelsio 发布“X 垃圾账号名单”：3,728 个持续发 AI 自动回复的账号，附证据与一键屏蔽</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-20 07:12 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
