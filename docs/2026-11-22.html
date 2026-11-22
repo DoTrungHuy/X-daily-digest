@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-22 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-22</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料以消费级产品动态为主：Cursor 开放官方插件生态、Grok Bot 完成一次真实退款追讨、levelsio 的 AI 回复机器人屏蔽方案进入“申诉+浏览器扩展”阶段；另有 Antigravity 并行 agent 做 3D 重建、ChatGPT/Codex 桌面端更新后的反馈征集。硬核模型/基准类新增信息较少。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>40 推文</span><span class="sig sig-mid">信号 中（产品与工程实践信号较多，缺少可验证的模型/基准级新信息）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Cursor 开放官方插件，让编码 agent 接入开发工具与 SaaS 工作流</h2>
+  <blockquote class="quote"><p>“Add official Cursor plugins so your coding agent can work with dev tools, SaaS integrations, and team workflows.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>插件化意味着 agent 的能力边界从“读代码”扩展到“调外部系统”，工程上要开始考虑插件权限、凭据隔离与审计日志；对团队而言，这是把 agent 接入 CI、工单、监控等既有流程的入口。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124332545227870316" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">Grok Bot 端到端追回 Amazon 历史漏退款 $590.62</h2>
+  <blockquote class="quote"><p>“I just had Grok @bot go through all of my Amazon orders and look for refunds that were never issued. It found $590.62 in missing refunds over several years, opened a support chat, talked to customer service, and got them to agree to issue the refunds.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“长时程 + 跨系统 + 有外部副作用”的 agent 任务样本：批量读取订单、做规则判断、发起客服会话并完成谈判。工程上值得关注的是失败回滚与人工确认点如何设计——这类任务一旦误判，代价是真实的账户操作。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124314532126323042" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：AI 回复机器人屏蔽进入第二阶段——申诉机制 + 开源浏览器扩展</h2>
+  <blockquote class="quote"><p>“i didn&#x27;t want to spend tokens on blocking everyone from the list or risk getting flagged by x for automation, so i built an extension for chrome and firefox to hide all the ai reply content from this list (refreshes the list every 6 hours)”；“First appeal oath in! ✅ Removed from the block list”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>相比此前“名单+一键屏蔽”，新增的是可申诉的纠错闭环与不依赖平台自动化的客户端侧过滤（每 6 小时刷新名单、开源可自建）。这是“社区治理工具”的常见演进路径：先做名单，再做申诉，最后做低副作用的分发方式。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124173241589854337" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2124139645587841226" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Google Antigravity：用并行 agent 把一个下午的视频运动转成 3D 物体</h2>
+  <blockquote class="quote"><p>“Turn video motion into 3D objects in one afternoon with parallel agents in Google Antigravity.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把“多 agent 并行”落到具体管线（视频→运动→3D 资产），比抽象的能力宣称更有参考价值；如果要做类似流水线，关键在子任务切分粒度与中间产物的可校验性。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2123856020963491924" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">ChatGPT/Codex 桌面端昨日更新后公开征集问题反馈，团队称下一个大版本已在准备</h2>
+  <blockquote class="quote"><p>“Team is already preparing another big update, but how are things since yesterday&#x27;s update to the ChatGPT/Codex desktop app? What still requires attention and is not quite there?”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>官方主动收集回归问题，说明桌面端仍在快速迭代期；重度使用者值得把遇到的复现步骤整理后提交，比事后抱怨更可能进入修复队列。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124322968499282388" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">Notion 强调“公司级 source of truth”，社区反馈集中在 context 系统</h2>
+  <blockquote class="quote"><p>“We&#x27;ve invested significantly over the year building and maintaining our company Notion as a source of truth across the whole business. It is a must now”；用户侧：“context systems win... has completely revamped how i operate across all my ai tools”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>agent 落地的瓶颈正从模型转向上下文供给——把知识库做成 agent 可读写的结构化存储，比换模型更能提升产出稳定性。做内部 agent 的话，先把“事实来源”收敛到单一位置。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124200058543641048" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2123878144100978991" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Graphic Walker：开源 Tableau 替代，CSV/JSON 拖拽出图，无需写代码</h2>
+  <blockquote class="quote"><p>“Graphic Walker is an open-source Tableau alternative that turns CSV or JSON files into drag-and-drop charts, no code needed; open the online playground and load a file to start.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>适合做内部数据看板的轻量前端，或作为 agent 输出结果的可视化层；开源意味着可以嵌进自有产品而不受商业 BI 授权约束。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124381115544998351" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Cursor 官方插件那条——它决定了你的编码 agent 能不能真正接进团队既有工具链。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Cursor 开放官方插件，让编码 agent 接入开发工具与 SaaS 工作流</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">Grok Bot 端到端追回 Amazon 历史漏退款 $590.62</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">levelsio：AI 回复机器人屏蔽进入第二阶段——申诉机制 + 开源浏览器扩展</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Google Antigravity：用并行 agent 把一个下午的视频运动转成 3D 物体</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">ChatGPT/Codex 桌面端昨日更新后公开征集问题反馈，团队称下一个大版本已在准备</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Notion 强调“公司级 source of truth”，社区反馈集中在 context 系统</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Graphic Walker：开源 Tableau 替代，CSV/JSON 拖拽出图，无需写代码</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-22 06:44 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
