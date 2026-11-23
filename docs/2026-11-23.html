@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-23 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-23</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日可确认的新增信号不多：一条是 Ollama Cloud 上线腾讯混元 Hy4（首个支持视觉与 computer use 的 Hy 系列），一条是 sama 借 OpenAI 预训练透明度发布提出“跨实验室共同上限”的行业规范主张；其余多为旧主题的后续或低信息量内容。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>6 条</span><span>32 推文</span><span class="sig sig-weak">信号 弱（多数推文为无来源转述、情绪化内容或已发布主题的重复）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">腾讯混元 Hy4 上线 Ollama Cloud：770B 总参 / 49B 激活，首个支持视觉与 computer use 的 Hy 模型</h2>
+  <blockquote class="quote"><p>“Hy4 from @TencentHunyuan is now on Ollama Cloud. Hosted in the US with zero data retention 🔒 770B parameters with 49B active per token. It&#x27;s the first Hy model that supports vision and computer use.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>MoE 架构（770B 总参、每 token 激活 49B）+ 视觉 + computer use，官方定位前端/游戏开发、金融研究与估值、办公任务、长链路深度研究。对 agent 开发者而言，可通过 <code>ollama run hy4:cloud</code> 直接调用托管版本，并宣称零数据保留——适合做需要 computer use 的流程原型，但托管在美国，数据合规需自行评估。</p></div>
+  <div class="item-src">
+    <span class="handle">@ollama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124669766723920377" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama：OpenAI 公开预训练进展，并提议以 perplexity 等指标设“共同上限”</h2>
+  <blockquote class="quote"><p>“I believe frontier model developers should jointly endeavour to establish shared norms for how to evaluate such models and red-team safety cases for them by the time they are first used, including shared transparency standards. I further propose common limits, based on perplexity and other measurements, that developers are committed to not crossing until our ability to understand and monitor AI behavior achieves a certain concrete milestone (such as the development of a successor to CoT monitors).”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是一份“行业自律 + 可测量阈值”的治理提案，核心是把 perplexity 这类可跨实验室追踪的指标当作开发上限的锚点，并绑定“CoT 监控后继技术”作为解锁条件。对做 eval / 监控 / 安全工程的团队，值得关注“跨实验室可比指标”这一方向是否会形成事实标准；注意 sama 本人称这是 OpenAI 近期最重要的发布之一，但具体文档内容未在材料中给出。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124551594691932405" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2124551883130114403" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 的 AI 回复屏蔽名单：约 4000 人误伤 4 人，称错误率 0.1% 已清零</h2>
+  <blockquote class="quote"><p>“P.S. there was a about 4 people wrongly blocked in the list of ~4,000 people. That means an error rate of 0.1%, pretty good. Those people have since been removed from the list btw making the error rate 0%.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“AI 回复机器人屏蔽”主题的后续数据点：人工复核后误伤率约 0.1%，被误伤者已移出。对做内容审核/垃圾账号识别的工程实践有参考价值——人工二次复核的成本与误伤率量级；但“错误率 0%”是作者自述，非独立验证。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124561533069881581" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：AI 回复 spam 是“自 sustaining 生态”，点名模板化回复账号</h2>
+  <blockquote class="quote"><p>“Nobody likes AI replies but they&#x27;re defending each other… it&#x27;s just a self sustaining ecosystem on here with a lot of people dependent on it to make money from X monetization and the shady businesses selling them the automation tools and bot farms to do so.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>给出了一组可操作的检测特征——固定句式模板（“the hardest part is…”、“the real flex is…”等）、约每分钟一条的回复频率。对做社交平台反滥用或 agent 行为检测的人，这类“模板 + 频率”信号是低成本基线；但作者对个别账号的指控属单方说法，材料中未见平台处置结论。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124586276489695710" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2124577708135030941" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">开源 Android 应用：手机上直接跑 DeepSeek Harness 编码助手，免 root / 免 Termux</h2>
+  <blockquote class="quote"><p>“An open-source Android app that runs the DeepSeek Harness AI coding assistant on your phone, no root or Termux needed.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把编码 agent 搬到移动端且不依赖 Termux 环境，降低了在手机上做轻量代码辅助/远程操作的门槛。材料未给出仓库细节与模型调用方式，落地前需自行核实其是否依赖云端 API 及权限模型。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124749039589867983" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">开源工具：录制应用行为，再逐块校验 Rust 重写是否等价</h2>
+  <blockquote class="quote"><p>“An open-source tool that records what your app does, then checks a piece-by-piece Rust rewrite against it.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>思路是“行为录制 → 作为差分测试基准 → 指导增量 Rust 迁移”，对正在做渐进式重写（尤其性能敏感服务）的团队是可复用的验证范式。材料未提供项目名与成熟度，建议先看其录制粒度（请求级还是函数级）再评估。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124698217619321016" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 sama 那条“共同上限 + perplexity 指标”的提案——它是唯一可能影响后续模型发布节奏的规范性信号。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">腾讯混元 Hy4 上线 Ollama Cloud：770B 总参 / 49B 激活，首个支持视觉与 computer use 的 Hy 模型</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">sama：OpenAI 公开预训练进展，并提议以 perplexity 等指标设“共同上限”</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">levelsio 的 AI 回复屏蔽名单：约 4000 人误伤 4 人，称错误率 0.1% 已清零</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">levelsio：AI 回复 spam 是“自 sustaining 生态”，点名模板化回复账号</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">开源 Android 应用：手机上直接跑 DeepSeek Harness 编码助手，免 root / 免 Termux</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">开源工具：录制应用行为，再逐块校验 Rust 重写是否等价</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-23 07:35 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
