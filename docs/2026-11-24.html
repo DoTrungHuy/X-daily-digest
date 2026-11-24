@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-24 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-24</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料里最值得工程侧注意的是 OpenAI 与 Cisco 联合开源的 Linux 运行时 Shirudo（agent 写 eBPF 动态防护、不停机挡漏洞），以及 GPT-6 Cyber 一次性验证 948 个可提权的 Linux 内核 bug；其余多为产品小更新与观点类内容，噪音比例偏高。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-strong">信号 中（两条安全/agent 基础设施信息较强，其余偏弱）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">OpenAI × Cisco 开源 Shirudo：让 agent 用动态 eBPF 给系统打“临时护盾”，不必停机等补丁</h2>
+  <blockquote class="quote"><p>“We&#x27;re introducing Shirudo, an open-source Linux runtime allowing agents to defend systems without downtime. It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches. Built by @cisco together with OpenAI.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>思路是把“漏洞窗口期”从被动等待补丁变成 agent 生成 eBPF 规则临时封堵；对做 agent 安全、运行时防护、eBPF 可观测/拦截的团队是可读的开源参考实现，也提示 agent 写内核级策略需要怎样的沙箱与审核流程。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2124980590717911527" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">GPT-6 Cyber 单次运行验证 948 个可本地提权的 Linux 内核 bug 并生成补丁</h2>
+  <blockquote class="quote"><p>“In one run, GPT-6 Cyber helped us validate 948 Linux kernel bugs that could grant local root access and generate patches for review. Our researchers @clintgibler and @ky1ebot share their findings and how they worked with maintainers to get fixes upstream.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“模型 + 维护者流程”的漏洞挖掘案例，重点不在数量而在补丁如何 upstream；对做安全自动化、漏洞复现与补丁评审流水线的团队有参考价值，也说明 agent 产出仍需人工/维护者复核。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125007927098699827" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">OpenAI 与 Cisco 合作定位为“agent 时代的安全基础设施原语”</h2>
+  <blockquote class="quote"><p>“We&#x27;re working with Cisco on what we think are going to be key infrastructure primitives in the new era of cybersecurity. Everything needs to be built to be operated safely by aligned agents at machine speed.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与 ITEM1 同源的表态，指向一个设计约束——未来基础设施要默认“由 agent 以机器速度操作且安全”；做平台/基础设施的团队可据此评估自身权限模型与审计粒度。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125141302501417232" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Antigravity 上线进度清单：实时追踪 agent 每一步，可展开完整分解</h2>
+  <blockquote class="quote"><p>“No more guessing what your agent is doing mid-run. Progress checklists are now live in Antigravity. Track every step in real time, and expand the full breakdown whenever you want to double-check the work. Built from your feedback, and we are just getting started.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>agent 长任务的可观测性从“日志”走向“结构化 checklist + 可展开明细”，是评审 agent 输出时的实用交互模式；做 agent UI/评测的可以借鉴这种“步骤级可核查”设计。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125032843550028030" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">OpenComputer：开源编码 agent，在 Slack 线程接任务、在自己的机器上开 PR</h2>
+  <blockquote class="quote"><p>“OpenComputer is an open-source coding agent that takes tasks in a Slack thread and opens a pull request, on its own computer.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>把入口放在 Slack、出口放在 PR，是团队内落地编码 agent 的低摩擦形态；可对照自建方案评估其隔离执行环境与 PR 生成质量（材料未给出更多细节）。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125065386555293722" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Apprise：一条命令、一种 URL 格式，把告警推到多个聊天/推送服务</h2>
+  <blockquote class="quote"><p>“Your alert script shouldn&#x27;t need a different tool for every chat and push service. Apprise sends one notification to many services from a single command, using one URL format.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>运维/agent 告警通知的统一出口，减少为每个 IM 渠道写适配器；适合接在监控脚本或 agent 任务完成回调后面。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125108659512561855" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 谈“扰动幂律”：少数人制造多数噪音，执行规则本身才有效</h2>
+  <blockquote class="quote"><p>“You see this power law in every community, both online and offline. A small % of people is responsible for the majority of disturbances. Which is why just enforcing the rules and removing those people is so effective. But we live in a time were simply doing that is frowned upon”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>与其说是 AI 话题，不如说是社区/产品治理经验；对做 UGC、评论区、agent 生成内容审核的团队，是“少量高频违规者优先处置”的经验佐证（非量化结论）。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125155472647106915" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 批评“用 AI 回复涨粉”是伪命题，并质疑头部实验室与监管的关系</h2>
+  <blockquote class="quote"><p>“You will never build a &#x27;community&#x27; off lukewarm, milquetoast AI replies... The idea that you can &#x27;grow your X account with AI&#x27; is a lie that has been sold to you and you fell for it.” / “Anthropic&#x27;s, and to some extent OpenAI&#x27;s, bargain proposed to government appears to be: grant us monopoly, shut down open source...”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>前者是内容策略层面的判断（观点，非数据）；后者是对 AI 监管与开源生态的强烈立场表达，阅读时注意其为个人观点，材料中无对应证据链。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125041141406204285" target="_blank" rel="noopener">原文1</a><a class="src" href="https://x.com/i/web/status/2124914931401138265" target="_blank" rel="noopener">原文2</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Shirudo 那条——它是这批材料里唯一同时具备“开源可读 + agent 安全基础设施”双重价值的条目。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">OpenAI × Cisco 开源 Shirudo：让 agent 用动态 eBPF 给系统打“临时护盾”，不必停机等补丁</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">GPT-6 Cyber 单次运行验证 948 个可本地提权的 Linux 内核 bug 并生成补丁</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 与 Cisco 合作定位为“agent 时代的安全基础设施原语”</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Antigravity 上线进度清单：实时追踪 agent 每一步，可展开完整分解</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">OpenComputer：开源编码 agent，在 Slack 线程接任务、在自己的机器上开 PR</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Apprise：一条命令、一种 URL 格式，把告警推到多个聊天/推送服务</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">levelsio 谈“扰动幂律”：少数人制造多数噪音，执行规则本身才有效</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio 批评“用 AI 回复涨粉”是伪命题，并质疑头部实验室与监管的关系</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-24 09:52 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
