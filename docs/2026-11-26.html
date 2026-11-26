@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-26 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-26</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日最硬的两条：Anthropic 把 Messages API 从 Python 迁到 Rust，并用 Claude agent 团队做双版本差分验证；sama 转述矩阵乘法指数上界 9/4 被证明是紧的，并给出 LP 求解 n^{9/4} 的推论。其余多为产品/计费/安全杂讯。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>8 条</span><span>40 推文</span><span class="sig sig-mid">信号 中</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button><button type="button" class="fbtn" data-f="行业趋势">行业趋势</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Anthropic 把 Messages API 从 Python 迁到 Rust，用 Claude agent 团队做新旧版本差分验证</h2>
+  <blockquote class="quote"><p>“We recently migrated our Messages API from Python to Rust. On our engineering blog, we share how we used the existing service to verify the new one, with teams of Claude agents tracking down and fixing differences between the two versions.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是“重写 + 等价性验证”的工程范式：以旧服务为 oracle，让 agent 团队逐差异定位并修复，比一次性大重写更可控。做语言迁移或性能重写的团队可直接借鉴这套差分流程。</p></div>
+  <div class="item-src">
+    <span class="handle">@AnthropicAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125627317263466739" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">sama 称矩阵乘法指数上界 9/4 已被证明是紧的，并推出 LP 可在 n^{9/4} 求解</h2>
+  <blockquote class="quote"><p>“we had a particularly clean advance on the matrix multiplication exponent, with a new upper bound of 9/4. Since then, the model has been working on a LOWER BOUND... Today we announced that actually 9/4 is tight... by an &#x27;old&#x27; result of Yin Tat Lee and collaborators this also implies that linear programs can be solved in time n^{9/4}.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>若成立，这是理论 CS 的罕见双向闭合结果（上界与下界相遇），并直接波及线性规划复杂度。注意这是转述，具体证明需看原始论文再引用。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125402576145572334" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">OpenAI 承认 GPT-6.2 上线计费错误，修正后 Astra/Sol 额度消耗分别快 40%/25%，补偿一次 banked reset</h2>
+  <blockquote class="quote"><p>“We made a billing mistake at launch of GPT-6.2 that incorrectly discounted GPT-6.2 Astra and Sol usage for most users. We&#x27;ve fixed this now... you will reach your limits 40% faster on GPT-6.2 Astra and 25% faster on Sol... we&#x27;ll be adding one banked reset for everyone on Go, Plus, Pro, and Business.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对按额度做成本估算的团队，这是实质性变更——此前基于“折扣期”实测的 token 预算需要重算，Astra 场景成本敏感度上升约 40%。历史用量不补收。</p></div>
+  <div class="item-src">
+    <span class="handle">@OpenAI</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125784147889393806" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">sama：OpenAI 正小范围测试 Private Inference（Private Intelligence 的一部分），含 ZDR + Private Safety Processing</h2>
+  <blockquote class="quote"><p>“We&#x27;re now testing Private Inference, our latest offering as part of OpenAI Private Intelligence, with a small group of customers... ZDR with Private Safety Processing enables automated safety reviews without giving OpenAI personnel access to the underlying content.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对企业/合规场景是关键信号：安全审查与“人不可见内容”被拆开设计。做受监管行业 agent 落地的，可关注其 ZDR 条款是否可写进 DPA。</p></div>
+  <div class="item-src">
+    <span class="handle">@sama</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125638790593274259" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">gitai：开源 Git 托管，多个编码 agent 用 compare-and-swap 落到同一分支而不排队</h2>
+  <blockquote class="quote"><p>“gitai is open-source Git hosting where many coding agents land on one branch without queue stalls, via compare-and-swap.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>多 agent 并行写同一仓库的锁竞争是实际痛点，CAS 思路值得看实现细节（冲突时如何回退/重放）。适合评估多 agent 协作流水线的团队。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125826401073045809" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Ollama v0.40.18 上线 Inkling 2 Mini：26B 参数，面向 agentic / coding / computer use，Mac 上用自定义 kernel 提速</h2>
+  <blockquote class="quote"><p>“Inkling 2 Mini is available on Windows and Linux with Ollama v0.40.18! 26B parameters. Fits on devices with 32GB of unified memory / VRAM or more... Made for agentic work, coding and computer use!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>32GB 统一内存即可本地跑，适合做离线 agent 原型或隐私敏感场景。Mac 侧性能改进来自自定义 kernel，值得实测与上一版对比。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125780317747466548" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="行业趋势">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-amber">行业趋势</span>
+  </div>
+  <h2 class="item-title">1Password 因单个被劫持的 GitHub 账号被入侵，六天后才告知客户</h2>
+  <blockquote class="quote"><p>“1Password, the company you pay so nobody steals your passwords, got breached through one hijacked GitHub account and told customers six days later. Your vault was fine, they say. Their own front door wasn&#x27;t.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>供应链攻击面再次落在“开发者身份”而非产品本身。团队应检查 GitHub 组织成员的 2FA/硬件密钥、CI 与发布流程的权限边界，以及第三方账号的告警延迟。</p></div>
+  <div class="item-src">
+    
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125851630327537786" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-8" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">08</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：把推文做成 AI spam 蜜罐，Grok 4.7 高推理复核后入屏蔽网络，称每日清 25–50 个 bot</h2>
+  <blockquote class="quote"><p>“All my tweets are now AI spammer honeypots... Each account is investigated by Grok 4.7 with extra high reasoning effort and analyzes ALL their recent other replies and only once it&#x27;s 100% conclusive it&#x27;s blocked, no false positives.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“屏蔽名单 + 申诉 + 浏览器扩展”路线的后续进展：从人工名单转为自动蜜罐 + 模型判定。对做内容平台反滥用的人，可参考“诱饵 + 全历史回复一致性判定”的降误伤设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125592280505704637" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 Anthropic 的 Rust 迁移 + Claude agent 差分验证那篇工程博客。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">Anthropic 把 Messages API 从 Python 迁到 Rust，用 Claude agent 团队做新旧版本差分验证</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">sama 称矩阵乘法指数上界 9/4 已被证明是紧的，并推出 LP 可在 n^{9/4} 求解</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">OpenAI 承认 GPT-6.2 上线计费错误，修正后 Astra/Sol 额度消耗分别快 40%/25%，补偿一次 banked reset</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">sama：OpenAI 正小范围测试 Private Inference（Private Intelligence 的一部分），含 ZDR + Private Safety Processing</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">gitai：开源 Git 托管，多个编码 agent 用 compare-and-swap 落到同一分支而不排队</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">Ollama v0.40.18 上线 Inkling 2 Mini：26B 参数，面向 agentic / coding / computer use，Mac 上用自定义 kernel 提速</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">1Password 因单个被劫持的 GitHub 账号被入侵，六天后才告知客户</span></a><a href="#item-8" class="toc-a"><span class="toc-i">08</span><span class="toc-t">levelsio：把推文做成 AI spam 蜜罐，Grok 4.7 高推理复核后入屏蔽网络，称每日清 25–50 个 bot</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-26 08:14 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
