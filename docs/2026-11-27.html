@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="每日 X 精读 — twitter-cli + DeepSeek 自动策展"/>
+  <meta name="theme-color" content="#0a0a0b"/>
+  <title>Digest 2026-11-27 · X Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=20260712c"/>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">X</span>
+        <span class="logo-text">Daily Digest</span>
+      </a>
+      <nav class="topnav">
+        <a class="" href="index.html">首页</a>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest" target="_blank" rel="noopener">源码</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+<div class="digest-layout">
+  <div class="digest-main">
+    <div class="page-head">
+      <a class="back" href="index.html">← 返回列表</a>
+      <p class="eyebrow">Daily Digest · 2026-11-27</p>
+      <h1 class="page-title">今日精读</h1>
+      <p class="lede">今日材料以节日闲聊与产品营销为主，硬技术信号稀疏；可用的新增信息集中在 levelsio 的 AI spam 治理进展、Chrome 蓝牙轮询 bug 的实测定位，以及若干开源工具（Chatterbox、Chili3D）与匿名模型 HungerG 的实测反馈。</p>
+      <div class="meta-row"><span>过去约 24 小时</span><span>7 条</span><span>39 推文</span><span class="sig sig-weak">信号 弱（多数为节日问候、促销与无关社会话题；无重大模型或基础设施发布）</span></div>
+    </div>
+
+    <div class="filters" role="toolbar"><button type="button" class="fbtn on" data-f="*">全部</button><button type="button" class="fbtn" data-f="关注动态">关注动态</button><button type="button" class="fbtn" data-f="工具更新">工具更新</button><button type="button" class="fbtn" data-f="中国相关">中国相关</button><button type="button" class="fbtn" data-f="大佬官方">大佬官方</button></div>
+    <div class="items">
+      
+<article class="item" id="item-1" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">01</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio 的 AI spam 屏蔽进入“愈合”阶段：500+ 账号被封，误伤率 0.1%</h2>
+  <blockquote class="quote"><p>“X is healing! The AI replies have disappeared for me and many others too since I started 🛡️ a few days ago… We got 500+ X accounts that were confirmed to be AI spammers suspended. There was 4 false positives on ~4000 accounts, so a 0.1% error rate”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>这是此前“屏蔽名单 + 申诉机制”的后续进展，新增信息是封禁落地数量与误伤复核结果；对做社区反滥用/内容审核的团队，可参考其“100% 确证 + 人工二次复核 + 申诉后每小时监控、再犯永久拉黑”的分级流程设计。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125923307002470407" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-2" data-cat="关注动态">
+  <div class="item-meta">
+    <span class="item-idx">02</span>
+    <span class="tag tag-violet">关注动态</span>
+  </div>
+  <h2 class="item-title">levelsio：AI spammer 只占约 0.2%，却淹没全部人类回复</h2>
+  <blockquote class="quote"><p>“There&#x27;s a few thousand on an account like mine, meaning about 0.2%. That tiny minority spams so much in replies that it&#x27;s hard to see any human replies left!”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>给出“扰动幂律”的量化补充——极少数账号贡献绝大多数噪音，说明反滥用应优先做高频行为者识别而非全量扫描；对设计 rate limit / 信誉分的工程有直接参考。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125927233059487876" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-3" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">03</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Chrome 158 在 macOS 上每秒请求 27 次蓝牙设备列表，导致系统卡顿</h2>
+  <blockquote class="quote"><p>“Chrome asked macOS for your list of paired devices about 27 times a second… That&#x27;s about 15,000+ requests from Chrome per minute. Every other app combined sent about 60. bluetoothd… is at 59% CPU because of it.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>一份可复用的性能归因范例——用服务日志做 30 秒采样、对比其他应用基线、排除扩展嫌疑后定位为浏览器 bug；若你在 macOS 上遇到周期性卡顿且开了蓝牙，可先查 bluetoothd CPU 占用。</p></div>
+  <div class="item-src">
+    <span class="handle">@levelsio</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125915670525469140" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-4" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">04</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Chili3D：开源浏览器 3D CAD，AI 助手与用户共用同一特征树和撤销栈</h2>
+  <blockquote class="quote"><p>“Chili3D is open-source browser 3D CAD where the AI assistant edits the same feature tree and undo stack as your own commands.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>对做 agent 接入专业工具的开发者，这是一个值得看的交互范式——AI 操作不另开旁路，而是进入与人类相同的可撤销命令历史，天然获得可审计与可回滚；比“AI 直接改文件”更可控。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2126156592576188478" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-5" data-cat="工具更新">
+  <div class="item-meta">
+    <span class="item-idx">05</span>
+    <span class="tag tag-green">工具更新</span>
+  </div>
+  <h2 class="item-title">Chatterbox：10 秒样本克隆音色，23+ 语言本地运行，MIT 许可</h2>
+  <blockquote class="quote"><p>“Chatterbox clones a voice from a 10-second clip and narrates text in 23+ languages, locally under MIT.”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>本地 + MIT 的组合适合嵌入离线 agent 的语音输出层；注意材料未提供质量评测与硬件要求，落地前需自行验证延迟与显存占用。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2126197332660408492" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-6" data-cat="中国相关">
+  <div class="item-meta">
+    <span class="item-idx">06</span>
+    <span class="tag tag-rose">中国相关</span>
+  </div>
+  <h2 class="item-title">匿名模型 HungerG 在 Qoder 限时免费，社区猜测为 Qwen 新模型</h2>
+  <blockquote class="quote"><p>“最近有一款代号HungerG的匿名模型上线了Qoder… 即使没有Qoder订阅也能用，完全不消耗Credits… 很多人讨论说它很可能是 Qwen 全新模型。”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>可作为低成本试跑编码任务的窗口期；但身份未证实、评测为主观描述（“交付稳、数据准、审美一流”），不宜据此做选型决策。</p></div>
+  <div class="item-src">
+    <span class="handle">@unknown</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2126213623681036729" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+
+<article class="item" id="item-7" data-cat="大佬官方">
+  <div class="item-meta">
+    <span class="item-idx">07</span>
+    <span class="tag tag-blue">大佬官方</span>
+  </div>
+  <h2 class="item-title">Notion 官方：Calendar iOS 端更新并支持 Duo</h2>
+  <blockquote class="quote"><p>“Notion calendar got some nice updates on iOS recently and has duo optimization”</p></blockquote>
+  <div class="take"><span class="take-k">实用点</span><p>无（仅产品更新通告，材料未涉及 API 或 agent 集成细节）。</p></div>
+  <div class="item-src">
+    <span class="handle">@NotionHQ</span>
+    <span class="src-links"><a class="src" href="https://x.com/i/web/status/2125991823906582528" target="_blank" rel="noopener">原文1</a></span>
+  </div>
+</article>
+
+    </div>
+    
+<aside class="close-box">
+  <p class="close-k">今日只看一条</p>
+  <p class="close-v">今天若只点开一条，点 levelsio 的 AI spam 治理复盘（ITEM1），它是唯一带可复用反滥用流程与量化误伤数据的新增信息。
+
+---
+
+_Source: X via free cookie CLI + DeepSeek. Hosted on GitHub Pages._</p>
+</aside>
+
+  </div>
+
+  <aside class="toc-side" aria-label="目录">
+    <p class="toc-label">本篇目录</p>
+    <nav class="toc"><a href="#item-1" class="toc-a"><span class="toc-i">01</span><span class="toc-t">levelsio 的 AI spam 屏蔽进入“愈合”阶段：500+ 账号被封，误伤率 0.1%</span></a><a href="#item-2" class="toc-a"><span class="toc-i">02</span><span class="toc-t">levelsio：AI spammer 只占约 0.2%，却淹没全部人类回复</span></a><a href="#item-3" class="toc-a"><span class="toc-i">03</span><span class="toc-t">Chrome 158 在 macOS 上每秒请求 27 次蓝牙设备列表，导致系统卡顿</span></a><a href="#item-4" class="toc-a"><span class="toc-i">04</span><span class="toc-t">Chili3D：开源浏览器 3D CAD，AI 助手与用户共用同一特征树和撤销栈</span></a><a href="#item-5" class="toc-a"><span class="toc-i">05</span><span class="toc-t">Chatterbox：10 秒样本克隆音色，23+ 语言本地运行，MIT 许可</span></a><a href="#item-6" class="toc-a"><span class="toc-i">06</span><span class="toc-t">匿名模型 HungerG 在 Qoder 限时免费，社区猜测为 Qwen 新模型</span></a><a href="#item-7" class="toc-a"><span class="toc-i">07</span><span class="toc-t">Notion 官方：Calendar iOS 端更新并支持 Duo</span></a></nav>
+  </aside>
+</div>
+
+    </main>
+
+    <footer class="foot">
+      <p>Cookie → DeepSeek → Pages · built 2026-11-27 08:28 UTC</p>
+      <p class="foot-links">
+        <a href="https://dotrunghuy.github.io/X-daily-digest/">站点</a>
+        <span>·</span>
+        <a href="https://github.com/DoTrungHuy/X-daily-digest">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js?v=20260712c" defer></script>
+</body>
+</html>
